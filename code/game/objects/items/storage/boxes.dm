@@ -190,6 +190,23 @@
 			grenade_count++
 	UnregisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP)
 
+/obj/item/storage/box/flashbang/pvp
+	name = "box of flashbangs (WARNING)"
+	desc = "<B>WARNING: These devices are extremely dangerous and can cause blindness or deafness in repeated use.</B>"
+	icon_state = "flashbang"
+	can_hold = list(/obj/item/explosive/grenade/flashbang/noskill)
+	w_class = SIZE_MEDIUM
+
+/obj/item/storage/box/flashbang/pvp/fill_preset_inventory()
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+
 /obj/item/storage/box/emps
 	name = "box of emp grenades"
 	desc = "A box with 5 emp grenades."
@@ -846,8 +863,8 @@
 	item_state = "teargas_nade_placeholder"
 	model_icon = "model_m66"
 	type_icon = null
-	can_hold = list(/obj/item/explosive/grenade/custom/teargas)
-	grenade_type = /obj/item/explosive/grenade/custom/teargas
+	can_hold = list(/obj/item/explosive/grenade/tear_gas)
+	grenade_type = /obj/item/explosive/grenade/tear_gas
 	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/box/nade_box/tear_gas/fill_preset_inventory()
