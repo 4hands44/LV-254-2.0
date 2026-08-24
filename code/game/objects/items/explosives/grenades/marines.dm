@@ -699,7 +699,7 @@
 
 /obj/item/explosive/grenade/gas/toxic_gas/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	toxic_gas.set_up(toxic_gas_radius, 0, get_turf(src), null, 6)
+	toxic_gas.set_up(toxic_gas_radius, 0, get_turf(src), null, 60)
 	toxic_gas.start()
 	qdel(src)
 
@@ -747,7 +747,7 @@
 
 /obj/item/explosive/grenade/gas/nerve_gas/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 6)
+	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null)
 	nerve_gas.start()
 	qdel(src)
 
@@ -798,7 +798,7 @@
 
 /obj/item/explosive/grenade/gas/mustard_gas/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	mustard_gas.set_up(mustard_gas_radius, 0, get_turf(src), null, 6)
+	mustard_gas.set_up(mustard_gas_radius, 0, get_turf(src), null)
 	mustard_gas.start()
 	qdel(src)
 
@@ -841,7 +841,7 @@
 
 /obj/item/explosive/grenade/gas/chlorine_gas/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	chlorine_gas.set_up(chlorine_gas_radius, 0, get_turf(src), null, 6)
+	chlorine_gas.set_up(chlorine_gas_radius, 0, get_turf(src), null)
 	chlorine_gas.start()
 	qdel(src)
 
@@ -857,6 +857,50 @@
 	. = ..()
 	activate()
 
+
+//===================tear gas=============================
+
+/obj/item/explosive/grenade/tear_gas
+	name = "\improper M66 teargas grenade"
+	desc = "Tear gas grenade used for nonlethal riot control. Please wear adequate gas protection."
+	icon_state = "gas_grenade"//temp icon
+	det_time = 40
+	item_state = "grenade_phos_clf"//temp icon
+	underslug_launchable = TRUE
+	harmful = TRUE
+	antigrief_protection = FALSE
+	/// The tear gas datum
+	var/datum/effect_system/smoke_spread/teargas/tear_gas
+	/// The typepath of the tear gas
+	var/tear_gas_type = /datum/effect_system/smoke_spread/teargas
+	/// The radius the gas will reach
+	var/tear_gas_radius = 8
+
+/obj/item/explosive/grenade/tear_gas/Initialize(mapload, ...)
+	. = ..()
+	tear_gas = new tear_gas_type
+	tear_gas.attach(src)
+
+/obj/item/explosive/grenade/tear_gas/Destroy()
+	QDEL_NULL(tear_gas)
+	return ..()
+
+/obj/item/explosive/grenade/tear_gas/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	tear_gas.set_up(tear_gas_radius, 0, get_turf(src), null,)
+	tear_gas.start()
+	qdel(src)
+
+/obj/item/explosive/grenade/tear_gas/primed
+	tear_gas_radius = 16
+	det_time = 6
+	item_state = "mortar"
+	icon_state = "mortar"
+	anchored = TRUE
+
+/obj/item/explosive/grenade/tear_gas/primed/Initialize()
+	. = ..()
+	activate()
 
 /*
 //================================================
