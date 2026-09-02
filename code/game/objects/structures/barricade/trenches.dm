@@ -1,14 +1,61 @@
+#define TRENCH_STAGE_POSTS 1
+#define TRENCH_STAGE_DIG 1
+#define TRENCH_STAGE_PANELS 1
+
+/obj/structure/unbuilt_trench
+	icon = 'icons/obj/structures/trenches.dmi'
+	climb_delay = CLIMB_DELAY_LONG
+	unslashable = FALSE
+	wrenchable = FALSE
+	health = 1000
+	anchored = TRUE
+	throwpass = 1
+	projectile_coverage = PROJECTILE_COVERAGE_MEDIUM
+	can_block_movement = TRUE
+	var/trench_prefix = "" //used in update_icon()
+	icon_state = "build_1"
+
+/obj/structure/unbuilt_trench/attack_hand(mob/user)
+	if (stage < WATCHTOWER_STAGE_COMPLETE)
+		return
+
+
 /obj/structure/trench
 	icon = 'icons/obj/structures/trenches.dmi'
 	climb_delay = CLIMB_DELAY_LONG
 	unslashable = FALSE
 	wrenchable = FALSE
-	health = 100
+	health = 1000
 	anchored = TRUE
+	throwpass = 1
 	projectile_coverage = PROJECTILE_COVERAGE_MEDIUM
 	can_block_movement = TRUE
 	var/trench_prefix = "" //used in update_icon()
 	icon_state = "no_connect"
+
+/obj/structure/trench/Initialize()
+	. = ..()
+
+	for(var/obj/structure/trench/T in src.loc)
+		if(T != src)
+			qdel(T)
+
+	update_adjacent()
+	update_icon()
+
+/obj/structure/trench/proc/update_adjacent(location)
+	if(!location)
+		location = src //location arg is used to correctly update neighbour trenches when deleting a trenches.
+
+	for(var/direction in CARDINAL_ALL_DIRS)
+		var/obj/structure/trench/T = locate(/obj/structure/trench, get_step(location,direction))
+		if(T && !HAS_TRAIT(T, TRAIT_TABLE_FLIPPING))
+			T.update_icon()
+
+/obj/structure/trench/Destroy()
+	var/trenchloc = loc
+	. = ..()
+	update_adjacent(trenchloc) //so neighbouring trenches get updated correctly
 
 /obj/structure/trench/update_icon()
 

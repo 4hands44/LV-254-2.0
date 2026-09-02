@@ -1421,6 +1421,7 @@
 #include "code\game\objects\structures\barricade\misc.dm"
 #include "code\game\objects\structures\barricade\non_folding.dm"
 #include "code\game\objects\structures\barricade\sandbags.dm"
+#include "code\game\objects\structures\barricade\trenches.dm"
 #include "code\game\objects\structures\crates_lockers\closets.dm"
 #include "code\game\objects\structures\crates_lockers\crates.dm"
 #include "code\game\objects\structures\crates_lockers\largecrate.dm"
