@@ -1190,7 +1190,7 @@
 	new /obj/item/stack/sheet/plasteel(src, 50)
 	new /obj/item/stack/sheet/metal(src, 50)
 	new /obj/item/stack/sheet/metal(src, 50)
-	new /obj/item/stack/sandbags_empty(src, 50)
+	new /obj/item/stack/sheet/wood(src, 50)
 	new /obj/item/stack/sandbags_empty(src, 50)
 	new /obj/item/stack/sandbags_empty(src, 50)
 

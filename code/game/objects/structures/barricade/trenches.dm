@@ -2,22 +2,45 @@
 #define TRENCH_STAGE_DIG 1
 #define TRENCH_STAGE_PANELS 1
 
-/obj/structure/unbuilt_trench
+/obj/structure/trench_frame
 	icon = 'icons/obj/structures/trenches.dmi'
 	climb_delay = CLIMB_DELAY_LONG
 	unslashable = FALSE
 	wrenchable = FALSE
 	health = 1000
 	anchored = TRUE
+	debris = list(/obj/item/stack/sheet/wood, /obj/item/stack/sheet/wood)
 	throwpass = 1
 	projectile_coverage = PROJECTILE_COVERAGE_MEDIUM
 	can_block_movement = TRUE
-	var/trench_prefix = "" //used in update_icon()
-	icon_state = "build_1"
+	var/stage = 0
+	icon_state = "build_0"
 
-/obj/structure/unbuilt_trench/attack_hand(mob/user)
-	if (stage < WATCHTOWER_STAGE_COMPLETE)
+/obj/structure/trench_frame/Initialize()
+	update_icon()
+	return ..()
+
+/obj/structure/trench_frame/update_icon()
+	. = ..()
+	icon_state = "stage[stage]"
+
+	overlays.Cut()
+
+/obj/structure/trench_frame/attackby(obj/item/item, mob/user)
+	if(user.action_busy)
 		return
+
+	if(istool(item) && !skillcheck(user, SKILL_CONSTRUCTION, SKILL_CONSTRUCTION_ENGI))
+		to_chat(user, SPAN_WARNING("You are not trained to configure [src]..."))
+		return TRUE
+
+	switch(stage)
+		if(TRENCH_STAGE_POSTS)
+			if(!istype(item, /obj/item/tool/shovel))
+				return
+
+			to_chat(user, SPAN_NOTICE("You start digging."))
+			playsound(user.loc, 'sound/effects/thud.ogg', 40, 1, 6)
 
 
 /obj/structure/trench
@@ -25,7 +48,7 @@
 	climb_delay = CLIMB_DELAY_LONG
 	unslashable = FALSE
 	wrenchable = FALSE
-	health = 1000
+	health = 10000
 	anchored = TRUE
 	throwpass = 1
 	projectile_coverage = PROJECTILE_COVERAGE_MEDIUM
@@ -33,155 +56,3 @@
 	var/trench_prefix = "" //used in update_icon()
 	icon_state = "no_connect"
 
-/obj/structure/trench/Initialize()
-	. = ..()
-
-	for(var/obj/structure/trench/T in src.loc)
-		if(T != src)
-			qdel(T)
-
-	update_adjacent()
-	update_icon()
-
-/obj/structure/trench/proc/update_adjacent(location)
-	if(!location)
-		location = src //location arg is used to correctly update neighbour trenches when deleting a trenches.
-
-	for(var/direction in CARDINAL_ALL_DIRS)
-		var/obj/structure/trench/T = locate(/obj/structure/trench, get_step(location,direction))
-		if(T && !HAS_TRAIT(T, TRAIT_TABLE_FLIPPING))
-			T.update_icon()
-
-/obj/structure/trench/Destroy()
-	var/trenchloc = loc
-	. = ..()
-	update_adjacent(trenchloc) //so neighbouring trenches get updated correctly
-
-/obj/structure/trench/update_icon()
-
-	var/dir_sum = 0
-	for(var/direction in CARDINAL_ALL_DIRS)
-		var/skip_sum = 0
-		for(var/obj/structure/window/W in src.loc)
-			if(W.dir == direction) //So smooth tables don't go smooth through windows
-				skip_sum = 1
-				continue
-		var/inv_direction = turn(dir, 180) //inverse direction
-		for(var/obj/structure/window/W in get_step(src, direction))
-			if(W.dir == inv_direction) //So smooth tables don't go smooth through windows when the window is on the other table's tile
-				skip_sum = 1
-				continue
-		if(!skip_sum) //there is no window between the two tiles in this direction
-			var/obj/structure/trench/T = locate(/obj/structure/trench, get_step(src, direction))
-			if(T)
-				if(direction < 5)
-					dir_sum += direction
-				else
-					if(direction == 5) //This permits the use of all table directions. (Set up so clockwise around the central table is a higher value, from north)
-						dir_sum += 16
-					if(direction == 6)
-						dir_sum += 32
-					if(direction == 8) //Aherp and Aderp.  Jezes I am stupid.  -- SkyMarshal
-						dir_sum += 8
-					if(direction == 10)
-						dir_sum += 64
-					if(direction == 9)
-						dir_sum += 128
-
-	var/table_type = 0 //stand_alone table
-	if((dir_sum%16) in GLOB.cardinals)
-		table_type = 1 //endtable
-		dir_sum %= 16
-	if((dir_sum%16) in list(3, 12))
-		table_type = 2 //1 tile thick, streight table
-		if(dir_sum%16 == 3) //3 doesn't exist as a dir
-			dir_sum = 2
-		if(dir_sum%16 == 12) //12 doesn't exist as a dir.
-			dir_sum = 4
-	if((dir_sum%16) in list(5, 6, 9, 10))
-		if(locate(/obj/structure/trench, get_step(src.loc, dir_sum%16)))
-			table_type = 3 //full table (not the 1 tile thick one, but one of the 'tabledir' tables)
-		else
-			table_type = 2 //1 tile thick, corner table (treated the same as streight tables in code later on)
-		dir_sum %= 16
-	if((dir_sum%16) in list(13, 14, 7, 11)) //Three-way intersection
-		table_type = 5 //full table as three-way intersections are not sprited, would require 64 sprites to handle all combinations.  TOO BAD -- SkyMarshal
-		switch(dir_sum%16) //Begin computation of the special type tables.  --SkyMarshal
-			if(7)
-				if(dir_sum == 23)
-					table_type = 6
-					dir_sum = 8
-				else if(dir_sum == 39)
-					dir_sum = 4
-					table_type = 6
-				else if(dir_sum == 55 || dir_sum == 119 || dir_sum == 247 || dir_sum == 183)
-					dir_sum = 4
-					table_type = 3
-				else
-					dir_sum = 4
-			if(11)
-				if(dir_sum == 75)
-					dir_sum = 5
-					table_type = 6
-				else if(dir_sum == 139)
-					dir_sum = 9
-					table_type = 6
-				else if(dir_sum == 203 || dir_sum == 219 || dir_sum == 251 || dir_sum == 235)
-					dir_sum = 8
-					table_type = 3
-				else
-					dir_sum = 8
-			if(13)
-				if(dir_sum == 29)
-					dir_sum = 10
-					table_type = 6
-				else if(dir_sum == 141)
-					dir_sum = 6
-					table_type = 6
-				else if(dir_sum == 189 || dir_sum == 221 || dir_sum == 253 || dir_sum == 157)
-					dir_sum = 1
-					table_type = 3
-				else
-					dir_sum = 1
-			if(14)
-				if(dir_sum == 46)
-					dir_sum = 1
-					table_type = 6
-				else if(dir_sum == 78)
-					dir_sum = 2
-					table_type = 6
-				else if(dir_sum == 110 || dir_sum == 254 || dir_sum == 238 || dir_sum == 126)
-					dir_sum = 2
-					table_type = 3
-				else
-					dir_sum = 2 //These translate the dir_sum to the correct dirs from the 'tabledir' icon_state.
-	if(dir_sum%16 == 15)
-		table_type = 4 //4-way intersection, the 'middle' table sprites will be used.
-
-	switch(table_type)
-		if(0)
-			icon_state = "[trench_prefix]table"
-		if(1)
-			icon_state = "[trench_prefix]1tileendtable"
-		if(2)
-			icon_state = "[trench_prefix]1tilethick"
-		if(3)
-			icon_state = "[trench_prefix]tabledir"
-		if(4)
-			icon_state = "[trench_prefix]middle"
-		if(5)
-			icon_state = "[trench_prefix]tabledir2"
-		if(6)
-			icon_state = "[trench_prefix]tabledir3"
-
-	if(dir_sum in CARDINAL_ALL_DIRS)
-		setDir(dir_sum)
-	else
-		setDir(SOUTH)
-
-/obj/structure/trench/BlockedPassDirs(atom/movable/mover, target_dir)
-	for(var/obj/structure/S in get_turf(mover))
-		if(S && S.climbable && !(S.flags_atom & ON_BORDER) && climbable && isliving(mover)) //Climbable non-border objects allow you to universally climb over others
-			return NO_BLOCKED_MOVEMENT
-
-	return ..()

@@ -236,6 +236,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi, list(
 		list("APC Circuit Board", 2, /obj/item/circuitboard/apc, null, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool (ET)", 2, /obj/item/tool/shovel/etool, null, VENDOR_ITEM_REGULAR),
 		list("High-Capacity Power Cell", 3, /obj/item/cell/high, null, VENDOR_ITEM_REGULAR),
+		list("Wood x50", 15, /obj/item/stack/sheet/wood/large_stack, null, VENDOR_ITEM_RECOMMENDED),
 		list("Metal x10", 5, /obj/item/stack/sheet/metal/small_stack, null, VENDOR_ITEM_RECOMMENDED),
 		list("Plasteel x10", 7, /obj/item/stack/sheet/plasteel/small_stack, null, VENDOR_ITEM_RECOMMENDED),
 		list("Concertina Wire x50", 10, /obj/item/stack/concertina_wire/full_stack, null, VENDOR_ITEM_RECOMMENDED),
