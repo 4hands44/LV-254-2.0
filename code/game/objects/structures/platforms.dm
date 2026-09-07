@@ -25,18 +25,23 @@
 	. = ..()
 	var/image/I = image(icon, src, "platform_overlay", LADDER_LAYER, dir)//ladder layer puts us just above weeds.
 	switch(dir)
-		if(SOUTH)
-			layer = ABOVE_MOB_LAYER
-			I.pixel_y = -16
-		if(NORTH)
+		if (NORTH)
+			layer = OBJ_LAYER+0.1
 			I.pixel_y = 16
-		if(EAST)
+		if (SOUTH)
+			layer = ABOVE_MOB_LAYER+0.1
+			I.pixel_y = -16
+		if (SOUTHEAST)
+			layer = ABOVE_MOB_LAYER+0.1
+		if (SOUTHWEST)
+			layer = ABOVE_MOB_LAYER+0.1
+		if (EAST)
+			layer = MOB_LAYER+0.1
 			I.pixel_x = 16
-			layer = MOB_LAYER
-		if(WEST)
+		if (WEST)
+			layer = MOB_LAYER+0.1
 			I.pixel_x = -16
-			layer = MOB_LAYER
-	overlays += I
+
 
 /obj/structure/platform/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()

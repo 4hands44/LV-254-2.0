@@ -44,6 +44,10 @@
 			if(!istype(item, /obj/item/tool/shovel))
 				return
 
+		var/turf/T = get_turf(src.loc)
+		var/turfdirt = T.get_dirt_type()
+		if(turfdirt)
+
 			to_chat(user, SPAN_NOTICE("You start digging."))
 			playsound(user.loc, 'sound/effects/thud.ogg', 40, 1, 6)
 
@@ -53,6 +57,13 @@
 			to_chat(user, SPAN_NOTICE("You dig the [src]."))
 			stage = TRENCH_STAGE_DIG
 			update_icon()
+		else
+			new /obj/item/stack/sheet/wood(src.loc)
+			new /obj/item/stack/sheet/wood(src.loc)
+			new /obj/item/stack/sheet/wood(src.loc)
+			new /obj/item/stack/sheet/wood(src.loc)
+			to_chat(user, SPAN_NOTICE("There is no dirt here."))
+			qdel(src)
 
 	switch(stage)
 		if(TRENCH_STAGE_DIG)
@@ -121,6 +132,8 @@
 				stage = TRENCH_STAGE_CREATE
 				update_icon()
 				new /obj/structure/trench(src.loc)
+				if(prob(75))
+					new /obj/effect/decal/cleanable/blood/mud(src.loc)
 				qdel(src)
 			else
 				to_chat(user, SPAN_NOTICE("You failed to construct the trench walls. You need more panels."))
@@ -149,7 +162,8 @@
 	name = "Wooden Trench"
 	desc = "This is a trench. Its like you're fighting the Kaiser again. In space."
 	icon = 'icons/obj/structures/trenches.dmi'
-	icon_state = "trench"
+	icon_state = "ground"
+	layer = TURF_LAYER
 	climb_delay = CLIMB_DELAY_LONG
 	unacidable = FALSE
 	unslashable = FALSE
@@ -159,8 +173,6 @@
 	health = 10000
 	anchored = TRUE
 	throwpass = TRUE
-	projectile_coverage = 90
-	projectile_coverage_distance_limit = 6
 	can_block_movement = TRUE
 
 	var/list/adjacent_trenches = list()
@@ -238,7 +250,7 @@
 
 /obj/structure/trench/update_icon()
 	src.overlays.Cut()
-	src.overlays += image(icon = icon,icon_state = "ground",layer=BETWEEN_OBJECT_ITEM_LAYER)
+	src.overlays += image(icon = icon,icon_state = "ground",layer=ABOVE_TURF_LAYER)
 	if(adjacent_trenches.Find("N") == 0)
 		src.overlays += image(icon = icon,icon_state = "wall_north",layer=BETWEEN_OBJECT_ITEM_LAYER + 0.01)
 	if(adjacent_trenches.Find("E") == 0)
@@ -261,3 +273,125 @@
 	. = ..()
 
 
+//the real walls
+
+/obj/structure/platform/stone/trench
+	name = "trench berm"
+	desc = "A raised collection of stones, mud and loose dirt designed to protect a trench's occupants. You could probably climb it."
+	icon_state = "trench_platform"
+	climb_delay = CLIMB_DELAY_MEDIUM
+	projectile_coverage = 95
+	explo_proof = FALSE
+	health = 10000
+	projectile_coverage_distance_limit = 1
+	var/force_level_absorption = 15
+	var/maxhealth = 10000
+	var/crusher_resistant = TRUE
+	var/barricade_hitsound = 'sound/effects/woodhit.ogg'
+	var/barricade_type = "barricade" //"metal", "plasteel", etc.
+	var/brute_multiplier = 1
+	var/burn_multiplier = 1
+	var/explosive_multiplier = 1
+	var/brute_projectile_multiplier = 0.5
+	var/burn_flame_multiplier = 1
+
+
+/obj/structure/platform/stone/trench/attackby(obj/item/item, mob/user)
+
+	if(item.force > force_level_absorption)
+		. = ..()
+		if(barricade_hitsound)
+			playsound(src, barricade_hitsound, 35, 1)
+		hit_barricade(item)
+
+/obj/structure/platform/stone/trench/bullet_act(obj/projectile/bullet)
+	bullet_ping(bullet)
+
+	if(bullet.ammo.damage_type == BURN)
+		bullet.damage = bullet.damage * burn_multiplier
+	else
+		bullet.damage = bullet.damage * brute_projectile_multiplier
+
+	if(istype(bullet.ammo, /datum/ammo/xeno/boiler_gas))
+		take_damage(floor(10 * burn_multiplier))
+
+	else if(bullet.ammo.flags_ammo_behavior & AMMO_ANTISTRUCT)
+		take_damage(bullet.damage * ANTISTRUCT_DMG_MULT_BARRICADES)
+
+	take_damage(bullet.damage)
+
+	return TRUE
+
+/obj/structure/platform/stone/trench/ex_act(severity)
+	if(explo_proof)
+		return
+	switch(severity)
+		if(EXPLOSION_THRESHOLD_VLOW to EXPLOSION_THRESHOLD_LOW)
+			playsound(src, 'sound/soundscape/rocksfalling2.ogg', 100)
+			return
+		if(EXPLOSION_THRESHOLD_LOW to EXPLOSION_THRESHOLD_HIGH)
+			playsound(src, 'sound/soundscape/rocksfalling2.ogg', 100)
+			return
+		if(EXPLOSION_THRESHOLD_HIGH to INFINITY)
+			playsound(src, 'sound/soundscape/rocksfalling2.ogg', 100)
+			return
+	return
+
+/obj/structure/platform/stone/trench/Collided(atom/movable/atom_movable)
+	..()
+
+	if(istype(atom_movable, /mob/living/carbon/xenomorph/crusher))
+		var/mob/living/carbon/xenomorph/crusher/living_carbon = atom_movable
+
+		if (!living_carbon.throwing)
+			return
+
+		if(crusher_resistant)
+			visible_message(SPAN_DANGER("[living_carbon] smashes into [src]!"))
+			take_damage(150)
+			playsound(src, barricade_hitsound, 25, TRUE)
+
+		else if(!living_carbon.stat)
+			visible_message(SPAN_DANGER("[living_carbon] smashes through [src]!"))
+			deconstruct(FALSE)
+			playsound(src, barricade_hitsound, 25, TRUE)
+
+/obj/structure/platform/stone/trench/acid_spray_act()
+	take_damage(25 * burn_multiplier)
+	visible_message(SPAN_WARNING("[src] is hit by the acid spray!"))
+	new /datum/effects/acid(src, null, null)
+
+/obj/structure/platform/stone/trench/flamer_fire_act(dam = BURN_LEVEL_TIER_1)
+	take_damage(dam * burn_flame_multiplier)
+
+/obj/structure/platform/stone/trench/proc/hit_barricade(obj/item/item)
+	take_damage(item.force * item.demolition_mod * 0.5 * brute_multiplier)
+
+/obj/structure/platform/stone/trench/proc/take_damage(damage)
+	for(var/obj/structure/barricade/barricade in get_step(src,dir)) //discourage double-stacking barricades by removing health from opposing barricade
+		if(barricade.dir == reverse_direction(dir))
+			barricade.update_health(damage)
+
+	update_health(damage)
+
+/obj/structure/platform/stone/trench/proc/take_acid_damage(damage)
+	take_damage(damage * burn_multiplier)
+
+/obj/structure/platform/stone/trench/update_health(damage, nomessage)
+	health -= damage
+	health = clamp(health, 0, maxhealth)
+
+	if(!health)
+		if(!nomessage)
+			visible_message(SPAN_DANGER("[src] falls apart!"))
+		broken(FALSE)
+		return
+
+	update_icon()
+
+/obj/structure/platform/stone/trench/north
+	dir = NORTH
+/obj/structure/platform/stone/trench/east
+	dir = EAST
+/obj/structure/platform/stone/trench/west
+	dir = WEST
