@@ -44,26 +44,29 @@
 			if(!istype(item, /obj/item/tool/shovel))
 				return
 
-		var/turf/T = get_turf(src.loc)
-		var/turfdirt = T.get_dirt_type()
-		if(turfdirt)
+			var/turf/T = get_turf(src.loc)
+			var/turfdirt = T.get_dirt_type()
+			if(turfdirt)
 
-			to_chat(user, SPAN_NOTICE("You start digging."))
-			playsound(user.loc, 'sound/effects/thud.ogg', 40, 1, 6)
+				to_chat(user, SPAN_NOTICE("You start digging."))
+				playsound(user.loc, 'sound/effects/thud.ogg', 40, 1, 6)
 
-			if(!do_after(user, 5 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
-				return
+				if(!do_after(user, 5 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
+					return
 
-			to_chat(user, SPAN_NOTICE("You dig the [src]."))
-			stage = TRENCH_STAGE_DIG
-			update_icon()
-		else
-			new /obj/item/stack/sheet/wood(src.loc)
-			new /obj/item/stack/sheet/wood(src.loc)
-			new /obj/item/stack/sheet/wood(src.loc)
-			new /obj/item/stack/sheet/wood(src.loc)
-			to_chat(user, SPAN_NOTICE("There is no dirt here."))
-			qdel(src)
+				to_chat(user, SPAN_NOTICE("You dig the [src]."))
+				stage = TRENCH_STAGE_DIG
+				update_icon()
+			else
+				playsound(user.loc, 'sound/effects/burrowing_b.ogg', 40, 1, 6)
+				playsound(user.loc, 'sound/effects/clang.ogg', 40, 1, 6)
+				new /obj/item/stack/sheet/wood(src.loc)
+				new /obj/item/stack/sheet/wood(src.loc)
+				new /obj/item/stack/sheet/wood(src.loc)
+				new /obj/item/stack/sheet/wood(src.loc)
+				to_chat(user, SPAN_WARNING("There ground is too hard, you cant dig a trench here!"))
+				to_chat(user, SPAN_NOTICE("The [src] falls apart."))
+				qdel(src)
 
 	switch(stage)
 		if(TRENCH_STAGE_DIG)
@@ -260,17 +263,60 @@
 	if(adjacent_trenches.Find("S") == 0)
 		src.overlays += image(icon = icon,icon_state = "wall_south",layer=ABOVE_MOB_LAYER + 0.03)
 
+/obj/structure/trench/proc/sync_platforms(obj/structure/trench/ignored_trench)
+	for(var/direction in CARDINAL_DIRS)
+		var/turf/adjacent_turf = get_step(src, direction)
+		var/obj/structure/trench/neighbor = locate(/obj/structure/trench, adjacent_turf)
+
+		if(neighbor && neighbor != ignored_trench)
+			for(var/obj/structure/platform/stone/trench/platform in adjacent_turf)
+				if(platform.dir == reverse_direction(direction))
+					qdel(platform)
+			for(var/obj/structure/platform/stone/trench/platform in loc)
+				if(platform.dir == direction)
+					qdel(platform)
+			continue
+
+		var/has_platform = FALSE
+		for(var/obj/structure/platform/stone/trench/platform in adjacent_turf)
+			if(platform.dir == reverse_direction(direction))
+				has_platform = TRUE
+
+		if(has_platform)
+			continue
+
+		switch(direction)
+			if(NORTH)
+				new /obj/structure/platform/stone/trench(adjacent_turf)
+			if(SOUTH)
+				new /obj/structure/platform/stone/trench/north(adjacent_turf)
+			if(EAST)
+				new /obj/structure/platform/stone/trench/west(adjacent_turf)
+			if(WEST)
+				new /obj/structure/platform/stone/trench/east(adjacent_turf)
+
 /obj/structure/trench/Initialize(mapload, ...)
 	. = ..()
 	if(modifies_adjacent)
 		check_neighbors()
 		update_icon()
+		sync_platforms()
 
 /obj/structure/trench/Destroy()
+	for(var/obj/structure/platform/stone/trench/platform in loc)
+		qdel(platform)
 
-	if(modifies_adjacent) remove_neighbors()
+	for(var/direction in CARDINAL_DIRS)
+		var/turf/adjacent_turf = get_step(src, direction)
+		var/obj/structure/trench/neighbor = locate(/obj/structure/trench, get_step(src, direction))
+		if(neighbor)
+			neighbor.sync_platforms(src)
+			continue
 
-	. = ..()
+		for(var/obj/structure/platform/stone/trench/platform in adjacent_turf)
+			if(platform.dir == reverse_direction(direction))
+				qdel(platform)
+	return ..()
 
 
 //the real walls
