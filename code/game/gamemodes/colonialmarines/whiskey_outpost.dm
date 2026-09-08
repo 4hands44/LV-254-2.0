@@ -769,7 +769,6 @@
 			/obj/item/tool/shovel/etool/folded,
 			/obj/item/tool/shovel/etool/folded,
 			/obj/item/stack/folding_barricade/three,
-			/obj/item/stack/folding_barricade/three,
 			/obj/item/storage/box/explosive_atmines,
 			/obj/item/storage/box/explosive_mines,
 			/obj/item/storage/toolbox/mechanical,

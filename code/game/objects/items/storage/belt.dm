@@ -2621,14 +2621,15 @@
 
 /obj/item/storage/belt/gun/utility/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
-	new /obj/item/tool/screwdriver(src)
-	new /obj/item/tool/wrench(src)
+	new /obj/item/ammo_magazine/pistol/mod88(src)
+	new /obj/item/ammo_magazine/pistol/mod88(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/device/multitool(src)
 
 /obj/item/storage/belt/gun/utility/full/ms/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/smg/nailgun/compact/tactical())
+	new /obj/item/ammo_magazine/smg/nailgun(src)
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/weldingtool(src)

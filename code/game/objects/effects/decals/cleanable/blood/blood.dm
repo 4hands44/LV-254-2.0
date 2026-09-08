@@ -15,6 +15,7 @@
 	var/list/viruses
 	var/basecolor= "#830303" // Color when wet.
 	var/amount = 3
+	var/mud = FALSE
 	var/drying_time = 30 SECONDS
 	var/dry_start_time // If this dries, track the dry start time for footstep drying
 	garbage = FALSE // Keep for atmosphere
@@ -54,6 +55,11 @@
 
 	var/mob/living/carbon/human/H = AM
 	H.add_blood(basecolor, BLOOD_FEET)
+
+	if(mud)
+		if(prob(50))
+			H.add_blood(basecolor, BLOOD_BODY)
+
 
 	var/dry_time_left = 0
 	if(drying_time)
@@ -181,3 +187,21 @@
 
 		if (step_to(src, get_step(src, direction), 0))
 			break
+
+//Mud effects.
+/obj/effect/decal/cleanable/blood/mud
+	name = "mud"
+	desc = "It's mud. Its wet and sticky and gets everywhere.</i>"
+	icon = 'icons/effects/blood.dmi'
+	basecolor = BLOOD_COLOR_MUD
+	mud = TRUE
+
+/obj/effect/decal/cleanable/blood/tracks/mud_tracks
+	desc = "It's mud. Its wet and sticky and gets everywhere.</i>"
+	basecolor = BLOOD_COLOR_MUD
+	mud = TRUE
+
+/obj/effect/decal/cleanable/blood/splatter/mud
+	desc = "It's mud. Its wet and sticky and gets everywhere.</i>"
+	basecolor = BLOOD_COLOR_MUD
+	mud = TRUE
