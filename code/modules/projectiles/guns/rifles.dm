@@ -2082,6 +2082,9 @@
 		/obj/item/attachable/attached_gun/grenade,
 	)
 
+/obj/item/weapon/gun/rifle/ak4047/tagrilla
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
 
 //M4RA Battle Rifle, standard USCM DMR
 

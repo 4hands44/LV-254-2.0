@@ -393,3 +393,24 @@
 		to_chat(user, SPAN_WARNING("\The [src] is too heavy for you to use as a weapon!"))
 		return
 	. = ..()
+
+/obj/item/weapon/twohanded/breacher/tagrilla
+	name = "\improper B4 Breaching Hammer"
+	desc = "This 200-pound abomination of a sledgehammer is made of solid tungsten, capable of punching through steel, concrete, and bone with ease. Just looking at it makes your arms feel like they're made of jelly."
+	icon_state = "syn_breacher"
+	item_state = "syn_breacher"
+	force_wielded = MELEE_FORCE_ABSURD
+	really_heavy = TRUE
+
+/obj/item/weapon/twohanded/breacher/tagrilla/pickup(mob/user)
+	if(!(HAS_TRAIT(user, TRAIT_TAGRILLA)))
+		to_chat(user, SPAN_HIGHDANGER("You barely manage to lift [src] above your feet, your knees quivering and your arms shaking dangerously, it's probably a good idea to set this down before you hurt yourself."))
+		user.apply_effect(4, EYE_BLUR, SUPERSLOW, WEAKEN)
+		return
+	..()
+
+/obj/item/weapon/twohanded/breacher/tagrilla/attack(target as mob, mob/living/user as mob)
+	if(!HAS_TRAIT(user, TRAIT_TAGRILLA))
+		to_chat(user, SPAN_WARNING("\The [src] is far too heavy for you to use as a weapon!"))
+		return
+	. = ..()

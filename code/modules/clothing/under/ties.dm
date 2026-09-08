@@ -401,6 +401,12 @@
 	desc = "An armband, worn by the crew to display which department they're assigned to. This one is white."
 	icon_state = "med"
 
+
+/obj/item/clothing/accessory/armband/bandage
+	name = "worn bandage"
+	desc = "A bandage wrapped around the elbow, worn by time."
+	icon_state = "bandage"
+
 /obj/item/clothing/accessory/armband/medgreen
 	name = "EMT armband"
 	desc = "An armband, worn by the crew to display which department they're assigned to. This one is white and green."

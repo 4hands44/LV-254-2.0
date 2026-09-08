@@ -1080,3 +1080,27 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+
+//======================================//TAGILLA\\=========================================\\
+//==========================================================================================\\
+
+/obj/item/clothing/suit/storage/marine/veteran/tagrilla
+	name = "\improper C2 Hardened Ballistic Vest"
+	desc = "Originally a civilian-grade ballistic vest, its current owner has heavily modified it with extra plating and pouches."
+	icon_state = "tagrilla"
+	icon = 'icons/obj/items/clothing/suits/misc_ert.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/misc_ert.dmi'
+	)
+	storage_slots = 6
+	flags_armor_protection = BODY_FLAG_CHEST
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/tagrilla
+)

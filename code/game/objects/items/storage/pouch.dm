@@ -1602,6 +1602,35 @@
 		return
 	addtimer(CALLBACK(src, PROC_REF(attempt_retrieval), user), 0.3 SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
 
+// sledge
+/obj/item/storage/pouch/sling/sledge
+	name = "Sledgehammer strap"
+	desc = "A set of sturdy straps that keeps a sledgehammer attached to your back when not in use."
+	storage_slots = 1
+	max_w_class = SIZE_LARGE
+	flags_equip_slot = SLOT_BACK
+	icon_state = "sling_sledge"
+	item_state_slots = list(WEAR_AS_BACK = "sling_sledge")
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/melee_weapons.dmi',
+		)
+	can_hold = list(/obj/item/weapon/twohanded/breacher,/obj/item/weapon/twohanded/breacher/synth)
+	sling_range = 2
+
+/obj/item/storage/pouch/sling/sledge/breacher/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher(src)
+
+/obj/item/storage/pouch/sling/sledge/synth/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher/synth(src)
+
+// special unstrippable tagrilla version
+/obj/item/storage/pouch/sling/sledge/tagrilla
+	can_hold = list(/obj/item/weapon/twohanded/breacher/tagrilla)
+	sling_range = 99
+
+/obj/item/storage/pouch/sling/sledge/tagrilla/full/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher/tagrilla(src)
+
 /obj/item/storage/pouch/cassette
 	name = "cassette pouch"
 	desc = "A finely crafted pouch, made specifically to keep cassettes safe during wartime."
