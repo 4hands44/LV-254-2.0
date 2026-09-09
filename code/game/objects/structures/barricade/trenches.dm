@@ -489,15 +489,15 @@
 			var/long_bridge_ramp_direction = reverse_direction(long_bridge_direction)
 			var/long_bridge_icon = bridge_wall_icon_state(long_bridge_ramp_direction)
 			src.overlays += image(icon = icon, icon_state = "wall_[long_bridge_icon]", layer = bridge_wall_layer(long_bridge_ramp_direction))
-			src.overlays += image(icon = icon, icon_state = "trench_bridge_[long_bridge_icon]", layer = ABOVE_MOB_LAYER + 0.04)
+			src.overlays += image(icon = icon, icon_state = "trench_bridge_[long_bridge_icon]", layer = ABOVE_MOB_LAYER - 0.01)
 		else
 			for(var/direction in CARDINAL_DIRS)
 				if(locate(/obj/structure/trench_ramp) in get_step(src, direction))
 					var/bridge_direction = bridge_wall_icon_state(direction)
 					src.overlays += image(icon = icon, icon_state = "wall_[bridge_direction]", layer = bridge_wall_layer(direction))
-					src.overlays += image(icon = icon, icon_state = "trench_bridge_[bridge_direction]", layer = ABOVE_MOB_LAYER + 0.04)
+					src.overlays += image(icon = icon, icon_state = "trench_bridge_[bridge_direction]", layer = ABOVE_MOB_LAYER - 0.01)
 	else if(Canopy)
-		var/image/canopy_overlay = image(icon = icon, icon_state = Canopy[1], layer = ABOVE_MOB_LAYER + 0.04)
+		var/image/canopy_overlay = image(icon = icon, icon_state = Canopy[1], layer = ABOVE_MOB_LAYER - 0.01)
 		canopy_overlay.color = Canopy[2]
 		canopy_overlay.alpha = has_nearby_mob() ? 100 : 255
 		src.overlays += canopy_overlay
