@@ -22,13 +22,8 @@
 	icon_state = "build_0"
 
 /obj/structure/trench_frame/Initialize()
-	. = ..()
-	if(locate(/obj/structure/trench) in get_turf(src))
-		visible_message(SPAN_WARNING("[src] overlaps an existing trench and falls apart."))
-		new /obj/item/stack/sheet/wood(get_turf(src), 4)
-		return INITIALIZE_HINT_QDEL
 	update_icon()
-	return .()
+	return ..()
 
 /obj/structure/trench_frame/update_icon()
 	. = ..()
@@ -186,9 +181,28 @@
 	var/list/adjacent_trenches = list()
 	var/modifies_adjacent = 1 // Set this flag to 0 on children to prevent icon redrawing on creation/destruction
 	var/Canopy = null
+	var/obj/structure/roof/trench_canopy/canopy_roof
 	var/mobpresent = 0
 	var/maxhealth = 10000
-	var/vehicle_bridge = FALSE
+
+/obj/structure/roof/trench_canopy
+	icon = 'icons/obj/structures/trenches.dmi'
+	layer = ABOVE_MOB_LAYER + 0.04
+
+/obj/structure/roof/trench_canopy/Initialize(mapload, canopy_icon_state, canopy_color)
+	icon_state = canopy_icon_state
+	. = ..()
+	under_image.alpha = 100
+	normal_image.color = canopy_color
+	under_image.color = canopy_color
+
+/obj/structure/roof/trench_canopy/LateInitialize()
+	. = ..()
+	if(!linked_master)
+		return
+	for(var/obj/effect/roof_node/node in linked_master.connected_nodes)
+		for(var/mob/living/living in node.loc)
+			linked_master.add_under_roof(living)
 
 /obj/structure/trench/proc/update_adjacent_berm_health(damage, nomessage)
 	for(var/direction in CARDINAL_DIRS)
@@ -228,58 +242,15 @@
 	. = ..()
 	if(ismob(O))
 		mobpresent++
-		update_nearby_canopies()
+		update_icon()
 
 /obj/structure/trench/Uncrossed(atom/movable/O)
 	if(ismob(O))
 		mobpresent = max(0, mobpresent - 1)
-		update_nearby_canopies()
+		update_icon()
 	return ..()
 
-/obj/structure/trench/proc/has_nearby_mob()
-	if(mobpresent)
-		return TRUE
-	for(var/obj/structure/trench/trench in range(8, src))
-		if(trench.mobpresent)
-			return TRUE
-	return FALSE
-
-/obj/structure/trench/proc/update_nearby_canopies()
-	update_icon()
-	for(var/obj/structure/trench/trench in range(8, src))
-		trench.update_icon()
-
 /obj/structure/trench/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/tool/shovel) && user.a_intent != INTENT_HARM)
-		var/obj/item/tool/shovel/shovel = item
-		if(shovel.folded)
-			to_chat(user, SPAN_WARNING("The shovel must be unfolded to deconstruct [src]."))
-			return TRUE
-		if(!shovel.dirt_amt)
-			to_chat(user, SPAN_WARNING("The shovel must be filled with dirt to deconstruct [src]."))
-			return TRUE
-		if(user.action_busy)
-			return TRUE
-		user.visible_message(
-			SPAN_NOTICE("[user] starts filling in [src] with [shovel]."),
-			SPAN_NOTICE("You start filling in [src] with [shovel].")
-		)
-		playsound(user.loc, "rustle", 30, 1, 6)
-		if(!do_after(user, shovel.shovelspeed * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src))
-			return TRUE
-		if(!shovel.dirt_amt)
-			return TRUE
-		shovel.dirt_amt = 0
-		shovel.check_dirt_type()
-		shovel.update_icon()
-		user.visible_message(
-			SPAN_NOTICE("[user] fills in [src] with [shovel]."),
-			SPAN_NOTICE("You fill in [src] with [shovel].")
-		)
-		new /obj/item/stack/sheet/wood(get_turf(src), 6)
-		deconstruct(TRUE)
-		return TRUE
-
 	if(!istype(item, /obj/item/stack/sheet/wood))
 		return ..()
 
@@ -289,16 +260,11 @@
 		"Camo netting(Desert) (1x wood)",
 		"Camo netting (Snow) (1x wood)",
 		"Tarp(Urban) (1x wood)",
-		"Tarp(Jungle) (1x wood)",
+		"Tarp(Jungle) (1xwood)",
 		"Tarp(Desert) (1x wood)",
 		"Tarp(Snow) (1x wood)",
 		"Remove canopy"
 	)
-	var/obj/structure/trench/long_bridge_partner = get_long_bridge_partner()
-	if(long_bridge_partner)
-		upgrade_options += "Vehicle bridge (16x wood)"
-	else if(has_opposing_ramps())
-		upgrade_options += "Vehicle bridge (8x wood)"
 	if(!istype(src, /obj/structure/trench/dugout))
 		upgrade_options += "Build dugout (20x wood)"
 	var/canopy_choice = tgui_input_list(user, "Choose an upgrade for [src].", "select upgrade", upgrade_options)
@@ -320,23 +286,10 @@
 	if(canopy_choice == "Remove canopy")
 		if(Canopy)
 			Canopy = null
+			qdel(canopy_roof)
+			canopy_roof = null
 			new /obj/item/stack/sheet/wood(get_turf(src))
 			update_icon()
-		return TRUE
-
-	if(canopy_choice == "Vehicle bridge (8x wood)" || canopy_choice == "Vehicle bridge (16x wood)")
-		var/obj/item/stack/sheet/wood/bridge_wood = item
-		var/bridge_cost = canopy_choice == "Vehicle bridge (16x wood)" ? 16 : 8
-		if(!bridge_wood.use(bridge_cost))
-			to_chat(user, SPAN_WARNING("You need [bridge_cost] wood to build a vehicle bridge on [src]."))
-			return TRUE
-		vehicle_bridge = TRUE
-		Canopy = null
-		update_icon()
-		if(long_bridge_partner)
-			long_bridge_partner.vehicle_bridge = TRUE
-			long_bridge_partner.Canopy = null
-			long_bridge_partner.update_icon()
 		return TRUE
 
 	var/obj/item/stack/sheet/wood/wood = item
@@ -357,12 +310,15 @@
 			Canopy = list("trench_netting", "#d8dedf")
 		if("Tarp(Urban) (1x wood)")
 			Canopy = list("trench_canopy", "#555555")
-		if("Tarp(Jungle) (1x wood)")
+		if("Tarp(Jungle) (1xwood)")
 			Canopy = list("trench_canopy", "#344d2b")
 		if("Tarp(Desert) (1x wood)")
 			Canopy = list("trench_canopy", "#8f693f")
 		if("Tarp(Snow) (1x wood)")
 			Canopy = list("trench_canopy", "#b8c4c9")
+	if(canopy_roof)
+		qdel(canopy_roof)
+	canopy_roof = new /obj/structure/roof/trench_canopy(get_turf(src), Canopy[1], Canopy[2])
 	update_icon()
 	return TRUE
 
@@ -382,7 +338,7 @@
 	if(adjacent_trenches.Find("S") == 0)
 		overlays += image(icon = icon, icon_state = "dugout_south", layer = ABOVE_MOB_LAYER + 0.03)
 	var/image/roof_overlay = image(icon = icon, icon_state = "dugout_roof", layer = ABOVE_MOB_LAYER + 0.04)
-	roof_overlay.alpha = has_nearby_mob() ? 100 : 255
+	roof_overlay.alpha = mobpresent ? 100 : 255
 	overlays += roof_overlay
 
 /obj/structure/trench/proc/remove_wall(direction)
@@ -482,65 +438,6 @@
 		src.overlays += image(icon = icon,icon_state = "wall_west",layer=BETWEEN_OBJECT_ITEM_LAYER + 0.02)
 	if(adjacent_trenches.Find("S") == 0)
 		src.overlays += image(icon = icon,icon_state = "wall_south",layer=ABOVE_MOB_LAYER + 0.03)
-	if(vehicle_bridge)
-		var/obj/structure/trench/long_bridge_partner = get_long_bridge_partner()
-		if(long_bridge_partner)
-			var/long_bridge_direction = long_bridge_partner.x > x ? EAST : long_bridge_partner.x < x ? WEST : long_bridge_partner.y > y ? NORTH : SOUTH
-			var/long_bridge_ramp_direction = reverse_direction(long_bridge_direction)
-			var/long_bridge_icon = bridge_wall_icon_state(long_bridge_ramp_direction)
-			src.overlays += image(icon = icon, icon_state = "wall_[long_bridge_icon]", layer = bridge_wall_layer(long_bridge_ramp_direction))
-			src.overlays += image(icon = icon, icon_state = "trench_bridge_[long_bridge_icon]", layer = ABOVE_MOB_LAYER - 0.01)
-		else
-			for(var/direction in CARDINAL_DIRS)
-				if(locate(/obj/structure/trench_ramp) in get_step(src, direction))
-					var/bridge_direction = bridge_wall_icon_state(direction)
-					src.overlays += image(icon = icon, icon_state = "wall_[bridge_direction]", layer = bridge_wall_layer(direction))
-					src.overlays += image(icon = icon, icon_state = "trench_bridge_[bridge_direction]", layer = ABOVE_MOB_LAYER - 0.01)
-	else if(Canopy)
-		var/image/canopy_overlay = image(icon = icon, icon_state = Canopy[1], layer = ABOVE_MOB_LAYER - 0.01)
-		canopy_overlay.color = Canopy[2]
-		canopy_overlay.alpha = has_nearby_mob() ? 100 : 255
-		src.overlays += canopy_overlay
-
-/obj/structure/trench/proc/has_opposing_ramps()
-	return (get_ramp_at(NORTH) && get_ramp_at(SOUTH)) || (get_ramp_at(EAST) && get_ramp_at(WEST))
-
-/obj/structure/trench/proc/get_ramp_at(direction)
-	var/turf/adjacent_turf = get_step(src, direction)
-	for(var/obj/structure/trench_ramp/ramp in adjacent_turf)
-		return ramp
-	return null
-
-/obj/structure/trench/proc/get_long_bridge_partner()
-	for(var/direction in CARDINAL_DIRS)
-		var/obj/structure/trench/adjacent_trench = locate(/obj/structure/trench, get_step(src, direction))
-		if(!adjacent_trench)
-			continue
-		if(!get_ramp_at(reverse_direction(direction)))
-			continue
-		if(!adjacent_trench.get_ramp_at(direction))
-			continue
-		return adjacent_trench
-	return null
-
-/obj/structure/trench/proc/bridge_wall_icon_state(direction)
-	switch(direction)
-		if(NORTH)
-			return "north"
-		if(EAST)
-			return "east"
-		if(SOUTH)
-			return "south"
-		if(WEST)
-			return "west"
-
-/obj/structure/trench/proc/bridge_wall_layer(direction)
-	if(direction == SOUTH)
-		return ABOVE_MOB_LAYER + 0.03
-	if(direction == NORTH)
-		return BETWEEN_OBJECT_ITEM_LAYER + 0.01
-	return BETWEEN_OBJECT_ITEM_LAYER + 0.02
-
 /obj/structure/trench/proc/sync_platforms(atom/ignored_connection)
 	for(var/direction in CARDINAL_DIRS)
 		var/turf/adjacent_turf = get_step(src, direction)
@@ -594,6 +491,10 @@
 		sync_platforms()
 
 /obj/structure/trench/Destroy()
+	if(canopy_roof)
+		qdel(canopy_roof)
+		canopy_roof = null
+
 	for(var/obj/structure/platform/stone/trench/platform in loc)
 		qdel(platform)
 
@@ -624,35 +525,6 @@
 	var/list/adjacent_trenches = list()
 
 /obj/structure/trench_ramp/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/tool/shovel) && user.a_intent != INTENT_HARM)
-		var/obj/item/tool/shovel/shovel = item
-		if(shovel.folded)
-			to_chat(user, SPAN_WARNING("The shovel must be unfolded to fill in [src]."))
-			return TRUE
-		if(!shovel.dirt_amt)
-			to_chat(user, SPAN_WARNING("The shovel must be filled with dirt to fill in [src]."))
-			return TRUE
-		if(user.action_busy)
-			return TRUE
-		user.visible_message(
-			SPAN_NOTICE("[user] starts filling in [src] with [shovel]."),
-			SPAN_NOTICE("You start filling in [src] with [shovel].")
-		)
-		playsound(user.loc, "rustle", 30, 1, 6)
-		if(!do_after(user, shovel.shovelspeed * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src))
-			return TRUE
-		if(!shovel.dirt_amt)
-			return TRUE
-		shovel.dirt_amt = 0
-		shovel.check_dirt_type()
-		shovel.update_icon()
-		user.visible_message(
-			SPAN_NOTICE("[user] fills in [src] with [shovel]."),
-			SPAN_NOTICE("You fill in [src] with [shovel].")
-		)
-		deconstruct(TRUE)
-		return TRUE
-
 	if(HAS_TRAIT(item, TRAIT_TOOL_SCREWDRIVER))
 		playsound(src, 'sound/items/Screwdriver.ogg', 25, 1)
 		user.visible_message("[user] rotates [src].", "You rotate [src].")
@@ -663,22 +535,8 @@
 			if(neighbor)
 				neighbor.check_neighbors()
 				neighbor.sync_platforms()
-			var/obj/structure/trench_ramp/adjacent_ramp = locate(/obj/structure/trench_ramp, get_step(src, direction))
-			if(adjacent_ramp)
-				adjacent_ramp.check_neighbors()
 		return
 	return ..()
-
-/obj/structure/trench_ramp/deconstruct(disassembled = TRUE)
-	var/ramp_dir = dir
-	var/turf/ramp_turf = get_turf(src)
-	if(disassembled)
-		new /obj/item/stack/sheet/wood(ramp_turf, 4)
-	qdel(src)
-	if(disassembled)
-		var/obj/structure/platform/stone/trench/berm = new(ramp_turf)
-		berm.setDir(ramp_dir)
-		berm.update_icon()
 
 /obj/structure/trench_ramp/Initialize(mapload, ramp_dir)
 	if(ramp_dir)
@@ -690,16 +548,11 @@
 		if(neighbor)
 			neighbor.remove_wall(trench_direction_name(reverse_direction(direction)))
 			neighbor.sync_platforms()
-		var/obj/structure/trench_ramp/adjacent_ramp = locate(/obj/structure/trench_ramp, get_step(src, direction))
-		if(adjacent_ramp)
-			adjacent_ramp.check_neighbors(src)
 
-/obj/structure/trench_ramp/proc/check_neighbors(obj/structure/trench_ramp/ignored_ramp)
+/obj/structure/trench_ramp/proc/check_neighbors()
 	adjacent_trenches.Cut()
 	for(var/direction in list(turn(dir, 90), turn(dir, -90)))
-		var/turf/adjacent_turf = get_step(src, direction)
-		var/obj/structure/trench_ramp/adjacent_ramp = locate(/obj/structure/trench_ramp, adjacent_turf)
-		if(locate(/obj/structure/trench) in adjacent_turf || (adjacent_ramp && adjacent_ramp != ignored_ramp))
+		if(locate(/obj/structure/trench) in get_step(src, direction) || locate(/obj/structure/trench_ramp) in get_step(src, direction))
 			adjacent_trenches += trench_direction_name(direction)
 	update_icon()
 
@@ -708,9 +561,9 @@
 	var/left_direction = trench_direction_name(turn(dir, 90))
 	var/right_direction = trench_direction_name(turn(dir, -90))
 	if(adjacent_trenches.Find(left_direction) == 0)
-		overlays += image(icon = icon, icon_state = "wall_[trench_wall_icon_state(left_direction)]", layer = trench_wall_layer(left_direction))
+		overlays += image(icon = icon, icon_state = "wall_[trench_wall_icon_state(left_direction)]", layer = BETWEEN_OBJECT_ITEM_LAYER + 0.01)
 	if(adjacent_trenches.Find(right_direction) == 0)
-		overlays += image(icon = icon, icon_state = "wall_[trench_wall_icon_state(right_direction)]", layer = trench_wall_layer(right_direction))
+		overlays += image(icon = icon, icon_state = "wall_[trench_wall_icon_state(right_direction)]", layer = BETWEEN_OBJECT_ITEM_LAYER + 0.02)
 
 /obj/structure/trench_ramp/proc/trench_wall_icon_state(direction)
 	switch(direction)
@@ -723,22 +576,12 @@
 		if("W")
 			return "west"
 
-/obj/structure/trench_ramp/proc/trench_wall_layer(direction)
-	if(direction == "S")
-		return ABOVE_MOB_LAYER + 0.03
-	if(direction == "N")
-		return BETWEEN_OBJECT_ITEM_LAYER + 0.01
-	return BETWEEN_OBJECT_ITEM_LAYER + 0.02
-
 /obj/structure/trench_ramp/Destroy()
 	for(var/direction in CARDINAL_DIRS)
 		var/obj/structure/trench/neighbor = locate(/obj/structure/trench, get_step(src, direction))
 		if(neighbor)
 			neighbor.add_wall(trench_direction_name(reverse_direction(direction)))
 			neighbor.sync_platforms(src)
-		var/obj/structure/trench_ramp/adjacent_ramp = locate(/obj/structure/trench_ramp, get_step(src, direction))
-		if(adjacent_ramp)
-			adjacent_ramp.check_neighbors(src)
 	return ..()
 
 /obj/structure/trench_ramp/proc/trench_direction_name(direction)
