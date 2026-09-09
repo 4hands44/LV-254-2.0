@@ -39,7 +39,6 @@
 	..()
 	toggle()
 
-
 /obj/item/clothing/head/welding/verb/toggle()
 	set category = "Object"
 	set name = "Adjust welding mask"

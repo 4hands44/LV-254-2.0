@@ -48,7 +48,7 @@
 	G.handle_retrieval(user, retrieval_slot)
 
 /datum/element/drop_retrieval/pouch_sling
-	compatible_types = list(/obj/item/device, /obj/item/tool)
+	compatible_types = list(/obj/item/device, /obj/item/tool, /obj/item/weapon/twohanded/breacher)
 	var/obj/item/storage/pouch/sling/container
 
 /datum/element/drop_retrieval/pouch_sling/Attach(datum/target, obj/item/storage/pouch/sling/new_container)

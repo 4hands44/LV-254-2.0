@@ -402,15 +402,24 @@
 	force_wielded = MELEE_FORCE_ABSURD
 	really_heavy = TRUE
 
-/obj/item/weapon/twohanded/breacher/tagrilla/pickup(mob/user)
+/obj/item/weapon/twohanded/breacher/tagrilla/pickup(mob/user, mob/living/M)
 	if(!(HAS_TRAIT(user, TRAIT_TAGRILLA)))
 		to_chat(user, SPAN_HIGHDANGER("You barely manage to lift [src] above your feet, your knees quivering and your arms shaking dangerously, it's probably a good idea to set this down before you hurt yourself."))
-		user.apply_effect(4, EYE_BLUR, SUPERSLOW, WEAKEN)
+		user.apply_effect(10, EYE_BLUR)
+		user.apply_effect(10, SUPERSLOW)
+	else
+		M.apply_effect(5, EYE_BLUR)
+		M.apply_effect(2, SLOW)
+		M.apply_effect(10, STUTTER)
+		M.apply_effect(10, DAZE)
+		M.apply_effect(5, WEAKEN)
+		shake_camera(M, 1, 2)
 		return
-	..()
+	. = ..()
 
 /obj/item/weapon/twohanded/breacher/tagrilla/attack(target as mob, mob/living/user as mob)
 	if(!HAS_TRAIT(user, TRAIT_TAGRILLA))
 		to_chat(user, SPAN_WARNING("\The [src] is far too heavy for you to use as a weapon!"))
 		return
 	. = ..()
+

@@ -1614,8 +1614,7 @@
 	item_icons = list(
 		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/melee_weapons.dmi',
 		)
-	can_hold = list(/obj/item/weapon/twohanded/breacher,/obj/item/weapon/twohanded/breacher/synth)
-	sling_range = 2
+	can_hold = list(/obj/item/weapon/twohanded/breacher)
 
 /obj/item/storage/pouch/sling/sledge/breacher/fill_preset_inventory()
 	new /obj/item/weapon/twohanded/breacher(src)
@@ -1623,12 +1622,7 @@
 /obj/item/storage/pouch/sling/sledge/synth/fill_preset_inventory()
 	new /obj/item/weapon/twohanded/breacher/synth(src)
 
-// special unstrippable tagrilla version
-/obj/item/storage/pouch/sling/sledge/tagrilla
-	can_hold = list(/obj/item/weapon/twohanded/breacher/tagrilla)
-	sling_range = 99
-
-/obj/item/storage/pouch/sling/sledge/tagrilla/full/fill_preset_inventory()
+/obj/item/storage/pouch/sling/sledge/tagrilla/fill_preset_inventory()
 	new /obj/item/weapon/twohanded/breacher/tagrilla(src)
 
 /obj/item/storage/pouch/cassette

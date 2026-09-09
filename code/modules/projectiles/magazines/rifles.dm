@@ -783,6 +783,44 @@
 	gun_type = /obj/item/weapon/gun/rifle/xm51/cmb
 	default_ammo = /datum/ammo/bullet/shotgun/light/rubber
 
+
+//--------------------------------------------------------
+//Type 24 HEAVY SHOTGUN
+
+/obj/item/ammo_magazine/rifle/type24
+	name = "\improper Type 24 drum magazine (8g)"
+	desc = "An 12-round, 8-gauge shotgun drum magazine, used by the Type 24 assault shotgun."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/shotguns.dmi'
+	icon_state = "type24"
+	caliber = "8g"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
+	max_rounds = 12
+	gun_type = /obj/item/weapon/gun/rifle/type24
+	transfer_handful_amount = 4
+	ammo_band_icon = "+type24_band"
+	ammo_band_icon_empty = "+type24_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+/obj/item/ammo_magazine/rifle/type24/slug
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/type24/flechette
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/flechette
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+/obj/item/ammo_magazine/rifle/type24/beanbag
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+/obj/item/ammo_magazine/rifle/type24/dragonsbreath
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+//--------------------------------------------------------
+//XM99 PLASMA GUN
+
 /obj/item/ammo_magazine/rifle/xm99a
 	name = "\improper XM99A1 Canister (pellets)"
 	desc = "A canister of cadmium pellets."
