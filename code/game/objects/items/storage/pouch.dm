@@ -1615,6 +1615,23 @@
 		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/melee_weapons.dmi',
 		)
 	can_hold = list(/obj/item/weapon/twohanded/breacher)
+	var/base_icon
+
+/obj/item/storage/pouch/sling/sledge/post_skin_selection()
+	base_icon = icon_state
+
+/obj/item/storage/pouch/sling/sledge/update_icon()
+	if(length(contents))
+		icon_state = "[base_icon]_full"
+	else
+		icon_state = base_icon
+
+	item_state = icon_state
+
+	var/mob/living/carbon/human/user = loc
+	if(istype(user))
+		if(src == user.back)
+			user.update_inv_back()
 
 /obj/item/storage/pouch/sling/sledge/breacher/fill_preset_inventory()
 	new /obj/item/weapon/twohanded/breacher(src)

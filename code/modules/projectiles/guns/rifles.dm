@@ -1805,6 +1805,13 @@
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
 
+
+/obj/item/weapon/gun/rifle/type71/tagrilla
+	random_spawn_chance = 0
+	random_rail_chance = 0
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/lasersight)
+
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
 	desc = " This appears to be a less common variant of the Type 71 with an integrated flamethrower that seems especially powerful."
@@ -1970,7 +1977,7 @@
 
 /obj/item/weapon/gun/rifle/ak4047
 	name = "\improper AK–4047 pulse rifle"
-	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap bulky but, lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
+	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap and lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/assault_rifles.dmi'
 	icon_state = "ak84s"
 	item_state = "ak84s"
@@ -3197,4 +3204,5 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/type23, /obj/item/attachable/verticalgrip)
 
 /obj/item/weapon/gun/rifle/type24/tagrilla
+	current_mag = /obj/item/ammo_magazine/rifle/type24/slug
 	starting_attachment_types = list(/obj/item/attachable/stock/type23, /obj/item/attachable/verticalgrip, /obj/item/attachable/magnetic_harness)
