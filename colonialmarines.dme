@@ -2371,6 +2371,7 @@
 #include "code\modules\projectiles\guns\energy.dm"
 #include "code\modules\projectiles\guns\flare_gun.dm"
 #include "code\modules\projectiles\guns\lever_action.dm"
+#include "code\modules\projectiles\guns\m78_pig.dm"
 #include "code\modules\projectiles\guns\misc.dm"
 #include "code\modules\projectiles\guns\pistols.dm"
 #include "code\modules\projectiles\guns\plasma.dm"

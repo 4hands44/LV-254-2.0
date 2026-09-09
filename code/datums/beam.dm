@@ -155,9 +155,16 @@
 	if(! (prob(probability) && ishuman(AM)) )
 		return
 	var/mob/living/carbon/human/moving_human = AM
+	var/datum/internal_organ/eyes/E = moving_human.internal_organs_by_name["eyes"]
 	var/laser_protection = moving_human.get_eye_protection()
 	var/rand_laser_power = rand(EYE_PROTECTION_FLAVOR, strength)
 	if(rand_laser_power > laser_protection)
+		if(strength == EYE_PROTECTION_WELDING)
+			INVOKE_ASYNC(moving_human, /mob/proc/emote, "pain")
+			moving_human.AdjustEyeBlur(12,20)
+			E.take_damage(rand(15, 25), TRUE)
+			visible_message(SPAN_DANGER("[moving_human] screams out in pain as \the [src] sears their eyes!"), SPAN_NOTICE("Aurgh!!! \The [src] flashes across your unprotected eyes for a split-second, blinding you!"))
+			return
 		//ouch!
 		INVOKE_ASYNC(moving_human, /mob/proc/emote, "pain")
 		visible_message(SPAN_DANGER("[moving_human] screams out in pain as \the [src] moves across their eyes!"), SPAN_NOTICE("Aurgh!!! \The [src] moves across your unprotected eyes for a split-second!"))
@@ -181,13 +188,19 @@
 	strength = EYE_PROTECTION_FLAVOR
 	probability = 5
 
+/obj/effect/ebeam/laser/plasma
+	name = "intense plasma beam"
+	alpha = 255
+	strength = EYE_PROTECTION_WELDING
+	probability = 80
+
 /obj/effect/ebeam/Destroy()
 	owner = null
 	return ..()
 
 /obj/effect/overlay/beam //Not actually a projectile, just an effect.
 	name="beam"
-	icon = 'icons/effects/beam.dmi'
+	icon='icons/effects/beam.dmi'
 	icon_state="b_beam"
 	mouse_opacity = FALSE
 
@@ -209,7 +222,7 @@
  * maxdistance: how far the beam will go before stopping itself. Used mainly for two things: preventing lag if the beam may go in that direction and setting a range to abilities that use beams.
  * beam_type: The type of your custom beam. This is for adding other wacky stuff for your beam only. Most likely, you won't (and shouldn't) change it.
  */
-/atom/proc/beam(atom/BeamTarget, icon_state="b_beam", icon = 'icons/effects/beam.dmi', time = BEAM_INFINITE_DURATION, maxdistance = INFINITY, beam_type=/obj/effect/ebeam, always_turn = TRUE)
+/atom/proc/beam(atom/BeamTarget, icon_state="b_beam", icon='icons/effects/beam.dmi', time = BEAM_INFINITE_DURATION, maxdistance = INFINITY, beam_type=/obj/effect/ebeam, always_turn = TRUE)
 	var/datum/beam/newbeam = new(src, BeamTarget, icon, icon_state, time, maxdistance, beam_type, always_turn)
 	INVOKE_ASYNC(newbeam, TYPE_PROC_REF(/datum/beam, Start))
 	return newbeam
