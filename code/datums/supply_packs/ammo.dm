@@ -346,10 +346,10 @@
 /datum/supply_packs/ammo_smartgun_battery_pack
 	name = "M56 smartgun battery crate (x4)"
 	contains = list(
-		/obj/item/smartgun_battery,
-		/obj/item/smartgun_battery,
-		/obj/item/smartgun_battery,
-		/obj/item/smartgun_battery,
+		/obj/item/heavygun_battery,
+		/obj/item/heavygun_battery,
+		/obj/item/heavygun_battery,
+		/obj/item/heavygun_battery,
 	)
 	cost = 40
 	containertype = /obj/structure/closet/crate/ammo

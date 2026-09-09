@@ -181,8 +181,28 @@
 	var/list/adjacent_trenches = list()
 	var/modifies_adjacent = 1 // Set this flag to 0 on children to prevent icon redrawing on creation/destruction
 	var/Canopy = null
+	var/obj/structure/roof/trench_canopy/canopy_roof
 	var/mobpresent = 0
 	var/maxhealth = 10000
+
+/obj/structure/roof/trench_canopy
+	icon = 'icons/obj/structures/trenches.dmi'
+	layer = ABOVE_MOB_LAYER + 0.04
+
+/obj/structure/roof/trench_canopy/Initialize(mapload, canopy_icon_state, canopy_color)
+	icon_state = canopy_icon_state
+	. = ..()
+	under_image.alpha = 100
+	normal_image.color = canopy_color
+	under_image.color = canopy_color
+
+/obj/structure/roof/trench_canopy/LateInitialize()
+	. = ..()
+	if(!linked_master)
+		return
+	for(var/obj/effect/roof_node/node in linked_master.connected_nodes)
+		for(var/mob/living/living in node.loc)
+			linked_master.add_under_roof(living)
 
 /obj/structure/trench/proc/update_adjacent_berm_health(damage, nomessage)
 	for(var/direction in CARDINAL_DIRS)
@@ -251,7 +271,7 @@
 	if(!canopy_choice)
 		return
 
-	if(canopy_choice == "Build dugout (20 wood)")
+	if(canopy_choice == "Build dugout (20x wood)")
 		var/obj/item/stack/sheet/wood/wood = item
 		if(!wood.use(20))
 			to_chat(user, SPAN_WARNING("You need 20 wood to build [src] into a dugout."))
@@ -263,9 +283,11 @@
 		dugout.setDir(dugout_dir)
 		return TRUE
 
-	if(canopy_choice == "Remove canopy (refund 1 wood)")
+	if(canopy_choice == "Remove canopy")
 		if(Canopy)
 			Canopy = null
+			qdel(canopy_roof)
+			canopy_roof = null
 			new /obj/item/stack/sheet/wood(get_turf(src))
 			update_icon()
 		return TRUE
@@ -282,18 +304,21 @@
 			Canopy = list("trench_netting", "#4f6b35")
 		if("Camo netting(Urban) (1x wood)")
 			Canopy = list("trench_netting", "#777777")
-		if("Camo netting(Desert) (1 wood)")
+		if("Camo netting(Desert) (1x wood)")
 			Canopy = list("trench_netting", "#b98a52")
-		if("Camo netting Snow) (1x wood)")
+		if("Camo netting (Snow) (1x wood)")
 			Canopy = list("trench_netting", "#d8dedf")
 		if("Tarp(Urban) (1x wood)")
 			Canopy = list("trench_canopy", "#555555")
-		if("Tarp(Jungle) (1x wood)")
+		if("Tarp(Jungle) (1xwood)")
 			Canopy = list("trench_canopy", "#344d2b")
 		if("Tarp(Desert) (1x wood)")
 			Canopy = list("trench_canopy", "#8f693f")
 		if("Tarp(Snow) (1x wood)")
 			Canopy = list("trench_canopy", "#b8c4c9")
+	if(canopy_roof)
+		qdel(canopy_roof)
+	canopy_roof = new /obj/structure/roof/trench_canopy(get_turf(src), Canopy[1], Canopy[2])
 	update_icon()
 	return TRUE
 
@@ -413,12 +438,6 @@
 		src.overlays += image(icon = icon,icon_state = "wall_west",layer=BETWEEN_OBJECT_ITEM_LAYER + 0.02)
 	if(adjacent_trenches.Find("S") == 0)
 		src.overlays += image(icon = icon,icon_state = "wall_south",layer=ABOVE_MOB_LAYER + 0.03)
-	if(Canopy)
-		var/image/canopy_overlay = image(icon = icon, icon_state = Canopy[1], layer = ABOVE_MOB_LAYER + 0.04)
-		canopy_overlay.color = Canopy[2]
-		canopy_overlay.alpha = mobpresent ? 100 : 255
-		src.overlays += canopy_overlay
-
 /obj/structure/trench/proc/sync_platforms(atom/ignored_connection)
 	for(var/direction in CARDINAL_DIRS)
 		var/turf/adjacent_turf = get_step(src, direction)
@@ -472,6 +491,10 @@
 		sync_platforms()
 
 /obj/structure/trench/Destroy()
+	if(canopy_roof)
+		qdel(canopy_roof)
+		canopy_roof = null
+
 	for(var/obj/structure/platform/stone/trench/platform in loc)
 		qdel(platform)
 

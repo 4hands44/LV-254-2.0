@@ -11,7 +11,7 @@
 	black_market_value = 35
 	var/obj/item/charging = null
 	var/percent_charge_complete = 0
-	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy, /obj/item/device/defibrillator, /obj/item/tool/portadialysis, /obj/item/clothing/suit/auto_cpr, /obj/item/smartgun_battery, /obj/item/device/helmet_visor/night_vision)
+	var/list/allowed_devices = list(/obj/item/weapon/baton, /obj/item/cell, /obj/item/weapon/gun/energy, /obj/item/device/defibrillator, /obj/item/tool/portadialysis, /obj/item/clothing/suit/auto_cpr, /obj/item/heavygun_battery, /obj/item/device/helmet_visor/night_vision)
 
 	var/charge_amount = 1000
 
@@ -166,8 +166,8 @@
 				update_icon()
 			return
 
-		if(istype(charging, /obj/item/smartgun_battery))
-			var/obj/item/smartgun_battery/charging_smartgun_battery = charging
+		if(istype(charging, /obj/item/heavygun_battery))
+			var/obj/item/heavygun_battery/charging_smartgun_battery = charging
 			if(charging_smartgun_battery.power_cell)
 				if(!charging_smartgun_battery.power_cell.fully_charged())
 					charging_smartgun_battery.power_cell.give(charge_amount)
