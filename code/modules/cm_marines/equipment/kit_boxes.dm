@@ -277,8 +277,58 @@
 	new /obj/item/mortar_shell/flare(src)
 	new /obj/item/mortar_shell/flare(src)
 	new /obj/item/tool/wrench(src)
-	new /obj/item/device/binoculars/range(src)
-	new /obj/item/device/binoculars/range(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
+/obj/item/storage/box/spec/pig_operator
+	name = "\improper PIG Operator equipment case"
+	desc = "A large case containing a Phases Infantry Plasma Gun (PIG) and the nessary equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "demo"
+
+/obj/item/storage/box/spec/pig_operator/fill_preset_inventory()
+	new /obj/item/clothing/suit/storage/marine/M3T(src)
+	new /obj/item/clothing/head/helmet/marine/M3T(src)
+	new /obj/item/clothing/glasses/sunglasses/big(src)
+
+	new /obj/item/pig_backpack(src)
+
+	new /obj/item/heavygun_battery(src)
+	new /obj/item/heavygun_battery(src)
+
+	new /obj/item/ammo_magazine/m78_pig(src)
+	new /obj/item/ammo_magazine/m78_pig(src)
+
+	new /obj/item/storage/box/kit/pig_assistant (src)
+
+
+
+/obj/item/storage/box/kit/pig_assistant
+	name = "\improper PIG assistant operator Kit"
+	desc = "A large kit containing all the supplies needed to equip the loading assistant for a PIG Operator."
+	pro_case_overlay = "loader"
+
+/obj/item/storage/box/kit/pig_assistant/fill_preset_inventory()
+	// wearables
+	new /obj/item/clothing/suit/storage/marine/M3T(src)
+	new /obj/item/clothing/head/helmet/marine/M3T(src)
+	new /obj/item/clothing/glasses/sunglasses/big(src)
+	new /obj/item/storage/backpack/marine/satchel/big(src)
+
+	// a little bit of extra ammo
+	new /obj/item/heavygun_battery(src)
+	new /obj/item/heavygun_battery(src)
+	new /obj/item/heavygun_battery(src)
+	new /obj/item/heavygun_battery(src)
+
+	new /obj/item/ammo_magazine/m78_pig(src)
+	new /obj/item/ammo_magazine/m78_pig(src)
+	new /obj/item/ammo_magazine/m78_pig(src)
+
+	// equipment
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/device/binoculars(src)
 
 /obj/item/storage/box/spec/clf/sniper
 	name = "\improper Sniper equipment case"

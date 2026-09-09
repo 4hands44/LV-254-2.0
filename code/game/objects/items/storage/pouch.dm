@@ -1314,7 +1314,7 @@
 		/obj/item/stock_parts/micro_laser,
 		/obj/item/stock_parts/scanning_module,
 		/obj/item/stock_parts/capacitor,
-		/obj/item/smartgun_battery,
+		/obj/item/heavygun_battery,
 	)
 
 /obj/item/storage/pouch/electronics/full/fill_preset_inventory()

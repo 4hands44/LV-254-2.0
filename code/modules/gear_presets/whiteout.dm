@@ -502,8 +502,8 @@
 	//jacket
 	var/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/armor = new()
 	new_human.equip_to_slot_or_del(armor, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/smartgun_battery, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/smartgun_battery, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/heavygun_battery, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/heavygun_battery, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78/incendiary, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/dirty/elite, WEAR_J_STORE)

@@ -2,37 +2,52 @@
  * M78 PIG energy weapon
  */
 
-/datum/ammo/energy/m78_pig
-	name = "cadmium telluride pellet"
+/datum/ammo/bullet/rifle/m78_pig
+	name = "plasma beam"
 	damage = 500
 	damage_type = BURN
-	max_range = 14
-	accurate_range = 14
-	shell_speed = AMMO_SPEED_TIER_3
-	debilitate = list(0, 0, 0, 0, 0, 12, 0, 0)
+	penetration = ARMOR_PENETRATION_TIER_10
+	max_range = 24
+	accurate_range = 24
+	shell_speed = 500
+	var/at_dmg_mult = 3
 
-/datum/ammo/energy/m78_pig/on_hit_mob(mob/living/target, obj/projectile/P)
+/datum/ammo/bullet/rifle/m78_pig/penetrating/set_bullet_traits()
 	. = ..()
-	if(!target)
-		return
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/rifle/m78_pig/on_hit_mob(mob/living/target, obj/projectile/P, mob/user)
+	. = ..()
 	ignite_impact(target, P)
+	user.visible_message(SPAN_BOLDWARNING("[src] sends burning debris flying off of the [target]!"))
+	create_shrapnel(get_turf(target), 5, 180, ,/datum/ammo/bullet/shrapnel/incendiary, P.weapon_cause_data)
+	create_shrapnel(get_turf(target), 5, 180, ,/datum/ammo/bullet/shrapnel/light/human, P.weapon_cause_data)
 
-/datum/ammo/energy/m78_pig/on_hit_obj(obj/O, obj/projectile/P)
-	. = ..()
-	if(!istype(O, /obj/vehicle/multitile))
-		return
-	var/obj/vehicle/multitile/vehicle = O
-	var/datum/cause_data/cause = create_cause_data("M78 PIG", P.firer)
-	vehicle.take_damage_type(damage, "abstract", P.firer)
-	new /obj/flamer_fire(get_turf(vehicle), cause)
+/datum/ammo/bullet/rifle/m78_pig/on_hit_obj(obj/O, obj/projectile/P, mob/user)
+	P.damage *= at_dmg_mult
+	cell_explosion(get_turf(O), 25, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
+	if(istype(O))
+		var/obj/vehicle/multitile/M = O
+		playsound(M, 'sound/effects/bang.ogg', 100)
+		M.plasma_munition_interior_bullet_effect(cause_data = create_cause_data("M78 PIG"))
+		M.ex_act(25, P.dir, P.weapon_cause_data, 10)
+	ignite_impact(O, P)
+	user.visible_message(SPAN_BOLDWARNING("[src] sends burning debris flying off of the [O]!"))
+	create_shrapnel(get_turf(O), 5, 180, ,/datum/ammo/bullet/shrapnel/incendiary, P.weapon_cause_data)
 
-/datum/ammo/energy/m78_pig/on_hit_turf(turf/T, obj/projectile/P)
+/datum/ammo/bullet/rifle/m78_pig/on_hit_turf(turf/T, obj/projectile/P, mob/user)
 	. = ..()
 	if(!T)
 		return
 	ignite_impact(T, P)
+	if(T.density)
+		cell_explosion(T, 25, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
+		user.visible_message(SPAN_BOLDWARNING("[src] sends burning debris flying off of the [T]!"))
+		create_shrapnel(get_turf(T), 5, 180, ,/datum/ammo/bullet/shrapnel/incendiary, P.weapon_cause_data)
 
-/datum/ammo/energy/m78_pig/proc/ignite_impact(atom/impact, obj/projectile/P)
+/datum/ammo/bullet/rifle/m78_pig/proc/ignite_impact(atom/impact, obj/projectile/P)
 	var/datum/cause_data/cause = create_cause_data("M78 PIG", P.firer)
 	impact.flamer_fire_act(BURN_LEVEL_TIER_4, cause)
 	new /obj/flamer_fire(get_turf(impact), cause)
@@ -43,9 +58,10 @@
 /obj/item/ammo_magazine/m78_pig
 	name = "M78 PIG pellet magazine"
 	desc = "A 30-round magazine containing cadmium telluride pellets."
-	icon_state = "mag"
-	item_state = "mag"
-	default_ammo = /datum/ammo/energy/m78_pig
+	icon_state = "m57"
+	item_state = "m57"
+	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS
+	default_ammo = /datum/ammo/bullet/rifle/m78_pig
 	caliber = "cadmium telluride"
 	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/m78_pig
@@ -53,33 +69,39 @@
 
 /obj/item/weapon/gun/m78_pig
 	name = "\improper M78 PIG"
-	desc = "A backpack-powered energy weapon that fires blinding cadmium telluride beams."
+	desc = "The M78 Phased-Plasma Infantry Gun (PIG) is an man-portable anti-armor weapon used by the United States Colonial Marine Corps that employs a vaporized plasma laser to burn through armor. Most marines enjoy the power of the weapon, but prefer the m5 rpg due to the PIG's exteme weight."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi'
-	icon_state = "m5"
-	item_state = "m5"
+	icon_state = "m78"
+	item_state = "m78"
 	item_icons = list(
-		WEAR_BACK = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/rocket_launchers.dmi',
 		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/rocket_launchers.dmi',
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/rocket_launchers_lefthand.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/rocket_launchers_righthand.dmi'
 	)
 	current_mag = /obj/item/ammo_magazine/m78_pig
-	ammo = /datum/ammo/energy/m78_pig
+	ammo = /datum/ammo/bullet/rifle/m78_pig
 	projectile_type = /obj/projectile/beam/m78_pig
-	fire_sound = 'sound/weapons/emitter2.ogg'
-	muzzle_flash = null
+	fire_sound = 'sound/weapons/m78_pig.ogg'
+	reload_sound = 'sound/weapons/shell_load4.ogg'
+	muzzle_flash_color = COLOR_STRONG_VIOLET
+	unacidable = TRUE
+	explo_proof = TRUE
 	w_class = SIZE_HUGE
+	gun_category = GUN_CATEGORY_HEAVY
 	flags_equip_slot = NO_FLAGS
+	accuracy_mult = 2
+	scatter = 0
+	aim_slowdown = 4
 	flags_item = TWOHANDED|NO_CRYO_STORE
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_UNUSUAL_DESIGN
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
 	attachable_allowed = list(
-		/obj/item/attachable/scope/mini_iff
+		/obj/item/attachable/scope/variable_zoom
 	)
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini_iff
+		/obj/item/attachable/scope/variable_zoom
 	)
 	auto_retrieval_slot = WEAR_IN_BACK
-	gun_category = GUN_CATEGORY_RIFLE
+	gun_category = GUN_CATEGORY_HEAVY
 	wield_delay = WIELD_DELAY_HORRIBLE
 	delay_style = WEAPON_DELAY_NO_FIRE
 	caliber = "cadmium telluride"
@@ -93,6 +115,19 @@
 	var/beam_delay = 50
 	var/cooling_sound_cooldown = 0
 	var/datum/effects/tethering/tether_effect
+
+
+/obj/item/weapon/gun/m78_pig/apply_bullet_effects(obj/projectile/projectile_to_fire, mob/user, i = 1, reflex = 0)
+	. = ..()
+	if(!HAS_TRAIT(user, TRAIT_BIMEX|EYE_PROTECTION_FLASH|EYE_PROTECTION_WELDING) && ishuman(user))
+		var/mob/living/carbon/human/huser = user
+		var/datum/internal_organ/eyes/E = huser.internal_organs_by_name["eyes"]
+		INVOKE_ASYNC(user, /mob/proc/emote, "pain")
+		huser.AdjustEyeBlur(12,20)
+		E.take_damage(rand(15, 25), TRUE)
+		to_chat(user, SPAN_DANGER("The light from the [src] flashes across your unprotected eyes for a split-second, blinding you! Probably shoulda worn the included Eye protection in hindsight. But you know what they say hindsight is 20-20... uh, which yours isnt anymore."))
+		return
+
 
 /obj/item/weapon/gun/m78_pig/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -164,12 +199,12 @@
 	if(target)
 		var/turf/beam_end = get_turf(user)
 		var/beam_dir = get_dir(user, target)
-		for(var/i in 1 to 14)
+		for(var/i in 1 to 24)
 			var/turf/next_turf = get_step(beam_end, beam_dir)
 			if(!next_turf)
 				break
 			beam_end = next_turf
-		charge_beam = user.beam(beam_end, "laser_beam", 'icons/effects/beam.dmi', 1.1 SECONDS, 15, /obj/effect/ebeam/laser, TRUE)
+		charge_beam = user.beam(beam_end, "laser_beam", 'icons/effects/beam.dmi', 2.1 SECONDS, 15, /obj/effect/ebeam/laser, TRUE)
 		charge_beam.visuals.alpha = 0
 		charge_beam.visuals.color = COLOR_PURPLE
 		animate(charge_beam.visuals, alpha = initial(charge_beam.visuals.alpha), color = COLOR_PURPLE, time = 3 SECONDS, easing = SINE_EASING|EASE_OUT)
@@ -193,9 +228,6 @@
 		cell.charge -= power_cost
 		return chambered
 
-/obj/item/weapon/gun/m78_pig/apply_bullet_effects(obj/projectile/projectile_to_fire, mob/user, reflex = FALSE, dual_wield = FALSE)
-	. = ..()
-
 /obj/item/weapon/gun/m78_pig/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	if(!target || !user || world.time < beam_cooldown)
 		return
@@ -204,19 +236,21 @@
 
 	var/turf/beam_end = get_turf(user)
 	var/beam_dir = get_dir(user, target)
-	for(var/i in 1 to 14)
+	for(var/i in 1 to 24)
 		var/turf/next_turf = get_step(beam_end, beam_dir)
 		if(!next_turf)
 			break
 		beam_end = next_turf
 
-	var/datum/beam/plasma_beam = user.beam(beam_end, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 14, beam_type = plasma_beam_type, always_turn = TRUE)
+	var/datum/beam/plasma_beam
+
+	plasma_beam = user.beam(beam_end, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 24, beam_type = plasma_beam_type, always_turn = TRUE)
 	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, luminosity = 3, easing = SINE_EASING|EASE_OUT)
 	return ..()
 
 /obj/item/weapon/gun/m78_pig/proc/cooling_finished()
 	if(!QDELETED(src))
-		playsound(src, 'sound/machines/beepalert.ogg', 40, TRUE)
+		playsound(src, 'sound/machines/beepalert.ogg', 4)
 		var/mob/living/user = ismob(loc) ? loc : (power_pack && ismob(power_pack.loc) ? power_pack.loc : null)
 		if(user)
 			to_chat(user, SPAN_NOTICE("The M78 PIG has finished cooling and is ready to fire."))
@@ -231,20 +265,22 @@
 	set_fire_delay(5 SECONDS)
 
 /obj/item/pig_backpack
-	name = "\improper M78 PIG power backpack"
-	desc = "A power backpack fitted with an M78 PIG and its dedicated battery."
-	icon = 'icons/obj/items/clothing/backpack/backpacks.dmi'
-	icon_state = "radio"
+	name = "\improper M78 PIG powerpack"
+	desc = "An all in one system designed to fascilitate carrying and powering the m78 PIG. This thing is really heavy."
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	icon_state = "pig_powerpack"
 	item_icons = list(
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
-		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks.dmi'
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
 	)
 	w_class = SIZE_LARGE
 	drop_sound = "armorequip"
 	flags_equip_slot = SLOT_BACK
 	actions_types = list(/datum/action/item_action/m78_pig/use_weapon)
 	var/obj/structure/m78_pig_mount/pig_mount
+	var/move_delay_mult = 3
+
 
 /obj/item/pig_backpack/Initialize(mapload)
 	. = ..()
@@ -255,6 +291,18 @@
 /obj/item/pig_backpack/Destroy()
 	QDEL_NULL(pig_mount)
 	. = ..()
+
+/obj/item/pig_backpack/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/pig_backpack/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	movedata["move_delay"] += move_delay_mult
+
+/obj/item/pig_backpack/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
 
 /obj/item/pig_backpack/get_examine_text(mob/user)
 	. = ..()
@@ -273,10 +321,10 @@
 	if(pig_mount && W == pig_mount.attached_to)
 		pig_mount.recall_weapon(user)
 		return
-	if(istype(W, /obj/item/pig_battery))
-		var/obj/item/pig_battery/new_battery = W
+	if(istype(W, /obj/item/heavygun_battery))
+		var/obj/item/heavygun_battery/new_battery = W
 		if(pig_mount.battery)
-			var/obj/item/pig_battery/old_battery = pig_mount.battery
+			var/obj/item/heavygun_battery/old_battery = pig_mount.battery
 			pig_mount.battery = null
 			user.put_in_hands(old_battery)
 		user.drop_inv_item_to_loc(new_battery, pig_mount)
@@ -288,7 +336,7 @@
 
 /obj/item/pig_backpack/clicked(mob/user, list/mods)
 	if(mods[ALT_CLICK] && pig_mount?.battery)
-		var/obj/item/pig_battery/battery = pig_mount.battery
+		var/obj/item/heavygun_battery/battery = pig_mount.battery
 		pig_mount.battery = null
 		user.put_in_hands(battery)
 		playsound(src, 'sound/machines/click.ogg', 25, TRUE)
@@ -300,7 +348,7 @@
 	name = "Use PIG"
 	button.name = name
 	button.overlays.Cut()
-	var/image/IMG = image('icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi', button, "m5")
+	var/image/IMG = image('icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi', button, "m78")
 	button.overlays += IMG
 
 /datum/action/item_action/m78_pig/use_weapon/action_activate()
@@ -318,12 +366,12 @@
 	desc = "An internal M78 PIG weapon mount."
 	var/obj/item/pig_backpack/power_pack
 	var/obj/item/weapon/gun/m78_pig/attached_to
-	var/obj/item/pig_battery/battery
+	var/obj/item/heavygun_battery/battery
 	var/atom/tether_holder
 
 /obj/structure/m78_pig_mount/Initialize(mapload)
 	. = ..()
-	battery = new /obj/item/pig_battery(src)
+	battery = new /obj/item/heavygun_battery(src)
 
 /obj/structure/m78_pig_mount/proc/attach_weapon()
 	attached_to = new /obj/item/weapon/gun/m78_pig(src)
@@ -349,20 +397,4 @@
 /obj/structure/m78_pig_mount/Destroy()
 	QDEL_NULL(attached_to)
 	QDEL_NULL(battery)
-	. = ..()
-
-/obj/item/pig_battery
-	name = "\improper M78 PIG battery"
-	desc = "A dedicated high-capacity battery for the M78 PIG."
-	icon = 'icons/obj/structures/machinery/power.dmi'
-	icon_state = "smartguncell"
-	w_class = SIZE_SMALL
-	var/obj/item/cell/high/power_cell
-
-/obj/item/pig_battery/Initialize(mapload)
-	. = ..()
-	power_cell = new(src)
-
-/obj/item/pig_battery/Destroy()
-	QDEL_NULL(power_cell)
 	. = ..()
