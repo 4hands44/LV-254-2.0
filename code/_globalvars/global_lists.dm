@@ -640,6 +640,18 @@ GLOBAL_LIST_INIT_TYPED(specialist_set_datums, /datum/specialist_set, setup_speci
 	return emotes_to_add
 
 
+/// Setup for tagrilla emotes and category list, returns data for tagrilla_emotes
+/proc/setup_tagrilla_emotes()
+	var/list/emotes_to_add = list()
+	for(var/datum/emote/living/carbon/human/tagrilla/emote as anything in subtypesof(/datum/emote/living/carbon/human/tagrilla))
+		if(!initial(emote.key) || !initial(emote.say_message))
+			continue
+
+		if(!(initial(emote.category) in GLOB.tagrilla_categories))
+			GLOB.tagrilla_categories += initial(emote.category)
+
+		emotes_to_add += emote
+	return emotes_to_add
 
 GLOBAL_LIST_EMPTY(topic_tokens)
 GLOBAL_PROTECT(topic_tokens)
