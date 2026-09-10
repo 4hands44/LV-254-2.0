@@ -697,6 +697,8 @@
 		/obj/item/storage/syringe_case,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
+		/obj/item/tool/surgery/triage_kit,
+		/obj/item/reagent_container/food/drinks/bottle/vodka_cocktail,
 	)
 
 /obj/item/storage/pouch/medical/full/fill_preset_inventory()
@@ -710,6 +712,12 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
+
+/obj/item/storage/pouch/medical/tagrilla/fill_preset_inventory()
+	new /obj/item/tool/surgery/triage_kit(src)
+	new /obj/item/reagent_container/food/drinks/bottle/vodka_cocktail(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/device/healthanalyzer(src)
 
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"

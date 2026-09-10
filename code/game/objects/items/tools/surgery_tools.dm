@@ -361,6 +361,24 @@
 	AddElement(/datum/element/suturing, FALSE, TRUE, 2.5, "graft", "grafting", "being burnt away all over again", "burns")
 
 /*
+ * Triage Kit.
+ * Combination surgical line + synth-graft, use sparingly.
+ */
+
+/obj/item/tool/surgery/triage_kit
+	name = "\proper Triage Kit"
+	desc = "A slim medical kit containing rolls of surgical line and synthetic skin grafts able to seamlessly treat any cut or burn, a pretty rare sight and highly sought after."
+	icon_state = "salewa"
+	item_state = "salewa"
+	force = 0
+	throwforce = 1
+	w_class = SIZE_SMALL
+
+/obj/item/tool/surgery/triage_kit/Initialize(mapload, ...)
+	. = ..()
+	AddElement(/datum/element/suturing, TRUE, TRUE, 1.5, "treat", "treating", "being stitched back together", "wounds")
+
+/*
  * Bonesetter.
  * Usual substitutes: wrench.
  */
