@@ -2,30 +2,33 @@
  * M78 PIG energy weapon
  */
 
-/datum/ammo/bullet/rifle/m78_pig
+/datum/ammo/energy/m78_pig
 	name = "plasma beam"
-	damage = 500
+	damage = 1000
+	damage_armor_punch = 5
 	damage_type = BURN
+	flags_ammo_behavior = AMMO_ENERGY
 	penetration = ARMOR_PENETRATION_TIER_10
+	damage_falloff = 0.1
 	max_range = 24
 	accurate_range = 24
 	shell_speed = 500
 	var/at_dmg_mult = 3
 
-/datum/ammo/bullet/rifle/m78_pig/penetrating/set_bullet_traits()
+/datum/ammo/energy/m78_pig/penetrating/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
 	))
 
-/datum/ammo/bullet/rifle/m78_pig/on_hit_mob(mob/living/target, obj/projectile/P, mob/user)
+/datum/ammo/energy/m78_pig/on_hit_mob(mob/living/target, obj/projectile/P, mob/user)
 	. = ..()
 	ignite_impact(target, P)
 	user.visible_message(SPAN_BOLDWARNING("[src] sends burning debris flying off of the [target]!"))
 	create_shrapnel(get_turf(target), 5, 180, ,/datum/ammo/bullet/shrapnel/incendiary, P.weapon_cause_data)
 	create_shrapnel(get_turf(target), 5, 180, ,/datum/ammo/bullet/shrapnel/light/human, P.weapon_cause_data)
 
-/datum/ammo/bullet/rifle/m78_pig/on_hit_obj(obj/O, obj/projectile/P, mob/user)
+/datum/ammo/energy/m78_pig/on_hit_obj(obj/O, obj/projectile/P, mob/user)
 	P.damage *= at_dmg_mult
 	cell_explosion(get_turf(O), 25, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, P.weapon_cause_data)
 	if(istype(O))
@@ -37,7 +40,7 @@
 	user.visible_message(SPAN_BOLDWARNING("[src] sends burning debris flying off of the [O]!"))
 	create_shrapnel(get_turf(O), 5, 180, ,/datum/ammo/bullet/shrapnel/incendiary, P.weapon_cause_data)
 
-/datum/ammo/bullet/rifle/m78_pig/on_hit_turf(turf/T, obj/projectile/P, mob/user)
+/datum/ammo/energy/m78_pig/on_hit_turf(turf/T, obj/projectile/P, mob/user)
 	. = ..()
 	if(!T)
 		return
@@ -47,7 +50,7 @@
 		user.visible_message(SPAN_BOLDWARNING("[src] sends burning debris flying off of the [T]!"))
 		create_shrapnel(get_turf(T), 5, 180, ,/datum/ammo/bullet/shrapnel/incendiary, P.weapon_cause_data)
 
-/datum/ammo/bullet/rifle/m78_pig/proc/ignite_impact(atom/impact, obj/projectile/P)
+/datum/ammo/energy/m78_pig/proc/ignite_impact(atom/impact, obj/projectile/P)
 	var/datum/cause_data/cause = create_cause_data("M78 PIG", P.firer)
 	impact.flamer_fire_act(BURN_LEVEL_TIER_4, cause)
 	new /obj/flamer_fire(get_turf(impact), cause)
@@ -61,7 +64,7 @@
 	icon_state = "m57"
 	item_state = "m57"
 	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS
-	default_ammo = /datum/ammo/bullet/rifle/m78_pig
+	default_ammo = /datum/ammo/energy/m78_pig
 	caliber = "cadmium telluride"
 	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/m78_pig
@@ -79,7 +82,7 @@
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/rocket_launchers_righthand.dmi'
 	)
 	current_mag = /obj/item/ammo_magazine/m78_pig
-	ammo = /datum/ammo/bullet/rifle/m78_pig
+	ammo = /datum/ammo/energy/m78_pig
 	projectile_type = /obj/projectile/beam/m78_pig
 	fire_sound = 'sound/weapons/m78_pig.ogg'
 	reload_sound = 'sound/weapons/shell_load4.ogg'
@@ -89,8 +92,9 @@
 	w_class = SIZE_HUGE
 	gun_category = GUN_CATEGORY_HEAVY
 	flags_equip_slot = NO_FLAGS
-	accuracy_mult = 2
-	scatter = 0
+	accuracy_mult = BASE_ACCURACY_MULT * 3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	scatter = SCATTER_AMOUNT_NONE
 	aim_slowdown = 4
 	flags_item = TWOHANDED|NO_CRYO_STORE
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER

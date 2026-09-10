@@ -178,6 +178,19 @@
 		/obj/item/storage/box/spec/sniper,
 		/obj/item/storage/box/spec/sharp_operator,
 		/obj/item/storage/box/kit/pursuit,
-		/obj/item/storage/box/kit/mini_jtac,
+		/obj/item/storage/box/spec/pig_operator,
 		)
 	new_human.equip_to_slot_or_del(new rfm_kit, WEAR_L_HAND)
+
+/datum/equipment_preset/proc/pick_engi_kit(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/engi_kit = pick(
+		/obj/item/storage/box/kit/sapper,
+		/obj/item/storage/box/kit/sentry,
+		/obj/item/storage/box/spec/pyro,
+		/obj/item/storage/box/kit/at,
+		/obj/item/storage/box/kit/breacher,
+		/obj/item/storage/box/kit/ewar,
+		/obj/item/storage/box/spec/mortar,
+		)
+	new_human.equip_to_slot_or_del(new engi_kit, WEAR_L_HAND)

@@ -24,7 +24,7 @@
 		icon_state = "kit_case_e"
 
 /obj/item/storage/box/spec/demolitionist
-	name = "\improper Demolitionist equipment case"
+	name = "\improper SADAR equipment case"
 	desc = "A large case containing a heavy-caliber anti-tank M5 RPG rocket launcher, M3-T light armor, five 84mm rockets and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "demo"
 	kit_name = "demolitionist"
@@ -263,17 +263,16 @@
 
 /obj/item/storage/box/spec/mortar/fill_preset_inventory()
 	new /obj/item/mortar_kit(src)
-	new /obj/item/pamphlet/skill/mortar_operator(src)
-	new /obj/item/pamphlet/skill/mortar_operator(src)
-	new /obj/item/storage/belt/gun/mortarbelt(src)
-	new /obj/item/storage/belt/gun/mortarbelt(src)
+	new /obj/item/storage/pouch/construction/full(src)
+	new /obj/item/storage/pouch/construction/full(src)
 	new /obj/item/storage/backpack/marine/mortarpack(src)
+	new /obj/item/storage/backpack/marine/ammo_rack(src)
+	new /obj/item/storage/box/nade_box/mortar/he(src)
+	new /obj/item/storage/box/nade_box/mortar(src)
+	new /obj/item/mortar_shell/smoke(src)
+	new /obj/item/mortar_shell/smoke(src)
 	new /obj/item/mortar_shell/incendiary(src)
 	new /obj/item/mortar_shell/incendiary(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/frag(src)
-	new /obj/item/mortar_shell/frag(src)
 	new /obj/item/mortar_shell/flare(src)
 	new /obj/item/mortar_shell/flare(src)
 	new /obj/item/tool/wrench(src)
@@ -828,7 +827,7 @@
 	pro_case_overlay = "at"
 	desc = "A Squad Rifleman's Anti-Tank kit containing an M5 RPG, Spare rockets, and mines."
 
-/obj/item/storage/box/kit/fill_preset_inventory()
+/obj/item/storage/box/kit/at/fill_preset_inventory()
 	new /obj/item/storage/pouch/construction/full(src)
 	new /obj/item/weapon/gun/launcher/rocket(src)
 	new /obj/item/attachable/scope/mini/alt_iff_scope(src)
@@ -839,6 +838,19 @@
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/storage/box/explosive_atmines(src)
 	new /obj/item/storage/box/explosive_atmines(src)
+
+/obj/item/storage/box/kit/m5
+	name = "\improper M5 RPG Kit"
+	pro_case_overlay = "at"
+	desc = "A small kit containing an M5 RPG, rocketpack and Spare rockets."
+
+/obj/item/storage/box/kit/m5/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/rocket(src)
+	new /obj/item/attachable/scope/mini/alt_iff_scope(src)
+	new /obj/item/storage/backpack/marine/rocketpack(src)
+	new /obj/item/ammo_magazine/rocket/ap(src)
+	new /obj/item/ammo_magazine/rocket/frag(src)
+	new /obj/item/ammo_magazine/rocket/frag(src)
 
 /obj/item/storage/box/kit/breacher
 	name = "\improper Demolition Kit"

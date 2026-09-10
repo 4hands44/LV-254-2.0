@@ -405,7 +405,12 @@
 		list("M94 Marking Flare Pack", floor(scale * 10), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", floor(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
 
+		list("SPECIAL EQUIPMENT", -1, null, null),
+		list("JTAC Kit", floor(scale * 2), /obj/item/storage/box/kit/mini_jtac, VENDOR_ITEM_REGULAR),
+		list("Tent", floor(scale * 1), /obj/item/folded_tent/big, VENDOR_ITEM_REGULAR),
+
 		list("MISCELLANEOUS", -1, null, null),
+		list("Automated Supply Beacon(ASB)", floor(scale * 3), /obj/item/device/whiskey_supply_beacon, VENDOR_ITEM_REGULAR),
 		list("Engineer Kit", floor(scale * 1), /obj/item/storage/toolkit/empty, VENDOR_ITEM_REGULAR),
 		list("Map", floor(scale * 5), /obj/item/map/current_map, VENDOR_ITEM_REGULAR),
 		list("Extinguisher", floor(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),

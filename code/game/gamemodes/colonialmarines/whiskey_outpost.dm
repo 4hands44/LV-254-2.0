@@ -617,6 +617,7 @@
 		"Scout ammo",
 		"SHARP ammo",
 		"Smartgun ammo",
+		"Mortar ammo",
 		"Medical Supplies",
 		"Engineering Supplies",
 		"General Purpose Resupply",
@@ -657,7 +658,10 @@
 			to_chat(usr, SPAN_NOTICE("Food and supplies will now drop!"))
 		if("SHARP ammo")
 			supply_drop = 10
-			to_chat(usr, SPAN_NOTICE("Food and supplies will now drop!"))
+			to_chat(usr, SPAN_NOTICE("SHARP ammo will now drop!"))
+		if("Mortar ammo - HE")
+			supply_drop = 11
+			to_chat(usr, SPAN_NOTICE("Mortar ammo will now drop!"))
 		else
 			return
 
@@ -699,7 +703,6 @@
 			spawnitems = list(/obj/item/ammo_box/rounds/ap,
 							/obj/item/ammo_box/rounds/heap,
 							/obj/item/ammo_box/rounds/smg/ap,
-							/obj/item/ammo_box/rounds/smg/heap,
 							/obj/item/ammo_box/magazine/shotgun,
 							/obj/item/ammo_box/magazine/shotgun/buckshot)
 		if(1)
@@ -800,6 +803,15 @@
 		/obj/item/ammo_magazine/rifle/sharp/flechette,
 		/obj/item/ammo_magazine/rifle/sharp/incendiary,
 		/obj/item/ammo_magazine/rifle/sharp/incendiary)
+		if(11) //SHARP
+			spawnitems = list(
+				/obj/item/storage/box/nade_box/mortar/he,
+				/obj/item/mortar_shell/flare,
+				/obj/item/mortar_shell/flare,
+				/obj/item/mortar_shell/flare,
+				/obj/item/mortar_shell/smoke,
+				/obj/item/mortar_shell/smoke)
+
 	crate.storage_capacity = 60
 	for(var/path in spawnitems)
 		new path(crate)

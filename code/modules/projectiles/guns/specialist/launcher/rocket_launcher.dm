@@ -35,7 +35,7 @@
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 	var/datum/effect_system/smoke_spread/smoke
 
-	flags_item = TWOHANDED|NO_CRYO_STORE
+	flags_item = TWOHANDED|NO_CRYO_STORE|SMARTGUNNER_BACKPACK_OVERRIDE
 	var/skill_locked = TRUE
 
 /obj/item/weapon/gun/launcher/rocket/Initialize(mapload, spawn_empty)
