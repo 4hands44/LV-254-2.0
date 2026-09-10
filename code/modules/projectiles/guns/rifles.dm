@@ -1809,7 +1809,7 @@
 /obj/item/weapon/gun/rifle/type71/tagrilla
 	random_spawn_chance = 0
 	random_rail_chance = 0
-	current_mag = /obj/item/ammo_magazine/rifle/ak4047/ap
+	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/lasersight)
 
 /obj/item/weapon/gun/rifle/type71/flamer
