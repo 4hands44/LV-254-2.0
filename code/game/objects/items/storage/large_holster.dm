@@ -77,6 +77,7 @@
 		/obj/item/weapon/gun/shotgun/double/mou53,
 	)
 	flags_atom = FPRINT // has gamemode skin
+	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
 
 /obj/item/storage/large_holster/m37/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
 	. = ..()
