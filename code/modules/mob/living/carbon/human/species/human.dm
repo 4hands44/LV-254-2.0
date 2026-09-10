@@ -140,6 +140,18 @@
 /datum/species/human/hero/lesser/handle_post_spawn(mob/living/carbon/human/H)
 	return ..()
 
+// Thrall
+
+/datum/species/human/hero/thrall
+	name = "Thrall"
+	name_plural = "Thralls"
+	weed_slowdown_mult = 0
+	acid_blood_dodge_chance = 70
+
+/datum/species/human/hero/thrall/handle_post_spawn(mob/living/carbon/human/thrall)
+	thrall.universal_understand = FALSE
+	return ..()
+
 //Various horrors that spawn in and haunt the living.
 /datum/species/human/spook
 	name = "Horror"

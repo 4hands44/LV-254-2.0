@@ -334,6 +334,10 @@ GLOBAL_LIST_INIT(uppj_emotes, setup_upp_joe_emotes())
 GLOBAL_LIST_EMPTY(wy_droid_categories)
 /// dict ("category" : (emotes)) of every wy droid emote typepath
 GLOBAL_LIST_INIT(wy_droid_emotes, setup_wy_droid_emotes())
+/// list of categories for tagrilla
+GLOBAL_LIST_EMPTY(tagrilla_categories)
+/// dict ("category" : (emotes)) of every tagrilla emote typepath
+GLOBAL_LIST_INIT(tagrilla_emotes, setup_tagrilla_emotes())
 
 /proc/cached_params_decode(params_data, decode_proc)
 	. = GLOB.paramslist_cache[params_data]
