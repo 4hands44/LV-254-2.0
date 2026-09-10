@@ -123,6 +123,8 @@
 	H.status_flags &= ~STATUS_FLAGS_DEBILITATE
 	return ..()
 
+// Use for human bosses without them being stupidly OP
+
 /datum/species/human/hero/lesser
 	name = "Lesser Human Hero"
 	name_plural = "Lesser Human Heroes"
@@ -134,26 +136,8 @@
 	knock_down_reduction = 1
 	stun_reduction = 1
 	total_health = 200
-	mob_inherent_traits = list(
-		TRAIT_TAGRILLA,
-		TRAIT_HEARTLESS,
-		TRAIT_SUPER_STRONG,
-		TRAIT_DEXTROUS,
-		TRAIT_EMOTE_CD_EXEMPT,
-		TRAIT_IRON_TEETH,
-	)
 
 /datum/species/human/hero/lesser/handle_post_spawn(mob/living/carbon/human/H)
-	return ..()
-
-/datum/species/human/hero/thrall
-	name = "Thrall"
-	name_plural = "Thralls"
-	weed_slowdown_mult = 0
-	acid_blood_dodge_chance = 70
-
-/datum/species/human/hero/thrall/handle_post_spawn(mob/living/carbon/human/thrall)
-	thrall.universal_understand = FALSE
 	return ..()
 
 //Various horrors that spawn in and haunt the living.

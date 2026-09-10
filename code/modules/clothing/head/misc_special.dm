@@ -37,7 +37,6 @@
 
 /obj/item/clothing/head/welding/attack_self(mob/user)
 	..()
-	toggle()
 
 /obj/item/clothing/head/welding/verb/toggle()
 	set category = "Object"
@@ -87,10 +86,6 @@
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR|HIDEEYES
 	actions_types = list()
 	vision_impair = VISION_IMPAIR_MIN
-
-/obj/item/clothing/head/welding/tagrilla/attack_self(mob/user)
-	..()
-	return
 
 /*
  * Cakehat

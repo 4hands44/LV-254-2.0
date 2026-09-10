@@ -803,18 +803,26 @@
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/rifle/type24/slug
+	name = "\improper Type 24 drum magazine (8g Slugs)"
+	desc = "An 12-round, 8-gauge shotgun drum magazine, used by the Type 24 assault shotgun, this one is loaded with heavy slugs."
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/type24/flechette
+	name = "\improper Type 24 drum magazine (8g Flechette)"
+	desc = "An 12-round, 8-gauge shotgun drum magazine, used by the Type 24 assault shotgun, this one is loaded with heavy flechettes."
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/flechette
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
 /obj/item/ammo_magazine/rifle/type24/beanbag
+	name = "\improper Type 24 drum magazine (8g Beanbag)"
+	desc = "An 12-round, 8-gauge shotgun drum magazine, used by the Type 24 assault shotgun, this one is loaded with heavy beanbags."
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 /obj/item/ammo_magazine/rifle/type24/dragonsbreath
+	name = "\improper Type 24 drum magazine (8g Dragonsbreath)"
+	desc = "An 12-round, 8-gauge shotgun drum magazine, used by the Type 24 assault shotgun, this one is loaded with heavy dragonsbreath."
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
 	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
 

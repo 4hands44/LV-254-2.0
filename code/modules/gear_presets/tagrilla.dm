@@ -3,6 +3,7 @@
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_TAGRILLA
 	flags = EQUIPMENT_PRESET_EXTRA
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
 
 	skills = /datum/skills/tagrilla
 	idtype = /obj/item/card/id/dogtag
@@ -33,10 +34,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/tagrilla(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/grey/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/sling/sledge/tagrilla(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/red(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
 	spawn_random_tagrilla_loadout(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/tagrilla(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp(new_human), WEAR_R_STORE)
 
-	new_human.set_species("Lesser Human Hero") //Tagrilla is STRONG.
+	new_human.set_species("Tagrilla")
 
 	to_chat(new_human, SPAN_WARNING("You are the Factory Boss, infamously angry and psychotic. You are armed with your AK4047 and your trusty sledgehammer, use both wisely with your other gear to kill any in your path!"))

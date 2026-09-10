@@ -1,0 +1,105 @@
+// Scav Boss Tagrilla
+
+/datum/species/human/hero/lesser/tagrilla
+	name = "Tagrilla"
+	name_plural = "Tagrillers"
+	mob_inherent_traits = list(
+		TRAIT_TAGRILLA,
+		TRAIT_HEARTLESS,
+		TRAIT_SUPER_STRONG,
+	)
+	death_message = "slowly stumbles forward, letting out a final pained grunt before falling over dead."
+	death_sound = 'sound/voice/tagrilla/death.ogg'
+
+/datum/species/human/hero/lesser/tagrilla/handle_post_spawn(mob/living/carbon/human/H)
+	return ..()
+
+// Emote Panel
+
+/datum/species/human/hero/lesser/tagrilla/open_emote_panel()
+	var/datum/tagrilla_emote_panel/ui = new(usr)
+	ui.ui_interact(usr)
+
+/datum/action/tagrilla_emote_panel
+	name = "Open Voice Synthesizer"
+	action_icon_state = "looc_toggle"
+
+/datum/action/tagrilla_emote_panel/can_use_action()
+	. = ..()
+	if(!.)
+		return FALSE
+
+	if(!iswydroid(owner))
+		return FALSE
+
+	return TRUE
+
+/datum/action/tagrilla_emote_panel/action_activate()
+	. = ..()
+	if(!can_use_action())
+		return
+
+	var/mob/living/carbon/human/human_owner = owner
+	var/datum/species/human/hero/lesser/tagrilla/wy_droid_species = human_owner.species
+
+	wy_droid_species.open_emote_panel()
+
+/datum/tagrilla_emote_panel
+	COOLDOWN_DECLARE(panel_emote_cooldown)
+
+/datum/tagrilla_emote_panel/proc/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "Emotes", "W-Y Combat Android Voice Synthesizer")
+		ui.open()
+
+/datum/tagrilla_emote_panel/ui_state(mob/user)
+	return GLOB.conscious_state
+
+/datum/tagrilla_emote_panel/ui_data(mob/user)
+	var/list/data = list()
+
+	data["on_cooldown"] = !COOLDOWN_FINISHED(src, panel_emote_cooldown)
+
+	return data
+
+
+/datum/tagrilla_emote_panel/ui_static_data(mob/user)
+	var/list/data = list()
+
+	data["theme"] = "crtwhite"
+	data["categories"] = GLOB.wy_droid_categories
+	data["emotes"] = list()
+
+	for(var/datum/emote/living/carbon/human/synthetic/colonial/wy_droid/emote as anything in GLOB.wy_droid_emotes)
+		data["emotes"] += list(list(
+			"id" = initial(emote.key),
+			"text" = (initial(emote.override_say) || initial(emote.say_message)),
+			"category" = initial(emote.category),
+			"path" = "[emote]",
+		))
+
+	return data
+
+/datum/tagrilla_emote_panel/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	. = ..()
+	if(.)
+		return
+
+	switch(action)
+		if("emote")
+			var/datum/emote/living/carbon/human/synthetic/colonial/wy_droid/path
+			if(!params["emotePath"])
+				return
+
+			path = text2path(params["emotePath"])
+
+			if(!path || !COOLDOWN_FINISHED(src, panel_emote_cooldown))
+				return
+
+			if(!(path in subtypesof(/datum/emote/living/carbon/human/synthetic/colonial/wy_droid)))
+				return
+
+			COOLDOWN_START(src, panel_emote_cooldown, 2.5 SECONDS)
+			usr.emote(initial(path.key))
+			return TRUE
