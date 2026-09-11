@@ -123,6 +123,24 @@
 	H.status_flags &= ~STATUS_FLAGS_DEBILITATE
 	return ..()
 
+// Use for human bosses without them being stupidly OP
+
+/datum/species/human/hero/lesser
+	name = "Lesser Human Hero"
+	name_plural = "Lesser Human Heroes"
+	brute_mod = 0.75
+	burn_mod = 0.75
+	pain_type = /datum/pain/human_hero/lesser
+	stamina_type = /datum/stamina/extra
+	darksight = 3
+	knock_down_reduction = 1
+	stun_reduction = 1
+	total_health = 200
+
+/datum/species/human/hero/lesser/handle_post_spawn(mob/living/carbon/human/H)
+	return ..()
+
+// Thrall
 
 /datum/species/human/hero/thrall
 	name = "Thrall"
@@ -186,3 +204,5 @@
 
 /datum/species/human/spook/handle_paygrades()
 	return ""
+
+

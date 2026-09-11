@@ -1805,6 +1805,13 @@
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
 
+
+/obj/item/weapon/gun/rifle/type71/tagrilla
+	random_spawn_chance = 0
+	random_rail_chance = 0
+	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/lasersight)
+
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
 	desc = " This appears to be a less common variant of the Type 71 with an integrated flamethrower that seems especially powerful."
@@ -1970,7 +1977,7 @@
 
 /obj/item/weapon/gun/rifle/ak4047
 	name = "\improper AK–4047 pulse rifle"
-	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap bulky but, lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
+	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap and lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/assault_rifles.dmi'
 	icon_state = "ak84s"
 	item_state = "ak84s"
@@ -2082,6 +2089,9 @@
 		/obj/item/attachable/attached_gun/grenade,
 	)
 
+/obj/item/weapon/gun/rifle/ak4047/tagrilla
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
 
 //M4RA Battle Rifle, standard USCM DMR
 
@@ -3130,3 +3140,69 @@
 	current_mag = /obj/item/ammo_magazine/rifle/xm51/cmb
 	map_specific_decoration = FALSE
 	starting_attachment_types = list(/obj/item/attachable/flashlight/grip, /obj/item/attachable/reflex)
+
+// Type 24 Assault Shotgun
+/obj/item/weapon/gun/rifle/type24
+	name = "\improper Type 24 assault shotgun"
+	desc = "As the Type 23 saw widespread success among UPP forces, a new variant was developed to increase the shotguns firepower. From this hard work emerged the Type 24, a modification capable of taking 12-round drum mags and fully automatic firing. Currently in field trials, initial findings are promising despite the amount of bruised shoulders."
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/shotguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/shotguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_righthand.dmi'
+	)
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/shotguns.dmi'
+	icon_state = "type24"
+	item_state = "type24"
+	fire_sound = 'sound/weapons/gun_type23.ogg' //not perfect, too small
+	current_mag = /obj/item/ammo_magazine/rifle/type24
+	attachable_allowed = list(
+		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/bayonet, // Muzzle
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+		/obj/item/attachable/attached_gun/extinguisher,
+		/obj/item/attachable/stock/type23, // Stock
+		)
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	gun_category = GUN_CATEGORY_SHOTGUN
+	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
+	start_automatic = TRUE
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/type24,
+		/obj/item/ammo_magazine/rifle/type24/slug,
+		/obj/item/ammo_magazine/rifle/type24/flechette,
+		/obj/item/ammo_magazine/rifle/type24/beanbag,
+		/obj/item/ammo_magazine/rifle/type24/dragonsbreath,
+	)
+
+/obj/item/weapon/gun/rifle/type24/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17)
+
+/obj/item/weapon/gun/rifle/type24/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SHOTGUN_DEATHSQUAD)
+	set_burst_amount(0)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_4
+	scatter_unwielded = SCATTER_AMOUNT_TIER_1
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_1
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+	recoil_buildup_limit = RECOIL_AMOUNT_TIER_3 / RECOIL_BUILDUP_VIEWPUNCH_MULTIPLIER
+
+
+/obj/item/weapon/gun/rifle/type24/tactical
+	starting_attachment_types = list(/obj/item/attachable/stock/type23, /obj/item/attachable/verticalgrip)
+
+/obj/item/weapon/gun/rifle/type24/tagrilla
+	current_mag = /obj/item/ammo_magazine/rifle/type24/slug
+	starting_attachment_types = list(/obj/item/attachable/stock/type23, /obj/item/attachable/verticalgrip, /obj/item/attachable/magnetic_harness)

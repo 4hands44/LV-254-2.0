@@ -636,6 +636,10 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_3
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 
+/obj/item/weapon/gun/smg/bizon/tagrilla
+	current_mag = /obj/item/ammo_magazine/smg/bizon/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
+
 /obj/item/weapon/gun/smg/bizon/upp
 	name = "\improper Type 64 Submachinegun"
 	desc = "The standard submachinegun of the UPP, sporting an unusual 64 round helical magazine, it has a high fire-rate, but is unusually accurate. This one has a black polymer grip, denoting it as in-use by the UPP military."

@@ -37,8 +37,6 @@
 
 /obj/item/clothing/head/welding/attack_self(mob/user)
 	..()
-	toggle()
-
 
 /obj/item/clothing/head/welding/verb/toggle()
 	set category = "Object"
@@ -74,6 +72,20 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.update_button_icon()
+
+// Tagrilla
+
+/obj/item/clothing/head/welding/tagrilla
+	name = "\improper Reinforced Welding Mask"
+	desc = "A heavy welding mask, reinforced to seemingly provide significant ballistic protection but loses the ability to be flipped up."
+	icon_state = "tagrilla"
+	item_state = "tagrilla"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR|HIDEEYES
+	actions_types = list()
+	vision_impair = VISION_IMPAIR_MIN
 
 /*
  * Cakehat

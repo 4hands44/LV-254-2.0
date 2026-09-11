@@ -285,3 +285,20 @@
 	item_state = "trauma"
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+// Tagrilla
+
+/obj/item/clothing/gloves/marine/veteran/tagrilla
+	name = "Padded kickboxing gloves"
+	desc = "a set of red kickboxing gloves, stuffed with padding."
+	icon_state = "tagrilla"
+	item_state = "tagrilla"
+	siemens_coefficient = 0
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	adopts_squad_color = FALSE

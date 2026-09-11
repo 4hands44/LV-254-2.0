@@ -697,6 +697,8 @@
 		/obj/item/storage/syringe_case,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
+		/obj/item/tool/surgery/triage_kit,
+		/obj/item/reagent_container/food/drinks/bottle/vodka_cocktail,
 	)
 
 /obj/item/storage/pouch/medical/full/fill_preset_inventory()
@@ -710,6 +712,12 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
+
+/obj/item/storage/pouch/medical/tagrilla/fill_preset_inventory()
+	new /obj/item/tool/surgery/triage_kit(src)
+	new /obj/item/reagent_container/food/drinks/bottle/vodka_cocktail(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/device/healthanalyzer(src)
 
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"
@@ -1602,6 +1610,46 @@
 	if(slung && slung.loc == src)
 		return
 	addtimer(CALLBACK(src, PROC_REF(attempt_retrieval), user), 0.3 SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
+
+// sledge
+/obj/item/storage/pouch/sling/sledge
+	name = "Sledgehammer strap"
+	desc = "A set of sturdy straps that keeps a sledgehammer attached to your back when not in use."
+	storage_slots = 1
+	max_w_class = SIZE_LARGE
+	flags_equip_slot = SLOT_BACK
+	icon_state = "sling_sledge"
+	item_state_slots = list(WEAR_AS_BACK = "sling_sledge")
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/melee_weapons.dmi',
+		)
+	can_hold = list(/obj/item/weapon/twohanded/breacher)
+	var/base_icon
+
+/obj/item/storage/pouch/sling/sledge/post_skin_selection()
+	base_icon = icon_state
+
+/obj/item/storage/pouch/sling/sledge/update_icon()
+	if(length(contents))
+		icon_state = "[base_icon]_full"
+	else
+		icon_state = base_icon
+
+	item_state = icon_state
+
+	var/mob/living/carbon/human/user = loc
+	if(istype(user))
+		if(src == user.back)
+			user.update_inv_back()
+
+/obj/item/storage/pouch/sling/sledge/breacher/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher(src)
+
+/obj/item/storage/pouch/sling/sledge/synth/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher/synth(src)
+
+/obj/item/storage/pouch/sling/sledge/tagrilla/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher/tagrilla(src)
 
 /obj/item/storage/pouch/cassette
 	name = "cassette pouch"

@@ -334,6 +334,10 @@ GLOBAL_LIST_INIT(uppj_emotes, setup_upp_joe_emotes())
 GLOBAL_LIST_EMPTY(wy_droid_categories)
 /// dict ("category" : (emotes)) of every wy droid emote typepath
 GLOBAL_LIST_INIT(wy_droid_emotes, setup_wy_droid_emotes())
+/// list of categories for tagrilla
+GLOBAL_LIST_EMPTY(tagrilla_categories)
+/// dict ("category" : (emotes)) of every tagrilla emote typepath
+GLOBAL_LIST_INIT(tagrilla_emotes, setup_tagrilla_emotes())
 
 /proc/cached_params_decode(params_data, decode_proc)
 	. = GLOB.paramslist_cache[params_data]
@@ -636,6 +640,18 @@ GLOBAL_LIST_INIT_TYPED(specialist_set_datums, /datum/specialist_set, setup_speci
 	return emotes_to_add
 
 
+/// Setup for tagrilla emotes and category list, returns data for tagrilla_emotes
+/proc/setup_tagrilla_emotes()
+	var/list/emotes_to_add = list()
+	for(var/datum/emote/living/carbon/human/tagrilla/emote as anything in subtypesof(/datum/emote/living/carbon/human/tagrilla))
+		if(!initial(emote.key))
+			continue
+
+		if(!(initial(emote.category) in GLOB.tagrilla_categories))
+			GLOB.tagrilla_categories += initial(emote.category)
+
+		emotes_to_add += emote
+	return emotes_to_add
 
 GLOBAL_LIST_EMPTY(topic_tokens)
 GLOBAL_PROTECT(topic_tokens)

@@ -393,3 +393,41 @@
 		to_chat(user, SPAN_WARNING("\The [src] is too heavy for you to use as a weapon!"))
 		return
 	. = ..()
+
+/obj/item/weapon/twohanded/breacher/tagrilla // heavier just to flex on the synths
+	name = "\improper B4 Breaching Hammer"
+	desc = "This 200-pound abomination of a sledgehammer is made of solid tungsten, capable of punching through steel, concrete, and bone with ease. Just looking at it makes your arms feel like they're made of jelly."
+	icon_state = "syn_breacher"
+	item_state = "syn_breacher"
+	force_wielded = MELEE_FORCE_ABSURD
+	really_heavy = TRUE
+	edge = 1
+	var/move_delay_addition = 2
+
+/obj/item/weapon/twohanded/breacher/tagrilla/pickup(mob/user)
+	if(!(HAS_TRAIT(user, TRAIT_TAGRILLA)))
+		to_chat(user, SPAN_HIGHDANGER("You barely manage to lift [src] above your feet, your knees quivering and your arms shaking dangerously, it's probably a good idea to set this down before you hurt yourself."))
+		user.apply_effect(10, EYE_BLUR)
+		RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+		return
+	. = ..()
+
+/obj/item/weapon/twohanded/breacher/tagrilla/proc/handle_movedelay(mob/living/M, list/movedata)
+	SIGNAL_HANDLER
+	movedata["move_delay"] += move_delay_addition
+
+/obj/item/weapon/twohanded/breacher/tagrilla/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/weapon/twohanded/breacher/tagrilla/attack(mob/living/target, mob/living/user)
+	if(!HAS_TRAIT(user, TRAIT_TAGRILLA))
+		to_chat(user, SPAN_WARNING("\The [src] is too heavy for you to use as a weapon!"))
+		return
+	else
+		target.apply_effect(5, SLOW)
+		target.apply_effect(10, DAZE)
+		target.apply_effect(10, EYE_BLUR)
+		shake_camera(target, 1, 8)
+	. = ..()

@@ -1716,3 +1716,26 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/volcano
+
+/obj/item/clothing/under/marine/veteran/tagrilla
+	name = "\improper Combat Trousers"
+	desc = "A pair of rugged combat trousers, seemingly missing the shirt? Regardless it's not very protective."
+	icon = 'icons/obj/items/clothing/uniforms/misc_ert_colony.dmi'
+	icon_state = "tagrilla"
+	worn_state = "tagrilla"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_NO_SENSORS
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/tagrilla)
+	flags_jumpsuit = NONE
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi'
+	)
