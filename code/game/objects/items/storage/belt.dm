@@ -1247,7 +1247,7 @@
 	max_w_class = SIZE_MEDIUM
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
 	///Array of holster slots and stats to use for them. First layer is "1", "2" etc. Guns are stored in both the slot and the holstered_guns list which keeps track of which was last inserted.
-	var/list/obj/item/weapon/gun/holster_slots = list(
+	var/list/holster_slots = list(
 		"1" = list(
 			"gun" = null,
 			"underlay_sprite" = null,
@@ -2621,14 +2621,15 @@
 
 /obj/item/storage/belt/gun/utility/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
-	new /obj/item/tool/screwdriver(src)
-	new /obj/item/tool/wrench(src)
+	new /obj/item/ammo_magazine/pistol/mod88(src)
+	new /obj/item/ammo_magazine/pistol/mod88(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/device/multitool(src)
 
 /obj/item/storage/belt/gun/utility/full/ms/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/smg/nailgun/compact/tactical())
+	new /obj/item/ammo_magazine/smg/nailgun(src)
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/weldingtool(src)

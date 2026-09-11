@@ -509,7 +509,7 @@
 //storage
 	new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human), WEAR_L_STORE)
 //vest items
-	new_human.equip_to_slot_or_del(new /obj/item/smartgun_battery(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/heavygun_battery(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_ACCESSORY)
@@ -734,18 +734,6 @@
 
 /datum/equipment_preset/uscm_mudskippers/engineer/e3
 	paygrades = list(PAY_SHORT_ME3)
-
-/datum/equipment_preset/proc/pick_engi_kit(mob/living/carbon/human/new_human)
-	if(!istype(new_human)) return
-	var/engi_kit = pick(
-		/obj/item/storage/box/kit/sapper,
-		/obj/item/storage/box/kit/sentry,
-		/obj/item/storage/box/spec/pyro,
-		/obj/item/storage/box/kit/at,
-		/obj/item/storage/box/kit/breacher,
-		/obj/item/storage/box/kit/ewar,
-		)
-	new_human.equip_to_slot_or_del(new engi_kit, WEAR_L_HAND)
 
 //---RFM---//
 /datum/equipment_preset/uscm_mudskippers/rfm

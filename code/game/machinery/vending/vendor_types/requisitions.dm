@@ -42,6 +42,8 @@
 		list("M2C Heavy Machine Gun", floor(scale * 2), /obj/item/storage/box/guncase/m2c, VENDOR_ITEM_REGULAR),
 		list("M240 Incinerator Unit", floor(scale * 2), /obj/item/storage/box/guncase/flamer, VENDOR_ITEM_REGULAR),
 		list("M79 Grenade Launcher", floor(scale * 3), /obj/item/storage/box/guncase/m79, VENDOR_ITEM_REGULAR),
+		list("M5 RPG", floor(scale * 1), /obj/item/storage/box/kit/m5, VENDOR_ITEM_REGULAR),
+		list("M78 PIG", floor(scale * 1), /obj/item/storage/box/spec/pig_operator, VENDOR_ITEM_REGULAR),
 		list("XM51 Breaching Scattergun", floor(scale * 3), /obj/item/storage/box/guncase/xm51, VENDOR_ITEM_REGULAR),
 
 		list("EXPLOSIVES", -1, null, null),
@@ -262,8 +264,9 @@
 		list("M39 Rubber Magazine (10x20mm)", round(scale * 10), /obj/item/ammo_magazine/smg/m39/rubber, VENDOR_ITEM_REGULAR),
 		list("M41A MK1 Rubber Magazine (10x24mm)", round(scale * 10), /obj/item/ammo_magazine/rifle/rubber, VENDOR_ITEM_REGULAR),
 		list("Box Of Beanbag Shells", round(scale * 5), /obj/item/ammo_magazine/shotgun/beanbag, VENDOR_ITEM_REGULAR),
-		list("m15 Stun Grenade", round(scale * 10), /obj/item/explosive/grenade/high_explosive/m15/rubber, VENDOR_ITEM_REGULAR),
-		list("m40 Stun Grenade", round(scale * 10), /obj/item/explosive/grenade/flashbang/noskill, VENDOR_ITEM_REGULAR),
+		list("M15 Stun Grenade", round(scale * 10), /obj/item/explosive/grenade/high_explosive/m15/rubber, VENDOR_ITEM_REGULAR),
+		list("M40 Stun Grenade", round(scale * 1), /obj/item/storage/box/flashbang/pvp, VENDOR_ITEM_REGULAR),
+		list("M66 Teargas Grenade", round(scale * 1), /obj/item/storage/box/nade_box/tear_gas, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR-PIERCING AMMUNITION", -1, null, null),
 		list("88 Mod 4 AP Magazine (9mm)", round(scale * 5), /obj/item/ammo_magazine/pistol/mod88, VENDOR_ITEM_REGULAR),
@@ -286,8 +289,9 @@
 		list("M4A3 Incendiary Magazine (9mm)", round(scale * 1), /obj/item/ammo_magazine/pistol/incendiary, VENDOR_ITEM_REGULAR),
 
 		list("SPECIAL AMMUNITION", -1, null, null),
-		list("M56 DV9 Battery", 4, /obj/item/smartgun_battery, VENDOR_ITEM_REGULAR),
+		list("DV9 heavy weapons battery", 6, /obj/item/heavygun_battery, VENDOR_ITEM_REGULAR),
 		list("M56 Smartgun Drum", 4, /obj/item/ammo_magazine/smartgun, VENDOR_ITEM_REGULAR),
+		list("M78 PIG pellet magazime", 4, /obj/item/ammo_magazine/m78_pig, VENDOR_ITEM_REGULAR),
 		list("M44 Heavy Speed Loader (.44)", 10, /obj/item/ammo_magazine/revolver/heavy, VENDOR_ITEM_REGULAR),
 		list("M44 Marksman Speed Loader (.44)", 6, /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
 		list("M4A3 HP Magazine (9mm)", floor(scale * 2), /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),

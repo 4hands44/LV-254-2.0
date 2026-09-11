@@ -1322,7 +1322,7 @@
 		/obj/item/stock_parts/micro_laser,
 		/obj/item/stock_parts/scanning_module,
 		/obj/item/stock_parts/capacitor,
-		/obj/item/smartgun_battery,
+		/obj/item/heavygun_battery,
 	)
 
 /obj/item/storage/pouch/electronics/full/fill_preset_inventory()
@@ -1355,9 +1355,9 @@
 /obj/item/storage/pouch/construction/full/fill_preset_inventory()
 	new /obj/item/stack/sheet/plasteel(src, 50)
 	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sheet/wood(src, 50)
 	new /obj/item/stack/sandbags_empty(src, 50)
 	new /obj/item/stack/concertina_wire(src, 50)
-	new /obj/item/stack/fragwire(src, 25)
 
 /obj/item/storage/pouch/construction/full_barbed_wire/fill_preset_inventory()
 	new /obj/item/stack/sheet/plasteel(src, 50)
@@ -1366,6 +1366,7 @@
 
 /obj/item/storage/pouch/construction/low_grade_full/fill_preset_inventory()
 	new /obj/item/stack/sheet/plasteel(src, 30)
+	new /obj/item/stack/sheet/wood(src, 50)
 	new /obj/item/stack/sheet/metal(src, 50)
 	new /obj/item/stack/barbed_wire(src, 15)
 

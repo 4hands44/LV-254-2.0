@@ -352,6 +352,7 @@
 		list("M44 Marksman Speed Loader (.44)", floor(scale * 2), /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
 		list("M4A3 AP Magazine", floor(scale * 2), /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
 
+
 		list("RESTRICTED FIREARM AMMUNITION", -1, null, null),
 		list("VP78 Magazine", floor(scale * 5), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 		list("SU-6 Smartpistol Magazine (.45)", floor(scale * 5), /obj/item/ammo_magazine/pistol/smart, VENDOR_ITEM_REGULAR),
@@ -362,6 +363,8 @@
 		list("HIRR Baton Slugs", floor(scale * 6), /obj/item/explosive/grenade/slug/baton, VENDOR_ITEM_REGULAR),
 		list("M74 AGM-S Star Shell", floor(scale * 4), /obj/item/explosive/grenade/high_explosive/airburst/starshell, VENDOR_ITEM_REGULAR),
 		list("M74 AGM-S Hornet Shell", floor(scale * 4), /obj/item/explosive/grenade/high_explosive/airburst/hornet_shell, VENDOR_ITEM_REGULAR),
+		list("M40 Stun Grenade", floor(scale * 4), /obj/item/explosive/grenade/flashbang/noskill, VENDOR_ITEM_REGULAR),
+		list("M66 Teargas Grenade", floor(scale * 1), /obj/item/explosive/grenade/tear_gas, VENDOR_ITEM_REGULAR),
 		)
 
 //--------------SQUAD ARMAMENTS VENDOR--------------
@@ -402,7 +405,12 @@
 		list("M94 Marking Flare Pack", floor(scale * 10), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", floor(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
 
+		list("SPECIAL EQUIPMENT", -1, null, null),
+		list("JTAC Kit", floor(scale * 2), /obj/item/storage/box/kit/mini_jtac, VENDOR_ITEM_REGULAR),
+		list("Tent", floor(scale * 1), /obj/item/folded_tent/big, VENDOR_ITEM_REGULAR),
+
 		list("MISCELLANEOUS", -1, null, null),
+		list("Automated Supply Beacon(ASB)", floor(scale * 3), /obj/item/device/whiskey_supply_beacon, VENDOR_ITEM_REGULAR),
 		list("Engineer Kit", floor(scale * 1), /obj/item/storage/toolkit/empty, VENDOR_ITEM_REGULAR),
 		list("Map", floor(scale * 5), /obj/item/map/current_map, VENDOR_ITEM_REGULAR),
 		list("Extinguisher", floor(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),

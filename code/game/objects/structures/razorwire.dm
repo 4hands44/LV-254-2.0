@@ -35,6 +35,9 @@
 		if(locate(/obj/structure/barricade) in get_turf(src))
 			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
 			return
+		if(locate(/obj/structure/trench) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
 		if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
 			playsound(loc, 'sound/handling/smartgun_open.ogg', 25, TRUE)
 			to_chat(user, SPAN_NOTICE(" You deploy [src]."))
@@ -164,6 +167,9 @@
 			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
 			return
 		if(locate(/obj/structure/barricade) in get_turf(src))
+			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
+			return
+		if(locate(/obj/structure/trench) in get_turf(src))
 			to_chat(user, SPAN_WARNING("There already is a barricade at this position!"))
 			return
 		if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
