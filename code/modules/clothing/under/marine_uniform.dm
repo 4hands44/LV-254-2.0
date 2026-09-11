@@ -1739,3 +1739,26 @@
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi'
 	)
+
+/obj/item/clothing/under/marine/veteran/killer
+	name = "\improper Tracksuit"
+	desc = "A stylish and comfortable iconicly branded tracksuit. Truely a killer look."
+	icon = 'icons/obj/items/clothing/uniforms/misc_ert_colony.dmi'
+	icon_state = "killer"
+	worn_state = "killer"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_NO_SENSORS
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/killer)
+	flags_jumpsuit = NONE
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi'
+	)

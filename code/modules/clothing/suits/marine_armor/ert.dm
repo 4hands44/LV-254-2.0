@@ -1104,3 +1104,24 @@
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/tagrilla
 )
+
+/obj/item/clothing/suit/storage/marine/veteran/killer
+	name = "\improper Old russian Ballistic Vest"
+	desc = "Originally a military-grade ballistic vest, its well past it's prime and using a design well over a hundred years old."
+	icon_state = "killer"
+	icon = 'icons/obj/items/clothing/suits/misc_ert.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/misc_ert.dmi'
+	)
+	storage_slots = 6
+	flags_armor_protection = BODY_FLAG_CHEST
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/killer
+)
