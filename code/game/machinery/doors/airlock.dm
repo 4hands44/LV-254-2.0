@@ -572,7 +572,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 			return
 
 		to_chat(user, SPAN_NOTICE("You start taking down \the [src]."))
-		if(!do_after(user, 10 SECONDS, INTERRUPT_ALL_OUT_OF_RANGE, BUSY_ICON_BUILD))
+		if(!do_after(user, 6 SECONDS, INTERRUPT_ALL_OUT_OF_RANGE, BUSY_ICON_BUILD))
 			to_chat(user, SPAN_NOTICE("You stop taking down \the [src]."))
 			return
 		to_chat(user, SPAN_NOTICE("You tear down \the [src]."))
