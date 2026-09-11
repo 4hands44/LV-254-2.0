@@ -1,5 +1,5 @@
 /datum/equipment_preset/tagrilla
-	name = "Factory Boss"
+	name = "Factory Boss(Warlord)"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_TAGRILLA
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -38,7 +38,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/red(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
 	spawn_random_tagrilla_loadout(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/tagrilla(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/scav_boss(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp(new_human), WEAR_R_STORE)
 
 	new_human.set_species("Tagrilla")

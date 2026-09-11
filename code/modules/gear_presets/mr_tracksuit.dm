@@ -1,5 +1,5 @@
 /datum/equipment_preset/mr_tracksuit
-	name = "Mr Tracksuit"
+	name = "Mr Tracksuit(Warlord)"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_MR_TRACKSUIT
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -12,7 +12,7 @@
 
 /datum/equipment_preset/mr_tracksuit/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = MALE
-	new_human.change_real_name(new_human, "Tracksuit")
+	new_human.change_real_name(new_human, "Mr. Tracksuit")
 	new_human.f_style = "7 O'clock Shadow"
 	new_human.h_style = "Crewcut"
 	new_human.undershirt = "None"
@@ -33,10 +33,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/killer(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/killer(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/grey/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/red(new_human), WEAR_WAIST)
-	spawn_random_tagrilla_loadout(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/tagrilla(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/np92(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp(new_human), WEAR_IN_ACCESSORY)
+	spawn_random_mr_tracksuit_loadout(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/scav_boss(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_R_STORE)
 
 	new_human.set_species("Tagrilla")
 
