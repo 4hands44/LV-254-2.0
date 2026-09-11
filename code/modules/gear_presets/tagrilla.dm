@@ -4,6 +4,7 @@
 	assignment = JOB_TAGRILLA
 	flags = EQUIPMENT_PRESET_EXTRA
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN)
+	faction = FACTION_UPP // change later to unique so he can have better emote sounds
 
 	skills = /datum/skills/tagrilla
 	idtype = /obj/item/card/id/dogtag
