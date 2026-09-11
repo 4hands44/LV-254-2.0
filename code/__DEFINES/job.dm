@@ -671,6 +671,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_XENOMORPH    "Xenomorph"
 #define JOB_XENOMORPH_QUEEN  "Queen"
 #define JOB_TAGRILLA "Factory Boss"
+#define JOB_MR_TRACKSUIT "Mall Goer"
 
 // For coloring the ranks in the statistics menu
 #define JOB_PLAYTIME_TIER_0  (0 HOURS)

@@ -33,7 +33,7 @@
 	new /obj/item/clothing/suit/storage/marine/M3T(src)
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
-	new /obj/item/weapon/gun/launcher/rocket(src)
+	new /obj/item/weapon/gun/launcher/rocket/m5(src)
 	new /obj/item/attachable/scope/mini/alt_iff_scope(src)
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket(src)
@@ -829,7 +829,7 @@
 
 /obj/item/storage/box/kit/at/fill_preset_inventory()
 	new /obj/item/storage/pouch/construction/full(src)
-	new /obj/item/weapon/gun/launcher/rocket(src)
+	new /obj/item/weapon/gun/launcher/rocket/m5(src)
 	new /obj/item/attachable/scope/mini/alt_iff_scope(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
@@ -845,7 +845,7 @@
 	desc = "A small kit containing an M5 RPG, rocketpack and Spare rockets."
 
 /obj/item/storage/box/kit/m5/fill_preset_inventory()
-	new /obj/item/weapon/gun/launcher/rocket(src)
+	new /obj/item/weapon/gun/launcher/rocket/m5(src)
 	new /obj/item/attachable/scope/mini/alt_iff_scope(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)

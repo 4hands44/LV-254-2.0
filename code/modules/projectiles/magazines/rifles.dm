@@ -380,6 +380,30 @@
 	default_ammo = /datum/ammo/bullet/rifle/type71/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/rifle/ak4047_drum
+	name = "\improper AK-4047 magazine (5.45x39mm)"
+	desc = "A 5.45x39mm high-capacity drum magazine for the AK-4047 rifle. (Also fits in the type71)"
+	caliber = "5.45x39mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/assault_rifles.dmi'
+	icon_state = "ak84s_drum"
+	ammo_band_icon = "+ak84s_drum_band"
+	ammo_band_icon_empty = "+ak84s_drum_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/type71
+	max_rounds = 95
+	gun_type = /obj/item/weapon/gun/rifle/type71
+
+/obj/item/ammo_magazine/rifle/ak4047_drum/ap
+	name = "\improper AK-4047 AP magazine (5.45x39mm)"
+	desc = "A 5.45x39mm high-capacity drum magazine containing armor piercing rounds for the AK-4047 rifle.(Also fits in the type71)"
+	default_ammo = /datum/ammo/bullet/rifle/type71/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/ak4047_drum/heap
+	name = "\improper AK-4047 HEAP magazine (5.45x39mm)"
+	desc = "A 5.45x39mm high-capacity drum magazine containing the standard high explosive armor piercing rounds for the AK-4047 rifle.(Also fits in the type71)"
+	default_ammo = /datum/ammo/bullet/rifle/type71/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
 //-------------------------------------------------------
 //UPP TYPE 71 RIFLE
 

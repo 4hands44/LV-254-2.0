@@ -2005,7 +2005,11 @@
 		/obj/item/ammo_magazine/rifle/type71/heap,
 		/obj/item/ammo_magazine/rifle/ak4047,
 		/obj/item/ammo_magazine/rifle/ak4047/ap,
-		/obj/item/ammo_magazine/rifle/ak4047/heap,)
+		/obj/item/ammo_magazine/rifle/ak4047/heap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/ap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/heap,
+		)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	flags_equip_slot = SLOT_BACK
@@ -2092,6 +2096,82 @@
 /obj/item/weapon/gun/rifle/ak4047/tagrilla
 	current_mag = /obj/item/ammo_magazine/rifle/ak4047/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
+
+
+//-------------------------------------------------------
+//UPP AK84s LMG
+
+/obj/item/weapon/gun/rifle/ak4047_lmg
+	name = "\improper AK–4047p pulse rifle"
+	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap and lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This is the LMG varient."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/assault_rifles.dmi'
+	icon_state = "ak84s"
+	item_state = "ak84s"
+
+	fire_sound = 'sound/weapons/gun_ak4047.mp3'
+	reload_sound = 'sound/weapons/ak4047_reload.mp3'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047_drum
+	wield_delay = WIELD_DELAY_FAST
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/lasersight,
+		)
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/type71/ap,
+		/obj/item/ammo_magazine/rifle/type71/heap,
+		/obj/item/ammo_magazine/rifle/ak4047,
+		/obj/item/ammo_magazine/rifle/ak4047/ap,
+		/obj/item/ammo_magazine/rifle/ak4047/heap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/ap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/heap,
+		)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_equip_slot = SLOT_BACK
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 13, "stock_x" = 11, "stock_y" = 14)
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_burst_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_5
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT //10~ more damage than m41, as well as higher ap from bullet, slightly higher DPS, 133>137.5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/stock/ak/STOCK = new(src)
+	STOCK.flags_attach_features &= ~ATTACH_REMOVABLE
+	STOCK.Attach(src)
+	update_attachable(STOCK.slot)
+
+	var/obj/item/attachable/extended_barrel/BARREL = new(src)
+	BARREL.flags_attach_features &= ~ATTACH_REMOVABLE
+	BARREL.Attach(src)
+	update_attachable(BARREL.slot)
+
+	var/obj/item/attachable/magnetic_harness/HARNESS = new(src)
+	HARNESS.flags_attach_features &= ~ATTACH_REMOVABLE
+	HARNESS.Attach(src)
+	update_attachable(HARNESS.slot)
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/mr_tracksuit
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047_drum/ap
 
 //M4RA Battle Rifle, standard USCM DMR
 

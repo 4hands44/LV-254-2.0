@@ -713,7 +713,7 @@
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
 
-/obj/item/storage/pouch/medical/tagrilla/fill_preset_inventory()
+/obj/item/storage/pouch/medical/scav_boss/fill_preset_inventory()
 	new /obj/item/tool/surgery/triage_kit(src)
 	new /obj/item/reagent_container/food/drinks/bottle/vodka_cocktail(src)
 	new /obj/item/stack/medical/splint(src)
