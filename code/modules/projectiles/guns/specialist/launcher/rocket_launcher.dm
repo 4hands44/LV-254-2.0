@@ -3,7 +3,7 @@
 //M5 RPG
 
 /obj/item/weapon/gun/launcher/rocket
-	name = "\improper M5 RPG"
+	name = "\improper concept of an RPG"
 	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi'
 	icon_state = "m5"
@@ -26,10 +26,9 @@
 	delay_style = WEAPON_DELAY_NO_FIRE
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	attachable_allowed = list(
+		/obj/item/attachable/m5_rpg_breech,
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini/alt_iff_scope,
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini_iff,
 	)
 
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
@@ -49,8 +48,7 @@
 
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 16, "rail_y" = 21, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
-
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 16, "rail_y" = 21, "under_x" = 19, "under_y" = 14, "stock_x" = -6, "stock_y" = 16)
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_config_values()
 	..()
@@ -210,6 +208,24 @@
 		mob.KnockDown(knockdown_amount)
 		mob.apply_effect(6, STUTTER)
 		mob.emote("pain")
+
+
+/obj/item/weapon/gun/launcher/rocket/m5
+	name = "\improper M5 RPG"
+	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
+
+/obj/item/weapon/gun/launcher/rocket/m5/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/m5_rpg_breech/S = new(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachables()
+
+	var/obj/item/attachable/scope/mini_iff/Integrated = new(src)
+	Integrated.hidden = TRUE
+	Integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	Integrated.Attach(src)
+	update_attachable(Integrated.slot)
 
 //-------------------------------------------------------
 //M5 RPG'S MEAN FUCKING COUSIN

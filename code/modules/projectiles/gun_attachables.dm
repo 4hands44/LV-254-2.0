@@ -2574,6 +2574,18 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0
 	size_mod = 0
 
+/obj/item/attachable/m5_rpg_breech
+	name = "M5 RPG Breech"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "m5_breech"
+	attach_icon = "m5_breech"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
+
 /obj/item/attachable/pkpbarrel
 	name = "QYJ-72 Barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
