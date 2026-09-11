@@ -1,17 +1,16 @@
 /datum/emote/living/carbon/human/tagrilla/passive
 	category = TAGRILLA_EMOTE_CATEGORY_PASSIVE
-	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 // Pain
 /datum/emote/living/carbon/human/tagrilla/passive/pain
-	key = "In Pain"
-
-/datum/emote/living/carbon/human/tagrilla/passive/pain/get_sound(mob/living/user)
-	return 'sound/voice/tagrilla/hurt.ogg'
+	override_say = "Pained"
+	key = "hurt"
+	sound = 'sound/voice/tagrilla/hurt.ogg'
 
 // Compliment
 /datum/emote/living/carbon/human/tagrilla/passive/compliment
-	key = "Good Job"
+	override_say = "Good Job"
+	key = "workgood"
 
 /datum/emote/living/carbon/human/tagrilla/passive/compliment/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/workgood_1.ogg',
@@ -19,7 +18,8 @@
 
 // Insult
 /datum/emote/living/carbon/human/tagrilla/passive/insult
-	key = "Bad Job"
+	override_say = "Bad Job"
+	key = "workbad"
 
 /datum/emote/living/carbon/human/tagrilla/passive/insult/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/workbad_1.ogg',
@@ -27,7 +27,8 @@
 
 // Need Ammo
 /datum/emote/living/carbon/human/tagrilla/passive/ammo
-	key = "Need Ammo"
+	override_say = "Need Ammo"
+	key = "needammo"
 
 /datum/emote/living/carbon/human/tagrilla/passive/ammo/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/needammo_1.ogg',

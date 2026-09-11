@@ -1,10 +1,10 @@
 /datum/emote/living/carbon/human/tagrilla/aggressive
 	category = TAGRILLA_EMOTE_CATEGORY_AGGRESSIVE
-	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 // Enemy Spotted
 /datum/emote/living/carbon/human/tagrilla/aggressive/spotted
-	key = "Enemy Spotted"
+	override_say = "Enemy Spotted"
+	key = "enemyspotted"
 
 /datum/emote/living/carbon/human/tagrilla/aggressive/spotted/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/enemyspotted_1.ogg',
@@ -14,7 +14,8 @@
 
 // Enemy Lost
 /datum/emote/living/carbon/human/tagrilla/aggressive/lost
-	key = "Lost Visual"
+	override_say = "Lost Visual"
+	key = "enemylost"
 
 /datum/emote/living/carbon/human/tagrilla/aggressive/lost/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/enemylost_1.ogg',
@@ -23,7 +24,8 @@
 
 // Enemy Killed
 /datum/emote/living/carbon/human/tagrilla/aggressive/kill
-	key = "Enemy Killed"
+	override_say = "Enemy Killed"
+	key = "enemydown"
 
 /datum/emote/living/carbon/human/tagrilla/aggressive/kill/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/enemydown_1.ogg',
@@ -32,7 +34,8 @@
 
 // Warcry
 /datum/emote/living/carbon/human/tagrilla/aggressive/warcry
-	key = "Warcry"
+	override_say = "Warcry"
+	key = "fighting"
 
 /datum/emote/living/carbon/human/tagrilla/aggressive/warcry/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/fighting_1.ogg',
@@ -44,7 +47,8 @@
 
 // Grenade
 /datum/emote/living/carbon/human/tagrilla/aggressive/grenade
-	key = "Grenade"
+	override_say = "Grenade"
+	key = "grenade"
 
 /datum/emote/living/carbon/human/tagrilla/aggressive/grenade/get_sound(mob/living/user)
 	return pick('sound/voice/tagrilla/grenade_1.ogg',

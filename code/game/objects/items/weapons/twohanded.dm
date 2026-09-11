@@ -429,5 +429,5 @@
 		target.apply_effect(5, SLOW)
 		target.apply_effect(10, DAZE)
 		target.apply_effect(10, EYE_BLUR)
-		shake_camera(target, 1, 6)
+		shake_camera(target, 1, 8)
 	. = ..()

@@ -6,12 +6,14 @@
 		TRAIT_TAGRILLA,
 		TRAIT_HEARTLESS,
 		TRAIT_SUPER_STRONG,
+		TRAIT_EMOTE_CD_EXEMPT
 	)
 	death_message = "slowly stumbles forward, letting out a final pained grunt before falling over dead."
 	death_sound = 'sound/voice/tagrilla/death.ogg'
 
 
 /datum/species/human/hero/lesser/tagrilla/handle_post_spawn(mob/living/carbon/human/H)
+	give_action(H, /datum/action/tagrilla_emote_panel)
 	return ..()
 
 
@@ -74,7 +76,7 @@
 	for(var/datum/emote/living/carbon/human/tagrilla/emote as anything in GLOB.tagrilla_emotes)
 		data["emotes"] += list(list(
 			"id" = initial(emote.key),
-			"text" = (initial(emote.override_say) || initial(emote.say_message)),
+			"text" = (initial(emote.override_say)),
 			"category" = initial(emote.category),
 			"path" = "[emote]",
 		))

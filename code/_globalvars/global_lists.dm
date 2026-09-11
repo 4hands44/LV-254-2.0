@@ -644,7 +644,7 @@ GLOBAL_LIST_INIT_TYPED(specialist_set_datums, /datum/specialist_set, setup_speci
 /proc/setup_tagrilla_emotes()
 	var/list/emotes_to_add = list()
 	for(var/datum/emote/living/carbon/human/tagrilla/emote as anything in subtypesof(/datum/emote/living/carbon/human/tagrilla))
-		if(!initial(emote.key) || !initial(emote.say_message))
+		if(!initial(emote.key))
 			continue
 
 		if(!(initial(emote.category) in GLOB.tagrilla_categories))

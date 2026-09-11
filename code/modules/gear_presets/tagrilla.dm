@@ -42,4 +42,4 @@
 
 	new_human.set_species("Tagrilla")
 
-	to_chat(new_human, SPAN_WARNING("You are the Factory Boss, infamously angry and psychotic. You are armed with your AK4047 and your trusty sledgehammer, use both wisely with your other gear to kill any in your path!"))
+	to_chat(new_human, SPAN_WARNING("You are the Factory Boss, infamously angry and psychotic. You are armed with an insanely strong sledgehammer, capable of killing most targets in a handful of hits. Your tough exterior and near immunity to pain make you hard to put down, use this and the rest of your gear to your advantage to kill those against you!"))

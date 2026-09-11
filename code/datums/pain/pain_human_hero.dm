@@ -23,7 +23,7 @@
 	threshold_severe = 200
 	threshold_horrible = 400
 
-	feels_pain = FALSE
+	feels_pain = TRUE
 
 /datum/pain/human_hero/lesser/activate_severe()
 	new /datum/effects/pain/human/discomforting(source_mob)
