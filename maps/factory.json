@@ -1,0 +1,65 @@
+{
+    "map_name": "Moroski Factory",
+    "map_path": "map_files/Factory",
+    "map_file": "factory.dmm",
+    "webmap_url": "Factory",
+
+    "weather_holder": "/datum/weather_ss_map_holder/lv759_hybrisa_prospera",
+
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/scientist/soro",
+        "/datum/equipment_preset/survivor/doctor/soro",
+        "/datum/equipment_preset/survivor/engineer/soro",
+        "/datum/equipment_preset/survivor/corporate/soro",
+        "/datum/equipment_preset/survivor/security/soro",
+        "/datum/equipment_preset/survivor/interstellar_human_rights_observer/soro"
+    ],
+    "defcon_triggers": [
+        3750,
+        2600,
+        1450,
+        580,
+        0.0
+    ],
+    "announce_text": "An emergency distress signal has been recieved from the frontier world of LV-305. Tracing the signal further has narrowed down the location to a munitions and chemical factory in the UPP-owned \"Moroski Economic Region\". A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "monkey_types": [
+        "farwa",
+        "monkey",
+        "neaera",
+        "stok"
+    ],
+    "xvx_hives": {
+        "xeno_hive_alpha": 0,
+        "xeno_hive_bravo": 0,
+        "xeno_hive_charlie": 70
+    },
+    "traits": [
+        {
+            "Ground": true,
+            "Up": 1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Down": -1
+        }
+    ],
+    "camouflage": "urban",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection",
+    ],
+    "nightmare_path": "maps/Nightmare/maps/Factory/"
+}
