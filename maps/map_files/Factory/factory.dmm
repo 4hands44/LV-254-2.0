@@ -1339,11 +1339,6 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/hybrisa/street/cement3,
 /area/factory/z2/indoors/processing)
-"hS" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/survivor_spawner,
-/turf/open/floor/almayer/dark_sterile,
-/area/factory/z3/indoors/office)
 "hT" = (
 /obj/structure/prop/power_transformer{
 	density = 1
@@ -5021,11 +5016,6 @@
 /obj/effect/landmark/corpsespawner/colonist/random/burst,
 /turf/open/floor/cult,
 /area/factory/z1/outdoors/directional)
-"Cx" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/survivor_spawner,
-/turf/open/floor/strata/fake_wood,
-/area/factory/z4/indoors/office/foreman)
 "Cz" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -7874,10 +7864,6 @@
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z2/indoors/chemical)
-"RU" = (
-/obj/effect/landmark/survivor_spawner,
-/turf/open/floor/hybrisa/tile/tilewhite,
-/area/factory/z3/indoors/lab)
 "RV" = (
 /obj/structure/platform_decoration/metal/almayer_smooth/west,
 /turf/open_space,
@@ -9090,11 +9076,6 @@
 /obj/structure/flora/tree/tyrargo/tree_2,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/factory/z2/outdoors/directional/east)
-"Yk" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/survivor_spawner,
-/turf/open/asphalt/cement,
-/area/factory/z4/indoors/balcony)
 "Ym" = (
 /obj/structure/fence/slim/dark,
 /turf/open/floor/almayer/plate,
@@ -49038,7 +49019,7 @@ XH
 NX
 ha
 NX
-hS
+XH
 XH
 YJ
 YJ
@@ -49177,7 +49158,7 @@ XH
 XH
 XH
 XH
-hS
+XH
 XH
 XH
 XH
@@ -57160,7 +57141,7 @@ Zo
 ak
 nT
 ak
-RU
+ak
 ak
 ak
 Zo
@@ -57549,7 +57530,7 @@ ak
 ak
 ak
 FZ
-RU
+ak
 Zo
 ta
 ta
@@ -66076,7 +66057,7 @@ qv
 Xc
 rC
 KT
-Cx
+KT
 KT
 KT
 jR
@@ -66208,7 +66189,7 @@ KT
 co
 yL
 co
-Cx
+KT
 KT
 rC
 mQ
@@ -73419,7 +73400,7 @@ BW
 TA
 BW
 BW
-Yk
+TA
 TA
 ug
 yu
@@ -74961,7 +74942,7 @@ lh
 TA
 TA
 TA
-Yk
+TA
 TA
 TA
 TA
