@@ -632,22 +632,25 @@
 	return
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/lz1
+	desc = "A flight computer that can be used for autopilot or long-range flights, this one is a laptop model, handy and portable."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
-	icon_state = "shuttle"
+	icon_state = "shuttle_laptop"
 	linked_lz = DROPSHIP_LZ1
 	is_remote = TRUE
 	can_change_shuttle = TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/lz2
+	desc = "A flight computer that can be used for autopilot or long-range flights, this one is a laptop model, handy and portable."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
-	icon_state = "shuttle"
+	icon_state = "shuttle_laptop"
 	linked_lz = DROPSHIP_LZ2
 	is_remote = TRUE
 	can_change_shuttle = TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control
+	desc = "A flight computer that can be used for autopilot or long-range flights, this one is a laptop model, handy and portable."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
-	icon_state = "shuttle"
+	icon_state = "shuttle_laptop"
 	is_remote = TRUE
 	needs_power = TRUE
 	can_change_shuttle = TRUE
