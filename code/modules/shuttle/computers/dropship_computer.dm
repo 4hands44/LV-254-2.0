@@ -648,9 +648,9 @@
 	can_change_shuttle = TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control
-	desc = "A flight computer that can be used for autopilot or long-range flights, this one is a laptop model, handy and portable."
+	desc = "A flight computer that can be used for autopilot or long-range flights."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
-	icon_state = "shuttle_laptop"
+	icon_state = "shuttle"
 	is_remote = TRUE
 	needs_power = TRUE
 	can_change_shuttle = TRUE
