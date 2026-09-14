@@ -261,7 +261,8 @@
 "bb" = (
 /obj/structure/machinery/door/airlock/almayer/generic/rusted{
 	dir = 1;
-	name = "\improper Catwalk"
+	name = "\improper Catwalk";
+	locked = 1
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z3/indoors/directional/south)
@@ -1797,7 +1798,7 @@
 /obj/structure/window{
 	dir = 4
 	},
-/turf/open/floor/almayer/dark_sterile,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z3/indoors/office)
 "gT" = (
 /obj/structure/stairs/multiz/up{
@@ -1816,7 +1817,7 @@
 /obj/structure/window{
 	dir = 8
 	},
-/turf/open/floor/almayer/dark_sterile,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z3/indoors/office)
 "gV" = (
 /obj/structure/machinery/light/small{
@@ -1832,7 +1833,7 @@
 /obj/structure/window{
 	dir = 8
 	},
-/turf/open/floor/almayer/dark_sterile,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z3/indoors/office)
 "gX" = (
 /obj/structure/platform/metal/almayer_smooth/east,
@@ -1843,6 +1844,15 @@
 "gY" = (
 /turf/open/floor/plating,
 /area/factory/z1/indoors/directional/south)
+"gZ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_29";
+	pixel_y = 8;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "ha" = (
 /turf/closed/wall,
 /area/factory/z3/indoors/office)
@@ -1981,6 +1991,14 @@
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z2/indoors/postman)
+"hD" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/trash{
+	icon_state = "trash_15";
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "hE" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/hybrisa/tile/tilewhite,
@@ -3073,6 +3091,16 @@
 "lP" = (
 /turf/open_space,
 /area/factory/z3/outdoors/directional/west)
+"lQ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood{
+	layer = 3
+	},
+/obj/structure/barricade/wooden{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "lR" = (
 /obj/structure/stairs/multiz/down{
 	dir = 4
@@ -3089,6 +3117,11 @@
 	icon_state = "25"
 	},
 /area/factory/z4/indoors/ship)
+"lU" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/surface/rack,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "lV" = (
 /obj/structure/barricade/metal,
 /turf/open/asphalt/cement,
@@ -3260,6 +3293,13 @@
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z4/indoors/directional)
+"mB" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/trash{
+	icon_state = "trash_8"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "mC" = (
 /obj/structure/platform/metal/almayer_smooth/west,
 /obj/effect/hybrisa/misc/fake/wire/red{
@@ -3588,6 +3628,13 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/holding)
+"nS" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/barricade/wooden{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "nT" = (
 /obj/effect/landmark/hunter_secondary,
 /turf/open/floor/hybrisa/tile/tilewhite,
@@ -4963,6 +5010,13 @@
 /obj/item/ammo_magazine/pistol/heavy/super,
 /turf/open/floor/hybrisa/carpet/carpetblue,
 /area/factory/z2/indoors/office)
+"sV" = (
+/obj/structure/closet,
+/obj/structure/barricade/wooden{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "sW" = (
 /obj/structure/safe,
 /turf/open/floor/hybrisa/carpet/carpetblue,
@@ -5310,6 +5364,14 @@
 "up" = (
 /turf/open/hybrisa/street/sidewalkcenter/south,
 /area/factory/z2/outdoors/directional/south)
+"uq" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/trash{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "ur" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -5406,6 +5468,17 @@
 "uI" = (
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/sewer)
+"uJ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/trash{
+	icon_state = "trash_12";
+	pixel_y = 12
+	},
+/obj/structure/barricade/wooden{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "uK" = (
 /obj/structure/prop/invuln/rope{
 	pixel_y = 20
@@ -5874,7 +5947,8 @@
 "wv" = (
 /obj/structure/machinery/door/airlock/almayer/generic/rusted{
 	dir = 1;
-	name = "\improper Catwalk"
+	name = "\improper Catwalk";
+	locked = 1
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z4/indoors/directional/east)
@@ -8841,6 +8915,11 @@
 /obj/structure/platform/metal/almayer_smooth/north,
 /turf/open_space,
 /area/factory/z2/indoors/loader)
+"Hv" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/tool/mop,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "Hw" = (
 /obj/structure/window/framed/colony,
 /turf/open/floor/almayer/plate,
@@ -8901,6 +8980,10 @@
 /obj/structure/platform/metal/almayer_smooth,
 /turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/unloading)
+"HH" = (
+/obj/item/tool/warning_cone,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "HI" = (
 /turf/open/hybrisa/street/sidewalkcenter/west,
 /area/factory/z2/outdoors/directional/west)
@@ -9016,6 +9099,11 @@
 /obj/effect/landmark/hunter_secondary,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional/east)
+"If" = (
+/obj/structure/platform/metal/almayer_smooth/west,
+/obj/structure/platform/metal/almayer_smooth/north,
+/turf/open_space,
+/area/factory/z3/indoors/office)
 "Ig" = (
 /turf/open/floor/almayer/no_build/plate,
 /area/factory/z4/indoors/office)
@@ -9132,6 +9220,19 @@
 /obj/item/trash/cigbutt,
 /turf/open/floor/hybrisa/tile/tilebeige,
 /area/factory/z4/indoors/bridge)
+"ID" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/east,
+/turf/open_space,
+/area/factory/z3/indoors/office)
+"IE" = (
+/obj/structure/platform/metal/almayer_smooth/west,
+/turf/open_space,
+/area/factory/z3/indoors/office)
+"IF" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/bedsheetbin,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "IG" = (
 /obj/structure/platform/metal/almayer_smooth{
 	climbable = 0;
@@ -9157,6 +9258,14 @@
 /obj/structure/platform/metal/almayer_smooth,
 /turf/open_space,
 /area/factory/z4/indoors/directional/west)
+"IJ" = (
+/obj/effect/decal/hybrisa/trash{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/structure/machinery/washing_machine,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "IK" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -9168,6 +9277,10 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/wood/wood_broken,
 /area/factory/z1/indoors/wet)
+"IM" = (
+/obj/structure/machinery/washing_machine,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "IN" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/hybrisa/street/cement3,
@@ -9191,6 +9304,10 @@
 	},
 /turf/open/hybrisa/street/cement3,
 /area/factory/z2/indoors/loader)
+"IR" = (
+/obj/structure/bedsheetbin,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "IS" = (
 /turf/open/hybrisa/street/sidewalk/east,
 /area/factory/z2/indoors/gate)
@@ -9206,6 +9323,13 @@
 "IV" = (
 /turf/open/hybrisa/street/sidewalkcenter/south,
 /area/factory/z2/outdoors/directional)
+"IW" = (
+/obj/effect/decal/hybrisa/trash{
+	icon_state = "trash_15";
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "IX" = (
 /obj/structure/machinery/light/spot/red{
 	dir = 1
@@ -9258,6 +9382,14 @@
 "Ji" = (
 /turf/open/hybrisa/street/sidewalkfull,
 /area/factory/z2/outdoors/comms)
+"Jj" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/trash{
+	icon_state = "trash_12";
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "Jk" = (
 /turf/closed/wall/wood,
 /area/factory/z2/indoors/shack)
@@ -9291,6 +9423,19 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z1/indoors/directional/south)
+"Jq" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/barricade/wooden,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
+"Jr" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_25";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
 "Js" = (
 /obj/structure/prop/hybrisa/vehicles/Meridian/Taxi,
 /turf/open/hybrisa/street/asphalt,
@@ -9299,6 +9444,14 @@
 /obj/effect/landmark/survivor_spawner,
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/factory/z4/indoors/ship)
+"Ju" = (
+/obj/structure/machinery/door/airlock/almayer/generic/rusted{
+	dir = 1;
+	name = "\improper Catwalk";
+	locked = 1
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/factory/z4/indoors/directional/west)
 "Jv" = (
 /obj/structure/platform_decoration/metal/almayer_smooth/west,
 /obj/structure/device/razorwire{
@@ -50836,16 +50989,16 @@ JL
 LA
 LA
 JL
-XH
+Jr
 XH
 XH
 Jo
 XH
+Hv
 XH
 XH
-XH
-XH
-XH
+IF
+IF
 XH
 XH
 XH
@@ -50855,7 +51008,7 @@ XH
 Jo
 kN
 XH
-XH
+gZ
 JL
 LA
 LA
@@ -50970,6 +51123,7 @@ Du
 XH
 XH
 XH
+Jj
 XH
 XH
 XH
@@ -50977,8 +51131,7 @@ XH
 XH
 XH
 XH
-XH
-XH
+uJ
 XH
 XH
 Du
@@ -51113,7 +51266,7 @@ NX
 ha
 NX
 XH
-XH
+hD
 JL
 Mu
 bG
@@ -51482,7 +51635,7 @@ Vi
 FS
 ha
 gP
-XH
+uq
 NX
 ha
 NX
@@ -51492,7 +51645,7 @@ ha
 gW
 YJ
 YJ
-YJ
+HH
 ha
 XH
 XH
@@ -51616,12 +51769,12 @@ NX
 ha
 NX
 XH
-XH
+nS
 ha
 ha
 ha
-YJ
-qi
+HH
+If
 ha
 XH
 gP
@@ -51747,17 +51900,17 @@ NX
 XH
 XH
 YJ
-YJ
+IJ
 ha
-qi
-qi
+IE
+ID
 ha
-XH
+uq
 XH
 NX
 ha
 NX
-XH
+mB
 XH
 ha
 Ni
@@ -51876,7 +52029,7 @@ NX
 gP
 XH
 lO
-YJ
+IM
 ha
 qi
 qi
@@ -52004,8 +52157,8 @@ ha
 NX
 XH
 XH
-YJ
-YJ
+IW
+IR
 ha
 ha
 ha
@@ -52014,9 +52167,9 @@ YJ
 YJ
 NX
 ha
-NX
-XH
-gP
+sV
+nS
+lQ
 ha
 Ni
 gM
@@ -52129,7 +52282,7 @@ pD
 XH
 XH
 XH
-XH
+Jq
 kN
 XH
 Du
@@ -52143,7 +52296,7 @@ XH
 XH
 XH
 XH
-XH
+uq
 XH
 XH
 pD
@@ -52265,16 +52418,16 @@ XH
 XH
 XH
 XH
-XH
-XH
-XH
+lU
+lU
+Hv
 XH
 XH
 XH
 sz
 XH
 XH
-XH
+lU
 ha
 Ni
 Ni
@@ -68146,7 +68299,7 @@ mh
 mh
 mh
 mh
-SP
+Ju
 yU
 yU
 HT
