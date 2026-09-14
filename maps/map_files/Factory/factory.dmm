@@ -42,6 +42,7 @@
 	name = "\improper Sewer Lockdown";
 	dir = 4
 	},
+/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z1/indoors/sewer)
 "aj" = (
@@ -2167,6 +2168,9 @@
 /area/factory/z2/outdoors/landing)
 "in" = (
 /obj/structure/stairs/multiz/up,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z1/indoors/triple)
 "io" = (
@@ -3309,10 +3313,6 @@
 /obj/item/storage/firstaid/toxin,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/tent)
-"mM" = (
-/obj/structure/fence/slim/dark,
-/turf/open/jungle/water/river,
-/area/factory/z1/indoors/sewer)
 "mN" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/largecrate/empty,
@@ -3547,10 +3547,6 @@
 /obj/item/shard,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional/west)
-"nK" = (
-/obj/structure/fence/slim/dark,
-/turf/open/floor/almayer/plate,
-/area/factory/z1/indoors/sewer)
 "nL" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/item/shard,
@@ -4146,13 +4142,31 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/factory/z4/indoors/office/foreman)
+"pW" = (
+/obj/structure/platform/metal/almayer_smooth,
+/obj/structure/platform/metal/kutjevo_smooth/east,
+/turf/open/jungle/water/river,
+/area/factory/z1/indoors/sewer)
 "pX" = (
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z4/indoors/office)
+"pY" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/wood/wood_broken,
+/area/factory/z1/indoors/sewer)
 "pZ" = (
 /obj/structure/cargo_container/upp/left,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/chemical)
+"qa" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/wood,
+/area/factory/z1/indoors/sewer)
+"qb" = (
+/obj/structure/platform/metal/almayer_smooth,
+/obj/structure/platform/metal/kutjevo_smooth/west,
+/turf/open/jungle/water/river,
+/area/factory/z1/indoors/sewer)
 "qc" = (
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/cement,
@@ -4161,22 +4175,49 @@
 /obj/structure/platform_decoration/metal/almayer_smooth/west,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z2/indoors/unloading)
+"qe" = (
+/obj/structure/platform/metal/almayer_smooth/north,
+/turf/open/jungle/water/river,
+/area/factory/z1/indoors/sewer)
 "qf" = (
 /obj/structure/platform/metal/kutjevo_smooth,
 /turf/open/gm/river{
 	name = "water"
 	},
 /area/factory/z1/indoors/wet)
+"qg" = (
+/obj/structure/platform/metal/almayer_smooth/north,
+/obj/structure/platform/metal/kutjevo_smooth/east,
+/turf/open/jungle/water/river,
+/area/factory/z1/indoors/sewer)
 "qh" = (
 /turf/closed/wall,
 /area/factory/z4/indoors/directional/east)
 "qi" = (
 /turf/open_space,
 /area/factory/z3/indoors/office)
+"qj" = (
+/obj/structure/platform/metal/almayer_smooth/north,
+/obj/structure/platform/metal/kutjevo_smooth/west,
+/turf/open/jungle/water/river,
+/area/factory/z1/indoors/sewer)
+"qk" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/wood,
+/area/factory/z1/indoors/wet)
+"ql" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/east,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/triple)
 "qm" = (
 /obj/structure/platform/metal/almayer_smooth/north,
 /turf/open_space,
 /area/sky)
+"qn" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/west,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/triple)
 "qo" = (
 /obj/structure/cargo_container/upp/left{
 	layer = 3.1;
@@ -4184,6 +4225,10 @@
 	},
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/holding)
+"qp" = (
+/obj/structure/platform/metal/almayer_smooth/west,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/triple)
 "qq" = (
 /obj/structure/flora/tree/tyrargo/tree_2,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -4243,6 +4288,10 @@
 /obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z4/indoors/directional/west)
+"qD" = (
+/obj/structure/platform/metal/almayer_smooth/east,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/triple)
 "qE" = (
 /turf/open/hybrisa/street/cement3,
 /area/factory/z2/indoors/loader)
@@ -4254,18 +4303,39 @@
 /obj/structure/platform/metal/almayer_smooth/north,
 /turf/open_space,
 /area/factory/z4/indoors/directional/east)
+"qH" = (
+/obj/structure/stairs{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/almayer/no_build,
+/area/factory/z1/indoors/triple)
 "qI" = (
 /obj/structure/barricade/wooden{
 	dir = 4
 	},
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/chemical)
+"qJ" = (
+/obj/structure/stairs,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build,
+/area/factory/z1/indoors/triple)
 "qK" = (
 /obj/structure/barricade/wooden{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
 /area/factory/z2/indoors/unloading)
+"qL" = (
+/obj/item/shard,
+/obj/structure/platform/metal/almayer_smooth/east,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/triple)
 "qM" = (
 /obj/structure/platform/metal/almayer_smooth/north,
 /obj/effect/hybrisa/misc/fake/wire/blue,
@@ -4283,9 +4353,17 @@
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
 /area/factory/z2/indoors/unloading)
+"qP" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/north,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/triple)
 "qQ" = (
 /turf/open/hybrisa/street/sidewalkfull,
 /area/factory/z2/outdoors/directional/east)
+"qR" = (
+/obj/structure/platform_decoration/metal/almayer_smooth,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/triple)
 "qS" = (
 /obj/structure/stairs/multiz/down{
 	dir = 4
@@ -6453,10 +6531,6 @@
 "Dd" = (
 /turf/closed/wall/cult,
 /area/factory/z1/outdoors/directional)
-"De" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer/plate,
-/area/factory/z1/indoors/sewer)
 "Dg" = (
 /obj/structure/stairs{
 	dir = 1
@@ -8195,6 +8269,7 @@
 /turf/open/floor/almayer/no_build,
 /area/factory/z3/indoors/office)
 "Mw" = (
+/obj/structure/platform/metal/almayer_smooth,
 /turf/open/jungle/water/river,
 /area/factory/z1/indoors/sewer)
 "My" = (
@@ -9584,6 +9659,9 @@
 /obj/structure/stairs/multiz/up{
 	dir = 1
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z1/indoors/triple)
 "Uc" = (
@@ -9619,10 +9697,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/unloading)
-"Ul" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/jungle/water/river,
-/area/factory/z1/indoors/sewer)
 "Un" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -17058,7 +17132,7 @@ UA
 UA
 UA
 Nq
-Nq
+qJ
 in
 jM
 bS
@@ -17186,10 +17260,10 @@ nu
 UA
 UA
 UA
-UA
-UA
-UA
-UA
+qP
+qp
+qp
+ql
 UA
 UA
 UA
@@ -18218,10 +18292,10 @@ UA
 UA
 UA
 UA
-UA
-ni
-UA
-UA
+qR
+qL
+qD
+qn
 UA
 ZH
 ZH
@@ -18349,7 +18423,7 @@ UA
 UA
 jM
 Ub
-qN
+qH
 qN
 UA
 uV
@@ -20573,7 +20647,7 @@ yZ
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -20702,7 +20776,7 @@ yZ
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -20831,7 +20905,7 @@ yZ
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -20960,7 +21034,7 @@ yZ
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -21089,7 +21163,7 @@ yZ
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -21217,10 +21291,10 @@ fm
 fm
 fm
 TG
-nK
-mM
-mM
-nK
+TM
+qe
+Mw
+TM
 TG
 fm
 fm
@@ -21346,10 +21420,10 @@ fm
 fm
 fm
 TG
-De
-Ul
-Ul
-De
+TM
+qe
+Mw
+TM
 TG
 fm
 fm
@@ -21476,7 +21550,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -21605,7 +21679,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -21734,7 +21808,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -21863,7 +21937,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -21992,7 +22066,7 @@ fm
 fm
 TG
 Ih
-Mw
+qe
 Mw
 TM
 TG
@@ -22121,7 +22195,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -22250,7 +22324,7 @@ TG
 TG
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -22379,7 +22453,7 @@ mS
 Pr
 sS
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -22508,8 +22582,8 @@ uI
 uI
 sS
 TM
-Mw
-Mw
+qg
+pW
 TM
 Yg
 rr
@@ -22637,8 +22711,8 @@ sS
 uI
 sS
 TM
-Mw
-Mw
+qa
+pY
 TM
 Yg
 rr
@@ -22766,8 +22840,8 @@ sS
 ZJ
 sS
 TM
-Mw
-Mw
+qa
+qa
 TM
 Yg
 rr
@@ -22895,8 +22969,8 @@ uI
 uI
 sS
 TM
-Mw
-Mw
+qj
+qb
 TM
 Yg
 Er
@@ -23024,7 +23098,7 @@ mR
 mR
 mN
 TM
-Mw
+qe
 Mw
 TM
 Yg
@@ -23153,7 +23227,7 @@ TG
 TG
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -23282,7 +23356,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -23396,7 +23470,7 @@ OS
 le
 sH
 LP
-LP
+OS
 LP
 LP
 LP
@@ -23411,7 +23485,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -23522,10 +23596,10 @@ LP
 LP
 qf
 OS
-GX
+qk
 sH
 LP
-LP
+OS
 LP
 LP
 LP
@@ -23540,7 +23614,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -23669,7 +23743,7 @@ fm
 fm
 TG
 Ih
-Mw
+qe
 Mw
 TM
 TG
@@ -23798,7 +23872,7 @@ TG
 TG
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -23927,7 +24001,7 @@ vc
 vc
 pA
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -24056,7 +24130,7 @@ vc
 vc
 pA
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -24185,7 +24259,7 @@ TG
 TG
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -24314,7 +24388,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -24443,7 +24517,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -24572,7 +24646,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -24700,10 +24774,10 @@ fm
 fm
 fm
 TG
-De
-Ul
-Ul
-De
+TM
+qe
+Mw
+TM
 TG
 fm
 fm
@@ -24829,10 +24903,10 @@ fm
 fm
 fm
 TG
-nK
-mM
-mM
-nK
+TM
+qe
+Mw
+TM
 TG
 fm
 fm
@@ -24959,7 +25033,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -25088,7 +25162,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
@@ -25217,7 +25291,7 @@ fm
 fm
 TG
 TM
-Mw
+qe
 Mw
 TM
 TG
