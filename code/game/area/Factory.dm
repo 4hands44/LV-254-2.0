@@ -368,6 +368,23 @@
 	name = "Moroski Factory Upper Catwalks, West"
 	icon_state = "west"
 
+// Z - LEVEL 4 DIRECTIONAL OUTDOORS
+/area/factory/z4/outdoors/directional
+	name = "Moroski Factory Upper Exterior Catwalks, North"
+	icon_state = "north"
+
+/area/factory/z4/outdoors/directional/east
+	name = "Moroski Factory Upper Exterior Catwalks, East"
+	icon_state = "east"
+
+/area/factory/z4/outdoors/directional/south
+	name = "Moroski Factory Upper Exterior Catwalks, South"
+	icon_state = "south"
+
+/area/factory/z4/outdoors/directional/west
+	name = "Moroski Factory Upper Exterior Catwalks, West"
+	icon_state = "west"
+
 // Z - LEVEL 4 INDOORS
 /area/factory/z4/indoors/office
 	name = "Moroski Factory Second Floor, Office"

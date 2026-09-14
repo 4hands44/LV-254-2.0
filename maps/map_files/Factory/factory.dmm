@@ -18,7 +18,7 @@
 /area/factory/bounds)
 "ad" = (
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/sky)
+/area/factory/z3/outdoors/directional/south)
 "ae" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -344,7 +344,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/sky)
+/area/factory/z4/outdoors/directional/south)
 "bu" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -928,7 +928,7 @@
 /area/factory/z4/indoors/directional/south)
 "dL" = (
 /turf/closed/wall/r_wall/unmeltable,
-/area/sky)
+/area/factory/z3/outdoors/directional/south)
 "dM" = (
 /obj/structure/device/razorwire,
 /turf/open/hybrisa/street/cement3,
@@ -1004,7 +1004,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/sky)
+/area/factory/z3/outdoors/directional/west)
 "eb" = (
 /obj/effect/decal/hybrisa/tiretrack,
 /turf/open/hybrisa/street/asphalt,
@@ -1826,7 +1826,7 @@
 	pixel_y = 16
 	},
 /turf/open_space,
-/area/sky)
+/area/factory/z3/outdoors/directional/west)
 "ha" = (
 /turf/closed/wall,
 /area/factory/z3/indoors/office)
@@ -3019,6 +3019,9 @@
 /obj/structure/largecrate/black_market/confiscated_weaponry,
 /turf/open/asphalt/cement,
 /area/factory/z4/indoors/balcony)
+"lG" = (
+/turf/closed/wall/r_wall/unmeltable,
+/area/factory/z3/outdoors/directional/west)
 "lH" = (
 /turf/open_space,
 /area/factory/z2/indoors/unloading)
@@ -3033,6 +3036,9 @@
 	},
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/processing)
+"lK" = (
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z3/outdoors/directional/west)
 "lL" = (
 /obj/effect/landmark/hunter_secondary,
 /turf/open/hybrisa/street/asphalt,
@@ -3049,6 +3055,19 @@
 /obj/effect/landmark/hunter_secondary,
 /turf/open/floor/almayer/dark_sterile,
 /area/factory/z3/indoors/office)
+"lP" = (
+/turf/open_space,
+/area/factory/z3/outdoors/directional/west)
+"lQ" = (
+/turf/open_space,
+/area/factory/z4/outdoors/directional/south)
+"lR" = (
+/obj/structure/stairs/multiz/down{
+	dir = 4
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/almayer/no_build,
+/area/factory/z4/outdoors/directional/south)
 "lS" = (
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/cement,
@@ -3075,6 +3094,10 @@
 	name = "water"
 	},
 /area/factory/z1/indoors/wet)
+"lX" = (
+/obj/structure/barricade/handrail,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/outdoors/directional/south)
 "lY" = (
 /obj/structure/stairs/multiz/down{
 	dir = 1
@@ -3112,6 +3135,15 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/office)
+"mc" = (
+/obj/structure/stairs/multiz/down{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build,
+/area/factory/z4/outdoors/directional/south)
+"md" = (
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/outdoors/directional/south)
 "me" = (
 /obj/vehicle/powerloader/jd{
 	dir = 8
@@ -3122,11 +3154,25 @@
 /obj/structure/prop/hybrisa/boulders/smallboulderdark/boulder_dark1,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional)
+"mg" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/outdoors/directional/west)
+"mh" = (
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/outdoors/directional/west)
 "mi" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/largecrate/supply/supplies/flares,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/processing)
+"mj" = (
+/turf/open/floor/almayer_hull{
+	name = "roof"
+	},
+/area/factory/z4/outdoors/directional/west)
 "mk" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/prop/invuln/lattice_prop{
@@ -3153,6 +3199,13 @@
 	},
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional/west)
+"mo" = (
+/obj/structure/stairs/multiz/down,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/almayer/no_build,
+/area/factory/z4/outdoors/directional/west)
 "mp" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 5;
@@ -3193,10 +3246,17 @@
 /obj/structure/stairs,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/unloading)
+"mz" = (
+/obj/structure/stairs/multiz/down,
+/turf/open/floor/almayer/no_build,
+/area/factory/z4/outdoors/directional/west)
 "mA" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z4/indoors/directional)
+"mB" = (
+/turf/open_space,
+/area/factory/z4/outdoors/directional/west)
 "mC" = (
 /obj/structure/platform/metal/almayer_smooth/west,
 /obj/effect/hybrisa/misc/fake/wire/red{
@@ -3561,7 +3621,7 @@
 	},
 /obj/structure/barricade/handrail,
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/south)
 "oz" = (
 /turf/open/hybrisa/street/roadlines,
 /area/factory/z2/indoors/loader)
@@ -3721,7 +3781,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/south)
 "pv" = (
 /obj/structure/platform/metal/almayer_smooth,
 /turf/open_space,
@@ -4516,7 +4576,7 @@
 	},
 /obj/structure/barricade/handrail,
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/south)
 "tW" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/almayer/plate,
@@ -5137,7 +5197,7 @@
 "xu" = (
 /obj/structure/stairs/multiz/up,
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/west)
 "xv" = (
 /turf/open/hybrisa/street/sidewalkcenter/west,
 /area/factory/z2/outdoors/landing)
@@ -5888,7 +5948,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer_hull/outerhull_dir/west,
-/area/sky)
+/area/factory/z4/outdoors/directional/west)
 "BI" = (
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/cement3,
@@ -6139,7 +6199,7 @@
 "Di" = (
 /obj/structure/stairs/multiz/down,
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/west)
 "Dj" = (
 /obj/structure/cargo_container/kelland/right,
 /turf/open/asphalt/cement,
@@ -6195,7 +6255,7 @@
 "DA" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/sky)
+/area/factory/z3/outdoors/directional/south)
 "DC" = (
 /obj/effect/landmark/corpsespawner/colonist/random,
 /turf/open/asphalt/cement,
@@ -6843,7 +6903,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/south)
 "Hi" = (
 /obj/effect/decal/cleanable/blood{
 	layer = 3
@@ -7747,7 +7807,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/west)
 "LU" = (
 /obj/structure/cargo_container/kelland/right,
 /turf/open/asphalt/cement,
@@ -8422,7 +8482,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/no_build,
-/area/sky)
+/area/factory/z3/outdoors/directional/west)
 "Pt" = (
 /obj/structure/machinery/light/spot/red{
 	dir = 1
@@ -10267,7 +10327,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/sky)
+/area/factory/z4/outdoors/directional/south)
 "ZE" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -48454,7 +48514,7 @@ ea
 ea
 ea
 LT
-dL
+lG
 qm
 qF
 qF
@@ -48573,17 +48633,17 @@ qF
 qF
 qF
 qF
-qF
+lP
 Di
-ad
-ad
-ad
-ad
-ad
-ad
-ad
+lK
+lK
+lK
+lK
+lK
+lK
+lK
 xu
-dL
+lG
 qm
 qF
 qF
@@ -65998,17 +66058,17 @@ qF
 qF
 qF
 qF
-qF
-Ps
-ea
-ea
-ea
-ea
-ea
-ea
-ea
-ea
-ea
+mB
+mo
+mg
+mg
+mg
+mg
+mg
+mg
+mg
+mg
+mg
 RB
 yU
 yU
@@ -66127,17 +66187,17 @@ qF
 qF
 qF
 qF
-qF
-Di
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
+mB
+mz
+mh
+mh
+mh
+mh
+mh
+mh
+mh
+mh
+mh
 SP
 yU
 yU
@@ -66373,26 +66433,26 @@ gt
 Qv
 Qv
 gt
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
 gt
 Qv
 Qv
@@ -66502,26 +66562,26 @@ gt
 Qv
 Qv
 gt
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
-ob
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
 gt
 Qv
 Qv
@@ -72716,8 +72776,8 @@ PH
 PH
 PH
 fi
-oH
-LZ
+nq
+xa
 xa
 xa
 xa
@@ -73133,8 +73193,8 @@ ot
 wR
 wR
 he
-qF
-qF
+lQ
+lQ
 mV
 qF
 qF
@@ -73262,8 +73322,8 @@ ot
 wR
 wR
 he
-pt
-oy
+mc
+lR
 qm
 qF
 qF
@@ -73391,8 +73451,8 @@ jJ
 Eg
 Eg
 qh
-ad
-DA
+md
+lX
 qm
 qF
 qF
@@ -73520,8 +73580,8 @@ jJ
 Eg
 Eg
 qh
-ad
-DA
+md
+lX
 qm
 qF
 qF
@@ -73649,8 +73709,8 @@ jJ
 Eg
 Eg
 qh
-ad
-DA
+md
+lX
 qm
 qF
 qF
@@ -73778,8 +73838,8 @@ jJ
 Eg
 Eg
 qh
-ad
-DA
+md
+lX
 qm
 qF
 qF
@@ -73907,8 +73967,8 @@ ZA
 Eg
 Eg
 qh
-ad
-DA
+md
+lX
 qm
 qF
 qF
@@ -74036,8 +74096,8 @@ Ee
 Eg
 Eg
 wv
-ad
-DA
+md
+lX
 qm
 qF
 qF
