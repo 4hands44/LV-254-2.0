@@ -4924,6 +4924,14 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/sewer)
+"sT" = (
+/obj/structure/surface/rack,
+/turf/open/floor/hybrisa/carpet/carpetblue,
+/area/factory/z2/indoors/office)
+"sU" = (
+/obj/structure/surface/table/woodentable/poor,
+/turf/open/floor/hybrisa/carpet/carpetblue,
+/area/factory/z2/indoors/office)
 "sV" = (
 /obj/structure/stairs/multiz/up{
 	dir = 1
@@ -4951,10 +4959,23 @@
 "ta" = (
 /turf/open_space,
 /area/factory/z3/indoors/directional/east)
+"tb" = (
+/obj/structure/closet/crate,
+/turf/open/floor/hybrisa/tile/tileblue,
+/area/factory/z2/indoors/office)
 "tc" = (
 /obj/structure/prop/hybrisa/boulders/smallboulderdark/boulder_dark1,
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/factory/z1/outdoors/directional/east)
+"td" = (
+/obj/structure/surface/rack,
+/obj/effect/landmark/good_item,
+/turf/open/floor/hybrisa/tile/tileblue,
+/area/factory/z2/indoors/office)
+"te" = (
+/obj/structure/surface/table/woodentable/poor,
+/turf/open/floor/hybrisa/tile/tileblue,
+/area/factory/z2/indoors/office)
 "tf" = (
 /obj/structure/stairs/multiz/up,
 /turf/open/floor/almayer/no_build,
@@ -4967,11 +4988,19 @@
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
 /area/factory/z4/indoors/directional/south)
+"ti" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/hybrisa/tile/tileblue,
+/area/factory/z2/indoors/office)
 "tj" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional/south)
+"tk" = (
+/obj/structure/largecrate/empty,
+/turf/open/floor/hybrisa/tile/tileblue,
+/area/factory/z2/indoors/office)
 "tl" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/hybrisa/street/asphalt,
@@ -5603,7 +5632,7 @@
 /area/factory/z2/indoors/holding)
 "wP" = (
 /obj/effect/decal/hybrisa/dirt,
-/turf/open/floor/almayer/no_build/plate,
+/turf/closed/wall,
 /area/factory/z2/indoors/office)
 "wR" = (
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -31866,9 +31895,9 @@ af
 jB
 jB
 af
+td
 rj
-rj
-rj
+tb
 QT
 Xb
 Xb
@@ -31995,9 +32024,9 @@ af
 Ye
 VH
 af
+tk
 rj
-rj
-rj
+td
 QT
 eN
 Xb
@@ -32014,7 +32043,7 @@ cX
 TY
 Lc
 Lc
-Lc
+sT
 af
 Ye
 VH
@@ -32126,7 +32155,7 @@ vn
 af
 wm
 rj
-rj
+QT
 QT
 eN
 Xb
@@ -32143,7 +32172,7 @@ Xb
 TY
 Lc
 Lc
-Lc
+sU
 af
 Xa
 Kx
@@ -32254,8 +32283,8 @@ AZ
 hi
 af
 rj
-rj
-rj
+ti
+te
 QT
 eN
 Xb
@@ -32271,8 +32300,8 @@ Xb
 Xb
 TY
 Lc
-Lc
 WR
+sU
 af
 yF
 Kx
@@ -32383,8 +32412,8 @@ AZ
 qS
 af
 rj
-rj
-rj
+tb
+te
 QT
 eN
 LE
@@ -32401,7 +32430,7 @@ Xb
 TY
 Lc
 ej
-Lc
+sU
 af
 mb
 Kx
