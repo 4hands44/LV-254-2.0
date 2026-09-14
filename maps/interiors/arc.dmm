@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	pixel_x = -20;
+	pixel_y = -3
+	},
+/turf/open/void/vehicle,
+/area/space)
 "dH" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	alpha = 50;
@@ -10,13 +17,6 @@
 /turf/open/floor,
 /area/interior/vehicle/arc)
 "sE" = (
-/turf/open/void/vehicle,
-/area/space)
-"yF" = (
-/obj/effect/landmark/interior/spawn/weapons_loader{
-	pixel_x = -20;
-	pixel_y = -3
-	},
 /turf/open/void/vehicle,
 /area/space)
 "yX" = (
@@ -126,6 +126,6 @@ sE
 (5,1,1) = {"
 sE
 sE
-yF
+aa
 sE
 "}

@@ -135,7 +135,7 @@
 	darksight = 3
 	knock_down_reduction = 1
 	stun_reduction = 1
-	total_health = 200
+	total_health = 225
 
 /datum/species/human/hero/lesser/handle_post_spawn(mob/living/carbon/human/H)
 	return ..()

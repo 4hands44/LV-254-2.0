@@ -1,0 +1,65 @@
+{
+    "map_name": "Moroski Factory",
+    "map_path": "map_files/Factory",
+    "map_file": "factory.dmm",
+    "webmap_url": "Factory",
+    "weather_holder": "/datum/weather_ss_map_holder/lv759_hybrisa_prospera",
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/scientist/soro",
+        "/datum/equipment_preset/survivor/doctor/soro",
+        "/datum/equipment_preset/survivor/engineer/soro",
+        "/datum/equipment_preset/survivor/corporate/soro",
+        "/datum/equipment_preset/survivor/security/soro",
+        "/datum/equipment_preset/survivor/interstellar_human_rights_observer/soro"
+    ],
+    "defcon_triggers": [
+        3750,
+        2600,
+        1450,
+        580,
+        0.0
+    ],
+    "survivor_message": "You are a UPP-civilian who, until a moment ago, was enjoying a peaceful-enough shuttle ride to the city of Moroski until both engines of your dropship lost power, you felt everything go black as you passed out from the impact, the last thing you heard was the sound of tearing metal as the shuttle slammed into something... Now awake you take a look at your surroundings, the shuttles completely fucked and you appear to be stuck in the rafters of a... factory? A sense of unease crosses your mind, the place is clearly abandoned, but why is there so much blood? It might be a good idea to find something to defend yourself with...",
+    "announce_text": "An emergency distress signal has been recieved from the frontier world of LV-305. Tracing the signal further has narrowed down the location to a munitions and chemical factory in the UPP-owned \"Moroski Economic Region\". A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "monkey_types": [
+        "farwa",
+        "monkey",
+        "neaera",
+        "stok"
+    ],
+    "xvx_hives": {
+        "xeno_hive_alpha": 100,
+        "xeno_hive_bravo": 0,
+        "xeno_hive_charlie": 0,
+        "xeno_hive_delta": 0
+    },
+    "traits": [
+        {
+            "Ground": true,
+            "Up": 1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Down": -1
+        }
+    ],
+    "camouflage": "urban",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ],
+    "nightmare_path": "maps/Nightmare/maps/Factory/"
+}
