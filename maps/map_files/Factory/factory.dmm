@@ -3313,6 +3313,12 @@
 /obj/item/storage/firstaid/toxin,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/tent)
+"mM" = (
+/obj/structure/fence/slim/dark/door{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/factory/z1/indoors/directional/west)
 "mN" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/largecrate/empty,
@@ -13400,7 +13406,7 @@ ZG
 ZG
 XF
 YE
-NY
+mM
 YE
 ZG
 fm
