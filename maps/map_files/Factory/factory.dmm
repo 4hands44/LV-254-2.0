@@ -1458,6 +1458,10 @@
 /obj/structure/machinery/big_computers/science_big/medilathe,
 /turf/open/floor/hybrisa/tile/tilewhite,
 /area/factory/z2/indoors/lab)
+"fH" = (
+/obj/structure/machinery/light/spot/red,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/west)
 "fI" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
@@ -4692,10 +4696,33 @@
 /obj/item/tool/pen,
 /turf/open/floor/strata/fake_wood,
 /area/factory/z4/indoors/office/foreman)
+"sf" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/light/spot/red,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/west)
+"sg" = (
+/obj/structure/machinery/light/spot/red,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/south)
 "sh" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/chemical)
+"si" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/light/spot/red{
+	dir = 8
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/factory/z4/indoors/directional/west)
 "sj" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/stairs{
@@ -4703,6 +4730,21 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z1/indoors/wet)
+"sk" = (
+/obj/structure/machinery/light/spot/red{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/south)
+"sl" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/light/spot/red{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/factory/z4/indoors/directional/east)
 "sm" = (
 /obj/structure/machinery/landinglight/ds2/delaythree{
 	dir = 1
@@ -4712,11 +4754,25 @@
 "sn" = (
 /turf/open/floor/almayer/plate,
 /area/factory/z1/indoors/wet)
+"so" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/west)
 "sp" = (
 /obj/structure/platform/metal/almayer_smooth/west,
 /obj/structure/platform/metal/almayer_smooth,
 /turf/open_space,
 /area/factory/z4/indoors/directional)
+"sq" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/south)
+"sr" = (
+/obj/structure/machinery/light/spot/red{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/west)
 "ss" = (
 /obj/effect/decal/hybrisa/trash{
 	icon_state = "trash_13";
@@ -4734,6 +4790,15 @@
 "su" = (
 /turf/open/hybrisa/street/sidewalk/west,
 /area/factory/z2/indoors/gate/five)
+"sv" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/light/spot/red{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/factory/z4/indoors/directional/south)
 "sw" = (
 /obj/structure/machinery/door/airlock/almayer/generic/rusted{
 	dir = 1;
@@ -4741,6 +4806,15 @@
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z4/indoors/bridge)
+"sx" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/light/spot/red{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/west)
 "sy" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /obj/effect/landmark/corpsespawner/colonist/random,
@@ -4761,6 +4835,12 @@
 /obj/structure/stairs,
 /turf/open/floor/almayer/no_build,
 /area/factory/z1/indoors/directional/east)
+"sC" = (
+/obj/structure/machinery/light/spot/red{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/east)
 "sD" = (
 /turf/open/auto_turf/hybrisa_auto_turf/layer2,
 /area/factory/z1/outdoors/directional/east)
@@ -4809,6 +4889,17 @@
 	},
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/loader)
+"sN" = (
+/obj/structure/machinery/power/apc/no_power/west,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z4/indoors/directional/east)
+"sO" = (
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/machinery/light/spot/red,
+/turf/open/floor/almayer/no_build/plate,
+/area/factory/z4/indoors/directional)
 "sP" = (
 /obj/effect/decal/cleanable/blood{
 	layer = 3
@@ -4817,6 +4908,18 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional/west)
+"sQ" = (
+/obj/structure/barricade/handrail,
+/obj/structure/machinery/light/spot/red{
+	dir = 1
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/factory/z4/indoors/directional)
+"sR" = (
+/obj/structure/barricade/handrail,
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/almayer/no_build/plate,
+/area/factory/z4/indoors/directional)
 "sS" = (
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/asphalt,
@@ -6525,6 +6628,9 @@
 "CF" = (
 /obj/structure/barricade/handrail{
 	dir = 8
+	},
+/obj/structure/machinery/light/spot/red{
+	dir = 4
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/factory/z4/indoors/directional/west)
@@ -65592,7 +65698,7 @@ yU
 HT
 HT
 HT
-Hr
+si
 HT
 HT
 HT
@@ -65602,7 +65708,7 @@ HT
 HT
 HT
 HT
-Hr
+si
 HT
 HT
 yU
@@ -66361,7 +66467,7 @@ RB
 Up
 Up
 Up
-yU
+so
 qC
 Sq
 YV
@@ -66653,7 +66759,7 @@ xe
 xe
 xe
 yU
-yU
+fH
 RB
 qF
 qF
@@ -67390,7 +67496,7 @@ RK
 jD
 ay
 gt
-yU
+sr
 qC
 Sq
 YV
@@ -68400,6 +68506,7 @@ hx
 sw
 HT
 HT
+sx
 HT
 HT
 HT
@@ -68413,8 +68520,7 @@ HT
 HT
 HT
 HT
-HT
-HT
+sx
 HT
 HT
 HT
@@ -68448,7 +68554,7 @@ xe
 xe
 xe
 xe
-xe
+sf
 RB
 qF
 qF
@@ -68629,7 +68735,7 @@ qF
 qF
 fb
 AC
-pw
+sQ
 qt
 oF
 oF
@@ -68640,7 +68746,7 @@ oF
 jO
 Fg
 AC
-pw
+sQ
 qt
 oF
 oF
@@ -70059,7 +70165,7 @@ oF
 jO
 Fg
 AC
-pw
+sR
 DK
 xV
 xV
@@ -70069,7 +70175,7 @@ xV
 xV
 xV
 iM
-Fg
+sO
 AC
 OJ
 bE
@@ -70357,7 +70463,7 @@ MA
 MA
 MA
 MA
-Cz
+sv
 MA
 MA
 MA
@@ -70487,7 +70593,7 @@ wR
 wR
 wR
 Ug
-wR
+sq
 wR
 wR
 wR
@@ -71415,7 +71521,7 @@ xa
 xa
 ot
 mX
-wR
+sg
 he
 qF
 qF
@@ -71467,7 +71573,7 @@ qF
 qF
 fb
 AC
-pw
+sQ
 qt
 oF
 oF
@@ -71478,7 +71584,7 @@ oF
 jO
 Fg
 AC
-pw
+sQ
 qt
 oF
 oF
@@ -72401,14 +72507,22 @@ Eg
 Eg
 Eg
 Eg
+sN
 Eg
 Eg
 Eg
 Eg
+sC
 Eg
 Eg
-Eg
-Eg
+wR
+wR
+wR
+wR
+wR
+wR
+wR
+sk
 wR
 wR
 wR
@@ -72419,6 +72533,7 @@ wR
 wR
 wR
 wR
+sk
 wR
 wR
 wR
@@ -72428,16 +72543,7 @@ wR
 wR
 wR
 wR
-wR
-wR
-wR
-wR
-wR
-wR
-wR
-wR
-wR
-wR
+sk
 wR
 wR
 wR
@@ -72907,7 +73013,7 @@ oF
 oF
 oF
 jO
-Fg
+sO
 AC
 OJ
 hx
@@ -73608,7 +73714,7 @@ xa
 xa
 ot
 wR
-wR
+sg
 he
 lQ
 lQ
@@ -74305,7 +74411,7 @@ qF
 qF
 fb
 AC
-pw
+sQ
 qt
 oF
 oF
@@ -74316,7 +74422,7 @@ oF
 jO
 Fg
 AC
-pw
+sQ
 qt
 oF
 oF
@@ -75745,7 +75851,7 @@ wG
 wG
 wG
 YN
-Fg
+sO
 AC
 lh
 Mg
@@ -76543,7 +76649,7 @@ Ee
 Ee
 Ee
 Ee
-FL
+sl
 Ee
 Ee
 Ee
@@ -76563,7 +76669,7 @@ Eg
 Ee
 Ee
 Ee
-FL
+sl
 Ee
 Ee
 Ee

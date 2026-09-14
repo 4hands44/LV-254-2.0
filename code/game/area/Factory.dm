@@ -410,3 +410,4 @@
 	name = "Moroski Factory Second Floor, Crashed Ship"
 	icon_state = "ship"
 	minimap_color = MINIMAP_AREA_SEC
+	requires_power = FALSE
