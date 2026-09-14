@@ -3842,6 +3842,10 @@
 /obj/structure/ladder/multiz,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z4/indoors/directional)
+"oT" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/hybrisa/street/sidewalk/east,
+/area/factory/z2/indoors/gate/five)
 "oU" = (
 /obj/structure/platform_decoration/metal/almayer_smooth/east,
 /turf/open/hybrisa/street/asphalt,
@@ -4031,6 +4035,10 @@
 	},
 /turf/open/floor/hybrisa/tile/tilewhite,
 /area/factory/z3/indoors/lab)
+"pG" = (
+/obj/item/stack/rods,
+/turf/open/hybrisa/street/sidewalk/east,
+/area/factory/z2/indoors/gate/five)
 "pH" = (
 /obj/structure/cargo_container/upp/left{
 	layer = 3.1;
@@ -4050,10 +4058,23 @@
 	name = "water"
 	},
 /area/factory/z1/indoors/wet)
+"pK" = (
+/obj/item/stack/rods,
+/turf/open/hybrisa/street/sidewalk/west,
+/area/factory/z2/indoors/gate/five)
+"pL" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/asphalt/cement,
+/area/factory/z2/indoors/gate/five)
 "pM" = (
 /obj/structure/stairs/multiz/up,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/holding)
+"pN" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods,
+/turf/open/asphalt/cement,
+/area/factory/z2/indoors/processing)
 "pO" = (
 /obj/item/ammo_magazine/rifle/mar40/extended,
 /obj/item/ammo_magazine/rifle/mar40/extended{
@@ -4084,6 +4105,47 @@
 "pT" = (
 /turf/open/hybrisa/street/sidewalkcenter/south,
 /area/factory/z2/outdoors/comms)
+"pU" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Medical Gate 4";
+	id = "Factory Gate 4";
+	pixel_x = 9
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Gate 3";
+	id = "Factory Gate 3";
+	pixel_x = -4
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Gate 0";
+	id = "Factory Gate 0";
+	pixel_y = 11;
+	pixel_x = -4
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Gate 1";
+	id = "Factory Gate 1";
+	pixel_y = 11;
+	pixel_x = 9
+	},
+/turf/open/floor/strata/fake_wood,
+/area/factory/z4/indoors/office/foreman)
+"pV" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Gate 5";
+	id = "Factory Gate 5";
+	pixel_x = -10
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Gate 2";
+	id = "Factory Gate 2";
+	pixel_y = 11;
+	pixel_x = -10
+	},
+/turf/open/floor/strata/fake_wood,
+/area/factory/z4/indoors/office/foreman)
 "pX" = (
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z4/indoors/office)
@@ -35989,12 +36051,12 @@ TX
 TX
 TX
 WB
-WB
+pN
 jc
 jG
 KG
-KG
-KG
+pG
+oT
 KG
 KG
 KG
@@ -36121,7 +36183,7 @@ wY
 WB
 jc
 ht
-qZ
+pL
 qZ
 qZ
 qZ
@@ -36251,7 +36313,7 @@ WB
 jc
 Ib
 su
-su
+pK
 su
 su
 su
@@ -36376,12 +36438,12 @@ dE
 XD
 WB
 WB
-WB
+pN
 jc
 jG
 KG
 KG
-KG
+oT
 Xx
 KG
 KG
@@ -67179,7 +67241,7 @@ KT
 jj
 KT
 KT
-CK
+pU
 RK
 jD
 ay
@@ -67308,7 +67370,7 @@ KT
 KT
 jR
 iY
-CK
+pV
 mQ
 Ig
 rF
