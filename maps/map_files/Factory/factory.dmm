@@ -1458,10 +1458,6 @@
 /obj/structure/machinery/big_computers/science_big/medilathe,
 /turf/open/floor/hybrisa/tile/tilewhite,
 /area/factory/z2/indoors/lab)
-"fH" = (
-/mob/living/simple_animal/mouse/rat/white/Milky,
-/turf/open/floor/hybrisa/tile/tilewhite,
-/area/factory/z2/indoors/lab)
 "fI" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
@@ -3553,6 +3549,10 @@
 /obj/item/shard,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional/west)
+"nK" = (
+/obj/structure/platform/metal/almayer_smooth,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional/south)
 "nL" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/item/shard,
@@ -4383,6 +4383,10 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/office)
+"qT" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/north,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional/south)
 "qU" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /obj/structure/platform/metal/almayer_smooth/north,
@@ -4427,6 +4431,10 @@
 /obj/structure/fence/slim/dark/door,
 /turf/open/floor/almayer/plate,
 /area/factory/z1/indoors/directional/east)
+"rc" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/north,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional/west)
 "rd" = (
 /obj/structure/stairs/multiz/up{
 	dir = 1
@@ -4434,6 +4442,13 @@
 /obj/structure/platform_decoration/metal/almayer_smooth/west,
 /turf/open/floor/almayer/no_build,
 /area/factory/z4/indoors/directional)
+"re" = (
+/obj/structure/stairs/multiz/up,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/almayer/no_build,
+/area/factory/z1/indoors/directional/west)
 "rf" = (
 /turf/open/hybrisa/street/sidewalkcenter/east,
 /area/factory/z2/outdoors/landing)
@@ -4441,6 +4456,10 @@
 /obj/structure/platform_decoration/metal/almayer_smooth/east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z4/indoors/directional)
+"rh" = (
+/obj/structure/platform/metal/almayer_smooth,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional)
 "ri" = (
 /obj/docking_port/stationary/marine_dropship/lz1/south,
 /turf/open/floor/plating,
@@ -4496,19 +4515,39 @@
 "rt" = (
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/factory/z2/outdoors/directional/west)
+"ru" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/north,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional)
 "rv" = (
 /obj/structure/cargo_container/upp/right,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/unloading)
+"rw" = (
+/obj/structure/platform_decoration/metal/almayer_smooth,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional)
 "rx" = (
 /obj/structure/platform/metal/almayer_smooth,
 /obj/structure/platform/metal/almayer_smooth/north,
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
 /area/factory/z2/indoors/unloading)
+"ry" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/north,
+/turf/open/floor/almayer/plate,
+/area/factory/z1/indoors/directional/east)
 "rz" = (
 /turf/open/floor/almayer/no_build/plate,
 /area/factory/z4/indoors/directional/east)
+"rA" = (
+/obj/structure/platform/metal/almayer_smooth,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/double)
+"rB" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/north,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/double)
 "rC" = (
 /turf/open/floor/strata/fake_wood,
 /area/factory/z4/indoors/office/foreman)
@@ -4541,6 +4580,10 @@
 	},
 /turf/open/floor/plating,
 /area/factory/z1/indoors/engineering)
+"rH" = (
+/obj/structure/platform/metal/almayer_smooth/north,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional)
 "rI" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/barricade/wooden,
@@ -4583,11 +4626,23 @@
 "rQ" = (
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/factory/z1/outdoors/directional)
+"rR" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/east,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional)
+"rS" = (
+/obj/structure/platform/metal/almayer_smooth/north,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/double)
 "rT" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/item/clothing/gloves/latex,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/tent)
+"rU" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/east,
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/double)
 "rV" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/factory/z2/indoors/chemical)
@@ -4628,6 +4683,15 @@
 	},
 /turf/open/hybrisa/street/cement3,
 /area/factory/z2/indoors/processing)
+"se" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/paper_bin{
+	pixel_y = 9
+	},
+/obj/item/tool/pen,
+/turf/open/floor/strata/fake_wood,
+/area/factory/z4/indoors/office/foreman)
 "sh" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/asphalt/cement,
@@ -12503,7 +12567,7 @@ ZG
 Qm
 Qm
 Qm
-Qm
+rc
 tI
 ZG
 fm
@@ -14731,7 +14795,7 @@ Re
 Re
 Mz
 Re
-Re
+nK
 vf
 bw
 fm
@@ -14860,7 +14924,7 @@ Re
 mJ
 Mz
 Re
-mH
+qT
 Ty
 bw
 fm
@@ -14988,7 +15052,7 @@ bw
 Re
 Re
 Mz
-Re
+mH
 Re
 mH
 bw
@@ -15083,7 +15147,7 @@ Qm
 Qm
 Qm
 nr
-Vg
+re
 ZG
 bw
 bw
@@ -15211,8 +15275,8 @@ Qm
 yJ
 sP
 yJ
-Qm
-Qm
+rc
+tI
 XF
 iQ
 iQ
@@ -17991,7 +18055,7 @@ fm
 fm
 Kj
 vE
-Qy
+rS
 Mc
 Qy
 Qy
@@ -18005,7 +18069,7 @@ Qy
 Qy
 Qy
 Qy
-Qy
+rA
 vE
 Kj
 fm
@@ -18120,7 +18184,7 @@ fm
 fm
 Kj
 Ts
-Qy
+rU
 Mc
 Qy
 Sr
@@ -18134,7 +18198,7 @@ dH
 dH
 Qy
 Qy
-Qy
+rB
 Ts
 Kj
 fm
@@ -20851,7 +20915,7 @@ db
 Gd
 Gd
 Gd
-Gd
+rh
 TH
 HE
 Gd
@@ -20980,7 +21044,7 @@ oI
 Gd
 db
 Gd
-Gd
+ru
 zR
 HE
 Gd
@@ -23560,7 +23624,7 @@ fm
 fm
 HE
 Gd
-Gd
+rw
 Yn
 HE
 fm
@@ -23689,7 +23753,7 @@ fm
 fm
 HE
 Gd
-Gd
+rh
 GK
 HE
 fm
@@ -23799,7 +23863,7 @@ fm
 fm
 HE
 TH
-Gd
+rH
 Gd
 HE
 fm
@@ -23818,7 +23882,7 @@ fm
 bF
 bF
 oG
-Pa
+ry
 bF
 bF
 fm
@@ -23928,7 +23992,7 @@ fm
 fm
 HE
 zR
-Gd
+rR
 Gd
 HE
 fm
@@ -41111,7 +41175,7 @@ Zy
 fM
 yw
 yw
-fH
+yw
 ah
 oY
 Bu
@@ -67576,7 +67640,7 @@ rC
 KT
 co
 yL
-co
+se
 KT
 KT
 rC
