@@ -9467,6 +9467,20 @@
 /obj/structure/machinery/door/airlock/almayer/generic/rusted,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z4/indoors/office)
+"Jy" = (
+/obj/structure/device/razorwire{
+	dir = 8
+	},
+/turf/open/gm/river{
+	name = "water"
+	},
+/area/factory/z1/indoors/wet)
+"Jz" = (
+/obj/structure/barricade/wooden{
+	dir = 1
+	},
+/turf/open/hybrisa/street/asphalt,
+/area/factory/z1/indoors/directional)
 "JB" = (
 /obj/structure/machinery/light/spot/red{
 	dir = 1
@@ -11274,10 +11288,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z3/indoors/server)
-"To" = (
-/obj/structure/device/razorwire,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/unloading)
 "Tp" = (
 /obj/effect/decal/hybrisa/trash{
 	icon_state = "trash_15";
@@ -20789,7 +20799,7 @@ Qy
 Qy
 xI
 Gd
-Gd
+Jz
 Gd
 Gd
 Gd
@@ -20918,7 +20928,7 @@ oL
 Qy
 xI
 Gd
-Gd
+Jz
 Gd
 Gd
 Gd
@@ -23806,9 +23816,9 @@ LP
 LP
 LP
 OS
-LP
-LP
-LP
+Jy
+Jy
+Jy
 OS
 LP
 LP
@@ -33943,9 +33953,9 @@ tU
 tU
 tU
 tU
-tU
-aM
-aM
+Qt
+EG
+EG
 aM
 aM
 aM
@@ -36397,10 +36407,10 @@ DM
 aM
 JJ
 VV
-To
-To
-To
-To
+EG
+EG
+EG
+EG
 aM
 Pe
 Ec
