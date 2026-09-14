@@ -10,7 +10,7 @@
 	)
 	death_message = "slowly stumbles forward, letting out a final pained grunt before falling over dead."
 	death_sound = 'sound/voice/tagrilla/death.ogg'
-
+	slowdown = -0.1
 
 /datum/species/human/hero/lesser/tagrilla/handle_post_spawn(mob/living/carbon/human/H)
 	give_action(H, /datum/action/tagrilla_emote_panel)

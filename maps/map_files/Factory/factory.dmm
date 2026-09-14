@@ -37,6 +37,17 @@
 "ah" = (
 /turf/closed/wall,
 /area/factory/z2/indoors/lab)
+"ai" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Sewer Lockdown";
+	dir = 4
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/factory/z1/indoors/sewer)
+"aj" = (
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/hybrisa/street/sidewalk/east,
+/area/factory/z2/indoors/gate)
 "ak" = (
 /turf/open/floor/hybrisa/tile/tilewhite,
 /area/factory/z3/indoors/lab)
@@ -50,6 +61,10 @@
 	icon_state = "89"
 	},
 /area/factory/z4/indoors/ship)
+"an" = (
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/hybrisa/street/sidewalk/east,
+/area/factory/z2/indoors/gate/five)
 "ao" = (
 /obj/effect/hybrisa/misc/fake/wire/blue,
 /turf/open_space,
@@ -58,6 +73,10 @@
 /obj/structure/platform_decoration/metal/almayer_smooth/west,
 /turf/open_space,
 /area/factory/z4/indoors/directional/south)
+"aq" = (
+/obj/structure/machinery/power/apc/no_power/east,
+/turf/open/asphalt/cement,
+/area/factory/z2/indoors/postman)
 "ar" = (
 /obj/structure/cargo_container/watatsumi/mid,
 /turf/open/asphalt/cement,
@@ -78,10 +97,20 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/hybrisa_auto_turf/layer2,
 /area/factory/z1/outdoors/directional/east)
+"av" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/hybrisa/street/sidewalk/north,
+/area/factory/z2/indoors/gate/four)
 "aw" = (
 /obj/structure/window/framed/colony,
 /turf/open/floor/almayer/plate,
 /area/factory/z3/indoors/directional/west)
+"ax" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/bedsheet/medical,
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/asphalt/cement,
+/area/factory/z2/indoors/tent)
 "ay" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
@@ -100,6 +129,11 @@
 /obj/structure/platform/metal/almayer_smooth,
 /turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/unloading)
+"aB" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/power/apc/no_power/east,
+/turf/open/floor/hybrisa/tile/tilebeige,
+/area/factory/z2/indoors/holding)
 "aC" = (
 /obj/structure/platform/metal/almayer_smooth/north,
 /turf/open_space,
@@ -111,6 +145,19 @@
 	},
 /turf/open/floor/almayer/no_build/plate,
 /area/factory/z3/indoors/directional/west)
+"aE" = (
+/obj/structure/machinery/power/apc/no_power/south,
+/turf/open/hybrisa/street/sidewalkfull,
+/area/factory/z2/outdoors/comms/two)
+"aF" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/power/apc/no_power/east,
+/turf/open/hybrisa/street/cement3,
+/area/factory/z2/indoors/processing)
+"aG" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/strata/fake_wood,
+/area/factory/z2/indoors/office)
 "aH" = (
 /obj/structure/platform/metal/almayer_smooth/north,
 /obj/structure/platform/metal/almayer_smooth,
@@ -119,6 +166,18 @@
 "aI" = (
 /turf/closed/wall/r_wall,
 /area/factory/z2/indoors/office)
+"aJ" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/hybrisa/street/sidewalkfull,
+/area/factory/z2/outdoors/comms)
+"aK" = (
+/obj/structure/machinery/power/apc/no_power/east,
+/turf/open/floor/strata/fake_wood,
+/area/factory/z2/indoors/shack)
+"aL" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/hybrisa/street/cement3,
+/area/factory/z2/indoors/chemical)
 "aM" = (
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/unloading)
@@ -126,6 +185,10 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/chemical)
+"aO" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/hybrisa/tile/tilewhite,
+/area/factory/z2/indoors/lab)
 "aP" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/device/razorwire,
@@ -139,6 +202,10 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/hybrisa/street/sidewalkcenter/west,
 /area/factory/bounds)
+"aR" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/strata/fake_wood,
+/area/factory/z2/indoors/unloading)
 "aS" = (
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/postman)
@@ -149,12 +216,25 @@
 /obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z4/indoors/directional/east)
+"aV" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/hybrisa/street/sidewalk/north,
+/area/factory/z2/indoors/gate/two)
+"aW" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/hybrisa/street/sidewalk/north,
+/area/factory/z2/indoors/gate/three)
 "aX" = (
 /obj/structure/prop/invuln/rope{
 	pixel_y = 12
 	},
 /turf/open_space,
 /area/factory/z3/indoors/directional/east)
+"aY" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/hybrisa/street/sidewalk/north,
+/area/factory/z2/indoors/gate/one)
 "aZ" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /obj/structure/platform/metal/almayer_smooth,
@@ -164,6 +244,13 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/floor/cult,
 /area/factory/z1/outdoors/directional)
+"bb" = (
+/obj/structure/machinery/door/airlock/almayer/generic/rusted{
+	dir = 1;
+	name = "\improper Catwalk"
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/factory/z3/indoors/directional/south)
 "bc" = (
 /obj/structure/barricade/handrail,
 /obj/structure/device/razorwire,
@@ -173,6 +260,10 @@
 /obj/structure/flora/tree/tyrargo/tree_2,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/factory/z2/outdoors/directional)
+"be" = (
+/obj/structure/machinery/power/apc/no_power/south,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/factory/z3/indoors/server)
 "bf" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -180,6 +271,15 @@
 /obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z2/indoors/processing)
+"bg" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/almayer/dark_sterile,
+/area/factory/z3/indoors/office)
+"bh" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/hybrisa/tile/tilewhite,
+/area/factory/z3/indoors/lab)
 "bi" = (
 /obj/effect/landmark/corpsespawner/colonist/random,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -187,6 +287,10 @@
 "bj" = (
 /turf/open/auto_turf/hybrisa_auto_turf/layer0,
 /area/factory/z1/outdoors/directional/west)
+"bk" = (
+/obj/structure/window_frame/hangar,
+/turf/open/floor/almayer/plate,
+/area/factory/z4/indoors/directional)
 "bl" = (
 /obj/structure/ladder/multiz,
 /obj/structure/barricade/handrail{
@@ -229,6 +333,10 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/chemical)
+"bs" = (
+/obj/structure/window_frame/hangar,
+/turf/open/floor/almayer/plate,
+/area/factory/z4/indoors/directional/west)
 "bt" = (
 /obj/structure/barricade/handrail,
 /obj/structure/barricade/handrail{
@@ -242,6 +350,10 @@
 	},
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/unloading)
+"bv" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/strata/fake_wood,
+/area/factory/z4/indoors/office/foreman)
 "bw" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/factory/z1/indoors/directional/south)
@@ -249,11 +361,20 @@
 /obj/structure/cargo_container/horizontal/blue/middle,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/holding)
+"by" = (
+/obj/structure/machinery/power/apc/no_power/east,
+/turf/open/floor/strata/fake_wood,
+/area/factory/z4/indoors/office)
 "bz" = (
 /obj/structure/prop/invuln/rope,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/chemical)
+"bA" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/asphalt/cement,
+/area/factory/z4/indoors/balcony)
 "bB" = (
 /obj/structure/prop/dam/truck/damaged,
 /turf/open/hybrisa/street/asphalt,
@@ -267,6 +388,10 @@
 /obj/structure/cargo_container/arious/mid,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/processing)
+"bE" = (
+/obj/structure/machinery/power/apc/no_power/north,
+/turf/open/floor/hybrisa/tile/tilebeige,
+/area/factory/z4/indoors/bridge)
 "bF" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/factory/z1/indoors/directional/east)
@@ -418,10 +543,6 @@
 /obj/effect/landmark/crap_item,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/unloading)
-"cz" = (
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/holding)
 "cA" = (
 /obj/structure/filtration/machine_32x32{
 	icon_state = "filtration_segment_A_1"
@@ -555,10 +676,6 @@
 /obj/structure/fence/slim/dark,
 /turf/open/floor/almayer/plate,
 /area/factory/z2/indoors/unloading)
-"dm" = (
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional/west)
 "dn" = (
 /turf/closed/shuttle/dropship3/tornado{
 	icon_state = "83"
@@ -1211,7 +1328,7 @@
 	dir = 4
 	},
 /obj/structure/platform/metal/almayer_smooth/north,
-/turf/open_space,
+/turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/office)
 "hj" = (
 /turf/closed/shuttle/dropship3/tornado{
@@ -1542,7 +1659,9 @@
 	dir = 8
 	},
 /obj/structure/platform/metal/kutjevo_smooth/north,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "jk" = (
 /obj/structure/machinery/power/apc/no_power/east,
@@ -1692,7 +1811,9 @@
 "jT" = (
 /obj/structure/platform/stone/hybrisa/rockdark/east,
 /obj/structure/platform/metal/kutjevo_smooth/north,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "jV" = (
 /obj/structure/prop/hybrisa/cavedecor/stalagmite3,
@@ -1860,11 +1981,6 @@
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
 /area/factory/z2/indoors/loader)
-"kS" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/tent)
 "kT" = (
 /obj/structure/platform/metal/almayer_smooth/west,
 /obj/structure/platform/metal/almayer_smooth/north,
@@ -2013,7 +2129,9 @@
 /area/factory/z4/indoors/ship)
 "lU" = (
 /obj/structure/machinery/power/apc/no_power/west,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "lV" = (
 /obj/structure/barricade/metal,
@@ -2022,7 +2140,9 @@
 "lW" = (
 /obj/structure/platform/metal/kutjevo_smooth,
 /obj/structure/platform/metal/kutjevo_smooth/west,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "lY" = (
 /obj/structure/stairs/multiz/down{
@@ -2201,10 +2321,6 @@
 "mQ" = (
 /turf/closed/wall,
 /area/factory/z4/indoors/office/foreman)
-"mR" = (
-/obj/structure/blocker/fog,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional/south)
 "mU" = (
 /obj/structure/reagent_dispensers/acidtank,
 /turf/open/asphalt/cement,
@@ -2361,10 +2477,6 @@
 /obj/structure/fence/slim/dark,
 /turf/open/floor/almayer/plate,
 /area/factory/z1/indoors/sewer)
-"nL" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/hybrisa/tile/tilewhite,
-/area/factory/z3/indoors/lab)
 "nN" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /obj/structure/platform/metal/almayer_smooth/north,
@@ -2463,10 +2575,6 @@
 /obj/structure/prop/dam/van/damaged,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z2/outdoors/comms/two)
-"on" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional)
 "oo" = (
 /turf/closed/wall/r_wall/unmeltable,
 /area/factory/z2/indoors/gate/three)
@@ -2555,10 +2663,6 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/roadlines,
 /area/factory/z2/indoors/loader)
-"oL" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/postman)
 "oM" = (
 /obj/structure/platform/metal/almayer_smooth/west,
 /obj/structure/platform/metal/almayer_smooth/north,
@@ -2751,7 +2855,9 @@
 /area/factory/z2/indoors/chemical)
 "pJ" = (
 /obj/structure/platform/metal/kutjevo_smooth/west,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "pM" = (
 /obj/structure/stairs/multiz/up,
@@ -2776,7 +2882,9 @@
 /area/factory/z2/outdoors/landing)
 "pR" = (
 /obj/structure/platform/metal/kutjevo_smooth/east,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "pS" = (
 /obj/structure/platform_decoration/metal/almayer_smooth/east,
@@ -2802,7 +2910,9 @@
 /area/factory/z2/indoors/unloading)
 "qf" = (
 /obj/structure/platform/metal/kutjevo_smooth,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "qh" = (
 /turf/closed/wall,
@@ -2903,10 +3013,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/factory/z2/indoors/unloading)
-"qL" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/hybrisa/tile/tilewhite,
-/area/factory/z2/indoors/lab)
 "qM" = (
 /obj/structure/platform/metal/almayer_smooth/north,
 /obj/effect/hybrisa/misc/fake/wire/blue,
@@ -2976,7 +3082,9 @@
 /area/factory/z2/indoors/gate/five)
 "ra" = (
 /obj/structure/prop/hybrisa/boulders/smallboulderdark/boulder_dark1,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "rb" = (
 /obj/structure/fence/slim/dark/door,
@@ -3015,6 +3123,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/structure/machinery/power/apc/no_power/north,
 /turf/open/hybrisa/street/cement3,
 /area/factory/z2/indoors/loader)
 "rn" = (
@@ -3270,7 +3379,9 @@
 /area/factory/z4/indoors/directional/south)
 "sH" = (
 /obj/structure/platform/metal/kutjevo_smooth/north,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "sI" = (
 /obj/structure/cargo_container/wy/right,
@@ -3309,10 +3420,6 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/sewer)
-"sT" = (
-/obj/effect/landmark/objective_landmark/science,
-/turf/open/floor/hybrisa/tile/tilewhite,
-/area/factory/z2/indoors/lab)
 "sV" = (
 /obj/structure/stairs/multiz/up{
 	dir = 1
@@ -3511,10 +3618,6 @@
 /obj/effect/landmark/corpsespawner/upp,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional/west)
-"ue" = (
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/triple)
 "ug" = (
 /obj/structure/barricade/handrail,
 /obj/effect/decal/hybrisa/dirt,
@@ -3635,11 +3738,6 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/processing)
-"uM" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/unloading)
 "uO" = (
 /turf/closed/wall,
 /area/factory/z1/indoors/engineering)
@@ -3679,7 +3777,9 @@
 "uZ" = (
 /obj/structure/platform/metal/kutjevo_smooth,
 /obj/structure/platform/metal/kutjevo_smooth/east,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "va" = (
 /obj/structure/stairs{
@@ -3871,10 +3971,6 @@
 /obj/structure/fence/slim/dark,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z2/indoors/unloading)
-"wf" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional/south)
 "wg" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -3992,7 +4088,9 @@
 /area/factory/z2/indoors/holding)
 "wK" = (
 /obj/structure/platform/stone/hybrisa/rockdark/east,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "wL" = (
 /obj/structure/cargo_container/kelland/right,
@@ -4335,7 +4433,7 @@
 	dir = 4
 	},
 /obj/structure/platform/metal/almayer_smooth,
-/turf/open_space,
+/turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/office)
 "yG" = (
 /obj/structure/stairs/multiz/down{
@@ -4558,13 +4656,6 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z1/indoors/directional)
-"zT" = (
-/obj/structure/stairs/multiz/down{
-	dir = 1
-	},
-/obj/structure/platform/metal/almayer_smooth/east,
-/turf/open_space,
-/area/factory/z4/indoors/directional)
 "zV" = (
 /obj/structure/stairs/multiz/down{
 	dir = 8
@@ -4798,10 +4889,6 @@
 	},
 /turf/open/hybrisa/street/cement3,
 /area/factory/z2/indoors/processing)
-"Bn" = (
-/obj/structure/stairs/multiz/up,
-/turf/open/floor/almayer/no_build,
-/area/factory/z1/indoors/directional)
 "Bq" = (
 /obj/structure/machinery/light/spot{
 	dir = 8
@@ -5097,10 +5184,6 @@
 "CW" = (
 /turf/open/floor/plating/burnt_platingdmg3/west,
 /area/factory/z4/indoors/ship)
-"CX" = (
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional/east)
 "CZ" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -5184,10 +5267,6 @@
 /obj/effect/landmark/good_item,
 /turf/open/floor/almayer/dark_sterile,
 /area/factory/z3/indoors/office)
-"Dv" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/factory/z3/indoors/server)
 "DA" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -5230,7 +5309,9 @@
 /area/factory/z2/outdoors/landing)
 "DP" = (
 /obj/structure/platform_decoration/stone/hybrisa/rockdark,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "DQ" = (
 /obj/structure/machinery/landinglight/ds2/delaythree,
@@ -5367,7 +5448,9 @@
 "EC" = (
 /obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/platform/metal/kutjevo_smooth/west,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "ED" = (
 /obj/structure/stairs/multiz/down{
@@ -5408,10 +5491,6 @@
 "EM" = (
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z2/indoors/processing)
-"EO" = (
-/obj/structure/blocker/fog,
-/turf/open/jungle/water/river,
-/area/factory/z1/indoors/sewer)
 "EP" = (
 /obj/structure/stairs/multiz/down,
 /obj/structure/platform/metal/almayer_smooth/west,
@@ -5609,7 +5688,9 @@
 "FX" = (
 /obj/structure/platform_decoration/stone/hybrisa/rockdark,
 /obj/structure/platform/metal/kutjevo_smooth/west,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "FY" = (
 /obj/structure/blocker/invisible_wall,
@@ -6012,10 +6093,6 @@
 	icon_state = "47"
 	},
 /area/factory/z4/indoors/ship)
-"HS" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional/south)
 "HT" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -6071,7 +6148,9 @@
 "Ii" = (
 /obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/platform/metal/kutjevo_smooth/east,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "Ij" = (
 /turf/open/hybrisa/street/sidewalk/north,
@@ -6193,11 +6272,6 @@
 	},
 /turf/open/hybrisa/street/cement3,
 /area/factory/z2/indoors/loader)
-"IR" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/holding)
 "IS" = (
 /turf/open/hybrisa/street/sidewalk/east,
 /area/factory/z2/indoors/gate)
@@ -6334,11 +6408,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z3/indoors/directional/east)
-"JH" = (
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/triple)
 "JI" = (
 /obj/structure/platform/metal/almayer/north,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -6565,11 +6634,6 @@
 "KR" = (
 /turf/open/floor/plating,
 /area/factory/z1/indoors/engineering)
-"KS" = (
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/office)
 "KT" = (
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/strata/fake_wood,
@@ -6720,7 +6784,9 @@
 "LJ" = (
 /obj/structure/platform/stone/hybrisa/rockdark/east,
 /obj/structure/platform/stone/hybrisa/rockdark,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "LK" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
@@ -6742,7 +6808,9 @@
 /turf/open/hybrisa/street/sidewalk/north,
 /area/factory/z2/indoors/gate/four)
 "LP" = (
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "LS" = (
 /obj/structure/barricade/metal,
@@ -7106,10 +7174,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z3/indoors/directional/west)
-"NO" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional/east)
 "NP" = (
 /turf/open/floor/almayer_hull/outerhull_dir/northeast,
 /area/sky)
@@ -7256,10 +7320,6 @@
 	},
 /turf/open/floor/almayer/no_build,
 /area/factory/z2/indoors/processing)
-"OA" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/triple)
 "OB" = (
 /obj/structure/platform_decoration/metal/almayer_smooth/east,
 /turf/open/floor/strata/fake_wood,
@@ -7526,13 +7586,11 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/holding)
-"PW" = (
-/obj/effect/landmark/objective_landmark/close,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/office)
 "PY" = (
 /obj/effect/landmark/corpsespawner/colonist/random,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "Qa" = (
 /obj/structure/cargo_container/upp/mid{
@@ -7653,10 +7711,6 @@
 /obj/structure/platform_decoration/metal/almayer_smooth/north,
 /turf/open_space,
 /area/factory/z3/indoors/directional/east)
-"QP" = (
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/unloading)
 "QQ" = (
 /obj/structure/stairs/multiz/up{
 	dir = 1
@@ -7917,7 +7971,9 @@
 /area/factory/z4/indoors/directional/west)
 "Sj" = (
 /obj/structure/platform_decoration/metal/kutjevo_smooth/west,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "Sl" = (
 /obj/structure/stairs{
@@ -8062,11 +8118,6 @@
 /obj/structure/flora/tree/tyrargo/tree_2,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/factory/z2/outdoors/directional/south)
-"ST" = (
-/obj/effect/landmark/objective_landmark/close,
-/obj/effect/decal/hybrisa/dirt,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/directional)
 "SU" = (
 /obj/structure/platform_decoration/metal/almayer_smooth/north,
 /turf/open/floor/almayer/no_build/plate,
@@ -8381,7 +8432,9 @@
 /area/factory/z2/indoors/gate/four)
 "UD" = (
 /obj/structure/platform_decoration/metal/kutjevo_smooth/north,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "UF" = (
 /obj/effect/hybrisa/misc/fake/wire/blue{
@@ -8429,7 +8482,9 @@
 /obj/structure/machinery/light/spot/red{
 	dir = 8
 	},
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "UP" = (
 /obj/structure/cargo_container/upp/right,
@@ -8485,17 +8540,12 @@
 /obj/structure/platform_decoration/metal/almayer_smooth/east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/factory/z4/indoors/directional)
-"Vn" = (
-/obj/effect/decal/hybrisa/dirt,
-/obj/effect/landmark/objective_landmark/far,
-/turf/open/asphalt/cement,
-/area/factory/z2/indoors/processing)
 "Vo" = (
 /obj/structure/stairs{
 	dir = 1
 	},
 /obj/structure/platform/metal/almayer_smooth/east,
-/turf/open_space,
+/turf/open/floor/almayer/no_build,
 /area/factory/z4/indoors/directional)
 "Vp" = (
 /obj/structure/stairs/multiz/up{
@@ -8514,7 +8564,9 @@
 /obj/structure/platform/stone/hybrisa/rockdark/east,
 /obj/structure/platform/metal/kutjevo_smooth,
 /obj/structure/platform/metal/kutjevo_smooth/west,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "Vs" = (
 /obj/effect/decal/cleanable/blood,
@@ -8524,6 +8576,7 @@
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/surface/table,
 /obj/item/device/healthanalyzer,
+/obj/structure/machinery/light/spot,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/tent)
 "Vu" = (
@@ -8768,7 +8821,9 @@
 /obj/structure/machinery/light/spot/red{
 	dir = 4
 	},
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "WU" = (
 /obj/structure/stairs,
@@ -8788,10 +8843,6 @@
 /obj/structure/cargo_container/horizontal/blue/top,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/holding)
-"WY" = (
-/obj/effect/landmark/objective_landmark/medium,
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z1/indoors/double)
 "WZ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12"
@@ -8833,10 +8884,6 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/asphalt/cement,
 /area/factory/z2/indoors/holding)
-"Xe" = (
-/obj/structure/blocker/fog,
-/turf/open/floor/almayer/plate,
-/area/factory/z1/indoors/sewer)
 "Xf" = (
 /obj/structure/fence/slim/dark/door,
 /turf/open/floor/almayer/plate,
@@ -8917,7 +8964,9 @@
 /area/factory/z3/indoors/directional/west)
 "Xw" = (
 /obj/structure/platform/stone/hybrisa/rockdark,
-/turf/open/jungle/water/river,
+/turf/open/gm/river{
+	name = "water"
+	},
 /area/factory/z1/indoors/wet)
 "Xx" = (
 /obj/structure/machinery/light/spot/red{
@@ -12146,7 +12195,7 @@ fm
 fm
 ZG
 Qm
-dm
+Qm
 Qm
 Qm
 ZG
@@ -13554,7 +13603,7 @@ hA
 hA
 hV
 hA
-PW
+hA
 hA
 hV
 hA
@@ -13585,7 +13634,7 @@ Re
 Mp
 Re
 Mz
-HS
+Re
 Re
 Re
 bw
@@ -13831,7 +13880,7 @@ iQ
 iQ
 iQ
 Re
-wf
+Re
 Re
 Re
 Mz
@@ -13945,7 +13994,7 @@ JV
 nW
 hA
 nW
-KS
+nW
 hA
 Nh
 Qm
@@ -15893,7 +15942,7 @@ ZH
 UA
 UA
 UA
-OA
+UA
 UA
 UA
 UA
@@ -16000,7 +16049,7 @@ UA
 UA
 UA
 UA
-ue
+UA
 UA
 UA
 UA
@@ -16652,7 +16701,7 @@ ca
 ca
 UA
 ZH
-JH
+ZH
 ZH
 UA
 UA
@@ -16774,7 +16823,7 @@ CS
 UA
 UA
 UA
-OA
+UA
 UA
 UA
 UA
@@ -17512,7 +17561,7 @@ CI
 Qy
 Qy
 Qy
-WY
+Qy
 Qy
 Qy
 Qy
@@ -17960,7 +18009,7 @@ fm
 fm
 bw
 bw
-bw
+Rh
 bw
 bw
 fm
@@ -18088,9 +18137,9 @@ bw
 fm
 fm
 bw
-mR
-mR
-mR
+Re
+Re
+Re
 bw
 fm
 fm
@@ -18454,7 +18503,7 @@ Gd
 Re
 Re
 Re
-wf
+Re
 iQ
 iQ
 iQ
@@ -18599,7 +18648,7 @@ Re
 Re
 Re
 Re
-wf
+Re
 Re
 Re
 oT
@@ -18693,7 +18742,7 @@ fm
 fm
 HE
 Gd
-ST
+QZ
 QZ
 wx
 HE
@@ -19135,10 +19184,10 @@ Gs
 yZ
 fm
 TG
-TG
-TG
-TG
-TG
+ai
+ai
+ai
+ai
 TG
 fm
 fm
@@ -19264,10 +19313,10 @@ Gs
 yZ
 fm
 TG
-Xe
-EO
-EO
-Xe
+TM
+Mw
+Mw
+TM
 TG
 fm
 fm
@@ -19842,7 +19891,7 @@ fm
 fm
 HE
 Gd
-on
+Gd
 Gd
 HE
 fm
@@ -19909,10 +19958,10 @@ fm
 fm
 fm
 TG
-TM
-Mw
-Mw
-TM
+nK
+mM
+mM
+nK
 TG
 fm
 fm
@@ -20038,10 +20087,10 @@ fm
 fm
 fm
 TG
-TM
-Mw
-Mw
-TM
+De
+Ul
+Ul
+De
 TG
 fm
 fm
@@ -20167,10 +20216,10 @@ fm
 fm
 fm
 TG
-nK
-mM
-mM
-nK
+TM
+Mw
+Mw
+TM
 TG
 fm
 fm
@@ -20296,10 +20345,10 @@ fm
 fm
 fm
 TG
-De
-Ul
-Ul
-De
+TM
+Mw
+Mw
+TM
 TG
 fm
 fm
@@ -20881,7 +20930,7 @@ fm
 fm
 fm
 HE
-on
+Gd
 QZ
 wx
 HE
@@ -21036,7 +21085,7 @@ xH
 xH
 xH
 BB
-NO
+BB
 Pa
 sB
 sB
@@ -21663,11 +21712,11 @@ HE
 HE
 HE
 HE
-HE
-HE
-HE
-HE
-HE
+fm
+fm
+fm
+fm
+fm
 fm
 bF
 BB
@@ -21791,12 +21840,12 @@ eC
 Gd
 Gd
 Gd
-Gd
-Gd
-Gd
-Gd
-Gd
 HE
+fm
+fm
+fm
+fm
+fm
 fm
 bF
 BB
@@ -21916,19 +21965,19 @@ HE
 Gd
 Gd
 Gd
-fd
+Tu
 Gd
 Gd
 Gd
-Gd
-Gd
-hz
-hz
-Bn
 HE
 fm
+fm
+fm
+fm
+fm
+fm
 bF
-NO
+BB
 BB
 bF
 fm
@@ -22050,11 +22099,11 @@ HE
 HE
 HE
 HE
-HE
-HE
-HE
-HE
-HE
+fm
+fm
+fm
+fm
+fm
 fm
 bF
 BB
@@ -22080,7 +22129,7 @@ fm
 yZ
 LP
 LP
-OS
+LP
 LP
 LP
 qf
@@ -22088,11 +22137,11 @@ OS
 le
 sH
 LP
-OS
 LP
 LP
 LP
-OS
+LP
+LP
 LP
 LP
 yZ
@@ -22209,7 +22258,7 @@ fm
 yZ
 LP
 LP
-OS
+LP
 LP
 LP
 qf
@@ -22217,11 +22266,11 @@ OS
 GX
 sH
 LP
-OS
 LP
 LP
 LP
-OS
+LP
+LP
 DP
 wK
 yZ
@@ -22957,7 +23006,7 @@ BB
 BB
 BB
 BB
-CX
+BB
 BB
 BB
 BB
@@ -23005,10 +23054,10 @@ fm
 fm
 fm
 TG
-De
-Ul
-Ul
-De
+TM
+Mw
+Mw
+TM
 TG
 fm
 fm
@@ -23134,10 +23183,10 @@ fm
 fm
 fm
 TG
-nK
-mM
-mM
-nK
+TM
+Mw
+Mw
+TM
 TG
 fm
 fm
@@ -23392,10 +23441,10 @@ fm
 fm
 fm
 TG
-TM
-Mw
-Mw
-TM
+De
+Ul
+Ul
+De
 TG
 fm
 fm
@@ -23521,10 +23570,10 @@ fm
 fm
 fm
 TG
-TM
-Mw
-Mw
-TM
+nK
+mM
+mM
+nK
 TG
 fm
 fm
@@ -23908,10 +23957,10 @@ fm
 fm
 fm
 TG
-Xe
-EO
-EO
-Xe
+TM
+Mw
+Mw
+TM
 TG
 fm
 fm
@@ -24037,10 +24086,10 @@ fm
 fm
 fm
 TG
-TG
-TG
-TG
-TG
+ai
+ai
+ai
+ai
 TG
 fm
 fm
@@ -28911,7 +28960,7 @@ Ck
 Lo
 Lo
 Lo
-Lo
+aE
 lz
 cB
 hk
@@ -28996,7 +29045,7 @@ bL
 bL
 Fe
 oo
-HK
+aW
 PQ
 Ft
 HK
@@ -29848,7 +29897,7 @@ gy
 eg
 kd
 bU
-cz
+eg
 eu
 eu
 eu
@@ -29955,7 +30004,7 @@ jW
 Mi
 eu
 eu
-IR
+eu
 eg
 eg
 eg
@@ -29994,7 +30043,7 @@ IS
 yT
 IS
 IS
-IS
+aj
 IS
 fg
 IS
@@ -30579,7 +30628,7 @@ LE
 LE
 Xb
 QT
-Xb
+aG
 Xb
 Xb
 TY
@@ -31761,7 +31810,7 @@ to
 to
 LI
 to
-to
+aB
 to
 to
 Al
@@ -31973,7 +32022,7 @@ aM
 aM
 aM
 aM
-QP
+aM
 aM
 aM
 aM
@@ -32917,7 +32966,7 @@ WB
 wY
 WB
 WB
-Vn
+WB
 QY
 WB
 WB
@@ -33323,7 +33372,7 @@ WB
 jc
 Te
 Ds
-oL
+aS
 aS
 xA
 Ok
@@ -33452,7 +33501,7 @@ WB
 jc
 Yi
 KO
-aS
+aq
 aS
 KO
 Ok
@@ -34181,7 +34230,7 @@ Sa
 Sa
 Ns
 Sa
-Sa
+aK
 Sa
 Jk
 jc
@@ -35143,7 +35192,7 @@ KG
 jG
 KG
 KG
-KG
+an
 KG
 Xx
 KG
@@ -35616,7 +35665,7 @@ or
 pj
 Bm
 pj
-pj
+aF
 pj
 pj
 pj
@@ -36494,7 +36543,7 @@ vz
 vz
 iO
 vz
-vz
+EY
 vz
 dy
 qx
@@ -36626,7 +36675,7 @@ OY
 OY
 OY
 dy
-qx
+aL
 lS
 lS
 lS
@@ -36749,7 +36798,7 @@ aM
 aM
 mO
 vz
-OY
+aR
 nV
 nV
 nV
@@ -36999,7 +37048,7 @@ tU
 tU
 tU
 tU
-uM
+tU
 tU
 tU
 tU
@@ -37394,11 +37443,11 @@ aM
 aM
 mO
 vz
+EY
 vz
 vz
 vz
-vz
-vz
+EY
 dy
 qx
 lS
@@ -38607,7 +38656,7 @@ wV
 wV
 mu
 ds
-kS
+qc
 qc
 qc
 qc
@@ -38864,7 +38913,7 @@ Rj
 wV
 wV
 mu
-AP
+ax
 qc
 Th
 qc
@@ -39464,11 +39513,11 @@ mO
 mO
 mO
 ah
-qL
+yw
 yw
 ah
 yw
-qL
+yw
 yw
 ah
 qx
@@ -39513,7 +39562,7 @@ yN
 qc
 qc
 rT
-kS
+qc
 ZU
 mu
 wV
@@ -39593,7 +39642,7 @@ Zy
 Zy
 ah
 ah
-yw
+aO
 yw
 Hc
 yw
@@ -39852,7 +39901,7 @@ Zy
 yw
 yw
 yw
-sT
+yw
 ah
 yw
 yw
@@ -39978,14 +40027,14 @@ rP
 dN
 UT
 Zy
-sT
+yw
 yw
 Bu
 yw
 ah
 yw
 yw
-sT
+yw
 ah
 qx
 lS
@@ -40765,7 +40814,7 @@ XC
 XC
 XC
 XC
-Ji
+aJ
 Ji
 Ji
 Ji
@@ -41445,7 +41494,7 @@ DX
 DX
 Ji
 zw
-LO
+av
 SI
 RE
 LO
@@ -41904,7 +41953,7 @@ bL
 bL
 Fe
 Dn
-Zb
+aV
 Bw
 TE
 Ij
@@ -42787,7 +42836,7 @@ Fe
 bd
 Fe
 Be
-Ct
+aY
 YH
 vb
 Ct
@@ -48105,8 +48154,8 @@ TC
 AC
 AC
 kf
-AC
-AC
+bk
+bk
 JL
 ky
 Sp
@@ -48885,7 +48934,7 @@ ha
 Ni
 Ni
 ha
-XH
+bg
 XH
 NX
 ha
@@ -50096,7 +50145,7 @@ Ev
 gm
 zb
 os
-Dv
+gm
 zb
 qF
 qF
@@ -50351,7 +50400,7 @@ LY
 ZV
 Do
 Ev
-Dv
+gm
 zb
 os
 gm
@@ -50609,7 +50658,7 @@ ZV
 ZV
 Do
 Ev
-gm
+be
 zb
 os
 gm
@@ -53580,7 +53629,7 @@ ZV
 Do
 kz
 XI
-TO
+bb
 ad
 DA
 qm
@@ -56493,7 +56542,7 @@ oF
 oF
 oF
 Zo
-nL
+ak
 Zo
 Zo
 Zo
@@ -57011,7 +57060,7 @@ oF
 Zo
 ak
 ak
-nL
+ak
 ak
 ak
 ak
@@ -57138,7 +57187,7 @@ fb
 Zo
 Zo
 Zo
-ak
+bh
 nT
 ak
 ak
@@ -57401,7 +57450,7 @@ ak
 eK
 ak
 ak
-nL
+ak
 Zo
 ta
 ta
@@ -64134,7 +64183,7 @@ qF
 RB
 yU
 yU
-Up
+bs
 yU
 yU
 HT
@@ -64650,7 +64699,7 @@ qF
 RB
 yU
 yU
-Up
+bs
 yU
 qC
 Sq
@@ -64779,7 +64828,7 @@ qF
 RB
 yU
 yU
-Up
+bs
 yU
 qC
 Sq
@@ -65385,7 +65434,7 @@ TC
 TC
 TC
 Vo
-zT
+Ex
 aZ
 oe
 TC
@@ -65926,7 +65975,7 @@ dI
 dI
 qv
 mQ
-rC
+bv
 KT
 KT
 KT
@@ -66310,7 +66359,7 @@ ff
 hn
 qv
 qv
-qv
+by
 qv
 mQ
 MC
@@ -68620,7 +68669,7 @@ iM
 Fg
 AC
 OJ
-hx
+bE
 hx
 OJ
 YV
@@ -73525,7 +73574,7 @@ lh
 Mg
 Mg
 lh
-TA
+bA
 TA
 BW
 BW
