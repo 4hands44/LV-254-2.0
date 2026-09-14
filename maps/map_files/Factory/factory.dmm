@@ -42,11 +42,16 @@
 /turf/closed/wall,
 /area/factory/z2/indoors/lab)
 "ai" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/door/poddoor/almayer{
+	id = "Factory Admin";
 	name = "\improper Sewer Lockdown";
+	explo_proof = 1;
+	unacidable = 1;
+	emp_proof = 1;
+	vehicle_resistant = 1;
 	dir = 4
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z1/indoors/sewer)
 "aj" = (
@@ -93,11 +98,16 @@
 /turf/open_space,
 /area/factory/z4/indoors/directional/south)
 "at" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Bunker Door"
-	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/door/poddoor/almayer{
+	id = "Factory Admin";
+	name = "\improper Bunker Door";
+	explo_proof = 1;
+	unacidable = 1;
+	emp_proof = 1;
+	vehicle_resistant = 1
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z1/indoors/directional)
 "au" = (
 /obj/effect/decal/cleanable/blood,
@@ -5145,7 +5155,7 @@
 /area/factory/z1/indoors/directional/south)
 "tx" = (
 /obj/structure/machinery/door/airlock/almayer/generic/rusted,
-/turf/open/floor/almayer/plate,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z1/indoors/directional)
 "ty" = (
 /obj/effect/spawner/random/gun/upp_primary/midchance,
@@ -9481,6 +9491,13 @@
 	},
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional)
+"JA" = (
+/obj/structure/machinery/door/airlock/almayer/generic/rusted{
+	dir = 1;
+	locked = 1
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/factory/z1/indoors/directional)
 "JB" = (
 /obj/structure/machinery/light/spot/red{
 	dir = 1
@@ -9488,6 +9505,12 @@
 /obj/item/shard,
 /turf/open/floor/strata/floor3,
 /area/factory/z1/indoors/directional/east)
+"JC" = (
+/obj/structure/machinery/door/airlock/almayer/generic/rusted{
+	dir = 1
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/factory/z1/indoors/directional)
 "JE" = (
 /obj/structure/ladder/multiz,
 /obj/structure/barricade/handrail{
@@ -10878,11 +10901,16 @@
 /turf/open/hybrisa/street/sidewalkcenter/east,
 /area/factory/z2/outdoors/directional/west)
 "Rh" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/door/poddoor/almayer{
+	id = "Factory Admin";
 	name = "\improper Bunker Door";
+	explo_proof = 1;
+	unacidable = 1;
+	emp_proof = 1;
+	vehicle_resistant = 1;
 	dir = 4
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/factory/z1/indoors/directional/south)
 "Ri" = (
@@ -22603,7 +22631,7 @@ HE
 cG
 Gd
 Gd
-fd
+eC
 oK
 db
 Gd
@@ -22732,7 +22760,7 @@ HE
 cG
 Gd
 db
-fd
+JA
 dd
 oI
 Gd
@@ -25169,7 +25197,7 @@ hz
 hz
 hz
 Gd
-Tu
+JC
 Gd
 Gd
 Gd
