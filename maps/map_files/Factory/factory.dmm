@@ -5464,17 +5464,6 @@
 /obj/effect/spawner/random/gun/upp_primary/midchance,
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/directional)
-"uH" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	id = "Factory Admin";
-	name = "\improper Service Tunnel Lockdown";
-	explo_proof = 1;
-	unacidable = 1;
-	emp_proof = 1;
-	vehicle_resistant = 1
-	},
-/turf/open/hybrisa/street/asphalt,
-/area/factory/z2/outdoors/directional/west)
 "uI" = (
 /turf/open/hybrisa/street/asphalt,
 /area/factory/z1/indoors/sewer)
@@ -33048,7 +33037,7 @@ yT
 Nc
 Nc
 Nc
-uH
+Nc
 Nc
 Nc
 ac
