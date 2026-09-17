@@ -520,7 +520,7 @@
 		var/turf/adjacent_turf = get_step(src, direction)
 		var/obj/structure/trench/neighbor = locate(/obj/structure/trench, adjacent_turf)
 		var/obj/structure/trench_ramp/ramp = locate(/obj/structure/trench_ramp, adjacent_turf)
-		var/obj/structure/machinery/m56d_hmg/mg_turret/turret = locate(/obj/structure/machinery/m56d_hmg/mg_turret, adjacent_turf)
+		var/obj/structure/machinery/m56d_hmg/mg_turret/trench/turret = locate(/obj/structure/machinery/m56d_hmg/mg_turret/trench, adjacent_turf)
 
 		if(turret)
 			for(var/obj/structure/platform/stone/trench/platform in adjacent_turf)
@@ -814,7 +814,7 @@
 		var/turf/turret_turf = get_turf(src)
 		qdel(item)
 		qdel(src)
-		var/obj/structure/machinery/m56d_hmg/mg_turret/turret = new(turret_turf)
+		var/obj/structure/machinery/m56d_hmg/mg_turret/trench/turret = new(turret_turf)
 		turret.setDir(reverse_direction(turret_dir))
 		for(var/direction in CARDINAL_DIRS)
 			var/obj/structure/trench/neighbor = locate(/obj/structure/trench, get_step(turret, direction))
