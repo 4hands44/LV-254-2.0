@@ -1238,3 +1238,97 @@
 	icon_state = "cross"
 	density = TRUE
 
+
+
+/obj/structure/prop/aa_base
+	name = "M2175 AA Turret Ring"
+	desc = "A sturdy metal baseplate and turret ring for a M2175 AA gun."
+	icon = 'icons/obj/structures/props/aa.dmi'
+	icon_state = "aa_base"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/aa_base/damaged
+	name = "Damaged M2175 AA Turret Ring"
+	desc = "A sturdy metal baseplate and turret ring for a M2175 AA gun."
+	icon = 'icons/obj/structures/props/aa.dmi'
+	icon_state = "aa_base_wreck"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/aa_gun
+	name = "M2175 AA Turret"
+	desc = "A reliable automated anti air turret capable of easily dealing with most small airborne threats."
+	icon = 'icons/obj/structures/props/aa.dmi'
+	icon_state = "aa_turret"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/aa_gun/alt
+	name = "M2175 AA Turret"
+	desc = "A reliable automated anti air turret capable of easily dealing with most small airborne threats."
+	icon = 'icons/obj/structures/props/aa.dmi'
+	icon_state = "aa_turret_up"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/aa_gun/damaged
+	name = "Damaged M2175 AA Turret"
+	desc = "A reliable automated anti air turret capable of easily dealing with most small airborne threats. This one is destroyed."
+	icon = 'icons/obj/structures/props/aa.dmi'
+	icon_state = "aa_turret_wreck"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/aa_gun/light_overlay
+	name = "M2175 AA Turret"
+	desc = "A reliable automated anti air turret capable of easily dealing with most small airborne threats."
+	icon = 'icons/obj/structures/props/aa.dmi'
+	icon_state = "aa_turret_glowred"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+
+
+/obj/structure/prop/rail_gun
+	name = "M2178 Rail Canon"
+	desc = "A reliable automated anti orbit turret capable of easily dealing with most airborne threats."
+	icon = 'icons/obj/structures/props/rail_cannon.dmi'
+	icon_state = "cannon"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/rail_gun/barrel
+	name = "M2178 Rail Canon"
+	desc = "A reliable automated anti orbit turret capable of easily dealing with most airborne threats."
+	icon = 'icons/obj/structures/props/rail_cannon.dmi'
+	icon_state = "cannon_barrel"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/rail_gun/barrel_middle
+	name = "M2178 Rail Canon"
+	desc = "A reliable automated anti orbit turret capable of easily dealing with most airborne threats."
+	icon = 'icons/obj/structures/props/rail_cannon.dmi'
+	icon_state = "cannon_barrel_middle"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+
+/obj/structure/prop/rail_gun/light_overlay
+	name = "M2178 Rail Canon"
+	desc = "A reliable automated anti orbit turret capable of easily dealing with most airborne threats."
+	icon = 'icons/obj/structures/props/rail_cannon.dmi'
+	icon_state = "cannon_lightglow"
+	density = TRUE
+	bound_width = 160
+	bound_height = 160
+

@@ -540,6 +540,100 @@
 /turf/open/gm/basalt/alt_12
 	icon_state = "basalt12"
 
+/turf/open/gm/basalt/cave
+	icon_state = "sand_to_cave"
+
+/turf/open/gm/basalt/cave/north
+
+	dir = 2
+
+/turf/open/gm/basalt/cave/east
+	dir = 8
+
+/turf/open/gm/basalt/cave/south
+	dir = 1
+
+/turf/open/gm/basalt/cave/west
+	dir = 4
+
+/turf/open/gm/basalt/cave/north_east
+	dir = 10
+
+/turf/open/gm/basalt/cave/north_west
+	dir = 6
+
+/turf/open/gm/basalt/cave/south_east
+	dir = 9
+
+/turf/open/gm/basalt/cave/south_west
+	dir = 5
+
+/turf/open/gm/basalt/cave/corner
+	icon_state = "sand_to_cave_corner"
+
+/turf/open/gm/basalt/cave/corner/north
+
+	dir = 2
+
+/turf/open/gm/basalt/cave/corner/east
+	dir = 8
+
+/turf/open/gm/basalt/cave/corner/south
+	dir = 1
+
+/turf/open/gm/basalt/cave/corner/west
+	dir = 4
+
+/turf/open/gm/basalt/dirt
+	icon_state = "basalt_to_dirt"
+
+/turf/open/gm/basalt/dirt/north
+
+	dir = 2
+
+/turf/open/gm/basalt/dirt/east
+	dir = 8
+
+/turf/open/gm/basalt/dirt/south
+	dir = 1
+
+/turf/open/gm/basalt/dirt/west
+	dir = 4
+
+/turf/open/gm/basalt/dirt/north_east
+	dir = 10
+
+/turf/open/gm/basalt/dirt/north_west
+	dir = 6
+
+/turf/open/gm/basalt/dirt/south_east
+	dir = 9
+
+/turf/open/gm/basalt/dirt/south_west
+	dir = 5
+
+/turf/open/gm/basalt/dirt/corner
+	icon_state = "basalt_to_dirt_corner"
+
+/turf/open/gm/basalt/dirt/corner/north
+
+	dir = 2
+
+/turf/open/gm/basalt/dirt/corner/east
+	dir = 8
+
+/turf/open/gm/basalt/dirt/corner/south
+	dir = 1
+
+/turf/open/gm/basalt/dirt/corner/west
+	dir = 4
+
+/turf/open/gm/basalt/glowing
+	icon_state = "basaltglow"
+	light_system = STATIC_LIGHT
+	light_range = 4
+	light_power = 0.75
+	light_color = LIGHT_COLOR_LAVA
 
 //burning
 
@@ -616,6 +710,261 @@
 
 /turf/open/gm/basalt/burning/alt_12
 	icon_state = "basalt12"
+
+/turf/open/gm/basalt/burning/glowing
+	icon_state = "basaltglow"
+	light_system = STATIC_LIGHT
+	light_range = 4
+	light_power = 0.75
+	light_color = LIGHT_COLOR_LAVA
+
+/turf/open/gm/lavaland_sand/dirt
+	icon_state = "basalt_purple"
+
+/turf/open/gm/lavaland_sand/dirt/Initialize(mapload)
+	. = ..()
+	setDir(pick(NORTH, SOUTH, EAST, WEST))
+
+/turf/open/gm/lavaland_sand/sand
+	icon_state = "sand"
+
+/turf/open/gm/lavaland_sand/sand/Initialize(mapload)
+	. = ..()
+	setDir(pick(NORTH, SOUTH, EAST, WEST))
+
+/turf/open/gm/lavaland_sand/brock
+	icon_state = "brock"
+
+/turf/open/gm/lavaland_sand/brock/Initialize(mapload)
+	. = ..()
+	setDir(pick(NORTH, SOUTH, EAST, WEST))
+
+
+//lavaland
+/turf/open/floor/lavaland
+	name = "floor"
+	icon_state = "lavaland_plating"
+	icon = 'icons/turf/floors/floors.dmi'
+
+/turf/open/floor/lavaland/grille
+	icon_state = "grille1"
+
+/turf/open/floor/lavaland/warning_grate
+	icon_state = "warning_grate"
+
+/turf/open/floor/plating/lavaland/grille
+	icon_state = "grille"
+
+/turf/open/floor/plating/lavaland/grate
+	icon_state = "grate"
+
+/turf/open/floor/plating/lavaland/grate/east
+	dir = EAST
+
+/turf/open/floor/plating/lavaland/grate/north
+	dir = NORTH
+
+/turf/open/floor/plating/lavaland/grate/west
+	dir = WEST
+
+/turf/open/floor/plating/lavaland/grille
+	icon_state = "grille1"
+
+/turf/open/floor/plating/lavaland
+	icon_state = "vent"
+
+/turf/open/floor/plating/lavaland/alt
+	icon_state = "vent1"
+
+// Plating & Damage
+
+/turf/open/floor/plating/lavaland
+	icon_state = "plating"
+	icon = 'icons/turf/floors/floors.dmi'
+
+/turf/open/floor/plating/lavaland
+	icon_state = "lavaland_plating"
+
+/turf/open/floor/plating/lavaland/platingdmg1
+	icon_state = "lavaland_platingdmg1"
+
+/turf/open/floor/plating/lavaland/platingdmg2
+	icon_state = "lavaland_platingdmg2"
+
+/turf/open/floor/plating/lavaland/platingdmg3
+	icon_state = "lavaland_platingdmg3"
+
+/turf/open/floor/plating/lavaland/panelscorched
+	icon_state = "lavaland_panelscorched"
+
+///
+
+/turf/open/floor/plating/lavaland/warning_grate
+	icon_state = "warning_grate"
+
+/turf/open/floor/plating/lavaland/warning_grate/north
+
+	dir = 2
+
+/turf/open/floor/plating/lavaland/warning_grate/east
+	dir = 8
+
+/turf/open/floor/plating/lavaland/warning_grate/south
+	dir = 1
+
+/turf/open/floor/plating/lavaland/warning_grate/west
+	dir = 4
+
+/turf/open/floor/plating/lavaland/filtrationside_lava
+	icon_state = "filtrationside_lava"
+
+/turf/open/floor/plating/lavaland/filtrationside_lava/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/plating/lavaland/filtrationside_lava/north
+	dir = NORTH
+
+/turf/open/floor/plating/lavaland/filtrationside_lava/east
+	dir = EAST
+
+/turf/open/floor/plating/lavaland/filtrationside_lava/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/plating/lavaland/filtrationside_lava/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/plating/lavaland/filtrationside_lava/west
+	dir = WEST
+
+/turf/open/floor/plating/lavaland/filtrationside_lava/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/plating/lavaland/filtrationside_lava_straight
+	icon_state = "filtrationside_lava_straight"
+
+/turf/open/floor/plating/lavaland/filtrationside_lava_straight/north
+	dir = NORTH
+
+/turf/open/floor/plating/lavaland/filtrationside_lava_straight/east
+	dir = EAST
+
+/turf/open/floor/plating/lavaland/filtrationside_lava_straight/west
+	dir = WEST
+
+// Catwalk Alpha
+
+/obj/effect/lava/catwalk
+	icon = 'icons/turf/floors/floors.dmi'
+	icon_state = "lavacatwalk_a"
+	layer = CATWALK_LAYER
+	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/lava/catwalk/catwalk_1
+	icon_state = "lavacatwalk_a"
+
+/obj/effect/lava/catwalk/catwalk_2
+	icon_state = "lavacatwalk_alt_a"
+
+/obj/effect/lava/catwalk/grille
+	icon_state = "grille_a"
+
+/obj/effect/lava/catwalk/plating_grille
+	icon_state = "grille_b"
+
+/obj/effect/lava/catwalk/grate
+	icon_state = "grate_a"
+
+// Warnplate
+
+/turf/open/floor/plating/lavaland/warnplate
+	icon_state = "dark_warnplate"
+
+/turf/open/floor/plating/lavaland/warnplate/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/plating/lavaland/warnplate/north
+	dir = NORTH
+
+/turf/open/floor/plating/lavaland/warnplate/east
+	dir = EAST
+
+/turf/open/floor/plating/lavaland/warnplate/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/plating/lavaland/warnplate/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/plating/lavaland/warnplate/west
+	dir = WEST
+
+/turf/open/floor/plating/lavaland/warnplate/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/plating/lavaland/warnplate/corner
+	icon_state = "dark_warnplatecorner"
+
+/turf/open/floor/plating/lavaland/warnplate/corner/north
+	dir = NORTH
+
+/turf/open/floor/plating/lavaland/warnplate/corner/east
+	dir = EAST
+
+/turf/open/floor/plating/lavaland/warnplate/corner/west
+	dir = WEST
+
+// Asteroid new
+
+/turf/open/floor/lavaland/asteroid
+	icon_state = "dark_asteroidfloor"
+
+/turf/open/floor/lavaland/asteroid/plating
+	icon_state = "dark_asteroidplating"
+
+/turf/open/floor/lavaland/asteroid/directions
+	icon_state = "dark_asteroidwarning"
+
+/turf/open/floor/lavaland/asteroid/directions/north
+
+	dir = NORTH
+
+/turf/open/floor/lavaland/asteroid/directions/east
+	dir = EAST
+
+/turf/open/floor/lavaland/asteroid/directions/south
+	dir = SOUTH
+
+/turf/open/floor/lavaland/asteroid/directions/west
+	dir = WEST
+
+/turf/open/floor/lavaland/asteroid/directions/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/lavaland/asteroid/directions/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/lavaland/asteroid/directions/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/lavaland/asteroid/directions/southwest
+	dir = SOUTHWEST
+
+// Asteroid corner
+
+/turf/open/floor/lavaland/asteroid/corner
+	icon_state = "dark_asteroidfloor_corner"
+
+/turf/open/floor/lavaland/asteroid/corner/north
+	dir = NORTH
+
+/turf/open/floor/lavaland/asteroid/corner/east
+	dir = EAST
+
+/turf/open/floor/lavaland/asteroid/corner/south
+	dir = SOUTH
+
+/turf/open/floor/lavaland/asteroid/corner/west
+	dir = WEST
 
 //Lunar
 /turf/open/gm/lunar
@@ -1512,16 +1861,19 @@
 	name = "Lava"
 	desc = "Burning hot molten stone."
 	icon = 'icons/turf/floors/floors.dmi'
-	icon_state = "lava"
+	icon_state = "old_lava"
 	can_bloody = FALSE
 	supports_surgery = FALSE
+	light_system = STATIC_LIGHT
+	light_range = 4
+	light_power = 0.75
+	light_color = LIGHT_COLOR_LAVA
+	supports_surgery = FALSE
+	allow_construction = FALSE
+	minimap_color = MINIMAP_LAVA
 
-/turf/open/lava/Initialize(mapload, ...)
-	. = ..()
-
-	set_light(5, , "#FF5C00")
-	update_icon()
-
+/turf/open/lava/is_weedable()
+	return NOT_WEEDABLE
 
 /turf/open/lava/Entered(atom/movable/O)
 	..()
@@ -1536,6 +1888,215 @@
 
 /turf/open/lava/flowing
 	icon_state = "lava_flowing"
+
+/turf/open/lava/flowing/north
+	dir = NORTH
+/turf/open/lava/flowing/east
+	dir = EAST
+
+/turf/open/lava/flowing/west
+	dir = WEST
+
+/turf/open/lava/alt
+	icon_state = "lava_full"
+
+/turf/open/lava/alt2
+	icon_state = "lava_full_alt"
+
+/turf/open/lava/lattice
+	icon_state = "full_lattice"
+
+/turf/open/lava/lava_no_burn
+	name = "lava"
+	icon_state = "lava_full"
+	baseturfs = /turf/open/lava
+	light_system = STATIC_LIGHT
+	light_range = 4
+	light_power = 0.75
+	light_color = LIGHT_COLOR_LAVA
+	can_bloody = FALSE
+	supports_surgery = FALSE
+	allow_construction = FALSE
+
+// Catwalks
+
+/turf/open/lavaland/catwalk
+	icon_state = "lavacatwalk"
+	light_system = STATIC_LIGHT
+	light_range = 4
+	light_power = 0.75
+	light_color = LIGHT_COLOR_LAVA
+
+/turf/open/lavaland/catwalk/alt
+	icon_state = "lavacatwalk_alt"
+
+/turf/open/lavaland/catwalk/glass_solid
+	icon_state = "lavacatwalk_glass_solid"
+
+/turf/open/lavaland/catwalk/glass
+	icon_state = "lavacatwalk_glass"
+
+/turf/open/lavaland/catwalk/glass_lattice
+	icon_state = "lavacatwalk_glass_lattice"
+
+/turf/open/lavaland/catwalk/glass_lattice_alt
+	icon_state = "lavacatwalk_glass_lattice_alt"
+
+// Lava edge
+
+/turf/open/lava/L_piece
+	icon_state = "lpiece"
+
+/turf/open/lava/L_piece/north
+
+	dir = 2
+
+/turf/open/lava/L_piece/east
+	dir = 8
+
+/turf/open/lava/L_piece/south
+	dir = 1
+
+/turf/open/lava/L_piece/west
+	dir = 4
+
+/turf/open/lava/side
+	icon_state = "side"
+
+/turf/open/lava/side/north
+
+	dir = 2
+
+/turf/open/lava/side/east
+	dir = 8
+
+/turf/open/lava/side/south
+	dir = 1
+
+/turf/open/lava/side/west
+	dir = 4
+
+/turf/open/lava/corner
+	icon_state = "corner"
+
+/turf/open/lava/corner/north
+
+	dir = 2
+
+/turf/open/lava/corner/east
+	dir = 8
+
+/turf/open/lava/corner/south
+	dir = 1
+
+/turf/open/lava/corner/west
+	dir = 4
+
+/turf/open/lava/single_intersection
+	icon_state = "single_intersection"
+
+/turf/open/lava/single_intersection_direction
+	icon_state = "single_intersection_direction"
+
+/turf/open/lava/single_intersection_direction/north
+
+	dir = 2
+
+/turf/open/lava/single_intersection_direction/east
+	dir = 8
+
+/turf/open/lava/single_intersection_direction/south
+	dir = 1
+
+/turf/open/lava/single_intersection_direction/west
+	dir = 4
+
+/turf/open/lava/single_intersection_direction/north_east
+	dir = 10
+
+/turf/open/lava/single_intersection_direction/north_west
+	dir = 6
+
+/turf/open/lava/single_intersection_direction/south_east
+	dir = 9
+
+/turf/open/lava/single_intersection_direction/south_west
+	dir = 5
+
+/turf/open/lava/single_middle
+	icon_state = "single_middle"
+
+/turf/open/lava/single_middle/north
+
+	dir = 2
+
+/turf/open/lava/single_middle/east
+	dir = 8
+
+/turf/open/lava/single_middle/south
+	dir = 1
+
+/turf/open/lava/single_middle/west
+	dir = 4
+
+/turf/open/lava/single
+	icon_state = "single"
+
+/turf/open/lava/single_end
+	icon_state = "single_end"
+
+/turf/open/lava/single_end/north
+
+	dir = 2
+
+/turf/open/lava/single_end/east
+	dir = 8
+
+/turf/open/lava/single_end/south
+	dir = 1
+
+/turf/open/lava/single_end/west
+	dir = 4
+
+/turf/open/lava/single_corners
+	icon_state = "single_corners"
+
+/turf/open/lava/single_corners/north
+
+	dir = 2
+
+/turf/open/lava/single_corners/east
+	dir = 8
+
+/turf/open/lava/single_corners/south
+	dir = 1
+
+/turf/open/lava/single_corners/west
+	dir = 4
+
+// Decals - For edges
+
+/obj/effect/lava
+	icon = 'icons/turf/floors/floors.dmi'
+	layer = TURF_LAYER
+	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/lava/edges/brock_side
+	icon_state = "brock_side"
+
+/obj/effect/lava/edges/basalt/l_piece
+	icon_state = "lpiece_rock"
+
+/obj/effect/lava/edges/basalt/side_rock
+	icon_state = "side_rock"
+
+/obj/effect/lava/edges/basalt/corner_rock
+	icon_state = "corner_rock"
+
+/obj/effect/lava/edges/overlay
+	icon_state = "brock"
+	layer = 2.01
 
 //SHUTTLE 'FLOORS'
 //not a child of turf/open/floor because shuttle floors are magic and don't behave like real floors.
