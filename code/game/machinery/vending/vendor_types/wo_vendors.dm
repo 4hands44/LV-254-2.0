@@ -30,7 +30,6 @@
 		list("External Webbing Vest", floor(scale * 5), /obj/item/clothing/suit/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Brown Webbing Vest", floor(scale * 1), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
 		list("Black Webbing Vest", floor(scale * 1), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
-		list("Webbing", floor(scale * 2), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", floor(scale * 1), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", floor(scale * 1), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
@@ -61,7 +60,6 @@
 		list("Technician Welder-Satchel", floor(scale * 2), /obj/item/storage/backpack/marine/engineerpack/satchel, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
-		list("M276 Pattern Ammo Load Rig", floor(scale * 10), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M40 Grenade Rig", floor(scale * 5), /obj/item/storage/belt/grenade, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Shotgun Shell Loading Rig", floor(scale * 10), /obj/item/storage/belt/shotgun, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern General Pistol Holster Rig", floor(scale * 10), /obj/item/storage/belt/gun/m4a3, VENDOR_ITEM_REGULAR),

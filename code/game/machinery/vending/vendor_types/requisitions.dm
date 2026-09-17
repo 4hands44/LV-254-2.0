@@ -68,7 +68,6 @@
 		list("Black Webbing Vest", floor(scale * 2), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
 		list("Brown Webbing Vest", floor(scale * 2), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", floor(scale * 1.5), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
-		list("Webbing", floor(scale * 5), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Black Webbing", floor(scale * 5), /obj/item/clothing/accessory/storage/webbing/black, VENDOR_ITEM_REGULAR),
 		list("Knife Webbing", floor(scale * 1), /obj/item/clothing/accessory/storage/knifeharness, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", floor(scale * 2), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
@@ -88,7 +87,6 @@
 
 		list("BELTS", -1, null, null),
 		list("G8-A General Utility Pouch", floor(scale * 2), /obj/item/storage/backpack/general_belt, VENDOR_ITEM_REGULAR),
-		list("M276 Ammo Load Rig", floor(scale * 15), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),
 		list("M276 General Pistol Holster Rig", floor(scale * 10), /obj/item/storage/belt/gun/m4a3, VENDOR_ITEM_REGULAR),
 		list("M276 Knife Rig", floor(scale * 5), /obj/item/storage/belt/knifepouch, VENDOR_ITEM_REGULAR),
 		list("M276 M39 Holster Rig", floor(scale * 5), /obj/item/storage/belt/gun/m39, VENDOR_ITEM_REGULAR),

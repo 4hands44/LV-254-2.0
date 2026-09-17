@@ -90,44 +90,10 @@
 
 	switch(stage)
 		if(TRENCH_STAGE_PANELS)
-			if(!istype(item, /obj/item/stack/tile/wood))
+			if(!istype(item, /obj/item/stack/sheet/wood))
 				return
 
-			var/obj/item/stack/tile/wood/panels = item
-
-			to_chat(user, SPAN_NOTICE("You start adding wood panels to sides walls of [src]."))
-			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
-
-			if(!do_after(user, 5 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
-				return
-
-			if(panels.use(4))
-				to_chat(user, SPAN_NOTICE("You add some panels to [src]."))
-				stage = TRENCH_STAGE_SCREWDRIVER
-				update_icon()
-			else
-				to_chat(user, SPAN_NOTICE("You failed to construct the trench walls. You need more panels."))
-
-	switch(stage)
-		if(TRENCH_STAGE_SCREWDRIVER)
-			if(!HAS_TRAIT(item, TRAIT_TOOL_SCREWDRIVER))
-				return
-
-			to_chat(user, SPAN_NOTICE("You start elevating the frame and screwing it up top."))
-			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-
-			if(!do_after(user, 7 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				return
-
-			to_chat(user, SPAN_NOTICE("You elevate the the frame and screw it up top."))
-			stage = TRENCH_STAGE_FINAL
-			update_icon()
-	switch(stage)
-		if(TRENCH_STAGE_FINAL)
-			if(!istype(item, /obj/item/stack/tile/wood))
-				return
-
-			var/obj/item/stack/tile/wood/panels = item
+			var/obj/item/stack/sheet/wood/panels = item
 
 			to_chat(user, SPAN_NOTICE("You start adding wood panels to sides walls of [src]."))
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
@@ -170,7 +136,7 @@
 	name = "Wooden Trench"
 	desc = "This is a trench. Its like you're fighting the Kaiser again. In space. It can be upgraded with wood."
 	icon = 'icons/obj/structures/trenches.dmi'
-	icon_state = "ground"
+	icon_state = "trench"
 	layer = TURF_LAYER
 	climb_delay = CLIMB_DELAY_LONG
 	unacidable = FALSE
@@ -554,7 +520,7 @@
 		var/turf/adjacent_turf = get_step(src, direction)
 		var/obj/structure/trench/neighbor = locate(/obj/structure/trench, adjacent_turf)
 		var/obj/structure/trench_ramp/ramp = locate(/obj/structure/trench_ramp, adjacent_turf)
-		var/obj/structure/machinery/m56d_hmg/mg_turret/turret = locate(/obj/structure/machinery/m56d_hmg/mg_turret, adjacent_turf)
+		var/obj/structure/machinery/m56d_hmg/mg_turret/trench/turret = locate(/obj/structure/machinery/m56d_hmg/mg_turret/trench, adjacent_turf)
 
 		if(turret)
 			for(var/obj/structure/platform/stone/trench/platform in adjacent_turf)
@@ -596,6 +562,7 @@
 
 /obj/structure/trench/Initialize(mapload, ...)
 	. = ..()
+	icon_state = "ground"
 	if(modifies_adjacent)
 		check_neighbors()
 		update_icon()
@@ -847,7 +814,7 @@
 		var/turf/turret_turf = get_turf(src)
 		qdel(item)
 		qdel(src)
-		var/obj/structure/machinery/m56d_hmg/mg_turret/turret = new(turret_turf)
+		var/obj/structure/machinery/m56d_hmg/mg_turret/trench/turret = new(turret_turf)
 		turret.setDir(reverse_direction(turret_dir))
 		for(var/direction in CARDINAL_DIRS)
 			var/obj/structure/trench/neighbor = locate(/obj/structure/trench, get_step(turret, direction))
