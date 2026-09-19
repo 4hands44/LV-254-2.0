@@ -2459,7 +2459,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90
 	name = "\improper F903A1 Rifle"
-	desc = "The standard issue rifle of the royal marines. Uniquely the royal marines are the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "Once the standard rifle of the RMC, the F90's performance was found lacking despite its upgrades, leading the TWE to replace it with the L23. The F90 now often sees use by mercenaries or private security. Uses uniquely non-pulse fired 10x24mm caseless ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/assault_rifles.dmi'
 	icon_state = "aug"
 	item_state = "aug"
@@ -2790,7 +2790,7 @@
 
 /obj/item/weapon/gun/rifle/l23
 	name = "\improper L23 assault rifle"
-	desc = "Replacing The AUG and SA80, the L23 is the new standard rifle of the Royal Marines, based upon Weyland-Yutani's NSG-23 and modified to suit Marine Operations. The main difference is the bullpup configuration, keeping the rifle both accurate and compact; the other change is the modular handguard, letting the user adapt the rifle to various roles. Feeds from 50-round quad-stack magazines and 150-round drums."
+	desc = "Replacing The F90 and SA80, the L23 is the new standard rifle of the Royal Marines, based upon Weyland-Yutani's NSG-23 and modified to suit Marine Operations. The main difference is the bullpup configuration, keeping the rifle both accurate and compact; the other change is the modular handguard, letting the user adapt the rifle to various roles. Feeds from 50-round quad-stack magazines and 150-round drums."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/assault_rifles.dmi'
 	icon_state = "l23"
 	item_state = "l23"
