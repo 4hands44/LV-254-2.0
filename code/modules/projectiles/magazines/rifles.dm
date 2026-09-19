@@ -729,54 +729,86 @@
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/rifle/l23
-	name = "\improper L23 magazine (8.88x51mm)"
-	desc = "An L23 assault rifle magazine."
-	caliber = "8.88x51mm"
+	name = "\improper L23 magazine (8.88x28mm)"
+	desc = "A standard quad-stack L23 assault rifle magazine, capable of holding 50 rounds."
+	caliber = "8.88x28mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/TWE/assault_rifles.dmi'
 	icon_state = "l23"
 	item_state = "l23"
-	bonus_overlay = "l23_mag_overlay" //needs to be an overlay, as the mag has a hole that would be filled over by the ext overlay
 	default_ammo = /datum/ammo/bullet/rifle/l23
-	max_rounds = 30
+	max_rounds = 50
 	gun_type = /obj/item/weapon/gun/rifle/l23
 	ammo_band_icon = "+l23_band"
 	ammo_band_icon_empty = "+l23_band_e"
 
-/obj/item/ammo_magazine/rifle/l23/extended
-	name = "\improper L23 high-capacity drum magazine (8.88x51mm)"
-	desc = "An L23 assault rifle magazine. This one contains 45 bullets."
-	icon_state = "l23_ext"
-	item_state = "l23_ext"
-	bonus_overlay = "l23_ext_overlay"
-	max_rounds = 45
-
 /obj/item/ammo_magazine/rifle/l23/ap
-	name = "\improper L23 armor-piercing magazine (8.88x51mm)"
-	desc = "An L23 assault rifle magazine. This one is armor piercing."
+	name = "\improper L23 armor-piercing magazine (8.88x28mm)"
+	desc = "A standard quad-stack L23 assault rifle magazine, capable of holding 50 rounds; This one is armor piercing."
 	default_ammo = /datum/ammo/bullet/rifle/l23/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/l23/heap
-	name = "\improper L23 HEAP magazine (8.88x51mm)"
-	desc = "An L23 assault rifle magazine. This one is loaded with armor-piercing explosive tipped rounds."
+	name = "\improper L23 HEAP magazine (8.88x28mm)"
+	desc = "A standard quad-stack L23 assault rifle magazine, capable of holding 50 rounds; This one is loaded with armor-piercing explosive tipped rounds."
 	default_ammo = /datum/ammo/bullet/rifle/l23/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 /obj/item/ammo_magazine/rifle/l23/incendiary
-	name = "\improper L23 incindiary magazine (8.88x51mm)"
-	desc = "An L23 assault rifle magazine. This one is loaded with incendiary white phosphorus tipped rounds."
+	name = "\improper L23 incindiary magazine (8.88x28mm)"
+	desc = "A standard quad-stack L23 assault rifle magazine, capable of holding 50 rounds; This one is loaded with incendiary white phosphorus tipped rounds."
 	default_ammo = /datum/ammo/bullet/rifle/l23/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/rifle/l23/rubber
-	name = "\improper L23 practice magazine (8.88x51mm)"
-	desc = "An L23 assault rifle magazine. This one is loaded with rubber bullets."
+	name = "\improper L23 practice magazine (8.88x28mm)"
+	desc = "A standard quad-stack L23 assault rifle magazine, capable of holding 50 rounds; This one is loaded with rubber bullets."
 	default_ammo = /datum/ammo/bullet/rifle/l23/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 /obj/item/ammo_magazine/rifle/l23/toxin
-	name = "\improper L23 toxin magazine (8.88x51mm)"
-	desc = "A 8.88mm toxin magazine."
+	name = "\improper L23 toxin magazine (8.88x28mm)"
+	desc = "A standard quad-stack L23 assault rifle magazine, capable of holding 50 rounds; This one is loaded with toxic bullets."
+	default_ammo = /datum/ammo/bullet/rifle/l23/ap/toxin
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
+
+
+/obj/item/ammo_magazine/rifle/l23/extended
+	name = "\improper L23 drum magazine (8.88x28mm)"
+	desc = "An L23 assault rifle drum magazine, capable of holding 150 rounds through the use of two stacked drums; Popular amongst RMC support gunners despite the added bulk."
+	icon_state = "l23_ext"
+	item_state = "l23_ext"
+	bonus_overlay = "l23_ext_overlay"
+	max_rounds = 150
+	ammo_band_icon = "+l23_ext_band"
+	ammo_band_icon_empty = "+l23_ext_band_e"
+
+/obj/item/ammo_magazine/rifle/l23/extended/ap
+	name = "\improper L23 armor-piercing drum magazine (8.88x28mm)"
+	desc = "An L23 assault rifle drum magazine, capable of holding 150 rounds through the use of two stacked drums; Popular amongst RMC support gunners despite the added bulk, this one is armor piercing."
+	default_ammo = /datum/ammo/bullet/rifle/l23/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/l23/extended/heap
+	name = "\improper L23 HEAP drum magazine (8.88x28mm)"
+	desc = "An L23 assault rifle drum magazine, capable of holding 150 rounds through the use of two stacked drums; Popular amongst RMC support gunners despite the added bulk, this one is loaded with armor-piercing explosive tipped rounds."
+	default_ammo = /datum/ammo/bullet/rifle/l23/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/l23/extended/incendiary
+	name = "\improper L23 incindiary drum magazine (8.88x28mm)"
+	desc = "An L23 assault rifle drum magazine, capable of holding 150 rounds through the use of two stacked drums; Popular amongst RMC support gunners despite the added bulk, this one is loaded with incendiary white phosphorus tipped rounds."
+	default_ammo = /datum/ammo/bullet/rifle/l23/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+/obj/item/ammo_magazine/rifle/l23/extended/rubber
+	name = "\improper L23 practice drum magazine (8.88x28mm)"
+	desc = "An L23 assault rifle drum magazine, capable of holding 150 rounds through the use of two stacked drums; Popular amongst RMC support gunners despite the added bulk, this one is loaded with rubber bullets."
+	default_ammo = /datum/ammo/bullet/rifle/l23/rubber
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+/obj/item/ammo_magazine/rifle/l23/extended/toxin
+	name = "\improper L23 toxin drum magazine (8.88x28mm)"
+	desc = "An L23 assault rifle drum magazine, capable of holding 150 rounds through the use of two stacked drums; Popular amongst RMC support gunners despite the added bulk, this one is loaded with toxic bullets."
 	default_ammo = /datum/ammo/bullet/rifle/l23/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 

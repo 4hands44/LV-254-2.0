@@ -974,6 +974,24 @@ Defined in conflicts.dm of the #defines folder.
 		to_chat(user, SPAN_NOTICE("You are unable to modify it."))
 	return
 
+/obj/item/attachable/flashlight/rmc
+	name = "\improper H12 handguard module"
+	desc = "The standard handguard for the L23 Assault Rifle used by the TWE's Royal marines, comes with a built-in laser/light combo."
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "l23_handguard"
+	attach_icon = "l23_handguard_a"
+	slot = "under"
+	original_state = "l23_handguard"
+	original_attach = "l23_handguard_a"
+
+/obj/item/attachable/flashlight/rmc/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_1
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_9
+	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
+
 /obj/item/attachable/magnetic_harness
 	name = "magnetic harness"
 	desc = "A magnetically attached harness kit that attaches to the rail mount of a weapon. When dropped, the weapon will sling to any set of USCM armor."
@@ -2622,6 +2640,18 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0
 	size_mod = 0
 
+/obj/item/attachable/l23_barrel
+	name = "L23 Barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "l23_barrel"
+	attach_icon = "l23_barrel_a"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
+
 /obj/item/attachable/type73suppressor
 	name = "Type 73 Integrated Suppressor"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
@@ -2954,18 +2984,6 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_y = 20
 	hud_offset_mod = 2
 
-/obj/item/attachable/stock/l23
-	name = "L23 stock"
-	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
-	icon_state = "l23_stock"
-	slot = "stock"
-	wield_delay_mod = WIELD_DELAY_NONE
-	melee_mod = 5
-	size_mod = 2
-	pixel_shift_x = 21
-	pixel_shift_y = 20
-	hud_offset_mod = 2
-
 // ======== Underbarrel Attachments ======== //
 
 
@@ -3237,13 +3255,13 @@ Defined in conflicts.dm of the #defines folder.
 	grenade_pass_flags = NO_FLAGS
 
 
-/obj/item/attachable/attached_gun/grenade/u1rmc
-	name = "\improper H34 underslung grenade launcher"
-	desc = "A W-Y take on an underslung grenade launcher system, made for the NSG23 line of weapons. Can store up to five grenades and fires them about as far as your U1 UGL for M41A Mk2."
-	icon_state = "u1rmc"
-	attach_icon = "u1rmc_a"
+/obj/item/attachable/attached_gun/grenade/rmc
+	name = "\improper H34 grenade launcher module"
+	desc = "A grenade launcher for the RMC's L23 Assault Rifle, slots neatly into the handguard area; holds three rounds and is comparable to the USCM's."
+	icon_state = "l23_grenade"
+	attach_icon = "l23_grenade_a"
 	current_rounds = 0
-	max_rounds = 5
+	max_rounds = 3
 	max_range = 10
 	attachment_firing_delay = 24
 
@@ -3406,6 +3424,12 @@ Defined in conflicts.dm of the #defines folder.
 
 		new/obj/flamer_fire(T, create_cause_data(initial(name), user), R)
 
+/obj/item/attachable/attached_gun/flamer/rmc
+	name = "\improper H18 Flamer Module"
+	desc = "A flamethrower for the RMC's L23 Assault Rifle, slots neatly into the handguard area."
+	icon_state = "l23_flamer"
+	attach_icon = "l23_flamer_a"
+
 /obj/item/attachable/attached_gun/flamer/advanced
 	name = "advanced mini flamethrower"
 	current_rounds = 50
@@ -3514,11 +3538,11 @@ Defined in conflicts.dm of the #defines folder.
 			return
 	to_chat(user, SPAN_WARNING("[src] only accepts shotgun buckshot."))
 
-/obj/item/attachable/attached_gun/shotgun/af13b //NSG underslung shottie for Breacher gun
-	name = "\improper AF13-B underbarrel shotgun"
-	icon_state = "masterkey_af13"
-	attach_icon = "masterkey_af13_a"
-	desc = "A Weyland-Yutani AF13-B underslung shotgun, heavily modified by RMC Armourers. Attaches to the underbarrel of NSG23 line of weapons. Only capable of loading up to six buckshot shells. Specialized for breaching into buildings."
+/obj/item/attachable/attached_gun/shotgun/rmc //NSG underslung shottie for Breacher gun
+	name = "\improper H42 Masterkey Module"
+	icon_state = "l23_masterkey"
+	attach_icon = "l23_masterkey_a"
+	desc = "An underbarrel shotgun that slots neatly into the handguard area on the L23 Assault Rifle. Only capable of loading up to six buckshot shells. Specialized for breaching into buildings."
 	w_class = SIZE_MEDIUM
 	max_rounds = 6
 	current_rounds = 6
@@ -3528,23 +3552,23 @@ Defined in conflicts.dm of the #defines folder.
 	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON|ATTACH_WIELD_OVERRIDE
 
-/obj/item/attachable/attached_gun/shotgun/af13b/New()
+/obj/item/attachable/attached_gun/shotgun/rmc/New()
 	..()
 	attachment_firing_delay = FIRE_DELAY_TIER_5*3
 
-/obj/item/attachable/attached_gun/shotgun/af13b/get_examine_text(mob/user)
+/obj/item/attachable/attached_gun/shotgun/rmc/get_examine_text(mob/user)
 	. = ..()
 	if(current_rounds > 0) . += "It has [current_rounds] shell\s left."
 	else . += "It's empty."
 
-/obj/item/attachable/attached_gun/shotgun/af13b/set_bullet_traits()
+/obj/item/attachable/attached_gun/shotgun/rmc/set_bullet_traits()
 	LAZYADD(traits_to_give_attached, list(
 		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 2*5, GLOB.damage_boost_turfs), // 3 hits to break down regular walls, about 6 to break down r-walls
 		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 3*10.8, GLOB.damage_boost_breaching), // 2-taps the R doors
 		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2*5, GLOB.damage_boost_pylons)
 	))
 
-/obj/item/attachable/attached_gun/shotgun/af13b/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
+/obj/item/attachable/attached_gun/shotgun/rmc/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
 	if(istype(mag) && mag.flags_magazine & AMMUNITION_HANDFUL)
 		if(mag.default_ammo == /datum/ammo/bullet/shotgun/buckshot)
 			if(current_rounds >= max_rounds)
@@ -4004,6 +4028,13 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "sa80_bipod"
 	attach_icon = "sa80_bipod_a"
 	slot = "muzzle"
+
+/obj/item/attachable/bipod/rmc
+	name = "H44 Folding Bipod Module"
+	desc = "A rugged bipod handguard module for the L23 Assault Rifle, popular amongst TWE Support Gunners. \nGreatly increases accuracy and reduces recoil when properly placed, but also increases weapon size and slows firing speed."
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "l23_bipod"
+	attach_icon = "l23_bipod_a"
 
 /obj/item/attachable/bipod/vulture
 	name = "heavy bipod"
