@@ -312,3 +312,55 @@
 /turf/closed/wall/r_wall/elevator/button/arrivals
 	icon_state = "wall_button_arrivals"
 
+//colorwall
+
+/turf/closed/wall/r_wall/color_wall
+	name = "reinforced metal wall"
+	icon = 'icons/turf/walls/color_walls/white.dmi'
+	icon_state = "rwall"
+	walltype = WALL_REINFORCED
+
+/turf/closed/wall/r_wall/color_wall
+	name = "heavy reinforced wall"
+	desc = "A huge chunk of ultra-reinforced metal used to separate rooms. Looks virtually indestructible."
+	icon_state = "hwall"
+	walltype = WALL_REINFORCED
+	turf_flags = TURF_HULL
+
+/turf/closed/wall/r_wall/color_wall_unmeltable/ex_act(severity) //Should make it indestructible
+		return
+
+/turf/closed/wall/r_wall/color_wall_unmeltable/fire_act(exposed_temperature, exposed_volume)
+		return
+
+/turf/closed/wall/r_wall/color_wall_unmeltable/attackby() //This should fix everything else. No cables, etc
+		return
+
+/turf/closed/wall/r_wall/color_wall/white
+	icon = 'icons/turf/walls/color_walls/white.dmi'
+
+/turf/closed/wall/r_wall/color_wall/black
+	icon = 'icons/turf/walls/color_walls/black.dmi'
+
+/turf/closed/wall/r_wall/color_wall/orange
+	icon = 'icons/turf/walls/color_walls/orange.dmi'
+
+/turf/closed/wall/r_wall/color_wall/blue
+	icon = 'icons/turf/walls/color_walls/blue.dmi'
+
+/turf/closed/wall/r_wall/color_wall/yellow
+	icon = 'icons/turf/walls/color_walls/yellow.dmi'
+
+/turf/closed/wall/r_wall/color_wall/red
+	icon = 'icons/turf/walls/color_walls/red.dmi'
+
+/turf/closed/wall/r_wall/color_wall/green
+	icon = 'icons/turf/walls/color_walls/green.dmi'
+
+
+/turf/closed/wall/r_wall/color_wall/purple
+	icon = 'icons/turf/walls/color_walls/purple.dmi'
+
+/turf/closed/wall/r_wall/color_wall/brown
+
+	icon = 'icons/turf/walls/color_walls/brown.dmi'

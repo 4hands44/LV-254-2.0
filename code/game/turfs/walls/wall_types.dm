@@ -492,6 +492,44 @@
 		if(r1 >= 9)
 			overlays += image(icon, icon_state = "wood_variant")
 
+//Color walls.
+
+/turf/closed/wall/color_wall
+	name = "metal wall"
+	icon = 'icons/turf/walls/color_walls/white.dmi'
+	icon_state = "metal"
+	walltype = WALL_METAL
+
+/turf/closed/wall/color_wall/white
+	icon = 'icons/turf/walls/color_walls/white.dmi'
+
+/turf/closed/wall/color_wall/black
+	icon = 'icons/turf/walls/color_walls/black.dmi'
+
+/turf/closed/wall/color_wall/orange
+	icon = 'icons/turf/walls/color_walls/orange.dmi'
+
+/turf/closed/wall/color_wall/blue
+	icon = 'icons/turf/walls/color_walls/blue.dmi'
+
+/turf/closed/wall/color_wall/yellow
+	icon = 'icons/turf/walls/color_walls/yellow.dmi'
+
+/turf/closed/wall/color_wall/red
+	icon = 'icons/turf/walls/color_walls/red.dmi'
+
+/turf/closed/wall/color_wall/green
+	icon = 'icons/turf/walls/color_walls/green.dmi'
+
+
+/turf/closed/wall/color_wall/purple
+	icon = 'icons/turf/walls/color_walls/purple.dmi'
+
+/turf/closed/wall/color_wall/brown
+
+	icon = 'icons/turf/walls/color_walls/brown.dmi'
+
+
 //Colorable rocks. Looks like moonsand.
 
 /turf/closed/wall/rock
