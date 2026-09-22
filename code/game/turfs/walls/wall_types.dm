@@ -521,14 +521,8 @@
 /turf/closed/wall/color_wall/green
 	icon = 'icons/turf/walls/color_walls/green.dmi'
 
-
 /turf/closed/wall/color_wall/purple
 	icon = 'icons/turf/walls/color_walls/purple.dmi'
-
-/turf/closed/wall/color_wall/brown
-
-	icon = 'icons/turf/walls/color_walls/brown.dmi'
-
 
 //Colorable rocks. Looks like moonsand.
 

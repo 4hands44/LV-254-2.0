@@ -360,7 +360,3 @@
 
 /turf/closed/wall/r_wall/color_wall/purple
 	icon = 'icons/turf/walls/color_walls/purple.dmi'
-
-/turf/closed/wall/r_wall/color_wall/brown
-
-	icon = 'icons/turf/walls/color_walls/brown.dmi'
