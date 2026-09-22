@@ -123,7 +123,7 @@
 			. += SPAN_NOTICE("Use a [SPAN_HELPFUL("Shovel")] to dig the [src].")
 			return
 		if(TRENCH_STAGE_PANELS)
-			. += SPAN_NOTICE("Add 4 wooden [SPAN_HELPFUL("floor tiles")] to construct the [src].")
+			. += SPAN_NOTICE("Add 4 wooden [SPAN_HELPFUL("planks")] to construct the [src].")
 			return
 		if(TRENCH_STAGE_SCREWDRIVER)
 			. += SPAN_NOTICE("Use a [SPAN_HELPFUL("screwdriver")] to construct the [src].")

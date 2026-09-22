@@ -308,6 +308,9 @@
 	desc = "Semiotic Standard denoting the nearby presence of a biological laboratory."
 	icon_state = "biolab"
 
+/obj/structure/sign/safety/biolab/alt
+	icon_state = "biolab_alt"
+
 /obj/structure/sign/safety/bridge
 	name = "bridge semiotic"
 	desc = "Semiotic Standard denoting the nearby presence of a starship's bridge."
@@ -553,6 +556,9 @@
 	desc = "Semiotic Standard denoting the nearby presence of a restricted area."
 	icon_state = "restrictedarea"
 
+/obj/structure/sign/safety/restrictedarea/dark
+	icon_state = "restrictedarea_dark"
+
 /obj/structure/sign/safety/fridge
 	name = "refrigerated storage (organic foodstuffs) semiotic"
 	desc = "Semiotic Standard denoting the nearby presence of a fridge."
@@ -645,12 +651,12 @@
 
 /obj/structure/sign/safety/luggageclaim
 	name = "\improper luggage claim semiotic"
-	desc = "Semiotic Standard denoting the presecense of a luggage claim area nearby."
+	desc = "Semiotic Standard denoting the presence of a luggage claim area nearby."
 	icon_state = "luggageclaim"
 
 /obj/structure/sign/safety/landingzone
 	name = "\improper landing zone semiotic"
-	desc = "Semiotic Standard denoting the presecense of a landing zone nearby."
+	desc = "Semiotic Standard denoting the presence of a landing zone nearby."
 	icon_state = "landingzone"
 
 /obj/structure/sign/safety/zero
@@ -702,6 +708,122 @@
 	name = "nine semiotic"
 	desc = "Semiotic Standard denoting the number nine."
 	icon_state = "9"
+
+/obj/structure/sign/safety/big_one
+	name = "one semiotic"
+	desc = "Semiotic Standard denoting the number one."
+	icon_state = "big1"
+
+/obj/structure/sign/safety/fire_station
+	name = "fire-station semiotic"
+	desc = "Semiotic Standard denoting the nearby presence of a fire-station."
+	icon_state = "firestation"
+
+/obj/structure/sign/safety/ten
+	name = "ten semiotic"
+	desc = "Semiotic Standard denoting the number ten."
+	icon_state = "10"
+
+/obj/structure/sign/safety/eleven
+	name = "eleven semiotic"
+	desc = "Semiotic Standard denoting the number eleven."
+	icon_state = "11"
+
+/obj/structure/sign/safety/twelve
+	name = "twelve semiotic"
+	desc = "Semiotic Standard denoting the number twelve."
+	icon_state = "12"
+
+/obj/structure/sign/safety/thirteen
+	name = "thirteen semiotic"
+	desc = "Semiotic Standard denoting the number thirteen."
+	icon_state = "13"
+
+/obj/structure/sign/safety/fourteen
+	name = "fourteen semiotic"
+	desc = "Semiotic Standard denoting the number fourteen."
+	icon_state = "14"
+
+/obj/structure/sign/safety/fifteen
+	name = "fifteen semiotic"
+	desc = "Semiotic Standard denoting the number fifteen."
+	icon_state = "15"
+
+/obj/structure/sign/safety/sixteen
+	name = "sixteen semiotic"
+	desc = "Semiotic Standard denoting the number sixteen."
+	icon_state = "16"
+
+/obj/structure/sign/safety/seventeen
+	name = "seventeen semiotic"
+	desc = "Semiotic Standard denoting the number seventeen."
+	icon_state = "17"
+
+/obj/structure/sign/safety/eighteen
+	name = "eighteen semiotic"
+	desc = "Semiotic Standard denoting the number eighteen."
+	icon_state = "18"
+
+/obj/structure/sign/safety/nineteen
+	name = "nineteen semiotic"
+	desc = "Semiotic Standard denoting the number nineteen."
+	icon_state = "19"
+
+/obj/structure/sign/safety/twenty
+	name = "twenty semiotic"
+	desc = "Semiotic Standard denoting the number twenty."
+	icon_state = "20"
+
+/obj/structure/sign/safety/twentyone
+	name = "twenty-one semiotic"
+	desc = "Semiotic Standard denoting the number twenty-one."
+	icon_state = "21"
+
+/obj/structure/sign/safety/twentytwo
+	name = "twenty-two semiotic"
+	desc = "Semiotic Standard denoting the number twenty-two."
+	icon_state = "22"
+
+/obj/structure/sign/safety/twentythree
+	name = "twenty-three semiotic"
+	desc = "Semiotic Standard denoting the number twenty-three."
+	icon_state = "23"
+
+/obj/structure/sign/safety/twentyfour
+	name = "twenty-four semiotic"
+	desc = "Semiotic Standard denoting the number twenty-four."
+	icon_state = "24"
+
+/obj/structure/sign/safety/twentyfive
+	name = "twenty-five semiotic"
+	desc = "Semiotic Standard denoting the number twenty-five."
+	icon_state = "25"
+
+/obj/structure/sign/safety/twentysix
+	name = "twenty-six semiotic"
+	desc = "Semiotic Standard denoting the number twenty-six."
+	icon_state = "26"
+
+/obj/structure/sign/safety/twentyseven
+	name = "twenty-seven semiotic"
+	desc = "Semiotic Standard denoting the number twenty-seven."
+	icon_state = "27"
+
+/obj/structure/sign/safety/twentyeight
+	name = "twenty-eight semiotic"
+	desc = "Semiotic Standard denoting the number twenty-eight."
+	icon_state = "28"
+
+/obj/structure/sign/safety/twentynine
+	name = "twenty-nine semiotic"
+	desc = "Semiotic Standard denoting the number twenty-nine."
+	icon_state = "29"
+
+/obj/structure/sign/safety/thirty
+	name = "thirty semiotic"
+	desc = "Semiotic Standard denoting the number thirty."
+	icon_state = "30"
+
 
 //===================//
 //   Marine signs   //
