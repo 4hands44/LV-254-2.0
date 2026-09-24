@@ -37,12 +37,14 @@
 	name = "Point Rain - Underground Fortification"
 	icon_state = "tunnel"
 	ceiling = CEILING_DEEP_UNDERGROUND
+	ceiling_muffle = FALSE
 	ambience_exterior = AMBIENCE_SHIP
 
 /area/point_rain/underground
 	name = "Point Rain - Caverns"
 	icon_state = "caves"
 	ceiling = CEILING_DEEP_UNDERGROUND
+	ceiling_muffle = FALSE
 	ambience_exterior = AMBIENCE_COAST_INDOORS
 
 //OUTDOORS AREAS
@@ -85,6 +87,16 @@
 	icon_state = "s"
 	ceiling = CEILING_NONE
 
+/area/point_rain/outdoors/inland/southwestern_wetland
+	name = "South-Western Wetlands"
+	icon_state = "sw"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/southeastern_wetland
+	name = "South-Eastern Wetlands"
+	icon_state = "se"
+	ceiling = CEILING_NONE
+
 /area/point_rain/outdoors/inland/northern_costal_guns
 	name = "Northern Analise Coastal Guns"
 	icon_state = "north"
@@ -100,9 +112,29 @@
 	icon_state = "ne"
 	ceiling = CEILING_NONE
 
+/area/point_rain/outdoors/inland/southern_road
+	name = "Southern road"
+	icon_state = "s"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inlandoutpost_road
+	name = "Outpost Road"
+	icon_state = "n"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/north_west
+	name = "North-Western Inland"
+	icon_state = "nw"
+	ceiling = CEILING_NONE
+
 /area/point_rain/outdoors/inland/south_east
 	name = "South-Eastern Inland"
 	icon_state = "se"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/south_west
+	name = "South-Western Inland"
+	icon_state = "sw"
 	ceiling = CEILING_NONE
 
 /area/point_rain/outdoors/inland/port_warehouses
@@ -147,6 +179,46 @@
 	name = "Hangar 2"
 	icon_state = "bunker"
 
+/area/point_rain/indoors/motorpool
+	name = "Point Rain - Motorpool"
+	icon_state = "tunnels3"
+	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
+	ambience_exterior = AMBIENCE_COAST_INDOORS
+
+/area/point_rain/indoors/sally_port
+	name = "Point Rain - sally port"
+	icon_state = "tunnels4"
+	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
+	ambience_exterior = AMBIENCE_COAST_INDOORS
+
+/area/point_rain/indoors/req
+	name = "Requisitons bay"
+	icon_state = "req"
+
+/area/point_rain/indoors/req/loading_dock
+	name = "Requisitons loading bay"
+	icon_state = "req1"
+
+/area/point_rain/indoors/underground/bunks
+	name = "Point Rain - Underground Fortification"
+	icon_state = "livingspace"
+
+/area/point_rain/indoors/underground/bunks/captain
+	name = "Point Rain - Commander's Bunk"
+	icon_state = "offices0"
+
+/area/point_rain/indoors/underground/bunks/lieutenant
+	name = "Point Rain - Officer's Bunk"
+	icon_state = "offices1"
+
+/area/point_rain/indoors/underground/bunks/enlisted_1
+	name = "Point Rain - Bunk 1"
+	icon_state = "livingspace"
+
+/area/point_rain/indoors/underground/bunks/enlisted_2
+	name = "Point Rain - Bunk 2"
+	icon_state = "livingspace"
+
 
 /area/point_rain/indoors/uscm_warehouse
 	name = "USCM Supply Warehouse"
@@ -170,7 +242,6 @@
 /area/point_rain/indoors/ds_hangar_2
 	name = "Dropship Hangar 2"
 	icon_state = "shuttle2"
-
 
 
 /area/point_rain/indoors/port_warehouse
@@ -231,6 +302,21 @@
 	ceiling = CEILING_DEEP_UNDERGROUND
 	ambience_exterior = AMBIENCE_COAST_CIC_2
 
+/area/point_rain/indoors/underground/medbay
+	name = "Point Rain - Hospital"
+	icon_state = "medical"
+
+/area/point_rain/indoors/underground/surgery_1
+	name = "OR 1"
+	icon_state = "medical"
+
+/area/point_rain/indoors/underground/surgery_2
+	name = "OR 2"
+	icon_state = "medical"
+
+/area/point_rain/indoors/underground/engineering
+	name = "Point Rain - Engineering"
+	icon_state = "engineering"
 
 //pillbox
 
