@@ -20,6 +20,13 @@
 	ceiling_muffle = FALSE
 	ambience_exterior = AMBIENCE_COAST
 
+/area/point_rain/outdoors/inland
+	name = "Point Rain - Outdoors"
+	icon_state = "outside"
+	ceiling = CEILING_NONE
+	ceiling_muffle = FALSE
+	ambience_exterior = AMBIENCE_COAST_INLAND
+
 /area/point_rain/indoors
 	name = "Point Rain - Indoors"
 	icon_state = "bunker"
@@ -30,7 +37,7 @@
 	name = "Point Rain - Underground Fortification"
 	icon_state = "tunnel"
 	ceiling = CEILING_DEEP_UNDERGROUND
-	ambience_exterior = AMBIENCE_COAST_INDOORS
+	ambience_exterior = AMBIENCE_SHIP
 
 /area/point_rain/underground
 	name = "Point Rain - Caverns"
@@ -68,32 +75,138 @@
 	name = "Eastern Beach"
 	icon_state = "beach"
 
+/area/point_rain/outdoors/inland/wetland_bridge
+	name = "Wetlands Bridge"
+	icon_state = "hall0"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/southern_wetland
+	name = "Southern Wetlands"
+	icon_state = "s"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/northern_costal_guns
+	name = "Northern Analise Coastal Guns"
+	icon_state = "north"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/southern_costal_guns
+	name = "Southern Analise Coastal Guns"
+	icon_state = "south"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/north_east
+	name = "North-Eastern Inland"
+	icon_state = "ne"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/south_east
+	name = "South-Eastern Inland"
+	icon_state = "se"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/port_warehouses
+	name = "Port Warehouses"
+	icon_state = "platform"
+	ceiling = CEILING_NONE
+
+/area/point_rain/outdoors/inland/airfield
+	name = "Airfield"
+	icon_state = "offices4"
+	ceiling = CEILING_NONE
+
 /area/point_rain/outdoors/checkpoint
 	name = "Military Checkpoint"
 	icon_state = "hall0"
+	ambience_exterior = AMBIENCE_COAST_INLAND
 	soundscape_interval = 60
 	soundscape_playlist = SCAPE_PL_CHECKPOINT
 
 
+//cmd bunker
 /area/point_rain/outdoors/command_bunker
 	name = "Command bunker"
 	icon_state = "outside"
 
 /area/point_rain/outdoors/command_bunker/analise_exterior
 	name = "Command bunker Analise"
-	icon_state = "outside"
+	icon_state = "hall2"
+	ambience_exterior = AMBIENCE_COAST_INLAND
 
 /area/point_rain/outdoors/command_bunker/martha_exterior
 	name = "Command bunker Martha-Exterior"
-	icon_state = "outside"
+	icon_state = "hall3"
 
 //INDOORS AREAS
 
+/area/point_rain/indoors/hangar_1
+	name = "Hangar 1"
+	icon_state = "bunker"
+
+/area/point_rain/indoors/hangar_2
+	name = "Hangar 2"
+	icon_state = "bunker"
+
+
+/area/point_rain/indoors/uscm_warehouse
+	name = "USCM Supply Warehouse"
+	icon_state = "bunker"
+	soundscape_playlist = SCAPE_PL_HANGAR
+	soundscape_interval = 50
+
+/area/point_rain/indoors/uscm_warehouse1
+	name = "USCM Supply Warehouse 1"
+	icon_state = "req1"
+
+/area/point_rain/indoors/uscm_warehouse2
+	name = "USCM Supply Warehouse 2"
+	icon_state = "req2"
+
+
+/area/point_rain/indoors/ds_hangar_1
+	name = "Dropship Hangar 1"
+	icon_state = "shuttle"
+
+/area/point_rain/indoors/ds_hangar_2
+	name = "Dropship Hangar 2"
+	icon_state = "shuttle2"
+
+
+
+/area/point_rain/indoors/port_warehouse
+	name = "Warehouse"
+	icon_state = "bunker"
+	soundscape_playlist = SCAPE_PL_HANGAR
+	soundscape_interval = 50
+
+/area/point_rain/indoors/port_warehouse1
+	name = "Warehouse 1"
+	icon_state = "req0"
+
+/area/point_rain/indoors/port_warehouse2
+	name = "Warehouse 2"
+	icon_state = "req1"
+
+/area/point_rain/indoors/port_warehouse3
+	name = "Warehouse 3"
+	icon_state = "req3"
+
+/area/point_rain/indoors/port_warehouse4
+	name = "Warehouse 4"
+	icon_state = "req4"
+
+/area/point_rain/indoors/port_warehouse5
+	name = "Warehouse 5"
+	icon_state = "req0"
+
+//cmd bunker
 /area/point_rain/indoors/command_bunker
 	name = "Point Rain - Command Bunker"
 	icon_state = "bunker"
 	ceiling = CEILING_METAL
 	ambience_exterior = AMBIENCE_COAST_CIC
+	soundscape_playlist = SCAPE_PL_CIC
+	soundscape_interval = 50
 
 /area/point_rain/indoors/checkpoint
 	name = "Point Rain - Checkpoint"
@@ -111,6 +224,12 @@
 /area/point_rain/indoors/command_bunker/martha
 	name = "Command Bunker Martha"
 	icon_state = "p2"
+
+/area/point_rain/indoors/underground/cic
+	name = "Point Rain - CIC"
+	icon_state = "cic"
+	ceiling = CEILING_DEEP_UNDERGROUND
+	ambience_exterior = AMBIENCE_COAST_CIC_2
 
 
 //pillbox
@@ -142,3 +261,11 @@
 /area/point_rain/indoors/pillbox/fox
 	name = "Pillbox fox"
 	icon_state = "p6"
+
+/area/point_rain/indoors/pillbox/george
+	name = "Pillbox George"
+	icon_state = "p1"
+
+/area/point_rain/indoors/pillbox/how
+	name = "Pillbox How"
+	icon_state = "p2"
