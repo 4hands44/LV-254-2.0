@@ -134,3 +134,9 @@
 #define SCAPE_PL_LV759_DEEPCAVES list('sound/soundscape/lv759/outdoors/deepcave1.ogg','sound/soundscape/lv759/outdoors/deepcave2.ogg')
 #define SCAPE_PL_LV759_CAVES list('sound/soundscape/lv759/outdoors/windy_caverns_1.ogg','sound/soundscape/lv759/outdoors/windy_caverns_2.ogg','sound/soundscape/lv759/outdoors/windy_caverns_3.ogg',)
 #define SCAPE_PL_LV759_PLATEAU_OUTDOORS list('sound/soundscape/lv759/outdoors/derelict_plateau_1.ogg','sound/soundscape/lv759/outdoors/derelict_plateau_2.ogg',)
+
+// Point Rain Soundscapes
+#define AMBIENCE_COAST 'sound/ambience/coastal.ogg'
+#define AMBIENCE_COAST_INDOORS 'sound/ambience/costal_interior.ogg'
+#define AMBIENCE_COAST_CIC 'sound/ambience/costal_cic_bunker.ogg'
+#define SCAPE_PL_CHECKPOINT list('sound/ambience/checkpoint/checkpoint_assault.ogg','sound/ambience/checkpoint/checkpoint_bypass.ogg','sound/ambience/checkpoint/checkpoint_combat_area.ogg','sound/ambience/checkpoint/checkpoint_contraband.ogg','sound/ambience/checkpoint/checkpoint_malcompliance.ogg','sound/ambience/checkpoint/checkpoint_papers.ogg','sound/ambience/checkpoint/checkpoint_papers2.ogg','sound/ambience/checkpoint/checkpoint_report.ogg','sound/ambience/checkpoint/checkpoint_sentry.ogg')

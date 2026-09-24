@@ -54,3 +54,21 @@
 		if(!affected_xeno.stat && affected_xeno.client)
 			playsound_client(affected_xeno.client, 'sound/voice/alien_distantroar_3.ogg', affected_xeno.loc, 25, FALSE)
 			affected_xeno.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>The Hivemind Senses:</u></span><br>" + "Incoming [weather_name]", /atom/movable/screen/text/screen_text/command_order, rgb(175, 0, 175))
+
+
+/datum/weather_ss_map_holder/override
+	name = "Map Override Holder"
+	warn_time = 1 MINUTES
+	min_time_between_events = 20 MINUTES
+	no_weather_turf_icon_state = "strata_clearsky"
+
+	potential_weather_events = list(
+		/datum/weather_event/light_rain,
+		/datum/weather_event/heavy_rain,
+	)
+
+/datum/weather_ss_map_holder/lv624/should_affect_area(area/A)
+	return !CEILING_IS_PROTECTED(A.ceiling, CEILING_GLASS)
+
+/datum/weather_ss_map_holder/lv624/should_start_event()
+	return prob(PROB_WEATHER_LV624)
