@@ -1,19 +1,15 @@
 {
-    "map_name": "LV-254 Point Rain",
+    "map_name": "Point Rain",
     "map_path": "map_files/Point_Rain",
     "map_file": "point_rain.dmm",
     "webmap_url": "Point Rain",
     "weather_holder": "/datum/weather_ss_map_holder/lv759_hybrisa_prospera",
     "survivor_types": [
-        "/datum/equipment_preset/uscm_mudskippers/pc",
         "/datum/equipment_preset/survivor/chaplain/nv",
         "/datum/equipment_preset/survivor/engineer/nv",
         "/datum/equipment_preset/survivor/trucker/nv",
         "/datum/equipment_preset/survivor/interstellar_commerce_commission_liaison/nv",
         "/datum/equipment_preset/survivor/beachbum",
-    ],
-	"CO_survivor_types": [
-        "/datum/equipment_preset/uscm_mudskippers/ccommander/ground"
     ],
     "defcon_triggers": [
         3750,
