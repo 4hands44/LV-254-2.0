@@ -19,6 +19,7 @@
 	ceiling = CEILING_NONE
 	ceiling_muffle = FALSE
 	ambience_exterior = AMBIENCE_COAST
+	soundscape_playlist = SCAPE_PL_PR_OUTDOORS
 
 /area/point_rain/outdoors/inland
 	name = "Point Rain - Outdoors"
@@ -26,12 +27,14 @@
 	ceiling = CEILING_NONE
 	ceiling_muffle = FALSE
 	ambience_exterior = AMBIENCE_COAST_INLAND
+	soundscape_playlist = SCAPE_PL_PR_OUTDOORS
 
 /area/point_rain/indoors
 	name = "Point Rain - Indoors"
 	icon_state = "bunker"
 	ceiling = CEILING_METAL
 	ambience_exterior = AMBIENCE_COAST_INDOORS
+	soundscape_playlist = SCAPE_PL_HANGAR
 
 /area/point_rain/indoors/underground
 	name = "Point Rain - Underground Fortification"
@@ -52,10 +55,6 @@
 /area/point_rain/outdoors/port
 	name = "Port"
 	icon_state = "req1"
-
-/area/point_rain/outdoors/port_road
-	name = "Port Road"
-	icon_state = "lane1n"
 
 /area/point_rain/outdoors/beach
 	name = "Beach"
@@ -117,7 +116,7 @@
 	icon_state = "s"
 	ceiling = CEILING_NONE
 
-/area/point_rain/outdoors/inlandoutpost_road
+/area/point_rain/outdoors/inland/outpost_road
 	name = "Outpost Road"
 	icon_state = "n"
 	ceiling = CEILING_NONE
@@ -147,6 +146,10 @@
 	icon_state = "offices4"
 	ceiling = CEILING_NONE
 
+/area/point_rain/outdoors/inland/base_exterior
+	name = "Point Rain - Outer gate"
+	icon_state = "outside"
+
 /area/point_rain/outdoors/checkpoint
 	name = "Military Checkpoint"
 	icon_state = "hall0"
@@ -174,30 +177,39 @@
 /area/point_rain/indoors/hangar_1
 	name = "Hangar 1"
 	icon_state = "bunker"
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 
 /area/point_rain/indoors/hangar_2
 	name = "Hangar 2"
 	icon_state = "bunker"
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 
 /area/point_rain/indoors/motorpool
 	name = "Point Rain - Motorpool"
 	icon_state = "tunnels3"
+	ceiling_muffle = FALSE
 	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
-	ambience_exterior = AMBIENCE_COAST_INDOORS
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 
 /area/point_rain/indoors/sally_port
 	name = "Point Rain - sally port"
 	icon_state = "tunnels4"
+	ceiling_muffle = FALSE
 	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
-	ambience_exterior = AMBIENCE_COAST_INDOORS
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 
-/area/point_rain/indoors/req
+/area/point_rain/indoors/underground/req
 	name = "Requisitons bay"
 	icon_state = "req"
 
-/area/point_rain/indoors/req/loading_dock
+/area/point_rain/indoors/underground/req/loading_dock
 	name = "Requisitons loading bay"
 	icon_state = "req1"
+	ambience_exterior = AMBIENCE_COAST_INDOORS
+
+/area/point_rain/indoors/underground/squad_prep
+	name = "Requisitons bay"
+	icon_state = "req2"
 
 /area/point_rain/indoors/underground/bunks
 	name = "Point Rain - Underground Fortification"
@@ -219,6 +231,14 @@
 	name = "Point Rain - Bunk 2"
 	icon_state = "livingspace"
 
+/area/point_rain/indoors/underground/cic_hallway
+	name = "Point Rain - CIC Hallway"
+	icon_state = "tunnel"
+
+/area/point_rain/indoors/underground/actor_prep
+	name = "Point Rain - Actor Prep"
+	icon_state = "base_icon"
+	unlimited_power = 1
 
 /area/point_rain/indoors/uscm_warehouse
 	name = "USCM Supply Warehouse"
@@ -238,11 +258,12 @@
 /area/point_rain/indoors/ds_hangar_1
 	name = "Dropship Hangar 1"
 	icon_state = "shuttle"
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 
 /area/point_rain/indoors/ds_hangar_2
 	name = "Dropship Hangar 2"
 	icon_state = "shuttle2"
-
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 
 /area/point_rain/indoors/port_warehouse
 	name = "Warehouse"
@@ -283,6 +304,7 @@
 	name = "Point Rain - Checkpoint"
 	icon_state = "p1"
 	ceiling = CEILING_METAL
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 	soundscape_interval = 60
 	soundscape_playlist = SCAPE_PL_CHECKPOINT
 
@@ -351,7 +373,9 @@
 /area/point_rain/indoors/pillbox/george
 	name = "Pillbox George"
 	icon_state = "p1"
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS
 
 /area/point_rain/indoors/pillbox/how
 	name = "Pillbox How"
 	icon_state = "p2"
+	ambience_exterior = AMBIENCE_COAST_INLAND_INDOORS

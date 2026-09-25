@@ -137,8 +137,10 @@
 
 // Point Rain Soundscapes
 #define AMBIENCE_COAST 'sound/ambience/coastal.ogg'
-#define AMBIENCE_COAST_INLAND 'sound/ambience/coastal_inland.ogg'
 #define AMBIENCE_COAST_INDOORS 'sound/ambience/costal_interior.ogg'
+#define AMBIENCE_COAST_INLAND 'sound/ambience/coastal_inland.ogg'
+#define AMBIENCE_COAST_INLAND_INDOORS 'sound/ambience/coastal_inland_interior.ogg'
 #define AMBIENCE_COAST_CIC 'sound/ambience/costal_cic_bunker.ogg'
 #define AMBIENCE_COAST_CIC_2 'sound/ambience/costal_cic2.ogg'
-#define SCAPE_PL_CHECKPOINT list('sound/ambience/checkpoint/checkpoint_assault.ogg','sound/ambience/checkpoint/checkpoint_bypass.ogg','sound/ambience/checkpoint/checkpoint_combat_area.ogg','sound/ambience/checkpoint/checkpoint_contraband.ogg','sound/ambience/checkpoint/checkpoint_malcompliance.ogg','sound/ambience/checkpoint/checkpoint_papers.ogg','sound/ambience/checkpoint/checkpoint_papers2.ogg','sound/ambience/checkpoint/checkpoint_report.ogg','sound/ambience/checkpoint/checkpoint_sentry.ogg')
+#define SCAPE_PL_CHECKPOINT list('sound/ambience/checkpoint/checkpoint_assault.ogg','sound/ambience/checkpoint/checkpoint_bypass.ogg','sound/ambience/checkpoint/checkpoint_combat_area.ogg','sound/ambience/checkpoint/checkpoint_contraband.ogg','sound/ambience/checkpoint/checkpoint_malcompliance.ogg','sound/ambience/checkpoint/checkpoint_papers.ogg','sound/ambience/checkpoint/checkpoint_papers2.ogg','sound/ambience/checkpoint/checkpoint_report.ogg','sound/ambience/checkpoint/checkpoint_sentry.ogg','sound/soundscape/ambient_dog.ogg','sound/soundscape/dropship_flyby.ogg','sound/soundscape/distant_bells.ogg')
+#define SCAPE_PL_PR_OUTDOORS list('sound/soundscape/ambient_dog.ogg','sound/soundscape/dropship_flyby.ogg','sound/soundscape/distant_bells.ogg','sound/soundscape/wind1.ogg','sound/soundscape/wind2.ogg')

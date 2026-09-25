@@ -2040,7 +2040,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "agB" = (
-/obj/effect/vehicle_spawner/jeep/police/riot{
+/obj/effect/vehicle_spawner/miltruck/miltruck_3/fixed{
 	dir = 1
 	},
 /turf/open/floor/almayer{
@@ -2637,11 +2637,11 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/middle/maint/star/mid)
 "aiU" = (
-/obj/effect/vehicle_spawner/jeep/command/plain{
+/obj/effect/vehicle_spawner/jeep/plain{
 	dir = 1
 	},
 /turf/open/floor/almayer{
-	icon_state = "test_floor5"
+	icon_state = "test_floor4"
 	},
 /area/blackgold/underdeck/vehicle)
 "aiV" = (
@@ -13827,10 +13827,6 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/intel)
 "aTF" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/intelligence_officer{
-	density = 0;
-	pixel_y = 15
-	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/intel)
 "aTG" = (
@@ -48387,11 +48383,11 @@
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/lower/rooms/aicore)
 "xey" = (
-/obj/effect/vehicle_spawner/jeep/plain{
+/obj/effect/vehicle_spawner/jeep/command/plain{
 	dir = 1
 	},
 /turf/open/floor/almayer{
-	icon_state = "test_floor5"
+	icon_state = "test_floor4"
 	},
 /area/blackgold/underdeck/vehicle)
 "xeN" = (
@@ -57558,9 +57554,9 @@ pdJ
 qlE
 kzN
 mWH
-mZS
-fUq
-aiU
+lif
+seh
+lif
 mWH
 lsW
 obL
@@ -57645,9 +57641,9 @@ pdJ
 qlE
 jnf
 mWH
-mWH
-ssa
-mWH
+tcL
+hYa
+tcL
 mhO
 lsW
 obL
@@ -57907,8 +57903,8 @@ qlE
 kzN
 mWH
 mZS
-fUq
-xey
+aiU
+mZS
 mWH
 lsW
 obL
@@ -58167,9 +58163,9 @@ pdJ
 qlE
 kzN
 mWH
-lif
-seh
-lif
+mZS
+xey
+mZS
 mWH
 lsW
 obL
@@ -58254,9 +58250,9 @@ pdJ
 qlE
 jnf
 mWH
-tcL
-hYa
-tcL
+mWH
+ssa
+mWH
 mhO
 lsW
 obL
