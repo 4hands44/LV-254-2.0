@@ -3,7 +3,7 @@
     "map_path": "map_files/Point_Rain",
     "map_file": "point_rain.dmm",
     "webmap_url": "Point Rain",
-    "weather_holder": "/datum/weather_ss_map_holder/lv759_hybrisa_prospera",
+    "weather_holder": "/datum/weather_ss_map_holder/point_rain",
     "survivor_types": [
         "/datum/equipment_preset/survivor/chaplain/nv",
         "/datum/equipment_preset/survivor/engineer/nv",

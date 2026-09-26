@@ -1,5 +1,5 @@
 /datum/weather_ss_map_holder/point_rain
-	name = "Point Map Holder"
+	name = "Point Rain Map Holder"
 
 	warn_time = 1 MINUTES
 	min_time_between_events = 12 MINUTES
@@ -9,8 +9,9 @@
 	no_weather_turf_icon_state = "strata_clearsky"
 
 	potential_weather_events = list(
-		/datum/weather_event/hybrisa_light_rain,
-		/datum/weather_event/hybrisa_very_light_rain,
+		/datum/weather_event/costal_fog,
+		/datum/weather_event/costal_rain,
+		/datum/weather_event/costal_acid_rain,
 	)
 
 /datum/weather_ss_map_holder/point_rain/should_affect_area(area/A)
