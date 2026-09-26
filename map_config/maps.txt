@@ -66,5 +66,8 @@ endmap
 map new_varadero
 endmap
 
+map point_rain
+endmap
+
 map whiskey_outpost_v2
 endmap

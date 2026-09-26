@@ -1,0 +1,64 @@
+{
+    "map_name": "Point Rain",
+    "map_path": "map_files/Point_Rain",
+    "map_file": "point_rain.dmm",
+    "webmap_url": "Point Rain",
+    "weather_holder": "/datum/weather_ss_map_holder/point_rain",
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/chaplain/nv",
+        "/datum/equipment_preset/survivor/engineer/nv",
+        "/datum/equipment_preset/survivor/trucker/nv",
+        "/datum/equipment_preset/survivor/interstellar_commerce_commission_liaison/nv",
+        "/datum/equipment_preset/survivor/beachbum"
+    ],
+    "defcon_triggers": [
+        3750,
+        2600,
+        1450,
+        580,
+        0.0
+    ],
+    "survivor_message": "You should not be seeing this. Something has gone wrong.",
+    "announce_text": "Welcome to Point Rain, a more pleasent posting with nice costal views. Weather forcast, rain, rain and more rain.",
+    "monkey_types": [
+        "farwa",
+        "monkey",
+        "neaera",
+        "stok"
+    ],
+    "xvx_hives": {
+        "xeno_hive_alpha": 100,
+        "xeno_hive_bravo": 0,
+        "xeno_hive_charlie": 0,
+        "xeno_hive_delta": 0
+    },
+    "traits": [
+        {
+            "Ground": true,
+            "Up": 1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Down": -1
+        }
+    ],
+    "camouflage": "urban",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ],
+    "nightmare_path": "maps/Nightmare/maps/Point_Rain/"
+}

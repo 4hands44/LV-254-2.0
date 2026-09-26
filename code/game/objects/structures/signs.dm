@@ -886,6 +886,46 @@
 		I AM QUARTERMASTER. I AM PROUD."}
 	icon_state = "rocreed"
 
+/obj/structure/sign/point_rain_directory
+	name = "\improper Point Rain Telephone Directory"
+	desc = "A list of the internal telephone numbers for Point Rain."
+	desc_lore = {"To reach a desired internal line please dial the correct number from the directory.
+	<p><strong>Command Centers-</strong></p>
+		<b>Central Command-</b>
+			041-CIC
+			042-CIC OW 1
+			043-CIC OW 2
+			044-CIC OW 3
+		<b>Cmd Bunker Analise-</b>
+			051-Analise
+			052-OW 1
+			053-O 2
+
+		<b>Cmd Bunker Martha-</b>
+			061-Martha
+			062-OW 1
+			063-OW 2
+
+	<b>Unsorted-</b>
+		071-Requistions
+		072-Hospital
+		073-Checkpoint
+
+	<b>Pillboxes-</b>
+		091-Able
+		092-Baker
+		093-Charlie
+		094-Dog
+		095-Easy
+		096-Fox
+		097-George
+		098-How
+
+
+		To reach an external line, enter 000 for operator and you will be automatically routed and connected by MU/TH/UR.
+		End Directory."}
+	icon_state = "rocreed"
+
 /obj/structure/sign/prop1
 	name = "\improper USCM Poster"
 	desc = "The symbol of the United States Colonial Marines corps."
