@@ -29,6 +29,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_clown, list(
 
 		list("UTILITIES", 0, null, null, null),
 		list("Empty Loot Bag", 0, /obj/item/storage/backpack, null, VENDOR_ITEM_REGULAR),
+		list("MRE", 0, /obj/item/storage/box/mre/fsr, null, VENDOR_ITEM_REGULAR),
 		list("Trauma Plate", 10, /obj/item/clothing/accessory/health, null, VENDOR_ITEM_REGULAR),
 		list("Metal Sheets (x50)", 20, /obj/item/stack/sheet/metal/large_stack, null, VENDOR_ITEM_REGULAR),
 		list("Night Vision Goggles", 40, /obj/item/clothing/glasses/night, null, VENDOR_ITEM_REGULAR),
