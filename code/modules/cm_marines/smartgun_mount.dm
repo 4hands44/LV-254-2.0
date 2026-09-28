@@ -67,7 +67,7 @@
 		. += "It seems to be lacking a ammo drum."
 
 /obj/item/device/m56d_gun/update_icon() //Lets generate the icon based on how much ammo it has.
-	var/icon_name = "M56D_gun"
+	var/icon_name = "M38D_gun"
 	if(has_mount)
 		icon_name += "_mount"
 	if(!rounds)
@@ -457,8 +457,8 @@
 /obj/structure/machinery/m56d_hmg
 	name = "\improper M56D heavy machine gun"
 	desc = "A deployable, heavy machine gun. While it is capable of taking the same rounds as the M56, it fires specialized tungsten rounds for increased armor penetration.<br>Drag its sprite onto yourself to man it. Ctrl-click it to cycle through firemodes."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi'
-	icon_state = "M56D"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi'
+	icon_state = "M38D"
 	anchored = TRUE
 	unslashable = TRUE
 	unacidable = TRUE //stop the xeno me(l)ta.
@@ -477,8 +477,8 @@
 	var/obj/projectile/in_chamber = null
 	var/locked = 0 //1 means its locked inplace (this will be for sandbag MGs)
 	var/muzzle_flash_lum = 4
-	var/icon_full = "M56D" // Put this system in for other MGs or just other mounted weapons in general, future proofing.
-	var/icon_empty = "M56D_e" //Empty
+	var/icon_full = "M38D" // Put this system in for other MGs or just other mounted weapons in general, future proofing.
+	var/icon_empty = "M38D_e" //Empty
 	var/zoom = 0 // 0 is it doesn't zoom, 1 is that it zooms.
 	var/damage_state = M56D_DMG_NONE
 
@@ -1188,7 +1188,7 @@
 	rounds_max = 1500
 	locked = 1
 	projectile_coverage = PROJECTILE_COVERAGE_HIGH
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi'
 	zoom = 1
 	ammo = /datum/ammo/bullet/machinegun/doorgun
 
@@ -1203,6 +1203,10 @@
 		health = health_max
 	update_damage_state()
 	update_icon()
+
+/obj/structure/machinery/m56d_hmg/mg_turret/trench
+	icon_full = "towergun"
+	icon_empty = "towergun"
 
 /obj/structure/machinery/m56d_hmg/mg_turret/dropship
 	name = "\improper scoped M56D heavy machine gun"

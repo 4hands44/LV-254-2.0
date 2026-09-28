@@ -93,12 +93,41 @@
 	item_state = "fancy_cane"
 	force = 30
 
+/obj/item/crutches
+	name = "folding crutches"
+	desc = "A pair of folding aluminum crutches"
+	icon = 'icons/obj/items/weapons/melee/canes.dmi'
+	icon_state = "crutches_folded"
+	item_state = "crutches_folded"
+	w_class = SIZE_SMALL
+
+/obj/item/crutches/get_examine_text(mob/user)
+	. = ..()
+	. += "Can be unfolded with ctrl click."
+
+
+/obj/item/crutches/clicked(mob/user, list/mods)
+	if(mods["ctrl"])
+		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
+		new /obj/item/weapon/pole/crutches(usr.loc)
+		qdel(src)
+
 /obj/item/weapon/pole/crutches
 	name = "folding crutches"
 	desc = "A pair of folding aluminum crutches"
-	icon_state = "fancy_cane"
-	item_state = "fancy_cane"
-	force = 30
+	icon_state = "crutches"
+	item_state = "crutches"
+	w_class = SIZE_LARGE
+
+/obj/item/weapon/pole/crutches/get_examine_text(mob/user)
+	. = ..()
+	. += "Can be folded with ctrl click."
+
+/obj/item/weapon/pole/crutches/clicked(mob/user, list/mods)
+	if(mods["ctrl"])
+		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
+		new /obj/item/crutches(usr.loc)
+		qdel(src)
 
 /obj/item/weapon/pole/fancy_cane/this_is_a_knife
 	name = "fancy cane"

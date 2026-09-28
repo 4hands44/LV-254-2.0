@@ -55,6 +55,43 @@
 	smoke.set_up(1, get_turf(projectile))
 	smoke.start()
 
+
+/datum/ammo/rocket/frag
+	name = "High-Explosive Fragmentation rocket"
+
+/datum/ammo/rocket/frag/on_hit_mob(mob/mob, obj/projectile/projectile)
+	cell_explosion(get_turf(mob), 50, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	create_shrapnel(get_turf(mob), 60, 90, 110, shrapnel_type = /datum/ammo/bullet/shrapnel/breaching)
+	smoke.set_up(1, get_turf(mob))
+	if(ishuman_strict(mob)) // No yautya or synths. Makes humans gib on direct hit.
+		mob.ex_act(125, null, projectile.weapon_cause_data, 25)
+	smoke.start()
+
+/datum/ammo/rocket/frag/on_hit_obj(obj/object, obj/projectile/projectile)
+	cell_explosion(get_turf(object), 50, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	create_shrapnel(get_turf(object), 60, 90, 110, shrapnel_type = /datum/ammo/bullet/shrapnel/breaching)
+	smoke.set_up(1, get_turf(object))
+	smoke.start()
+
+	cell_explosion(get_turf(object), 50, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	create_shrapnel(get_turf(object), 60, 90, 110, shrapnel_type = /datum/ammo/bullet/shrapnel/breaching)
+	smoke.set_up(1, get_turf(object))
+	smoke.start()
+
+/datum/ammo/rocket/frag/on_hit_turf(turf/turf, obj/projectile/projectile)
+	cell_explosion(turf, 50, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	create_shrapnel(turf, 60, 90, 110, shrapnel_type = /datum/ammo/bullet/shrapnel/breaching)
+	smoke.set_up(1, turf)
+	smoke.start()
+
+/datum/ammo/rocket/frag/do_at_max_range(obj/projectile/projectile)
+	cell_explosion(get_turf(projectile), 50, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	create_shrapnel(get_turf(projectile), 60, 90, 110, shrapnel_type = /datum/ammo/bullet/shrapnel/breaching)
+	smoke.set_up(1, get_turf(projectile))
+	smoke.start()
+
+
+
 /datum/ammo/rocket/ap
 	name = "anti-armor rocket"
 	damage_falloff = 0

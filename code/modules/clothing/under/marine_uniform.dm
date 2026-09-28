@@ -1701,3 +1701,64 @@
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/advanced
 
+/obj/item/clothing/under/marine/cbrn/volcano
+	name = "M3 Hazardous Enviroments Uniform"
+	desc = "A thick rubbery suit, treated to protect the wearer in various dangerously hot and toxic climates where a full spacesuit is too much. Using a liquid cooling internal lining running throughout the suit, it reduces the wearer's body temprature and protects them, while also sealing out any toxic fumes of the environment. As per USCM doctrine, the uniform is designed to be lightweight enough to be worn with standard combat armor, unfortunately, the suits only come in two sizes: too big and too small."
+	icon_state = "volcano"
+	worn_state = "volcano"
+	item_state = "volcano"
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_HARDCORE
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	hood_type = /obj/item/clothing/head/helmet/marine/cbrn_hood/volcano
+
+/obj/item/clothing/under/marine/veteran/tagrilla
+	name = "\improper Combat Trousers"
+	desc = "A pair of rugged combat trousers, seemingly missing the shirt? Regardless it's not very protective."
+	icon = 'icons/obj/items/clothing/uniforms/misc_ert_colony.dmi'
+	icon_state = "tagrilla"
+	worn_state = "tagrilla"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_NO_SENSORS
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/tagrilla)
+	flags_jumpsuit = NONE
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi'
+	)
+
+/obj/item/clothing/under/marine/veteran/killer
+	name = "\improper Tracksuit"
+	desc = "A stylish and comfortable iconicly branded tracksuit. Truely a killer look."
+	icon = 'icons/obj/items/clothing/uniforms/misc_ert_colony.dmi'
+	icon_state = "killer"
+	worn_state = "killer"
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_NO_SENSORS
+	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/killer)
+	flags_jumpsuit = NONE
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi'
+	)

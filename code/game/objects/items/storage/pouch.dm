@@ -733,6 +733,8 @@
 		/obj/item/storage/syringe_case,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
+		/obj/item/tool/surgery/triage_kit,
+		/obj/item/reagent_container/food/drinks/bottle/vodka_cocktail,
 	)
 
 /obj/item/storage/pouch/medical/full/fill_preset_inventory()
@@ -746,6 +748,12 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
+
+/obj/item/storage/pouch/medical/scav_boss/fill_preset_inventory()
+	new /obj/item/tool/surgery/triage_kit(src)
+	new /obj/item/reagent_container/food/drinks/bottle/vodka_cocktail(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/device/healthanalyzer(src)
 
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"
@@ -832,7 +840,7 @@
 	name = "first responder pouch"
 	desc = "A pouch designed for carrying supplies to assist medical personnel and quickly respond to injuries on the battlefield without immediately treating them. Can hold supplies such as roller beds, stasis bags, and health analysers."
 	icon_state = "frt_med"
-	storage_slots = 4
+	storage_slots = 5
 
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
@@ -843,12 +851,14 @@
 		/obj/item/reagent_container/hypospray,
 		/obj/item/tool/extinguisher/mini,
 		/obj/item/roller,
+		/obj/item/crutches,
 		/obj/item/bodybag,
 	)
 
 /obj/item/storage/pouch/first_responder/full/fill_preset_inventory()
 	new /obj/item/device/healthanalyzer(src)
 	new /obj/item/roller(src)
+	new /obj/item/crutches(src)
 	new /obj/item/tool/extinguisher/mini(src)
 	new /obj/item/bodybag/cryobag(src)
 
@@ -939,11 +949,11 @@
 
 
 /obj/item/storage/pouch/medkit
-	name = "medical kit pouch"
+	name = "M-FAK"
 	storage_flags = STORAGE_FLAGS_POUCH
 	icon_state = "medkit"
-	desc = "It's specifically made to hold medical items. Requires medical skills to use effectively."
-	storage_slots = 7
+	desc = "Multiple Injury First Aid Kit(MFAK), a larger medical kit designed to treat multiple people in high-risk scenarios or mass-casualty events."
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/reagent_container/dropper,
@@ -957,8 +967,6 @@
 		/obj/item/storage/surgical_case,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
-		/obj/item/roller,
-		/obj/item/bodybag,
 		/obj/item/reagent_container/blood,
 		/obj/item/tool/surgery/FixOVein,
 	)
@@ -966,20 +974,33 @@
 
 /obj/item/storage/pouch/medkit/full/fill_preset_inventory()
 	new /obj/item/device/healthanalyzer(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless( src )
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
 	new /obj/item/stack/medical/bruise_pack(src)
 	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 
 /obj/item/storage/pouch/medkit/full_advanced/fill_preset_inventory()
-	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/emergency( src )
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 
 /obj/item/storage/pouch/medkit/full_rmc/fill_preset_inventory()
@@ -1013,7 +1034,6 @@
 	new /obj/item/device/healthanalyzer(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
-	new /obj/item/roller(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
@@ -1338,7 +1358,7 @@
 		/obj/item/stock_parts/micro_laser,
 		/obj/item/stock_parts/scanning_module,
 		/obj/item/stock_parts/capacitor,
-		/obj/item/smartgun_battery,
+		/obj/item/heavygun_battery,
 	)
 
 /obj/item/storage/pouch/electronics/full/fill_preset_inventory()
@@ -1371,9 +1391,9 @@
 /obj/item/storage/pouch/construction/full/fill_preset_inventory()
 	new /obj/item/stack/sheet/plasteel(src, 50)
 	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sheet/wood(src, 50)
 	new /obj/item/stack/sandbags_empty(src, 50)
 	new /obj/item/stack/concertina_wire(src, 50)
-	new /obj/item/stack/fragwire(src, 25)
 
 /obj/item/storage/pouch/construction/clown/fill_preset_inventory()
 	new /obj/item/stack/sheet/metal(src, 50)
@@ -1389,6 +1409,7 @@
 
 /obj/item/storage/pouch/construction/low_grade_full/fill_preset_inventory()
 	new /obj/item/stack/sheet/plasteel(src, 30)
+	new /obj/item/stack/sheet/wood(src, 50)
 	new /obj/item/stack/sheet/metal(src, 50)
 	new /obj/item/stack/barbed_wire(src, 15)
 
@@ -1632,6 +1653,46 @@
 	if(slung && slung.loc == src)
 		return
 	addtimer(CALLBACK(src, PROC_REF(attempt_retrieval), user), 0.3 SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
+
+// sledge
+/obj/item/storage/pouch/sling/sledge
+	name = "Sledgehammer strap"
+	desc = "A set of sturdy straps that keeps a sledgehammer attached to your back when not in use."
+	storage_slots = 1
+	max_w_class = SIZE_LARGE
+	flags_equip_slot = SLOT_BACK
+	icon_state = "sling_sledge"
+	item_state_slots = list(WEAR_AS_BACK = "sling_sledge")
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/melee_weapons.dmi',
+		)
+	can_hold = list(/obj/item/weapon/twohanded/breacher)
+	var/base_icon
+
+/obj/item/storage/pouch/sling/sledge/post_skin_selection()
+	base_icon = icon_state
+
+/obj/item/storage/pouch/sling/sledge/update_icon()
+	if(length(contents))
+		icon_state = "[base_icon]_full"
+	else
+		icon_state = base_icon
+
+	item_state = icon_state
+
+	var/mob/living/carbon/human/user = loc
+	if(istype(user))
+		if(src == user.back)
+			user.update_inv_back()
+
+/obj/item/storage/pouch/sling/sledge/breacher/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher(src)
+
+/obj/item/storage/pouch/sling/sledge/synth/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher/synth(src)
+
+/obj/item/storage/pouch/sling/sledge/tagrilla/fill_preset_inventory()
+	new /obj/item/weapon/twohanded/breacher/tagrilla(src)
 
 /obj/item/storage/pouch/cassette
 	name = "cassette pouch"

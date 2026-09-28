@@ -3,23 +3,10 @@
 	desc = "An automated weapon rack hooked up to a small storage of standard-issue weapons. Can be accessed only by the Vehicle Crewmen."
 	icon_state = "guns"
 	req_access = list(ACCESS_MARINE_CREWMAN)
-	vendor_role = list(JOB_TANK_CREW)
+	vendor_role = list(JOB_TANK_CREW, JOB_MS_CREWMAN)
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND
 
 	listed_products = list(
-		list("PRIMARY FIREARMS", -1, null, null),
-		list("M4RA Battle Rifle", 2, /obj/item/weapon/gun/rifle/m4ra, VENDOR_ITEM_REGULAR),
-		list("M37A2 Pump Shotgun", 2, /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
-		list("M39 Submachine Gun", 2, /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
-		list("M41A Pulse Rifle MK2", 2, /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_REGULAR),
-
-		list("PRIMARY AMMUNITION", -1, null, null),
-		list("Box of Buckshot Shells (12g)", 6, /obj/item/ammo_magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
-		list("Box of Flechette Shells (12g)", 6, /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
-		list("Box of Shotgun Slugs (12g)", 6, /obj/item/ammo_magazine/shotgun/slugs, VENDOR_ITEM_REGULAR),
-		list("M4RA Magazine (10x24mm)", 12, /obj/item/ammo_magazine/rifle/m4ra, VENDOR_ITEM_REGULAR),
-		list("M39 HV Magazine (10x20mm)", 12, /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),
-		list("M41A Magazine (10x24mm)", 12, /obj/item/ammo_magazine/rifle, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("M10 Auto Pistol", 2, /obj/item/weapon/gun/pistol/m10, VENDOR_ITEM_REGULAR),
@@ -81,9 +68,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Individual First-Aid Kit (Tan)", 0, /obj/item/storage/ifak, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Individual First-Aid Kit (Black)", 0, /obj/item/storage/ifak/blk, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Large Magazine Pouch", 0, /obj/item/storage/pouch/magazine/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
@@ -133,13 +119,18 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		list("UTILITIES", 0, null, null, null),
 		list("Binoculars", 10, /obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
 		list("Fire Extinguisher (Portable)", 5, /obj/item/tool/extinguisher/mini, null, VENDOR_ITEM_REGULAR),
+		list("Radio Telephone Pack", 15, /obj/item/storage/backpack/marine/satchel/rto, null, VENDOR_ITEM_RECOMMENDED),
 		list("Fuel Tank Strap Pouch", 5, /obj/item/storage/pouch/flamertank, null, VENDOR_ITEM_REGULAR),
 		list("Fulton Device Stack", 5, /obj/item/stack/fulton, null, VENDOR_ITEM_REGULAR),
 		list("Large Shotgun Shell Pouch", 10, /obj/item/storage/pouch/shotgun/large, null, VENDOR_ITEM_REGULAR),
-		list("Motion Detector", 15, /obj/item/device/motiondetector, null, VENDOR_ITEM_REGULAR),
+		list("Motion Detector", 5, /obj/item/device/motiontracker/adv, null, VENDOR_ITEM_RECOMMENDED),
 		list("Plastic Explosive", 10, /obj/item/explosive/plastic, null, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", 5, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
 		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
+		list("Automated Supply Beacon", 10, /obj/item/device/whiskey_supply_beacon, null, VENDOR_ITEM_REGULAR),
+		list("Welding Visor", 5, /obj/item/device/helmet_visor/welding_visor, null, VENDOR_ITEM_REGULAR),
+		list("Insulated Gloves", 3, /obj/item/clothing/gloves/yellow, null, VENDOR_ITEM_REGULAR),
+
 	))
 
 //MARINE_CAN_BUY_SHOES MARINE_CAN_BUY_UNIFORM currently not used
@@ -147,7 +138,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 	name = "\improper ColMarTech Vehicle Crewman Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of Vehicle Crewmen standard-issue equipment."
 	req_access = list(ACCESS_MARINE_CREWMAN)
-	vendor_role = list(JOB_TANK_CREW)
+	vendor_role = list(JOB_TANK_CREW, JOB_MS_CREWMAN)
 
 /obj/structure/machinery/cm_vending/clothing/vehicle_crew/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_vehicle_crew

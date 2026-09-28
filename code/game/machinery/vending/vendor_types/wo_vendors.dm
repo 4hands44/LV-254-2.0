@@ -30,7 +30,6 @@
 		list("External Webbing Vest", floor(scale * 5), /obj/item/clothing/suit/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Brown Webbing Vest", floor(scale * 1), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
 		list("Black Webbing Vest", floor(scale * 1), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
-		list("Webbing", floor(scale * 2), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", floor(scale * 1), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", floor(scale * 1), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
@@ -61,7 +60,6 @@
 		list("Technician Welder-Satchel", floor(scale * 2), /obj/item/storage/backpack/marine/engineerpack/satchel, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
-		list("M276 Pattern Ammo Load Rig", floor(scale * 10), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M40 Grenade Rig", floor(scale * 5), /obj/item/storage/belt/grenade, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Shotgun Shell Loading Rig", floor(scale * 10), /obj/item/storage/belt/shotgun, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern General Pistol Holster Rig", floor(scale * 10), /obj/item/storage/belt/gun/m4a3, VENDOR_ITEM_REGULAR),
@@ -74,8 +72,8 @@
 
 		list("POUCHES", -1, null, null, null),
 		list("Bayonet Sheath (Full)",floor(scale * 10), /obj/item/storage/pouch/bayonet, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Splints, Gauze, Ointment)", floor(scale * 10), /obj/item/storage/pouch/firstaid/full/alternate, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Pill Packets)", floor(scale * 10), /obj/item/storage/pouch/firstaid/full/pills, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Tan)", floor(scale * 15), /obj/item/storage/ifak, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Black)", floor(scale * 15), /obj/item/storage/ifak/blk, VENDOR_ITEM_REGULAR),
 		list("Flare Pouch (Full)", floor(scale * 10), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
 		list("Small Document Pouch", floor(scale * 10), /obj/item/storage/pouch/document/small, VENDOR_ITEM_REGULAR),
 		list("Magazine Pouch", floor(scale * 10), /obj/item/storage/pouch/magazine, VENDOR_ITEM_REGULAR),
@@ -188,6 +186,7 @@
 		list("EXTRA DEMOLITIONIST AMMUNITION", -1, null, null, null),
 		list("84mm Anti-Armor Rocket", floor(scale * 1), /obj/item/ammo_magazine/rocket/ap, VENDOR_ITEM_REGULAR),
 		list("84mm High-Explosive Rocket", floor(scale * 1), /obj/item/ammo_magazine/rocket, VENDOR_ITEM_REGULAR),
+		list("84mm High-Explosive Fragmentation Rocket", floor(scale * 2), /obj/item/ammo_magazine/rocket/frag,, VENDOR_ITEM_REGULAR),
 		list("84mm White-Phosphorus Rocket", floor(scale * 1), /obj/item/ammo_magazine/rocket/wp, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA GRENADES", -1, null, null, null),

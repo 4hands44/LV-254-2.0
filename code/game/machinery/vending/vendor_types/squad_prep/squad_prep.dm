@@ -86,6 +86,52 @@
 		list("M41A Magazine (10x24mm)", 99, /obj/item/ammo_magazine/rifle, VENDOR_ITEM_RECOMMENDED),
 	)
 
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/special
+	name = "\improper ColMarTech Automated Weapons Rack"
+	desc = "An automated weapon rack hooked up to a big storage of standard-issue weapons."
+	icon_state = "guns"
+	req_access = list()
+	req_one_access = list(ACCESS_MARINE_DATABASE, ACCESS_MARINE_PREP)
+	hackable = TRUE
+	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_STOCK_DYNAMIC
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/special/ui_state(mob/user)
+	return GLOB.not_incapacitated_and_adjacent_strict_state
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/special/populate_product_list(scale)
+	listed_products = list(
+
+		list("SIDEARMS", -1, null, null),
+		list("M10 Auto Pistol", floor(scale * 10), /obj/item/weapon/gun/pistol/m10, VENDOR_ITEM_REGULAR),
+		list("88 Mod 4 Combat Pistol", floor(scale * 10), /obj/item/weapon/gun/pistol/mod88, VENDOR_ITEM_REGULAR),
+		list("M44 Combat Revolver", floor(scale * 10), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
+		list("M4A3 Service Pistol", floor(scale * 10), /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
+		list("M82F Flare Gun", floor(scale * 5), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
+		list("PRIMARY AMMUNITION", -1, null, null),
+		list("M41A MK1 Rubber Magazine (10x24mm)", round(scale * 10), /obj/item/ammo_magazine/rifle/rubber, VENDOR_ITEM_REGULAR),
+		list("Box Of Beanbag Shells", round(scale * 5), /obj/item/ammo_magazine/shotgun/beanbag, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARM AMMUNITION", -1, null, null),
+		list("M10 HV magazine (10x20mm)", floor(scale * 10), /obj/item/ammo_magazine/pistol/m10, VENDOR_ITEM_REGULAR),
+		list("88M4 AP Magazine (9mm)", floor(scale * 10), /obj/item/ammo_magazine/pistol/mod88, VENDOR_ITEM_REGULAR),
+		list("M44 Speedloader (.44)", floor(scale * 10), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
+		list("M4A3 Magazine (9mm)", floor(scale * 10), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
+
+		list("ATTACHMENTS", -1, null, null),
+		list("Mod 88 Folding Stock", round(scale * 10), /obj/item/attachable/stock/mod88, VENDOR_ITEM_REGULAR),
+		list("M39 Folding Stock", floor(scale * 5), /obj/item/attachable/stock/smg/collapsible, VENDOR_ITEM_REGULAR),
+		list("M41A Folding Stock", floor(scale * 5), /obj/item/attachable/stock/rifle/collapsible, VENDOR_ITEM_REGULAR),
+		list("Rail Flashlight", floor(scale * 10), /obj/item/attachable/flashlight, VENDOR_ITEM_RECOMMENDED),
+		list("Underbarrel Flashlight Grip", floor(scale * 5), /obj/item/attachable/flashlight/grip, VENDOR_ITEM_RECOMMENDED),
+		list("Underslung Grenade Launcher", floor(scale * 10), /obj/item/attachable/attached_gun/grenade, VENDOR_ITEM_REGULAR), //They already get these as on-spawns, might as well formalize some spares.
+
+		list("UTILITIES", -1, null, null),
+		list("Earplugs", round(scale * 5), /obj/item/clothing/ears/earmuffs/earplugs, VENDOR_ITEM_REGULAR),
+		list("M5 Bayonet", floor(scale * 10), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
+		list("M11 Throwing Knife", round(scale * 10), /obj/item/weapon/throwing_knife, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", floor(scale * 5), /obj/item/storage/box/m94, VENDOR_ITEM_RECOMMENDED)
+	)
 //------------SQUAD PREP UNIFORM VENDOR---------------
 
 
@@ -121,7 +167,6 @@
 		list("External Webbing Vest", floor(scale * 5), /obj/item/clothing/suit/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Brown Webbing Vest", 1, /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
 		list("Black Webbing Vest", 1, /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
-		list("Webbing", floor(scale * 2), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Black Webbing", floor(scale * 2), /obj/item/clothing/accessory/storage/webbing/black, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", 0.75, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", 0.75, /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
@@ -153,7 +198,6 @@
 		list("Radio Telephone Backpack", 0.75, /obj/item/storage/backpack/marine/satchel/rto, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
-		list("M276 Pattern Ammo Load Rig", floor(scale * 15), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern M40 Grenade Rig", floor(scale * 10), /obj/item/storage/belt/grenade, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Shotgun Shell Loading Rig", floor(scale * 15), /obj/item/storage/belt/shotgun, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern General Pistol Holster Rig", floor(scale * 15), /obj/item/storage/belt/gun/m4a3, VENDOR_ITEM_REGULAR),
@@ -167,8 +211,8 @@
 
 		list("POUCHES", -1, null, null, null),
 		list("Bayonet Sheath (Full)",floor(scale * 15), /obj/item/storage/pouch/bayonet, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Splints, Gauze, Ointment)", floor(scale * 15), /obj/item/storage/pouch/firstaid/full/alternate, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Pill Packets)", floor(scale * 15), /obj/item/storage/pouch/firstaid/full/pills, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Tan)", floor(scale * 15), /obj/item/storage/ifak, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Black)", floor(scale * 15), /obj/item/storage/ifak/blk, VENDOR_ITEM_REGULAR),
 		list("Flare Pouch (Full)", floor(scale * 15), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
 		list("Small Document Pouch", floor(scale * 15), /obj/item/storage/pouch/document/small, VENDOR_ITEM_REGULAR),
 		list("Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine, VENDOR_ITEM_REGULAR),
@@ -299,9 +343,13 @@
 
 		list("SPECIAL AMMUNITION", -1, null, null),
 		list("M56 Smartgun Drum", 1, /obj/item/ammo_magazine/smartgun, VENDOR_ITEM_REGULAR),
+		list("84mm high-explosive rocket", floor(scale * 1), /obj/item/ammo_magazine/rocket, VENDOR_ITEM_REGULAR),
+		list("84mm anti-armor rocket", floor(scale * 1), /obj/item/ammo_magazine/rocket/ap, VENDOR_ITEM_REGULAR),
+		list("84mm high-explosive fragmentation rocket", floor(scale * 3), /obj/item/ammo_magazine/rocket/frag, VENDOR_ITEM_REGULAR),
 		list("M44 Heavy Speed Loader (.44)", floor(scale * 2), /obj/item/ammo_magazine/revolver/heavy, VENDOR_ITEM_REGULAR),
 		list("M44 Marksman Speed Loader (.44)", floor(scale * 2), /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
 		list("M4A3 AP Magazine", floor(scale * 2), /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
+
 
 		list("RESTRICTED FIREARM AMMUNITION", -1, null, null),
 		list("VP78 Magazine", floor(scale * 5), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
@@ -313,6 +361,8 @@
 		list("HIRR Baton Slugs", floor(scale * 6), /obj/item/explosive/grenade/slug/baton, VENDOR_ITEM_REGULAR),
 		list("M74 AGM-S Star Shell", floor(scale * 4), /obj/item/explosive/grenade/high_explosive/airburst/starshell, VENDOR_ITEM_REGULAR),
 		list("M74 AGM-S Hornet Shell", floor(scale * 4), /obj/item/explosive/grenade/high_explosive/airburst/hornet_shell, VENDOR_ITEM_REGULAR),
+		list("M40 Stun Grenade", floor(scale * 4), /obj/item/explosive/grenade/flashbang/noskill, VENDOR_ITEM_REGULAR),
+		list("M66 Teargas Grenade", floor(scale * 1), /obj/item/explosive/grenade/tear_gas, VENDOR_ITEM_REGULAR),
 		)
 
 //--------------SQUAD ARMAMENTS VENDOR--------------
@@ -353,7 +403,12 @@
 		list("M94 Marking Flare Pack", floor(scale * 10), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", floor(scale * 1), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
 
+		list("SPECIAL EQUIPMENT", -1, null, null),
+		list("JTAC Kit", floor(scale * 2), /obj/item/storage/box/kit/mini_jtac, VENDOR_ITEM_REGULAR),
+		list("Tent", floor(scale * 1), /obj/item/folded_tent/big, VENDOR_ITEM_REGULAR),
+
 		list("MISCELLANEOUS", -1, null, null),
+		list("Automated Supply Beacon(ASB)", floor(scale * 3), /obj/item/device/whiskey_supply_beacon, VENDOR_ITEM_REGULAR),
 		list("Engineer Kit", floor(scale * 1), /obj/item/storage/toolkit/empty, VENDOR_ITEM_REGULAR),
 		list("Map", floor(scale * 5), /obj/item/map/current_map, VENDOR_ITEM_REGULAR),
 		list("Extinguisher", floor(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
@@ -389,6 +444,7 @@
 		list("Recoil Compensator", 2.5, /obj/item/attachable/compensator, VENDOR_ITEM_REGULAR),
 		list("Suppressor", 2.5, /obj/item/attachable/suppressor, VENDOR_ITEM_REGULAR),
 		list("Shotgun Choke", 1.5, /obj/item/attachable/shotgun_choke, VENDOR_ITEM_REGULAR),
+		list("M5 Bayonet", 5, /obj/item/attachable/bayonet,, VENDOR_ITEM_REGULAR),
 
 		list("RAIL", -1, null, null),
 		list("B8 Smart-Scope", round(scale * 1.5), /obj/item/attachable/scope/mini_iff, VENDOR_ITEM_REGULAR),

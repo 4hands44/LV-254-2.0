@@ -61,7 +61,7 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/uscm/pfc
-	name = "USCM Squad Rifleman"
+	name = "Falling Falcons Squad Rifleman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP)
@@ -83,7 +83,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/pfc/cryo
-	name = "USCM Cryo Squad Rifleman"
+	name = "Falling Falcons Cryo Squad Rifleman"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/pfc/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -93,7 +93,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
-	name = "USCM Squad Smartgunner"
+	name = "Falling Falcons Squad Smartgunner"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
@@ -115,7 +115,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/sg/cryo
-	name = "USCM Cryo Squad Smartgunner"
+	name = "Falling Falcons Cryo Squad Smartgunner"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/sg/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -125,7 +125,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg/full
-	name = "USCM Squad Smartgunner (Full)"
+	name = "Falling Falcons Squad Smartgunner (Full)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm/sg/full/load_gear(mob/living/carbon/human/new_human)
@@ -145,7 +145,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tank
-	name = "USCM Vehicle Crewman (CRMN) (Cryo)"
+	name = "Falling Falcons Vehicle Crewman (CRMN) (Cryo)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(
@@ -183,7 +183,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tank/full
-	name = "USCM Vehicle Crewman (CRMN)"
+	name = "Falling Falcons Vehicle Crewman (CRMN)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/tanker)
@@ -205,7 +205,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/intel
-	name = "USCM Intelligence Officer (IO) (Cryo)"
+	name = "Falling Falcons Intelligence Officer (IO) (Cryo)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/silver
@@ -246,7 +246,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/intel/full
-	name = "USCM Intelligence Officer (IO)"
+	name = "Falling Falcons Intelligence Officer (IO)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	utility_under = list(/obj/item/clothing/under/marine/officer/intel)
@@ -271,7 +271,7 @@
 
 /*****************************************************************************************************/
 /datum/equipment_preset/uscm/spec
-	name = "USCM (Cryo) Squad Weapons Specialist"
+	name = "Falling Falcons (Cryo) Squad Weapons Specialist"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
@@ -294,7 +294,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/specrag(new_human), WEAR_HEAD)
 
 /datum/equipment_preset/uscm/spec/cryo
-	name = "USCM Cryo Squad Weapons Specialist"
+	name = "Falling Falcons Cryo Squad Weapons Specialist"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/spec/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -305,7 +305,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/spec/full_armor
-	name = "USCM Weapons Specialist (B18 Armor)"
+	name = "Falling Falcons Weapons Specialist (B18 Armor)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 /datum/equipment_preset/uscm/spec/full_armor/load_gear(mob/living/carbon/human/new_human)
@@ -330,7 +330,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/medic
-	name = "USCM Squad Hospital Corpsman"
+	name = "Falling Falcons Squad Hospital Corpsman"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
@@ -354,7 +354,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/medic/cryo
-	name = "USCM Cryo Squad Hospital Corpsman"
+	name = "Falling Falcons Cryo Squad Hospital Corpsman"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/medic/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -364,7 +364,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
-	name = "USCM Fireteam Leader"
+	name = "Falling Falcons Fireteam Leader"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
@@ -384,7 +384,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/tl/cryo
-	name = "USCM Cryo Fireteam Leader"
+	name = "Falling Falcons Cryo Fireteam Leader"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/tl/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -394,7 +394,7 @@
 /*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/engineer
-	name = "USCM Squad Combat Technician"
+	name = "Falling Falcons Squad Combat Technician"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
@@ -418,7 +418,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/engineer/cryo
-	name = "USCM Cryo Squad Combat Technician"
+	name = "Falling Falcons Cryo Squad Combat Technician"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/engineer/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -428,7 +428,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader
-	name = "USCM Squad Leader"
+	name = "Falling Falcons Squad Leader"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
@@ -449,7 +449,7 @@
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 /datum/equipment_preset/uscm/leader/cryo
-	name = "USCM Cryo Squad Leader"
+	name = "Falling Falcons Cryo Squad Leader"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 /datum/equipment_preset/uscm/leader/cryo/load_gear(mob/living/carbon/human/new_human)
@@ -461,7 +461,7 @@
 // ERT members that spawn with full gear from DEFCON
 
 /datum/equipment_preset/uscm/private_equipped
-	name = "USCM Squad Rifleman (Equipped)"
+	name = "Falling Falcons Squad Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP)
@@ -498,14 +498,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/private_equipped/cryo
-	name = "USCM Cryo Squad Rifleman (Equipped)"
+	name = "Falling Falcons Cryo Squad Rifleman (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader_equipped
-	name = "USCM Squad Leader (Equipped)"
+	name = "Falling Falcons Squad Leader (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
@@ -541,13 +541,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended(new_human.back), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/leader_equipped/cryo
-	name = "USCM Cryo Squad Leader (Equipped)"
+	name = "Falling Falcons Cryo Squad Leader (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/smartgunner_equipped
-	name = "USCM Squad Smartgunner (Equipped)"
+	name = "Falling Falcons Squad Smartgunner (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
@@ -579,14 +579,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles(new_human), WEAR_EYES)
 
 /datum/equipment_preset/uscm/smartgunner_equipped/cryo
-	name = "USCM Cryo Squad Smartgunner (Equipped)"
+	name = "Falling Falcons Cryo Squad Smartgunner (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/engineer_equipped
-	name = "USCM Squad Combat Technician (Equipped)"
+	name = "Falling Falcons Squad Combat Technician (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
@@ -628,13 +628,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/engineer_equipped/cryo
-	name = "USCM Cryo Squad Combat Technician (Equipped)"
+	name = "Falling Falcons Cryo Squad Combat Technician (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/medic_equipped
-	name = "USCM Squad Hospital Corpsman (Equipped)"
+	name = "Falling Falcons Squad Hospital Corpsman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
@@ -683,14 +683,14 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/medic_equipped/cryo
-	name = "USCM Cryo Hospital Corpsman (Equipped)"
+	name = "Falling Falcons Cryo Hospital Corpsman (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/specialist_equipped
-	name = "USCM Squad Weapons Specialist (Equipped)"
+	name = "Falling Falcons Squad Weapons Specialist (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
@@ -730,13 +730,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/uscm/specialist_equipped/cryo
-	name = "USCM Cryo Squad Weapons Specialist (Equipped)"
+	name = "Falling Falcons Cryo Squad Weapons Specialist (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/specialist_equipped/sniper
-	name = "USCM Sniper Specialist (Equipped)"
+	name = "Falling Falcons Sniper Specialist (Equipped)"
 
 /datum/equipment_preset/uscm/specialist_equipped/sniper/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -762,7 +762,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl_equipped
-	name = "USCM Fireteam Leader (Equipped)"
+	name = "Falling Falcons Fireteam Leader (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
@@ -794,7 +794,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars(new_human), WEAR_L_HAND)
 
 /datum/equipment_preset/uscm/tl_equipped/cryo
-	name = "USCM Cryo Fireteam Leader (Equipped)"
+	name = "Falling Falcons Cryo Fireteam Leader (Equipped)"
 	auto_squad_name = SQUAD_MARINE_CRYO
 
 //############ Marine Raiders #############
@@ -983,7 +983,7 @@
 
 //## Rifleman ##//
 /datum/equipment_preset/uscm/pve
-	name = "USCM Solar Devils Rifleman"
+	name = " Solar Devils Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_MARINE_PREP)
 	assignment = JOB_SQUAD_MARINE
@@ -1043,7 +1043,7 @@
 
 //## Corpsman ##//
 /datum/equipment_preset/uscm/pve/medic
-	name = "USCM Solar Devils Platoon Corpsman"
+	name = " Solar Devils Platoon Corpsman"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
@@ -1106,7 +1106,7 @@
 
 //## Smartgunner ##//
 /datum/equipment_preset/uscm/pve/sg
-	name = "USCM Solar Devils Smartgunner"
+	name = " Solar Devils Smartgunner"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
@@ -1152,7 +1152,7 @@
 
 //## Team Leader ##//
 /datum/equipment_preset/uscm/pve/tl
-	name = "USCM Solar Devils Team Leader"
+	name = " Solar Devils Team Leader"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP, ACCESS_MARINE_DROPSHIP)
@@ -1208,7 +1208,7 @@
 
 //## Squad Leader ##//
 /datum/equipment_preset/uscm/pve/sl
-	name = "USCM Solar Devils Platoon Leader"
+	name = " Solar Devils Platoon Leader"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
@@ -1276,7 +1276,7 @@
 	ert_squad = TRUE
 
 /datum/equipment_preset/uscm/hunted/rifleman
-	name = "USCM Solar Devils Rifleman (Hunted)"
+	name = " Solar Devils Rifleman (Hunted)"
 	access = list(ACCESS_MARINE_PREP)
 	assignment = JOB_SQUAD_MARINE
 	rank = JOB_SQUAD_MARINE
@@ -1321,7 +1321,7 @@
 	spawn_marine_fluff_items(new_human)
 
 /datum/equipment_preset/uscm/hunted/tl
-	name = "USCM Solar Devils Team Leader (Hunted)"
+	name = " Solar Devils Team Leader (Hunted)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP, ACCESS_MARINE_DROPSHIP)
@@ -1364,7 +1364,7 @@
 	spawn_marine_fluff_items(new_human)
 
 /datum/equipment_preset/uscm/hunted/sg
-	name = "USCM Solar Devils Smartgunner (Hunted)"
+	name = " Solar Devils Smartgunner (Hunted)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)

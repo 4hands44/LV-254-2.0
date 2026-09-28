@@ -17,8 +17,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
-	new_human.equip_to_slot(new /obj/item/attachable/bayonet(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot(new /obj/item/device/flashlight(new_human), WEAR_R_STORE)
 
 /datum/equipment_preset/colonist/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	var/obj/item/clothing/under/uniform = new_human.w_uniform

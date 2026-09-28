@@ -1742,9 +1742,9 @@
 
 /obj/item/weapon/gun/rifle/type71/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_fire_delay(FIRE_DELAY_TIER_8)
 	set_burst_amount(BURST_AMOUNT_TIER_5)
-	set_burst_delay(FIRE_DELAY_TIER_7)
+	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -1812,6 +1812,13 @@
 	random_spawn_under = list(
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
+
+
+/obj/item/weapon/gun/rifle/type71/tagrilla
+	random_spawn_chance = 0
+	random_rail_chance = 0
+	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/lasersight)
 
 /obj/item/weapon/gun/rifle/type71/flamer
 	name = "\improper Type 71-F pulse rifle"
@@ -1978,7 +1985,7 @@
 
 /obj/item/weapon/gun/rifle/ak4047
 	name = "\improper AK–4047 pulse rifle"
-	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap bulky but, lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
+	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap and lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/assault_rifles.dmi'
 	icon_state = "ak84s"
 	item_state = "ak84s"
@@ -2006,7 +2013,11 @@
 		/obj/item/ammo_magazine/rifle/type71/heap,
 		/obj/item/ammo_magazine/rifle/ak4047,
 		/obj/item/ammo_magazine/rifle/ak4047/ap,
-		/obj/item/ammo_magazine/rifle/ak4047/heap,)
+		/obj/item/ammo_magazine/rifle/ak4047/heap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/ap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/heap,
+		)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	flags_equip_slot = SLOT_BACK
@@ -2090,6 +2101,85 @@
 		/obj/item/attachable/attached_gun/grenade,
 	)
 
+/obj/item/weapon/gun/rifle/ak4047/tagrilla
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047/ap
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
+
+
+//-------------------------------------------------------
+//UPP AK84s LMG
+
+/obj/item/weapon/gun/rifle/ak4047_lmg
+	name = "\improper AK–4047p pulse rifle"
+	desc = "The primary service rifle of the UPP space forces, the AK–4047 pulse rifle is a cheap and lightweight pulse rifle chambered in 5.45x39mm. In accordance with doctrinal principles of overmatch and suppression, the rifle has a high rate of fire and a high-capacity casket magazine. Despite lackluster precision, an integrated recoil-dampening mechanism makes the rifle surprisingly controllable in bursts. This is the LMG varient."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/assault_rifles.dmi'
+	icon_state = "ak84s"
+	item_state = "ak84s"
+
+	fire_sound = 'sound/weapons/gun_ak4047.mp3'
+	reload_sound = 'sound/weapons/ak4047_reload.mp3'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047_drum
+	wield_delay = WIELD_DELAY_FAST
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/lasersight,
+		)
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/type71/ap,
+		/obj/item/ammo_magazine/rifle/type71/heap,
+		/obj/item/ammo_magazine/rifle/ak4047,
+		/obj/item/ammo_magazine/rifle/ak4047/ap,
+		/obj/item/ammo_magazine/rifle/ak4047/heap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/ap,
+		/obj/item/ammo_magazine/rifle/ak4047_drum/heap,
+		)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_equip_slot = SLOT_BACK
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 10, "rail_y" = 23, "under_x" = 20, "under_y" = 13, "stock_x" = 11, "stock_y" = 14)
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_burst_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_5
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT //10~ more damage than m41, as well as higher ap from bullet, slightly higher DPS, 133>137.5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/stock/ak/STOCK = new(src)
+	STOCK.flags_attach_features &= ~ATTACH_REMOVABLE
+	STOCK.Attach(src)
+	update_attachable(STOCK.slot)
+
+	var/obj/item/attachable/extended_barrel/BARREL = new(src)
+	BARREL.flags_attach_features &= ~ATTACH_REMOVABLE
+	BARREL.Attach(src)
+	update_attachable(BARREL.slot)
+
+	var/obj/item/attachable/magnetic_harness/HARNESS = new(src)
+	HARNESS.flags_attach_features &= ~ATTACH_REMOVABLE
+	HARNESS.Attach(src)
+	update_attachable(HARNESS.slot)
+
+/obj/item/weapon/gun/rifle/ak4047_lmg/mr_tracksuit
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047_drum/ap
 
 //M4RA Battle Rifle, standard USCM DMR
 
@@ -2377,7 +2467,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90
 	name = "\improper F903A1 Rifle"
-	desc = "The standard issue rifle of the royal marines. Uniquely the royal marines are the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "Once the standard rifle of the RMC, the F90's performance was found lacking despite its upgrades, leading the TWE to replace it with the L23. The F90 now often sees use by mercenaries or private security. Uses uniquely non-pulse fired 10x24mm caseless ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/assault_rifles.dmi'
 	icon_state = "aug"
 	item_state = "aug"
@@ -2708,7 +2798,7 @@
 
 /obj/item/weapon/gun/rifle/l23
 	name = "\improper L23 assault rifle"
-	desc = "A rare sight, this rifle is seen most commonly in the hands of Three World Empire RMCs. Compared to the M41A MK2, it has noticeably improved handling and vastly improved performance. This one is painted in RMC's purple-blue camouflage"
+	desc = "Replacing The F90 and SA80, the L23 is the new standard rifle of the Royal Marines, based upon Weyland-Yutani's NSG-23 and modified to suit Marine Operations. The main difference is the bullpup configuration, keeping the rifle both accurate and compact; the other change is the modular handguard, letting the user adapt the rifle to various roles. Feeds from 50-round quad-stack magazines and 150-round drums."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/assault_rifles.dmi'
 	icon_state = "l23"
 	item_state = "l23"
@@ -2721,144 +2811,102 @@
 	current_mag = /obj/item/ammo_magazine/rifle/l23
 
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/rmc,
-		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/stock/l23,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-		/obj/item/attachable/attached_gun/grenade,
-		/obj/item/attachable/attached_gun/grenade/u1rmc,
-		/obj/item/attachable/attached_gun/shotgun,
-		/obj/item/attachable/attached_gun/shotgun/af13,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/flashlight/rmc,
+		/obj/item/attachable/bipod/rmc,
+		/obj/item/attachable/attached_gun/flamer/rmc,
+		/obj/item/attachable/attached_gun/grenade/rmc,
+		/obj/item/attachable/attached_gun/shotgun/rmc,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/variable_zoom/twe,
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
-	random_spawn_chance = 100 //L23 always spawns with attachments (for proper NSG underrail offsets it's X=23 Y=13)
-	random_spawn_under = list(
-		/obj/item/attachable/attached_gun/grenade/u1rmc,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-		/obj/item/attachable/attached_gun/shotgun/af13,
-	)
-	random_spawn_rail = list(
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/scope/mini,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-	)
+	random_spawn_chance = 35
 	start_semiauto = FALSE
 	start_automatic = TRUE
+
+	random_spawn_rail = list(
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/scope/mini,
+	)
+
+	starting_attachment_types = list(
+		/obj/item/attachable/flashlight/rmc,
+	)
 
 /obj/item/weapon/gun/rifle/l23/Initialize(mapload, spawn_empty)
 	. = ..()
 	update_icon()
 
 /obj/item/weapon/gun/rifle/l23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 12, "rail_y" = 20, "under_x" = 21, "under_y" = 11, "stock_x" = 5, "stock_y" = 17)
+	attachable_offset = list(
+		"muzzle_x" = 36, "muzzle_y" = 17,
+		"rail_x" = 16, "rail_y" = 20,
+		"under_x" = 21, "under_y" = 16,
+		"special_x" = 32, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/l23/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_11 + FIRE_DELAY_TIER_12/4)
+	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_SG + FIRE_DELAY_TIER_12/4)
+	set_burst_delay(FIRE_DELAY_TIER_SG)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1
-	recoil = RECOIL_AMOUNT_TIER_4 + RECOIL_AMOUNT_TIER_5/5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/rifle/l23/handle_starting_attachment() //Adds L23's unremovable stock
+/obj/item/weapon/gun/rifle/l23/handle_starting_attachment() //Adds L23's unremovable barrel
 	..()
-	var/obj/item/attachable/stock/l23/S = new(src)
+	var/obj/item/attachable/l23_barrel/S = new(src)
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
 	S.Attach(src)
 	update_attachable(S.slot)
 
-//***************************************************************//
-/obj/item/weapon/gun/rifle/l23/breacher // One-handed UBS rifle
-	name = "\improper L23-B assault rifle"
-	desc = "A rare sight, this rifle is seen most commonly in the hands of Three World Empire RMCs. This particular model was modified to facilitate RMC operations in tight quarters, allowing for it to be fired one-handed. This however crippled its stopping power due to a shorter barrel needed to make it compact. Burst fire still kicks like a mule. Compared to the M41A MK2, it has noticeably improved handling and vastly improved performance. This one is painted in RMC's purple-blue camouflage"
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/TWE/assault_rifles.dmi'
-	icon_state = "l23"
-	item_state = "l23"
-	fire_sound = "gun_nsg23"
-	reload_sound = 'sound/weapons/handling/nsg23_reload.ogg'
-	unload_sound = 'sound/weapons/handling/nsg23_unload.ogg'
-	cocked_sound = 'sound/weapons/handling/nsg23_cocked.ogg'
-	aim_slowdown = SLOWDOWN_ADS_QUICK
-	wield_delay = WIELD_DELAY_VERY_FAST
+/obj/item/weapon/gun/rifle/l23/stripped
+	random_spawn_chance = 0
+	starting_attachment_types = list(
+		/obj/item/attachable/flashlight/rmc,
+	)
+
+/obj/item/weapon/gun/rifle/l23/gunner
+	random_spawn_chance = 0
 	current_mag = /obj/item/ammo_magazine/rifle/l23/extended
-
-	attachable_allowed = list(
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/rmc,
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/stock/l23,
-		/obj/item/attachable/attached_gun/shotgun/af13b,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/scope/mini/nsg23,
-		/obj/item/attachable/scope/mini,
-	)
-
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	auto_retrieval_slot = WEAR_J_STORE
-
-	random_spawn_chance = 100 //L23 always spawns with attachments (for proper NSG underrail offsets it's X=23 Y=13)
-
-	random_spawn_rail = list(
+	starting_attachment_types = list(
+		/obj/item/attachable/bipod/rmc,
 		/obj/item/attachable/reflex,
 	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/rmc,
+
+/obj/item/weapon/gun/rifle/l23/breacher
+	starting_attachment_types = list(
+		/obj/item/attachable/attached_gun/shotgun/rmc,
 	)
-	start_semiauto = FALSE
-	start_automatic = TRUE
 
-/obj/item/weapon/gun/rifle/l23/breacher/set_gun_config_values()
-	..()
-	fire_delay = FIRE_DELAY_TIER_11 + FIRE_DELAY_TIER_12/4
-	burst_amount = BURST_AMOUNT_TIER_3
-	burst_delay = FIRE_DELAY_TIER_SG + FIRE_DELAY_TIER_12/4
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
-	scatter = SCATTER_AMOUNT_TIER_8
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
-	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1
-	recoil = RECOIL_AMOUNT_TIER_4
-	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+/obj/item/weapon/gun/rifle/l23/grenade
+	starting_attachment_types = list(
+		/obj/item/attachable/attached_gun/grenade/rmc,
+	)
 
-/obj/item/weapon/gun/rifle/l23/breacher/handle_starting_attachment() //Adds L23-B's breaching shotgun
-	..()
-	var/obj/item/attachable/attached_gun/shotgun/af13b/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
+/obj/item/weapon/gun/rifle/l23/pyro
+	starting_attachment_types = list(
+		/obj/item/attachable/attached_gun/flamer/rmc,
+	)
 
 /obj/item/weapon/gun/rifle/l23/leader
+	random_spawn_chance = 0
 	starting_attachment_types = list(
-		/obj/item/attachable/attached_gun/flamer/advanced,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/flashlight/rmc,
 	)
 
 //L42A3 Battle Rifle
@@ -3138,3 +3186,69 @@
 	current_mag = /obj/item/ammo_magazine/rifle/xm51/cmb
 	map_specific_decoration = FALSE
 	starting_attachment_types = list(/obj/item/attachable/flashlight/grip, /obj/item/attachable/reflex)
+
+// Type 24 Assault Shotgun
+/obj/item/weapon/gun/rifle/type24
+	name = "\improper Type 24 assault shotgun"
+	desc = "As the Type 23 saw widespread success among UPP forces, a new variant was developed to increase the shotguns firepower. From this hard work emerged the Type 24, a modification capable of taking 12-round drum mags and fully automatic firing. Currently in field trials, initial findings are promising despite the amount of bruised shoulders."
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/shotguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/shotguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/shotguns_righthand.dmi'
+	)
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/shotguns.dmi'
+	icon_state = "type24"
+	item_state = "type24"
+	fire_sound = 'sound/weapons/gun_type23.ogg' //not perfect, too small
+	current_mag = /obj/item/ammo_magazine/rifle/type24
+	attachable_allowed = list(
+		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/bayonet, // Muzzle
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+		/obj/item/attachable/attached_gun/extinguisher,
+		/obj/item/attachable/stock/type23, // Stock
+		)
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	gun_category = GUN_CATEGORY_SHOTGUN
+	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
+	start_automatic = TRUE
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/type24,
+		/obj/item/ammo_magazine/rifle/type24/slug,
+		/obj/item/ammo_magazine/rifle/type24/flechette,
+		/obj/item/ammo_magazine/rifle/type24/beanbag,
+		/obj/item/ammo_magazine/rifle/type24/dragonsbreath,
+	)
+
+/obj/item/weapon/gun/rifle/type24/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17)
+
+/obj/item/weapon/gun/rifle/type24/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SHOTGUN_DEATHSQUAD)
+	set_burst_amount(0)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_4
+	scatter_unwielded = SCATTER_AMOUNT_TIER_1
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_1
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+	recoil_buildup_limit = RECOIL_AMOUNT_TIER_3 / RECOIL_BUILDUP_VIEWPUNCH_MULTIPLIER
+
+
+/obj/item/weapon/gun/rifle/type24/tactical
+	starting_attachment_types = list(/obj/item/attachable/stock/type23, /obj/item/attachable/verticalgrip)
+
+/obj/item/weapon/gun/rifle/type24/tagrilla
+	current_mag = /obj/item/ammo_magazine/rifle/type24/slug
+	starting_attachment_types = list(/obj/item/attachable/stock/type23, /obj/item/attachable/verticalgrip, /obj/item/attachable/magnetic_harness)

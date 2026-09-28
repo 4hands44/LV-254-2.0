@@ -350,6 +350,7 @@
 	direction = UP
 
 /obj/structure/stairs/multiz/down
+	icon_state = "ramptop_alt"
 	direction = DOWN
 
 /obj/structure/stairs/perspective //instance these for the required icons

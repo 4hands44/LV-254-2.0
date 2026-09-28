@@ -719,3 +719,41 @@
 /obj/effect/landmark/tutorial_bottom_left
 	name = "tutorial bottom left"
 	icon_state = "new_player"
+
+
+/obj/effect/landmark/ambient_sound
+	name = "ambient sound"
+	icon = 'icons/landmarks.dmi'
+	icon_state = "sound"
+
+	var/list/sound_list = list()
+	var/min_delay = 30 SECONDS
+	var/max_delay = 90 SECONDS
+	var/volume = 35
+	var/min_volume = 35
+	var/vary = TRUE
+	var/play_chance = 100
+	var/sound_radius = 7
+	var/play_once = FALSE
+
+/obj/effect/landmark/ambient_sound/Initialize(mapload)
+	. = ..()
+
+	addtimer(CALLBACK(src, PROC_REF(play_random_sound)), rand(min_delay, max_delay))
+
+/obj/effect/landmark/ambient_sound/proc/play_random_sound()
+	if(QDELETED(src))
+		return
+
+	if(prob(play_chance) && length(sound_list))
+		playsound(loc, pick(sound_list), rand(min_volume, volume), vary, sound_radius)
+	if(play_once)
+		return
+
+	addtimer(CALLBACK(src, PROC_REF(play_random_sound)), rand(min_delay, max_delay))
+
+// The sounds - static playing sound landmarks, can be configured easily. A variety of uses.
+
+// Sounds will overlap, unlike the area ambience.
+
+// Use short sounds, shorter the better. I'd say around 20 seconds max.

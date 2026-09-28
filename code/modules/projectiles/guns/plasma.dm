@@ -177,7 +177,7 @@
 		/obj/item/attachable/flashlight/grip,
 		)
 
-	var/obj/item/smartgun_battery/battery = null
+	var/obj/item/heavygun_battery/battery = null
 	/// Whether the smartgun drains the battery (Ignored if requires_battery is false)
 	var/requires_power = TRUE
 	/// Whether the smartgun requires a battery
@@ -188,7 +188,7 @@
 
 /obj/item/weapon/gun/plasma/xm99a/Initialize(mapload, ...)
 
-	battery = new /obj/item/smartgun_battery(src)
+	battery = new /obj/item/heavygun_battery(src)
 	muzzle_flash = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	. = ..()
@@ -353,8 +353,8 @@
 		force_off_armbrace(user)
 
 /obj/item/weapon/gun/plasma/xm99a/attackby(obj/item/attacking_object, mob/user)
-	if(istype(attacking_object, /obj/item/smartgun_battery))
-		var/obj/item/smartgun_battery/new_cell = attacking_object
+	if(istype(attacking_object, /obj/item/heavygun_battery))
+		var/obj/item/heavygun_battery/new_cell = attacking_object
 		visible_message(SPAN_NOTICE("[user] swaps out the power cell in [src]."),
 			SPAN_NOTICE("You swap out the power cell in [src] and drop the old one."))
 		to_chat(user, SPAN_NOTICE("The new cell contains: [new_cell.power_cell.charge] power."))

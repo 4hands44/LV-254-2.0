@@ -35,7 +35,7 @@
 
 /obj/structure/sign/double/corpsign/New()
 	..()
-	ChangeSign(pick("walmart", "kb", "pinkerton", "nanotrasen", "kelland", "seegson", "weyyu", "wy", "hyperdyne", "silver", "vaipo"))
+	ChangeSign(pick("walmart", "kb", "pinkerton", "nanotrasen", "kelland", "seegson", "weyyu", "wy", "hyperdyne", "silver", "vaipo", "waffle"))
 	return
 
 /obj/structure/sign/double/corpsign/proc/ChangeSign(Text)
@@ -126,4 +126,9 @@
 /obj/structure/sign/double/norandom/shi
 	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
 	icon_state = "shi"
+	anchored = TRUE
+
+/obj/structure/sign/double/norandom/waffle
+	icon = 'icons/obj/structures/props/wall_decorations/barsigns.dmi'
+	icon_state = "waffle"
 	anchored = TRUE

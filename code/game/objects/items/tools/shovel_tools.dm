@@ -22,9 +22,16 @@
 	var/shovelspeed = 30
 	var/dirt_amt = 0
 	var/dirt_amt_per_dig = 6
+	var/image/dirt_overlay_image
 
 
 /obj/item/tool/shovel/update_icon()
+	if(dirt_overlay_image)
+		overlays -= dirt_overlay_image
+		dirt_overlay_image = null
+	if(!dirt_amt)
+		return
+
 	var/image/I = image(icon,src,dirt_overlay)
 	switch(dirt_type) // We can actually shape the color for what environment we dig up our dirt in.
 		if(DIRT_TYPE_GROUND)
@@ -37,11 +44,8 @@
 			I.color = "#ab804b"
 		if(DIRT_TYPE_SHALE)
 			I.color = "#1c2142"
-	overlays -= I
-	if(dirt_amt)
-		overlays += I
-	else
-		I = null
+	overlays += I
+	dirt_overlay_image = I
 
 
 

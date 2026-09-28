@@ -162,6 +162,21 @@
 	. = ..()
 	reagents.add_reagent("vodka", 100)
 
+/obj/item/reagent_container/food/drinks/bottle/vodka_cocktail
+	name = "\improper Red Star Medicinal Cocktail"
+	desc = "An extra-large bottle of Red Star Vodka for true enthusiasts, emptied of its original contents and refilled with a medical cocktail, with a vodka screwdriver chaser. Red Star switched their larger bottles to use a cheaper plastic instead of glass... atleast it won't shatter."
+	icon_state = "red_star_cocktail"
+	volume = 300
+	isGlass = 0
+	center_of_mass = "x=17;y=3"
+
+/obj/item/reagent_container/food/drinks/bottle/vodka_cocktail/Initialize()
+	. = ..()
+	reagents.add_reagent("tricordrazine", 100)
+	reagents.add_reagent("nutriment", 100)
+	reagents.add_reagent("screwdrivercocktail", 50)
+	reagents.add_reagent("tramadol", 50)
+
 //chess bottles
 
 /obj/item/reagent_container/food/drinks/bottle/vodka/chess

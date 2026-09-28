@@ -4737,6 +4737,15 @@
 /turf/open/floor/darkish
 	icon_state = "darkish"
 
+/turf/open/floor/dark_herringbone
+	icon_state = "dark_herringbone"
+
+/turf/open/floor/dark_small
+	icon_state = "dark_small"
+
+/turf/open/floor/dark_herringbone
+	icon_state = "dark_herringbone"
+
 /turf/open/floor/delivery
 	icon_state = "delivery"
 

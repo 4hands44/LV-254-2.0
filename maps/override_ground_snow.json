@@ -1,0 +1,88 @@
+{
+    "override_map": true,
+    "map_name": "Lv-254",
+
+    "weather_holder": "/datum/weather_ss_map_holder/sorokyne",
+    "environment_traits": {
+        "COLD": true
+    },
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/civilian",
+        "/datum/equipment_preset/survivor/goon"
+    ],
+    "map_item_type": "/obj/item/map/big_red_map",
+    "announce_text": "USS Black Gold Wake-Up Commenced",
+    "monkey_types": [
+        "neaera"
+    ],
+    "traits": [
+        {
+            "Ground": true,
+            "Up": 1
+        },
+        {
+            "Ground": true,
+            "Up": 1,{
+    "override_map": true,
+    "map_name": "Lv-254",
+    "weather_holder": "/datum/weather_ss_map_holder/lv624",
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/civilian",
+        "/datum/equipment_preset/survivor/goon"
+    ],
+    "map_item_type": "/obj/item/map/big_red_map",
+    "announce_text": "USS Black Gold Wake-Up Commenced",
+    "monkey_types": [
+        "neaera"
+    ],
+    "traits": [
+        {
+            "Ground": true,
+            "Up": 1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Down": -1
+        }
+    ],
+    "camouflage": "snow",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
+
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Up": 1,
+            "Down": -1
+        },
+        {
+            "Ground": true,
+            "Down": -1
+        }
+    ],
+    "camouflage": "classic",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}

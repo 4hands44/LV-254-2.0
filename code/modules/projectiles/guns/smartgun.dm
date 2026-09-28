@@ -69,7 +69,7 @@
 
 	)
 
-	var/obj/item/smartgun_battery/battery = null
+	var/obj/item/heavygun_battery/battery = null
 	/// Whether the smartgun drains the battery (Ignored if requires_battery is false)
 	var/requires_power = TRUE
 	/// Whether the smartgun requires a battery
@@ -127,7 +127,7 @@
 	ammo_primary = ammo_primary_def
 	ammo_secondary = ammo_secondary_def
 	MD = new(src)
-	battery = new /obj/item/smartgun_battery(src)
+	battery = new /obj/item/heavygun_battery(src)
 	muzzle_flash = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	autoshot_image = image('icons/effects/effects.dmi', null, "lock")
@@ -227,8 +227,8 @@
 		return ..()
 
 /obj/item/weapon/gun/smartgun/attackby(obj/item/attacking_object, mob/user)
-	if(istype(attacking_object, /obj/item/smartgun_battery))
-		var/obj/item/smartgun_battery/new_cell = attacking_object
+	if(istype(attacking_object, /obj/item/heavygun_battery))
+		var/obj/item/heavygun_battery/new_cell = attacking_object
 		visible_message(SPAN_NOTICE("[user] swaps out the power cell in [src]."),
 			SPAN_NOTICE("You swap out the power cell in [src] and drop the old one."))
 		to_chat(user, SPAN_NOTICE("The new cell contains: [new_cell.power_cell.charge] power."))
@@ -1145,9 +1145,9 @@
 #undef KNOCKDOWN_SG_FAILSOUND_COOLDOWN
 
 
-/obj/item/smartgun_battery
-	name = "\improper DV9 smartgun battery"
-	desc = "A standard-issue 9-volt lithium dry-cell battery, most commonly used within the USCMC to power smartguns. Per the manual, one battery is good for up to 50000 rounds and plugs directly into the smartgun's power receptacle, which is only compatible with this type of battery. Various auxiliary modes usually bring the round count far lower. While this cell is incompatible with most standard electrical system, it can be charged by common rechargers in a pinch. USCMC smartgunners often guard them jealously."
+/obj/item/heavygun_battery
+	name = "\improper DV9 heavy weapons battery"
+	desc = "A standard-issue 9-volt lithium dry-cell battery, most commonly used within the USCMC to power smartguns, and other heavy weapons. Per the manual, one battery is good for up to 50000 rounds and plugs directly into the smartgun's power receptacle, which is only compatible with this type of battery. Various auxiliary modes usually bring the round count far lower. While this cell is incompatible with most standard electrical system, it can be charged by common rechargers in a pinch. USCMC gunners often guard them jealously."
 
 	icon = 'icons/obj/structures/machinery/power.dmi'
 	icon_state = "smartguncell"
@@ -1160,11 +1160,11 @@
 
 	var/obj/item/cell/high/power_cell
 
-/obj/item/smartgun_battery/Initialize(mapload)
+/obj/item/heavygun_battery/Initialize(mapload)
 	. = ..()
 
 	power_cell = new(src)
 
-/obj/item/smartgun_battery/Destroy()
+/obj/item/heavygun_battery/Destroy()
 	QDEL_NULL(power_cell)
 	return ..()

@@ -2040,7 +2040,7 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/cic)
 "agB" = (
-/obj/effect/vehicle_spawner/jeep/police/riot{
+/obj/effect/vehicle_spawner/miltruck/miltruck_3/fixed{
 	dir = 1
 	},
 /turf/open/floor/almayer{
@@ -2637,11 +2637,11 @@
 /turf/closed/wall/almayer/reinforced,
 /area/blackgold/middle/maint/star/mid)
 "aiU" = (
-/obj/effect/vehicle_spawner/jeep/command/plain{
+/obj/effect/vehicle_spawner/jeep/plain{
 	dir = 1
 	},
 /turf/open/floor/almayer{
-	icon_state = "test_floor5"
+	icon_state = "test_floor4"
 	},
 /area/blackgold/underdeck/vehicle)
 "aiV" = (
@@ -3849,10 +3849,10 @@
 /turf/open/floor/almayer/red/north,
 /area/blackgold/middle/rooms/squad)
 "amZ" = (
-/obj/effect/vehicle_spawner/jeep/medical/plain{
-	dir = 1
+/obj/effect/vehicle_spawner/jeep/medical/plain,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
 	},
-/turf/open/floor/plating/plating_catwalk,
 /area/blackgold/underdeck/vehicle)
 "ana" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food{
@@ -4267,7 +4267,7 @@
 /turf/open/floor/almayer/black/southeast,
 /area/blackgold/upper/stairs/star/aft)
 "aow" = (
-/obj/effect/vehicle_spawner/lav/plasma{
+/obj/effect/vehicle_spawner/apc_cmd/fixed{
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -4317,9 +4317,9 @@
 "aoF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/clothing/k9_handler{
-	density = 0;
-	pixel_y = 32
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -4782,11 +4782,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/rooms/range)
 "aqq" = (
-/obj/effect/vehicle_spawner/jeep/plain,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/blackgold/underdeck/vehicle)
+/obj/structure/machinery/medical_pod/autodoc,
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
 "aqr" = (
 /obj/structure/machinery/cryopod/right,
 /turf/open/floor/almayer/cargo,
@@ -4838,7 +4836,7 @@
 	},
 /area/blackgold/upper/rooms/companycommand/charlie/cc)
 "aqF" = (
-/obj/effect/vehicle_spawner/jeep/plain,
+/obj/effect/vehicle_spawner/miltruck/miltruck_3/fixed,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/underdeck/vehicle)
 "aqG" = (
@@ -4848,12 +4846,6 @@
 	},
 /turf/open/floor/almayer/silverfull2,
 /area/blackgold/lower/rooms/gym)
-"aqH" = (
-/obj/effect/vehicle_spawner/jeep/flatbed/plain,
-/turf/open/floor/almayer{
-	icon_state = "mono"
-	},
-/area/blackgold/underdeck/vehicle)
 "aqI" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
@@ -4948,10 +4940,9 @@
 /area/blackgold/underdeck/vehicle)
 "ard" = (
 /obj/structure/surface/rack,
-/obj/item/hardpoint/support/jeep/jeep_wheels,
-/obj/item/hardpoint/support/jeep/jeep_wheels,
-/obj/item/hardpoint/support/jeep/jeep_wheels,
-/obj/item/hardpoint/support/jeep/jeep_wheels,
+/obj/item/hardpoint/support/locomotion/atruck,
+/obj/item/hardpoint/support/locomotion/atruck,
+/obj/item/hardpoint/support/locomotion/atruck,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -7136,6 +7127,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/item/tool/hand_labeler,
+/obj/item/tool/hand_labeler,
 /turf/open/floor/almayer/green/west,
 /area/blackgold/middle/rooms/squad/prep)
 "ayG" = (
@@ -11377,6 +11370,7 @@
 "aLt" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/book/manual/chef_recipes,
+/obj/structure/machinery/power/apc/almayer/hardened/south,
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aLu" = (
@@ -11388,6 +11382,9 @@
 	},
 /obj/item/reagent_container/food/snacks/sliceable/bread,
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/light/spot{
+	pixel_x = 16
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aLv" = (
@@ -11418,6 +11415,9 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/microwave{
 	pixel_y = 6
+	},
+/obj/structure/machinery/light/spot{
+	pixel_x = 16
 	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
@@ -11690,8 +11690,7 @@
 /turf/open/floor/almayer/green/west,
 /area/blackgold/upper/rooms/kitchen)
 "aMs" = (
-/obj/structure/closet/crate/freezer,
-/turf/open/floor/prison/kitchen,
+/turf/closed/wall/almayer/reinforced,
 /area/blackgold/upper/rooms/kitchen)
 "aMt" = (
 /obj/structure/machinery/disposal,
@@ -11706,7 +11705,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aMv" = (
 /obj/structure/surface/rack,
 /obj/item/storage/box/bodybags{
@@ -11747,6 +11746,10 @@
 "aMy" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/clothing/head/chefhat,
+/obj/structure/machinery/light/spot{
+	dir = 1;
+	pixel_y = 10
+	},
 /turf/open/floor/prison/kitchen,
 /area/blackgold/upper/rooms/kitchen)
 "aMz" = (
@@ -11854,7 +11857,7 @@
 "aMM" = (
 /obj/structure/closet/secure_closet/fridge/organic/stock,
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aMN" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_29"
@@ -11940,6 +11943,10 @@
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = -6
 	},
+/obj/structure/machinery/light/spot{
+	dir = 1;
+	pixel_y = 10
+	},
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/kitchen)
 "aNb" = (
@@ -11952,11 +11959,14 @@
 /area/blackgold/upper/rooms/kitchen)
 "aNd" = (
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aNe" = (
 /obj/structure/closet/secure_closet/fridge/meat/stock,
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "aNf" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/solid{
 	name = "Morgue";
@@ -13817,10 +13827,6 @@
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/intel)
 "aTF" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/intelligence_officer{
-	density = 0;
-	pixel_y = 15
-	},
 /turf/open/floor/almayer/cargo,
 /area/blackgold/upper/rooms/intel)
 "aTG" = (
@@ -29102,7 +29108,7 @@
 /obj/structure/closet/secure_closet/fridge/groceries/stock,
 /obj/structure/closet/secure_closet/fridge/organic/stock,
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "cvt" = (
 /obj/structure/pallet/standard/weapon/mk1,
 /turf/open/floor/almayer/plate,
@@ -31231,6 +31237,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/lower/rooms/shuttle/stern)
+"eXe" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/no_build,
+/area/blackgold/underdeck/req)
 "eXH" = (
 /turf/open/floor/almayer,
 /area/blackgold/upper/rooms/cic)
@@ -31370,6 +31380,11 @@
 "fdn" = (
 /turf/open/floor/almayer/plate,
 /area/blackgold/upper/rooms/companycommand/charlie)
+"fdp" = (
+/obj/structure/machinery/power/apc/almayer/hardened/west,
+/obj/structure/closet/crate/freezer,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/kitchen/freezer)
 "fdC" = (
 /obj/structure/platform_decoration/metal/almayer/north,
 /turf/open/floor/almayer/aicore/no_build,
@@ -31664,6 +31679,12 @@
 /obj/structure/platform/metal/ship/west,
 /turf/open/floor/plating/almayer/no_build,
 /area/blackgold/middle/stairs/star/mid)
+"ftS" = (
+/obj/effect/vehicle_spawner/miltruck/miltruck_2/fixed,
+/turf/open/floor/almayer{
+	icon_state = "test_floor5"
+	},
+/area/blackgold/underdeck/vehicle)
 "fuD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -31694,6 +31715,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
 /area/blackgold/lower/hallways/star/fore)
+"fvZ" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/plating_striped/north,
+/area/blackgold/underdeck/req)
 "fwd" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -32304,6 +32329,10 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/almayer/plate,
 /area/blackgold/middle/rooms/briefing)
+"gdJ" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/plate,
+/area/blackgold/lower/rooms/req)
 "gdO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -33162,9 +33191,9 @@
 /area/blackgold/upper/rooms/hangar)
 "hbc" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/cm_vending/clothing/k9_synth{
-	density = 0;
-	pixel_y = 32
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/almayer/green/north,
 /area/blackgold/middle/rooms/squad/prep)
@@ -34679,6 +34708,12 @@
 	},
 /turf/open_space,
 /area/blackgold/upper/rooms/hangar)
+"iCf" = (
+/obj/vehicle/multitile/tank/aev{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/blackgold/underdeck/vehicle)
 "iCJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orange/west,
@@ -37058,10 +37093,10 @@
 /area/blackgold/middle/rooms/orbital)
 "lif" = (
 /obj/vehicle/motorbike/green{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/almayer{
-	icon_state = "plate"
+	icon_state = "test_floor5"
 	},
 /area/blackgold/underdeck/vehicle)
 "lip" = (
@@ -40330,6 +40365,12 @@
 	},
 /turf/open/floor/almayer/aicore/no_build/ai_floor2,
 /area/blackgold/lower/rooms/aicore)
+"ous" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/blackgold/middle/rooms/medical)
 "ouO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -42779,6 +42820,10 @@
 /obj/structure/flora/pottedplant/random,
 /turf/open/floor/wood/ship,
 /area/blackgold/upper/rooms/commandbunks/xo)
+"qWC" = (
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/plating/northeast,
+/area/blackgold/underdeck/req)
 "qXe" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -43823,6 +43868,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/blackgold/middle/maint/port/mid)
+"seh" = (
+/obj/vehicle/motorbike/green{
+	dir = 8
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/blackgold/underdeck/vehicle)
 "sei" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -44388,7 +44441,7 @@
 /obj/structure/closet/secure_closet/fridge/fish/stock,
 /obj/structure/closet/secure_closet/fridge/organic/stock,
 /turf/open/floor/almayer/plate,
-/area/blackgold/upper/rooms/kitchen)
+/area/blackgold/upper/rooms/kitchen/freezer)
 "sGt" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -46635,6 +46688,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/green/south,
 /area/blackgold/middle/rooms/squad/prep)
+"vom" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/special,
+/turf/open/floor/almayer/plate,
+/area/blackgold/middle/rooms/squad/prep)
 "voC" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -47255,6 +47312,13 @@
 "vTW" = (
 /turf/open/floor/almayer/red/southwest,
 /area/blackgold/upper/rooms/brig/stairs)
+"vUH" = (
+/obj/structure/prop/hybrisa/Factory/Conveyor_belt{
+	layer = 2.9
+	},
+/obj/structure/closet/crate/hazheat,
+/turf/open/floor/almayer/no_build,
+/area/blackgold/underdeck/req)
 "vUV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/secure/ammo,
@@ -47451,6 +47515,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/black/east,
 /area/blackgold/middle/hallways/port/fore)
+"wew" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/closet/crate/freezer,
+/turf/open/floor/almayer/plate,
+/area/blackgold/upper/rooms/kitchen)
 "weR" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -48314,11 +48383,11 @@
 /turf/open/floor/almayer/no_build/plating,
 /area/blackgold/lower/rooms/aicore)
 "xey" = (
-/obj/vehicle/motorbike/green{
-	dir = 4
+/obj/effect/vehicle_spawner/jeep/command/plain{
+	dir = 1
 	},
 /turf/open/floor/almayer{
-	icon_state = "mono"
+	icon_state = "test_floor4"
 	},
 /area/blackgold/underdeck/vehicle)
 "xeN" = (
@@ -56703,7 +56772,7 @@ qlE
 jnf
 ssa
 edc
-edc
+iCf
 edc
 ssa
 lsW
@@ -57125,7 +57194,7 @@ lsW
 mWH
 mWH
 ssa
-aqq
+mWH
 mWH
 jnf
 obE
@@ -57212,7 +57281,7 @@ lsW
 mWH
 mZS
 fUq
-mZS
+ftS
 mWH
 kzN
 obE
@@ -57485,9 +57554,9 @@ pdJ
 qlE
 kzN
 mWH
-mZS
-fUq
-aiU
+lif
+seh
+lif
 mWH
 lsW
 obL
@@ -57572,9 +57641,9 @@ pdJ
 qlE
 jnf
 mWH
-mWH
-ssa
-mWH
+tcL
+hYa
+tcL
 mhO
 lsW
 obL
@@ -57734,7 +57803,7 @@ lsW
 mWH
 mWH
 ssa
-aqH
+mWH
 mWH
 jnf
 obE
@@ -57746,9 +57815,9 @@ pdJ
 qlE
 jnf
 mWH
-xey
-lif
-xey
+mWH
+ssa
+mWH
 egJ
 lsW
 obL
@@ -57821,7 +57890,7 @@ lsW
 mWH
 mZS
 fUq
-mZS
+amZ
 mWH
 kzN
 obE
@@ -57834,7 +57903,7 @@ qlE
 kzN
 mWH
 mZS
-fUq
+aiU
 mZS
 mWH
 lsW
@@ -57922,7 +57991,7 @@ jnf
 ssa
 edc
 edc
-amZ
+edc
 ssa
 lsW
 obL
@@ -58095,7 +58164,7 @@ qlE
 kzN
 mWH
 mZS
-fUq
+xey
 mZS
 mWH
 lsW
@@ -58181,9 +58250,9 @@ pdJ
 qlE
 jnf
 mWH
-tcL
-hYa
-tcL
+mWH
+ssa
+mWH
 mhO
 lsW
 obL
@@ -62352,7 +62421,7 @@ drY
 nPo
 nPo
 jzQ
-onU
+vUH
 nPo
 drY
 kXK
@@ -62526,7 +62595,7 @@ drY
 tjG
 nPo
 hln
-onU
+vUH
 oTd
 drY
 kXK
@@ -62865,7 +62934,7 @@ drY
 gOY
 ydL
 ydL
-ydL
+qWC
 noo
 kcB
 drY
@@ -63140,7 +63209,7 @@ jzQ
 drY
 kXK
 drY
-gOY
+fvZ
 ydL
 ydL
 ydL
@@ -65568,7 +65637,7 @@ kcB
 drY
 rjH
 drY
-jzQ
+eXe
 jzQ
 jzQ
 jzQ
@@ -65910,7 +65979,7 @@ drY
 gOY
 qHM
 noo
-ydL
+qWC
 ydL
 kcB
 drY
@@ -79475,7 +79544,7 @@ bjB
 aky
 alc
 eHa
-akz
+gdJ
 bKw
 dXY
 blf
@@ -98446,10 +98515,10 @@ ayh
 anE
 anE
 anE
+anE
 anK
 anK
-anK
-anK
+anE
 anE
 anE
 anE
@@ -98533,10 +98602,10 @@ ayh
 dbc
 wJN
 gSb
-ayh
+vom
 ayN
 ayN
-ayh
+vom
 ayH
 wJN
 bpd
@@ -98620,10 +98689,10 @@ ayh
 anE
 anE
 anE
-anK
+anE
 vRJ
 vRJ
-anK
+anE
 anE
 anE
 anE
@@ -107846,7 +107915,7 @@ azN
 azI
 bpl
 hOc
-hOc
+ous
 hOc
 aba
 abM
@@ -107933,7 +108002,7 @@ azO
 azJ
 bpl
 hOc
-hOc
+aqq
 hOc
 bAO
 aaX
@@ -130830,8 +130899,8 @@ aNc
 aLO
 btd
 aLO
-aMs
-aMs
+aLO
+aLO
 aLO
 beL
 aLv
@@ -130912,11 +130981,11 @@ aNr
 auB
 bgF
 atT
-aLf
-aLf
+aMs
+aMs
 gjg
-aLf
-aLf
+aMs
+aMs
 aMt
 aMn
 bsI
@@ -130999,11 +131068,11 @@ aNr
 auB
 buf
 atT
-aLf
-aNd
+aMs
+fdp
 aNd
 aNe
-aLf
+aMs
 bfp
 bfe
 bfe
@@ -131086,11 +131155,11 @@ aNr
 wyO
 bug
 atT
-aLf
+aMs
 aMM
 aNd
 sGs
-aLf
+aMs
 aMy
 aLO
 aLO
@@ -131173,16 +131242,16 @@ aNr
 xKX
 buh
 atU
-aLf
+aMs
 cvs
 aNd
 aMu
-aLf
+aMs
 aMz
 aMp
 aLA
 bsw
-aLA
+wew
 aLf
 brl
 jJD
@@ -131260,11 +131329,11 @@ aNr
 aNq
 acY
 aNm
-aLf
-aLf
-aLf
-aLf
-aLf
+aMs
+aMs
+aMs
+aMs
+aMs
 aLf
 aLf
 aLf

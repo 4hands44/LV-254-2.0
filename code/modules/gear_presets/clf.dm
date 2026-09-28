@@ -97,6 +97,8 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_R_EAR) //fuck you I know this is shitcode
 
+//light infantry
+
 /datum/equipment_preset/clf/soldier/light
 	name = "Insurgent Soldier(light inf)"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -151,6 +153,58 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs(new_human), WEAR_R_EAR)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_gasmask(new_human), WEAR_R_EAR) //fuck you I know this is shitcode
+
+//hazardous environs
+
+/datum/equipment_preset/clf/soldier/hazard
+	name = "Insurgent Soldier(hazard)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_CLF
+	rank = JOB_CLF
+	role_comm_title = "GRL"
+
+	minimap_icon = "clf_mil"
+
+	skills = /datum/skills/clf
+
+/datum/equipment_preset/clf/soldier/hazard/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/insurgent/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/militia/smartgun/hazard(new_human), WEAR_JACKET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/hybrisa/kelland_mining_helmet(new_human), WEAR_HEAD)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/mercenary/miner(new_human), WEAR_HEAD)
+	spawn_rebel_shoes(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/clf_patch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv/hacked/clf, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/mre_food_packet/clf, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_IN_BACK)
+	if(prob(50))
+		spawn_rebel_smg(new_human)
+	else
+		spawn_rebel_rifle(new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+	if(prob(15))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_FACE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather(new_human), WEAR_FACE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs/earplugs(new_human), WEAR_R_EAR)
+
+//IED
 
 /datum/equipment_preset/clf/soldier/ied
 	name = "Insurgent Soldier(suicider)"
@@ -1578,7 +1632,7 @@
 		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", 0, /obj/item/storage/pouch/sling, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Medical Pouch", 0, /obj/item/storage/pouch/medical, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("M-FAK (empty)", 0, /obj/item/storage/pouch/medical, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 

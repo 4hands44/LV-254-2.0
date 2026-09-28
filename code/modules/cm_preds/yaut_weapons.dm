@@ -565,8 +565,9 @@
 		return TRUE
 
 	if(issamespecies(user, victim))
-		to_chat(user, SPAN_HIGHDANGER("ARE YOU OUT OF YOUR MIND!?"))
-		return
+		if(!HAS_TRAIT(user, TRAIT_HEARTLESS))
+			to_chat(user, SPAN_HIGHDANGER("ARE YOU OUT OF YOUR MIND!?"))
+			return
 
 	if(isspeciessynth(victim))
 		to_chat(user, SPAN_WARNING("You can't flay metal..."))

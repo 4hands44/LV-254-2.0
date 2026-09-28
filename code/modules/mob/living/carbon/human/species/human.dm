@@ -123,6 +123,24 @@
 	H.status_flags &= ~STATUS_FLAGS_DEBILITATE
 	return ..()
 
+// Use for human bosses without them being stupidly OP
+
+/datum/species/human/hero/lesser
+	name = "Lesser Human Hero"
+	name_plural = "Lesser Human Heroes"
+	brute_mod = 0.75
+	burn_mod = 0.75
+	pain_type = /datum/pain/human_hero/lesser
+	stamina_type = /datum/stamina/extra
+	darksight = 3
+	knock_down_reduction = 1
+	stun_reduction = 1
+	total_health = 225
+
+/datum/species/human/hero/lesser/handle_post_spawn(mob/living/carbon/human/H)
+	return ..()
+
+// Thrall
 
 /datum/species/human/hero/thrall
 	name = "Thrall"
@@ -144,6 +162,13 @@
 	burn_mod = 1.50
 	reagent_tag = IS_HORROR
 	flags = HAS_SKIN_COLOR|NO_BREATHE|NO_POISON|HAS_LIPS|NO_CLONE_LOSS|NO_POISON|NO_BLOOD|NO_SLIP|NO_CHEM_METABOLIZATION
+	mob_inherent_traits = list(
+		TRAIT_YAUTJA_TECH,
+		TRAIT_SUPER_STRONG,
+		TRAIT_EMOTE_CD_EXEMPT,
+		TRAIT_IRON_TEETH,
+		TRAIT_HEARTLESS,
+	)
 	unarmed_type = /datum/unarmed_attack/punch/strong
 	secondary_unarmed_type = /datum/unarmed_attack/bite/strong
 	death_message = "doubles over, unleashes a horrible, ear-shattering scream, then falls motionless and still..."
@@ -179,3 +204,5 @@
 
 /datum/species/human/spook/handle_paygrades()
 	return ""
+
+

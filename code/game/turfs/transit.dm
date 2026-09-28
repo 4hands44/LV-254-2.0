@@ -140,6 +140,12 @@
 /obj/structure/pallet/get_paradrop_scatter()
 	return 4
 
+/obj/vehicle/multitile/can_paradrop()
+	return TRUE
+
+/obj/vehicle/multitile/get_paradrop_scatter()
+	return 4
+
 /atom/movable/proc/handle_paradrop(turf/target, dropship_name)
 	clear_active_explosives()
 	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_SOURCE_DROPSHIP_INTERACTION)

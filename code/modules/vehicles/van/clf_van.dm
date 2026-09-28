@@ -274,13 +274,6 @@
 /obj/vehicle/multitile/clf_van/proc/reset_overdrive()
 	misc_multipliers["move"] += overdrive_speed_mult
 
-/obj/vehicle/multitile/clf_van/get_projectile_hit_boolean(obj/projectile/P)
-	if(src == P.original) //clicking on the van itself will hit it.
-		var/hitchance = P.get_effective_accuracy()
-		if(prob(hitchance))
-			return TRUE
-	return FALSE
-
 /obj/vehicle/multitile/clf_van/Collide(atom/A)
 	if(!seats[VEHICLE_DRIVER])
 		return FALSE

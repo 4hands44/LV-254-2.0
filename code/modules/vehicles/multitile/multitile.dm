@@ -287,8 +287,21 @@
 	for(var/obj/item/hardpoint/H in hardpoints)
 		. += "There [H.p_are()] \a [H] module[H.p_s()] installed."
 		H.examine(user, TRUE)
+	if(vehicle_pen_armor > 0)
+		if(vehicle_pen_armor == 1)
+			. += "The [src] has no armor."
+		if(vehicle_pen_armor == 2)
+			. += "The [src] looks like it could bounce some weaker bullets."
+		if(vehicle_pen_armor == 3)
+			. += "The [src] has LIGHT Armor. Probably best to use AP bullets against it."
+		if(vehicle_pen_armor == 4)
+			. += "The [src] has MEDIUM Armor. Only very powerful AP bullets would probably get through that."
+		if(vehicle_pen_armor == 5)
+			. += "The [src] has HEAVY armor. Only dedicated anti-material weapons are getting through that."
+		if(vehicle_pen_armor > 5)
+			. += "The [src] has VERY HEAVY armor. Only dedicated Anti-Tank weapons are likely getting through that."
 	if(clamped)
-		. += "There is a vehicle clamp attached."
+		. += "This vehicle isnt going anywhere. There is a vehicle clamp attached to the wheel."
 	if(isxeno(user) && interior)
 		var/passengers_amount = interior.passengers_taken_slots
 		for(var/datum/role_reserved_slots/RRS in interior.role_reserved_slots)

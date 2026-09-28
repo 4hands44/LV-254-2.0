@@ -203,8 +203,6 @@
 	)
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
 
-
-
 /obj/item/weapon/gun/pkp/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/attachie = new /obj/item/attachable/pkpbarrel(src)

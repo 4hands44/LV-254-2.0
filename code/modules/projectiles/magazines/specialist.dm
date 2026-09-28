@@ -258,6 +258,12 @@
 	default_ammo = /datum/ammo/rocket/ap
 	desc = "A rocket tube loaded with an AP warhead. Capable of piercing heavily armored targets. Deals very little to no splash damage. Inflicts guaranteed stun to most targets. Has high accuracy within 7 meters."
 
+/obj/item/ammo_magazine/rocket/frag
+	name = "\improper 84mm high-explosive fragmentation rocket"
+	icon_state = "frag_rocket"
+	default_ammo = /datum/ammo/rocket/frag
+	desc = "A rocket tube loaded with a HEFA warhead. Perfect for clearing out infantry. Deals wide area low impact anti-personal damage. Inflicts guaranteed stun to most targets. Has high accuracy within 7 meters."
+
 /obj/item/ammo_magazine/rocket/wp
 	name = "\improper 84mm white-phosphorus rocket"
 	icon_state = "wp_rocket"

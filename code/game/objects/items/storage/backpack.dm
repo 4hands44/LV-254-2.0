@@ -619,6 +619,20 @@
 	icon_state = "marinebigsatch"
 	max_storage_space = 15
 
+/obj/item/storage/backpack/marine/satchel/oxygen_pack
+	name = "\improper USCM Hazardous environs pack"
+	desc = "A heavy-duty IMP based backpack with an attached airsupply."
+	icon_state = "oxygen_backpack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN
+	max_storage_space = 15
+
+
 /obj/item/storage/backpack/marine/satchel/big //wacky squad marine loadout item, its the IO backpack.
 	name = "\improper USCM logistics IMP backpack"
 	desc = "A standard-issue backpack worn by logistics personnel. It is occasionally issued to combat personnel for longer term expeditions and deep space incursions."
@@ -880,12 +894,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_storage_space = 10
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
-	flags_equip_slot = SLOT_WAIST
+	flags_equip_slot = SLOT_WAIST|SLOT_BACK
+	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
 	icon_state = "g8pouch"
 	item_state = "g8pouch"
 	icon = 'icons/obj/items/clothing/belts/belts_by_map/jungle.dmi'
 	item_icons = list(
-		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/jungle.dmi'
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/jungle.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/jungle.dmi'
 	)
 	flags_atom = FPRINT // has gamemode skin
 	can_hold_skill = list()

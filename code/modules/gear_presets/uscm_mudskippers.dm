@@ -208,7 +208,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 //storage
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/command/full(new_human), WEAR_L_STORE)
 //armor
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/MP/CO(new_human), WEAR_JACKET)
@@ -507,9 +507,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/bridge(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner(new_human), WEAR_JACKET)
 //storage
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human), WEAR_L_STORE)
 //vest items
-	new_human.equip_to_slot_or_del(new /obj/item/smartgun_battery(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/heavygun_battery(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_ACCESSORY)
@@ -523,7 +523,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/plasma/xm99a/scoped(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud/plasma(new_human), WEAR_EYES)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/smartgunner/full(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/pmc_mod88(new_human), WEAR_R_STORE)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/xm99/full(new_human), WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/plasma/xm99a/scoped(new_human), WEAR_J_STORE)
@@ -537,13 +537,13 @@
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles(new_human), WEAR_EYES)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/smartgunner/full(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/pmc_mod88(new_human), WEAR_R_STORE)
 		if(4)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/hpr(new_human), WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lmg/braced(new_human), WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud/plasma(new_human), WEAR_EYES)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/smartgunner/full(new_human), WEAR_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_R_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/pmc_mod88(new_human), WEAR_R_STORE)
 		if(5)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/hpr(new_human), WEAR_WAIST)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lmg/braced(new_human), WEAR_J_STORE)
@@ -640,7 +640,8 @@
 //equipment
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/crutches(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator(new_human), WEAR_IN_BACK)
 //kit
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/czsp/medical(new_human), WEAR_L_HAND)
@@ -715,6 +716,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/sling(new_human), WEAR_R_STORE)
 //items
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human),WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
 //vest items
 	new_human.equip_to_slot_or_del(new /obj/item/device/whiskey_supply_beacon(new_human), WEAR_IN_ACCESSORY)
@@ -732,18 +734,6 @@
 
 /datum/equipment_preset/uscm_mudskippers/engineer/e3
 	paygrades = list(PAY_SHORT_ME3)
-
-/datum/equipment_preset/proc/pick_engi_kit(mob/living/carbon/human/new_human)
-	if(!istype(new_human)) return
-	var/engi_kit = pick(
-		/obj/item/storage/box/kit/sapper,
-		/obj/item/storage/box/kit/sentry,
-		/obj/item/storage/box/spec/pyro,
-		/obj/item/storage/box/kit/at,
-		/obj/item/storage/box/kit/breacher,
-		/obj/item/storage/box/kit/ewar,
-		)
-	new_human.equip_to_slot_or_del(new engi_kit, WEAR_L_HAND)
 
 //---RFM---//
 /datum/equipment_preset/uscm_mudskippers/rfm
@@ -801,7 +791,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/carrier(new_human), WEAR_JACKET)
 //storage
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/squad(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/utility/full(new_human), WEAR_WAIST)
 //items
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv, WEAR_IN_BACK)
@@ -883,7 +873,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/carrier(new_human), WEAR_JACKET)
 //storage
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/squad(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/ifak(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/utility/full(new_human), WEAR_WAIST)
 //items
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiontracker/adv, WEAR_IN_BACK)

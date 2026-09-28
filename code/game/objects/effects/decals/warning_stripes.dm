@@ -132,3 +132,21 @@
 	name = "\improper Worn USCM logo"
 	desc = "The symbol of the United States Colonial Marines corps."
 	icon_state = "small_uscm_dirty"
+
+/obj/effect/decal/warning_stripes/worn
+	icon = 'icons/turf/floors/space.dmi'
+	icon_state = "worn_stripes"
+
+/obj/effect/decal/warning_stripes/worn/corner
+	icon_state = "worn_stripescorner"
+
+/obj/effect/decal/warning_stripes/worn/stripes_double
+	icon_state = "worn_stripes_double"
+
+/obj/effect/decal/warning_stripes/worn/worn_stripes_large
+	icon_state = "worn_stripes_large"
+	layer = TURF_LAYER
+
+/obj/effect/decal/warning_stripes/worn/warning_platform
+	icon_state = "warning_plat"
+	layer = WALL_LAYER

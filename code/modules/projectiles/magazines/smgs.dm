@@ -191,6 +191,20 @@
 	icon_state = "type64mag"
 	max_rounds = 64
 	gun_type = /obj/item/weapon/gun/smg/bizon
+	ammo_band_icon = "+type64mag_band"
+	ammo_band_icon_empty = "+type64mag_band_e"
+
+/obj/item/ammo_magazine/smg/bizon/ap
+	name = "\improper Type 64 Armor-Piercing Helical Magazine (7.62x19mm)"
+	desc = "A 64 round magazine for the Type 64 submachinegun, this one is loaded with armor-piercing rounds meant to penetrate armor."
+	default_ammo = /datum/ammo/bullet/smg/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/smg/bizon/incen
+	name = "\improper Type 64 Incendiary Helical Magazine (7.62x19mm)"
+	desc = "A 64 round magazine for the Type 64 submachinegun, this one is loaded with phosphrous-tipped rounds meant to ignite targets."
+	default_ammo = /datum/ammo/bullet/smg/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 //-------------------------------------------------------
 //GENERIC UZI //Based on the uzi submachinegun, of course.

@@ -260,7 +260,7 @@
 	G = new nade_type(T)
 	var/det_time = 10
 
-	if (nade_type == /obj/item/explosive/grenade/custom/teargas)
+	if (nade_type == /obj/item/explosive/grenade/tear_gas)
 		det_time = 2
 	else if (nade_type == /obj/item/explosive/grenade/slug/baton)
 		det_time = 0

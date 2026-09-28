@@ -817,7 +817,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A modified M10 marine helmet for ComTechs. Features a toggleable welding screen for eye protection."
 	icon_state = "tech_helmet"
 	specialty = "M10 technician"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/welding_visor)
+	built_in_visors = list(new /obj/item/device/helmet_visor/uscm, new /obj/item/device/helmet_visor/night_vision/marine_raider, new /obj/item/device/helmet_visor/welding_visor, )
 
 /obj/item/clothing/head/helmet/marine/welding
 	name = "\improper M10 welding helmet"
@@ -1520,6 +1520,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/CLF.dmi'
 	)
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_HEAD
+	flags_heat_protection = BODY_FLAG_HEAD
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGH
@@ -1757,6 +1761,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR
 	built_in_visors = list()
+
+/obj/item/clothing/head/helmet/marine/cbrn_hood/volcano
+	name = "M3 Hazardous Enviroments Hooded Helmet"
+	desc = "A thick rubbery suit, treated to protect the wearer in various hot and toxic climates where a full spacesuit is too much. Using a liquid cooling internal lining running throughout the suit, it reduces the wearer's body temprature and protects them, while also sealing out any toxic fumes of the environment. Sadly the built in Anti-Fog ballistic visor, is Anti-fog in name only."
+	icon_state = "volcano_hood"
+	item_state = "volcano_hood"
+	armor_bio = CLOTHING_ARMOR_HARDCORE
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 
 /obj/item/clothing/head/helmet/marine/cbrn_hood/advanced
 	armor_melee = CLOTHING_ARMOR_HIGH

@@ -475,6 +475,10 @@
 	)
 	icon_state = "kelland_mining_helmet"
 	item_state = "kelland_mining_helmet"
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_HEAD
+	flags_heat_protection = BODY_FLAG_HEAD
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_laser = CLOTHING_ARMOR_LOW
@@ -658,7 +662,11 @@
 	icon_state = "kellandmining_oversuit"
 	item_state = "kellandmining_oversuit"
 	uniform_restricted = null
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	fire_intensity_resistance = BURN_LEVEL_TIER_1
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_laser = CLOTHING_ARMOR_LOW
@@ -700,7 +708,11 @@
 	icon_state = "kellandmining_alt_oversuit"
 	item_state = "kellandmining_alt_oversuit"
 	uniform_restricted = null
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	fire_intensity_resistance = BURN_LEVEL_TIER_1
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_laser = CLOTHING_ARMOR_LOW

@@ -63,8 +63,9 @@
 
 		list("POUCHES", -1, null, null),
 		list("Autoinjector Pouch", floor(scale * 1), /obj/item/storage/pouch/autoinjector, VENDOR_ITEM_REGULAR),
-		list("Medical Kit Pouch", floor(scale * 2), /obj/item/storage/pouch/medkit, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Full)", floor(scale * 5), /obj/item/storage/pouch/firstaid/full, VENDOR_ITEM_REGULAR),
+		list("Multiple First-Aid Kit (Full)", floor(scale * 2), /obj/item/storage/pouch/medkit/full_advanced, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Tan)", floor(scale * 15), /obj/item/storage/ifak, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Black)", floor(scale * 15), /obj/item/storage/ifak/blk, VENDOR_ITEM_REGULAR),
 		list("First Responder Pouch", floor(scale * 2), /obj/item/storage/pouch/first_responder, VENDOR_ITEM_REGULAR),
 		list("Syringe Pouch", floor(scale * 2), /obj/item/storage/pouch/syringe, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch (Full)", floor(scale * 2), /obj/item/storage/pouch/tools/full, VENDOR_ITEM_REGULAR),

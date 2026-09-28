@@ -54,6 +54,7 @@
 	for(var/icon in GLOB.player_list)
 		var/mob/mob = icon
 		mob.client.images -= normal_image
+		mob.client.images -= under_image
 	return ..()
 
 /obj/structure/roof/proc/add_default_image(subsystem, mob/mob)

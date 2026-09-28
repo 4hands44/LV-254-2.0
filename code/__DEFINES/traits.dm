@@ -181,6 +181,9 @@
 #define TRAIT_INFILTRATOR_SYNTH "t_infiltrator_synth"
 /// Makes it impossible to strip the inventory of this mob.
 #define TRAIT_UNSTRIPPABLE "t_unstrippable"
+/// Tagrilla trait to stop people using his funny hammer
+#define TRAIT_TAGRILLA "t_tagrilla"
+
 
 // HIVE TRAITS
 /// If the Hive is a Xenonid Hive
@@ -247,6 +250,8 @@
 #define TRAIT_SPEC(spec_type) "t_spec_[spec_type]"
 /// If the mob won't drop items held in face slot when downed
 #define TRAIT_IRON_TEETH "t_iron_teeth"
+/// If the mob won't care about horrible acts
+#define TRAIT_HEARTLESS "t_heartless"
 
 // -- ability traits --
 /// Xenos with this trait cannot have plasma transfered to them
@@ -318,6 +323,7 @@
 GLOBAL_LIST_INIT(mob_traits, list(
 	TRAIT_YAUTJA_TECH,
 	TRAIT_SUPER_STRONG,
+	TRAIT_TAGRILLA,
 	TRAIT_FOREIGN_BIO,
 	TRAIT_INTENT_EYES,
 	TRAIT_NESTED,
@@ -349,6 +355,7 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_UNDENSE" = TRAIT_UNDENSE,
 		"TRAIT_YAUTJA_TECH" = TRAIT_YAUTJA_TECH,
 		"TRAIT_SUPER_STRONG" = TRAIT_SUPER_STRONG,
+		"TRAIT_TAGRILLA" = TRAIT_TAGRILLA,
 		"TRAIT_FOREIGN_BIO" = TRAIT_FOREIGN_BIO,
 		"TRAIT_INTENT_EYES" = TRAIT_INTENT_EYES,
 		"TRAIT_INFILTRATOR_SYNTH" = TRAIT_INFILTRATOR_SYNTH,

@@ -5,6 +5,7 @@
 	name = "Sons of Marina Militia(SOM)"
 	assignment = JOB_SOM_MILITIA
 	rank = JOB_SOM_MILITIA
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -72,6 +73,7 @@
 	name = "Sons of Marina Witch Doktor(SOM)"
 	assignment = JOB_SOM_MEDIC
 	rank = JOB_SOM_MEDIC
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -112,6 +114,7 @@
 	name = "Sons of Marina Zealot(SOM)"
 	assignment = JOB_SOM_ZEALOT
 	rank = JOB_SOM_ZEALOT
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -145,6 +148,7 @@
 	name = "Sons of Marina Zealot Gunner(SOM)"
 	assignment = JOB_SOM_ZEALOT
 	rank = JOB_SOM_ZEALOT
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -177,6 +181,7 @@
 	name = "Sons of Marina Paladin(SOM)"
 	assignment = JOB_SOM_PALLY
 	rank = JOB_SOM_PALLY
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -211,6 +216,7 @@
 	name = "Sons of Marina Acolyte(SOM)"
 	assignment = JOB_SOM_ACOLYTE
 	rank = JOB_SOM_ACOLYTE
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -240,6 +246,7 @@
 	name = "Sons of Marina Shaman(SOM)"
 	assignment = JOB_SOM_PRIEST
 	rank = JOB_SOM_PRIEST
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -274,6 +281,7 @@
 	name = "Sons of Marina Ascended(SOM)"
 	assignment = JOB_SOM_PRIEST
 	rank = JOB_SOM_PRIEST
+	faction = list(FACTION_XENOMORPH, )
 	languages = list(LANGUAGE_CELTIC, LANGUAGE_ENGLISH)
 	skills = /datum/skills/civilian/survivor/militia
 
@@ -290,7 +298,7 @@
 	spawn_rebel_shoes(new_human)
 	spawn_rebel_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/yautja/knife(new_human), WEAR_R_STORE)
 	spawn_weapon(/obj/item/weapon/gun/rifle/l42a/abr40, /obj/item/ammo_magazine/rifle/l42a/abr40, new_human)
 
 	if(prob(50))

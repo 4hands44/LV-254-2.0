@@ -91,6 +91,8 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	qdel(src)
 
 /obj/structure/flora/ex_act(power)
+	if(explo_proof)
+		return
 	if(power >= EXPLOSION_THRESHOLD_VLOW)
 		deconstruct(FALSE)
 
@@ -153,14 +155,37 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	icon = 'icons/obj/structures/props/natural/vegetation/ground_map64.dmi'
 	desc = "What an enormous tree!"
 	density = FALSE
+	unacidable = TRUE
+	unslashable = TRUE
+	explo_proof = TRUE
 	layer = ABOVE_XENO_LAYER
 
 // LV-624's Yggdrasil Tree
-/obj/structure/flora/tree/jungle/bigtreeTR
+/obj/structure/roof/flora/tree/jungle/bigtreeTR
+	name = "huge tree"
+	desc = "What an enormous tree!"
+	icon = 'icons/obj/structures/props/natural/vegetation/ground_map64.dmi'
 	icon_state = "bigtreeTR"
+	density = FALSE
+	unacidable = TRUE
+	unslashable = TRUE
+	explo_proof = TRUE
+	layer = ABOVE_XENO_LAYER
+	bound_height = 128
+	bound_width = 128
 
-/obj/structure/flora/tree/jungle/bigtreeTL
+/obj/structure/roof/flora/tree/jungle/bigtreeTL
+	name = "huge tree"
+	desc = "What an enormous tree!"
+	icon = 'icons/obj/structures/props/natural/vegetation/ground_map64.dmi'
 	icon_state = "bigtreeTL"
+	density = FALSE
+	unacidable = TRUE
+	unslashable = TRUE
+	explo_proof = TRUE
+	layer = ABOVE_XENO_LAYER
+	bound_height = 128
+	bound_width = 128
 
 /obj/structure/flora/tree/jungle/bigtreeBOT
 	icon_state = "bigtreeBOT"
@@ -175,6 +200,10 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 /obj/structure/flora/tree/tyrargo/tree_3
 	icon_state = "bald"
 
+/obj/structure/flora/tree/tyrargo/tree_3/Initialize(mapload, ...)
+	. = ..()
+	AddComponent(/datum/component/shimmy_around, south_offset = 5)
+
 /obj/structure/flora/tree/tyrargo/tree_4
 	icon_state = "dead_tree1"
 
@@ -188,6 +217,10 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 /obj/structure/flora/tree/tyrargo_small
 	icon = 'icons/obj/structures/props/natural/vegetation/tyrargo_dead_trees.dmi'
 	icon_state = "tree_1"
+
+/obj/structure/flora/tree/tyrargo_small/Initialize(mapload, ...)
+	. = ..()
+	AddComponent(/datum/component/shimmy_around, south_offset = 5)
 
 /obj/structure/flora/tree/tyrargo_small/tree_2
 	icon_state = "tree_2"
@@ -205,12 +238,52 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	icon_state = "tree_stump"
 	density = FALSE
 
+// alien tree
+
+/obj/structure/flora/tree/alien
+	name = "ashrose tree"
+	desc = "Commonly known as the 'Ashrose Tree', this tall xenoflora is adapted to hostile environments and is nearly impervious to heat. Scientifically classified as 'pyroflora rosea thermalis'."
+	icon = 'icons/obj/structures/props/natural/vegetation/alien_tree.dmi'
+	icon_state = "tree1"
+	density = FALSE
+	layer = ABOVE_XENO_LAYER
+	fire_flag = FLORA_NO_BURN
+
+/obj/structure/flora/tree/alien/tree_1
+	icon_state = "tree1"
+
+/obj/structure/flora/tree/alien/tree_2
+	icon_state = "tree2"
+
+/obj/structure/flora/tree/alien/tree_3
+	icon_state = "tree3"
+
+/obj/structure/flora/tree/alien/tree_4
+	icon_state = "tree4"
+
+/obj/structure/flora/tree/alien/tree_5
+	icon_state = "tree5"
+
+/obj/structure/flora/tree/alien/tree_6
+	name = "dead ashrose tree"
+	icon_state = "tree6"
+
+/obj/structure/flora/tree/alien/tree_7
+	name = "ashrose tree stump"
+	icon_state = "tree7"
+
+/obj/structure/flora/tree/alien/tree_8
+	name = "ashrose tree stump"
+	icon_state = "tree8"
+
 //grass
 /obj/structure/flora/grass
 	name = "grass"
 	icon = 'icons/obj/structures/props/natural/vegetation/ausflora.dmi'
 	density = FALSE
 	fire_flag = FLORA_BURN_NO_SPREAD
+	layer = UNDERFLOOR_OBJ_LAYER
+	plane = FLOOR_PLANE
 /*
 
 ICE GRASS
@@ -375,6 +448,8 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	unslashable = TRUE
 	unacidable = TRUE
 	cut_level = PLANT_CUT_MACHETE
+	layer = OBJ_LAYER
+	plane = GAME_PLANE
 	var/overlay_type = "tallgrass_overlay"
 
 /obj/structure/flora/grass/tallgrass/Initialize()
@@ -401,13 +476,24 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
 
-//ICE COLONY - SOROKYNE//
+//ICE COLONY
 /obj/structure/flora/grass/tallgrass/ice
 	color = COLOR_G_ICE
 	icon_state = "tallgrass"
-	desc = "A large swathe of bristling snowgrass"
+	desc = "A large swathe of bristling snowgrass."
 
 /obj/structure/flora/grass/tallgrass/ice/corner
+	icon_state = "tallgrass_corner"
+	overlay_type = "tallgrass_overlay_corner"
+	center = FALSE
+
+// SOROKYNE
+/obj/structure/flora/grass/tallgrass/jungle_alt
+	color = COLOR_G_SORO
+	icon_state = "tallgrass"
+	desc = "A thick carpet of bristling junglegrass, vibrant and untamed."
+
+/obj/structure/flora/grass/tallgrass/jungle_alt/corner
 	icon_state = "tallgrass_corner"
 	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
@@ -417,13 +503,46 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/grass/tallgrass/jungle
 	color = COLOR_G_JUNG
 	icon_state = "tallgrass"
-	desc = "A clump of vibrant jungle grasses"
+	desc = "A clump of vibrant jungle grasses."
 	fire_flag = FLORA_BURN_SPREAD_ONCE
 
 /obj/structure/flora/grass/tallgrass/jungle/corner
 	icon_state = "tallgrass_corner"
 	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
+
+//TYRARGO - TEMPERATE/TAIGA MAPS//
+
+/obj/structure/flora/grass/temperate
+	icon = 'icons/obj/structures/props/natural/vegetation/temperate_flora.dmi'
+	icon_state = "1"
+
+/obj/structure/flora/wood
+	name = "stick"
+	icon = 'icons/obj/structures/props/natural/vegetation/tyrargo_wood_flora.dmi'
+	icon_state = "stick1"
+	density = FALSE
+	fire_flag = FLORA_BURN_NO_SPREAD
+
+/obj/structure/flora/wood/stick1
+	icon_state = "stick1"
+
+/obj/structure/flora/wood/stick2
+	icon_state = "stick2"
+
+/obj/structure/flora/wood/stick3
+	icon_state = "stick3"
+
+/obj/structure/flora/wood/stick4
+	icon_state = "stick4"
+
+/obj/structure/flora/wood/trunk1
+	name = "tree trunk"
+	icon_state = "trunk1"
+
+/obj/structure/flora/wood/trunk2
+	name = "tree trunk"
+	icon_state = "trunk2"
 
 //BUSHES
 
@@ -465,7 +584,8 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/bush/ausbushes/reedbush
 	icon_state = "reedbush_1"
 	icon_tag = "reedbush"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /obj/structure/flora/bush/ausbushes/palebush
 	icon_state = "palebush_1"
@@ -486,12 +606,14 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/bush/ausbushes/lavendergrass
 	icon_state = "lavendergrass_1"
 	icon_tag = "lavendergrass"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /obj/structure/flora/bush/ausbushes/ywflowers
 	icon_state = "ywflowers_1"
 	icon_tag = "ywflowers"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /*
 
@@ -508,7 +630,8 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/bush/ausbushes/var3/leafybush
 	icon_state = "leafybush_1"
 	icon_tag = "leafybush"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /obj/structure/flora/bush/ausbushes/var3/stalkybush
 	icon_state = "stalkybush_1"
@@ -525,22 +648,26 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/bush/ausbushes/var3/brflowers
 	icon_state = "brflowers_1"
 	icon_tag = "brflowers"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /obj/structure/flora/bush/ausbushes/var3/ppflowers
 	icon_state = "ppflowers_1"
 	icon_tag = "ppflowers"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass
 	icon_state = "sparsegrass_1"
 	icon_tag = "sparsegrass"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /obj/structure/flora/bush/ausbushes/var3/fullgrass
 	icon_state =  "fullgrass_1"
 	icon_tag = "fullgrass"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /*
 
@@ -559,11 +686,14 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	name = "cactus"
 	desc = "It's a small, spiky cactus."
 	icon_state = "cactus_3"
-	layer = BELOW_MOB_LAYER
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /obj/structure/flora/bush/desert/cactus/multiple
 	name = "cacti"
 	icon_state = "cacti_1"
+	plane = FLOOR_PLANE
+	layer = TURF_LAYER
 
 /*
 
@@ -734,41 +864,42 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 
 
 /obj/structure/flora/jungle/thickbush/Crossed(atom/movable/AM)
+	..()
 	if(!stump)
 		if(isliving(AM))
-			var/mob/living/L = AM
+			var/mob/living/living_thing = AM
 			var/bush_sound_prob = 60
-			if(istype(L, /mob/living/carbon/xenomorph))
-				var/mob/living/carbon/xenomorph/X = L
-				bush_sound_prob = X.tier * 20
+			if(istype(living_thing, /mob/living/carbon/xenomorph))
+				var/mob/living/carbon/xenomorph/xeno = living_thing
+				bush_sound_prob = xeno.tier * 20
 
 			if(prob(bush_sound_prob))
 				var/sound = pick('sound/effects/vegetation_walk_0.ogg','sound/effects/vegetation_walk_1.ogg','sound/effects/vegetation_walk_2.ogg')
 				playsound(src.loc, sound, 25, 1)
-			if(ishuman(L))
-				var/mob/living/carbon/human/H = L
+			if(ishuman(living_thing))
+				var/mob/living/carbon/human/human = living_thing
 				var/stuck = rand(0,10)
-				if(HAS_TRAIT(L, TRAIT_HAULED))
+				if(HAS_TRAIT(living_thing, TRAIT_HAULED))
 					return
 				switch(stuck)
 					if(0 to 4)
-						var/new_slowdown = H.next_move_slowdown + rand(2,3)
-						H.next_move_slowdown = new_slowdown
+						var/new_slowdown = human.next_move_slowdown + rand(2,3)
+						human.next_move_slowdown = new_slowdown
 						if(prob(2))
-							to_chat(H, SPAN_WARNING("Moving through [src] slows you down."))
+							to_chat(human, SPAN_WARNING("Moving through [src] slows you down."))
 					if(5 to 7)
-						var/new_slowdown = H.next_move_slowdown + rand(4,7)
-						H.next_move_slowdown = new_slowdown
+						var/new_slowdown = human.next_move_slowdown + rand(4,7)
+						human.next_move_slowdown = new_slowdown
 						if(prob(10))
-							to_chat(H, SPAN_WARNING("It is very hard to move trough this [src]..."))
+							to_chat(human, SPAN_WARNING("It is very hard to move through [src]..."))
 					if(8 to 9)
-						var/new_slowdown = H.next_move_slowdown + rand(8,11)
-						H.next_move_slowdown = new_slowdown
-						to_chat(H, SPAN_WARNING("You got tangeled in [src]!"))
+						var/new_slowdown = human.next_move_slowdown + rand(8,11)
+						human.next_move_slowdown = new_slowdown
+						to_chat(human, SPAN_WARNING("You got tangled in [src]!"))
 					if(10)
-						var/new_slowdown = H.next_move_slowdown + rand(12,20)
-						H.next_move_slowdown = new_slowdown
-						to_chat(H, SPAN_WARNING("You got completely tangeled in [src]! Oh boy..."))
+						var/new_slowdown = human.next_move_slowdown + rand(12,20)
+						human.next_move_slowdown = new_slowdown
+						to_chat(human, SPAN_WARNING("You got completely tangled in [src]! Oh boy..."))
 
 /obj/structure/flora/jungle/thickbush/attackby(obj/item/I as obj, mob/user as mob)
 	//hatchets and shiet can clear away undergrowth
@@ -813,3 +944,181 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	desc = "Looks like some of that fruit might be edible."
 	icon_tag = "plant"
 	variations  = 7
+
+// Large Jungle Bush - SORO - (Colorable)
+
+/obj/structure/flora/jungle/thickbush/large_jungle_bush
+	name = "bush"
+	desc = "A large jungle bush, it'll take something sharp and a lot of determination to clear away."
+	icon = 'icons/obj/structures/props/natural/vegetation/colorable_junge_bush.dmi'
+	icon_state = "bush1"
+	density = FALSE
+	layer = ABOVE_XENO_LAYER
+	fire_flag = FLORA_BURN_NO_SPREAD
+	health = 100
+
+/obj/structure/flora/jungle/thickbush/large_jungle_bush/attack_alien(mob/living/carbon/xenomorph/current_xenomorph)
+	if(unslashable)
+		return XENO_NO_DELAY_ACTION
+	current_xenomorph.animation_attack_on(src)
+	playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
+	current_xenomorph.visible_message(SPAN_DANGER("[current_xenomorph] slashes at [src]!"),
+	SPAN_DANGER("We slash at [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	update_health(rand(current_xenomorph.melee_damage_lower, current_xenomorph.melee_damage_upper))
+	return XENO_ATTACK_ACTION
+
+// Alien Flora
+
+/obj/structure/flora/alien
+	icon = 'icons/obj/structures/props/natural/vegetation/alien_flora.dmi'
+	icon_state = "red_bulb_1"
+	cut_level = PLANT_CUT_KNIFE
+	projectile_coverage = 0
+	layer = UNDERFLOOR_OBJ_LAYER
+	plane = FLOOR_PLANE
+	density = FALSE
+
+/obj/structure/flora/alien/chilli_bush
+	icon_state = "chilli_bush_1"
+	light_on = 1
+	light_color = "#00f4ff"
+	light_range = 2
+	light_power = 1
+
+/obj/structure/flora/alien/chilli_bush/chilli_bush_1
+	icon_state = "chilli_bush_1"
+
+/obj/structure/flora/alien/chilli_bush/chilli_bush_2
+	icon_state = "chilli_bush_2"
+
+/obj/structure/flora/alien/chilli_bush/chilli_bush_3
+	icon_state = "chilli_bush_3"
+
+/obj/structure/flora/alien/chilli_bush/chilli_bush_4
+	icon_state = "chilli_bush_4"
+
+/obj/structure/flora/alien/chilli_bush_no_light
+	icon_state = "chilli_bush_5"
+
+/obj/structure/flora/alien/chilli_bush_no_light/chilli_bush_1
+	icon_state = "chilli_bush_6"
+
+/obj/structure/flora/alien/leafy_bush/leafy_bush_1
+	icon_state = "leafybush_1"
+
+/obj/structure/flora/alien/leafy_bush/leafy_bush_2
+	icon_state = "leafybush_2"
+
+/obj/structure/flora/alien/leafy_bush/leafy_bush_3
+	icon_state = "leafybush_3"
+
+/obj/structure/flora/alien/bluegrass/bluegrass_1
+	icon_state = "bluegrass_1"
+
+/obj/structure/flora/alien/bluegrass/bluegrass_2
+	icon_state = "bluegrass_2"
+
+/obj/structure/flora/alien/bluegrass/bluegrass_3
+	icon_state = "bluegrass_3"
+
+/obj/structure/flora/alien/bluegrass/bluegrass_4
+	icon_state = "bluegrass_4"
+
+/obj/structure/flora/alien/sparsegrass/sparsegrass_1
+	icon_state = "sparsegrass_1"
+
+/obj/structure/flora/alien/sparsegrass/sparsegrass_2
+	icon_state = "sparsegrass_2"
+
+/obj/structure/flora/alien/sparsegrass/sparsegrass_3
+	icon_state = "sparsegrass_3"
+
+/obj/structure/flora/alien/fullgrass/fullgrass_1
+	icon_state = "fullgrass_1"
+
+/obj/structure/flora/alien/fullgrass/fullgrass_1
+	icon_state = "fullgrass_1"
+
+/obj/structure/flora/alien/fullgrass/fullgrass_2
+	icon_state = "fullgrass_2"
+
+/obj/structure/flora/alien/fullgrass/fullgrass_3
+	icon_state = "fullgrass_3"
+
+/obj/structure/flora/alien/red_bulb
+	light_on = 1
+	light_color = "#794aa4"
+	light_range = 2
+	light_power = 1
+
+/obj/structure/flora/alien/red_bulb/red_bulb_1
+	icon_state = "red_bulb_1"
+
+/obj/structure/flora/alien/red_bulb/red_bulb2
+	icon_state = "red_bulb_2"
+
+/obj/structure/flora/alien/red_bulb/red_bulb_3
+	icon_state = "red_bulb_3"
+
+/obj/structure/flora/alien/red_bulb/red_bulb_4
+	icon_state = "red_bulb_4"
+
+/obj/structure/flora/alien/red_bulb/red_bulb_5
+	icon_state = "red_bulb_5"
+
+/obj/structure/flora/alien/red_bulb/red_bulb_6
+	icon_state = "red_bulb_6"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_1
+	icon_state = "p_mushroom_1"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_2
+	icon_state = "p_mushroom_2"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_3
+	icon_state = "p_mushroom_3"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_4
+	icon_state = "p_mushroom_4"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_5
+	icon_state = "p_mushroom_5"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_6
+	icon_state = "p_mushroom_6"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_7
+	icon_state = "p_mushroom_7"
+
+/obj/structure/flora/alien/purple_mushroom/purple_mushroom_8
+	icon_state = "p_mushroom_8"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_1
+	icon_state = "o_mushroom_1"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_2
+	icon_state = "o_mushroom_2"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_3
+	icon_state = "o_mushroom_3"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_4
+	icon_state = "o_mushroom_4"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_5
+	icon_state = "o_mushroom_5"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_6
+	icon_state = "o_mushroom_6"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_7
+	icon_state = "o_mushroom_7"
+
+/obj/structure/flora/alien/orange_mushroom/orange_mushroom_8
+	icon_state = "o_mushroom_8"
+
+/obj/structure/flora/alien/cup_plant/cup_plant_1
+	icon_state = "cup_plant_1"
+
+/obj/structure/flora/alien/cup_plant/cup_plant_2
+	icon_state = "cup_plant_2"

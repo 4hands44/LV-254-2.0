@@ -31,6 +31,22 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	//fix for issue https://github.com/cmss13-devs/cmss13/issues/2191
 	base_muffle = AREA_MUTED
 
+/area/outer_space
+	base_lighting_alpha = 255
+	is_resin_allowed = TRUE
+	pressure = 0
+	flags_area = AREA_NOTUNNEL
+	powernet_name = "ground"
+
+
+/area/outer_space/no_weather
+	base_lighting_alpha = 255
+	is_resin_allowed = TRUE
+	pressure = 0
+	flags_area = AREA_NOTUNNEL
+	weather_enabled = FALSE
+	powernet_name = "ground"
+
 /area/engine
 	//ambience = list('sound/ambience/ambisin1.ogg','sound/ambience/ambisin2.ogg','sound/ambience/ambisin3.ogg','sound/ambience/ambisin4.ogg')
 

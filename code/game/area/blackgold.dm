@@ -771,6 +771,10 @@
 	name = "\improper Upper Deck Kitchen"
 	icon_state = "gruntrnr"
 
+/area/blackgold/upper/rooms/kitchen/freezer
+	name = "\improper Walk-in Freezer"
+	temperature = ICE_COLONY_TEMPERATURE
+
 /area/blackgold/upper/rooms/medical
 	name = "\improper Upper Deck Aft Medbay"
 	icon_state = "medical"

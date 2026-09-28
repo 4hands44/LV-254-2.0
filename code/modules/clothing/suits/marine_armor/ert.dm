@@ -451,6 +451,25 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	storage_slots = 2
 
+/obj/item/clothing/suit/storage/militia/smartgun/hazard
+	name = "\improper Combat mining hazmat suit."
+	desc = "A set of standard issue Kelland-Mining utility fatigues, a yellow pair of utility work slacks and a black collared heavy padded jacket, which protects against various environmental hazards. This one has been modified by insurgents to protect against bullets."
+	icon = 'icons/obj/items/clothing/suits/hazard.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/hazard.dmi',
+	)
+	icon_state = "insurgentminer_oversuit"
+	item_state = "insurgentminer_oversuit"
+	uniform_restricted = null
+	fire_intensity_resistance = BURN_LEVEL_TIER_1
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_HIGH
+	valid_accessory_slots = list(ACCESSORY_SLOT_PONCHO)
 
 //===========================//CMB\\================================\\
 //=====================================================================\\
@@ -602,6 +621,10 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CLF.dmi'
 	)
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGH
@@ -1057,3 +1080,48 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+
+//======================================//TAGILLA\\=========================================\\
+//==========================================================================================\\
+
+/obj/item/clothing/suit/storage/marine/veteran/tagrilla
+	name = "\improper C2 Hardened Ballistic Vest"
+	desc = "Originally a civilian-grade ballistic vest, its current owner has heavily modified it with extra plating and pouches."
+	icon_state = "tagrilla"
+	icon = 'icons/obj/items/clothing/suits/misc_ert.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/misc_ert.dmi'
+	)
+	storage_slots = 6
+	flags_armor_protection = BODY_FLAG_CHEST
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/tagrilla
+)
+
+/obj/item/clothing/suit/storage/marine/veteran/killer
+	name = "\improper Old russian Ballistic Vest"
+	desc = "Originally a military-grade ballistic vest, its well past it's prime and using a design well over a hundred years old."
+	icon_state = "killer"
+	icon = 'icons/obj/items/clothing/suits/misc_ert.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/misc_ert.dmi'
+	)
+	storage_slots = 6
+	flags_armor_protection = BODY_FLAG_CHEST
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/killer
+)

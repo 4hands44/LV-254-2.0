@@ -171,22 +171,22 @@
 /obj/item/ammo_box/rounds/pistol/incen/empty
 	empty = TRUE
 
-//----------------8.88x51mm round boxes for L23 battle rifles------------------
+//----------------8.88x28mm round boxes for L23 battle rifles------------------
 
 /obj/item/ammo_box/rounds/l23
-	name = "\improper rifle ammunition box (8.88x51mm)"
-	desc = "A 8.88x51mm ammunition box. Used to refill L23 regular and extended magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "\improper rifle ammunition box (8.88x28mm)"
+	desc = "A 8.88x28mm ammunition box. Used to refill L23 regular and extended magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_l23"
 	overlay_content = "_l23_reg"
-	caliber = "8.88x51mm"
+	caliber = "8.88x28mm"
 	default_ammo = /datum/ammo/bullet/rifle/l23
 
 /obj/item/ammo_box/rounds/l23/empty
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/l23/ap
-	name = "\improper rifle ammunition box (8.88x51mm AP)"
-	desc = "A 8.88x51mm ammunition box. Used to refill L23 AP magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "\improper rifle ammunition box (8.88x28mm AP)"
+	desc = "A 8.88x28mm ammunition box. Used to refill L23 AP magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_l23_ap"
 	default_ammo = /datum/ammo/bullet/rifle/l23/ap
 
@@ -194,8 +194,8 @@
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/l23/heap
-	name = "\improper rifle ammunition box (8.88x51mm HEAP)"
-	desc = "A 8.88x51mm ammunition box. Used to refill L23 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "\improper rifle ammunition box (8.88x28mm HEAP)"
+	desc = "A 8.88x28mm ammunition box. Used to refill L23 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_l23_heap"
 	default_ammo = /datum/ammo/bullet/rifle/l23/heap
 
@@ -203,8 +203,8 @@
 	empty = TRUE
 
 /obj/item/ammo_box/rounds/l23/incendiary
-	name = "\improper rifle ammunition box (8.88x51mm Incendiary)"
-	desc = "A 8.88x51mm ammunition box. Used to refill L23 incendiary magazines. It comes with a leather strap allowing to wear it on the back."
+	name = "\improper rifle ammunition box (8.88x28mm Incendiary)"
+	desc = "A 8.88x28mm ammunition box. Used to refill L23 incendiary magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_l23_incen"
 	default_ammo = /datum/ammo/bullet/rifle/l23/incendiary
 	bullet_amount = 420 //Incen is OP

@@ -42,6 +42,8 @@
 		list("M2C Heavy Machine Gun", floor(scale * 2), /obj/item/storage/box/guncase/m2c, VENDOR_ITEM_REGULAR),
 		list("M240 Incinerator Unit", floor(scale * 2), /obj/item/storage/box/guncase/flamer, VENDOR_ITEM_REGULAR),
 		list("M79 Grenade Launcher", floor(scale * 3), /obj/item/storage/box/guncase/m79, VENDOR_ITEM_REGULAR),
+		list("M5 RPG", floor(scale * 1), /obj/item/storage/box/kit/m5, VENDOR_ITEM_REGULAR),
+		list("M78 PIG", floor(scale * 1), /obj/item/storage/box/spec/pig_operator, VENDOR_ITEM_REGULAR),
 		list("XM51 Breaching Scattergun", floor(scale * 3), /obj/item/storage/box/guncase/xm51, VENDOR_ITEM_REGULAR),
 
 		list("EXPLOSIVES", -1, null, null),
@@ -66,7 +68,6 @@
 		list("Black Webbing Vest", floor(scale * 2), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
 		list("Brown Webbing Vest", floor(scale * 2), /obj/item/clothing/accessory/storage/black_vest/brown_vest, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", floor(scale * 1.5), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
-		list("Webbing", floor(scale * 5), /obj/item/clothing/accessory/storage/webbing, VENDOR_ITEM_REGULAR),
 		list("Black Webbing", floor(scale * 5), /obj/item/clothing/accessory/storage/webbing/black, VENDOR_ITEM_REGULAR),
 		list("Knife Webbing", floor(scale * 1), /obj/item/clothing/accessory/storage/knifeharness, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", floor(scale * 2), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
@@ -86,7 +87,6 @@
 
 		list("BELTS", -1, null, null),
 		list("G8-A General Utility Pouch", floor(scale * 2), /obj/item/storage/backpack/general_belt, VENDOR_ITEM_REGULAR),
-		list("M276 Ammo Load Rig", floor(scale * 15), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),
 		list("M276 General Pistol Holster Rig", floor(scale * 10), /obj/item/storage/belt/gun/m4a3, VENDOR_ITEM_REGULAR),
 		list("M276 Knife Rig", floor(scale * 5), /obj/item/storage/belt/knifepouch, VENDOR_ITEM_REGULAR),
 		list("M276 M39 Holster Rig", floor(scale * 5), /obj/item/storage/belt/gun/m39, VENDOR_ITEM_REGULAR),
@@ -99,9 +99,9 @@
 
 		list("POUCHES", -1, null, null),
 		list("Autoinjector Pouch", floor(scale * 1), /obj/item/storage/pouch/autoinjector, VENDOR_ITEM_REGULAR),
-		list("Medical Kit Pouch", floor(scale * 2), /obj/item/storage/pouch/medkit, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Full)", floor(scale * 5), /obj/item/storage/pouch/firstaid/full, VENDOR_ITEM_REGULAR),
-		list("First Responder Pouch", floor(scale * 2), /obj/item/storage/pouch/first_responder, VENDOR_ITEM_REGULAR),
+		list("Multiple First-Aid Kit (Full)", floor(scale * 2), /obj/item/storage/pouch/medkit/full_advanced, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Tan)", floor(scale * 15), /obj/item/storage/ifak, VENDOR_ITEM_REGULAR),
+		list("Individual First-Aid Kit (Black)", floor(scale * 15), /obj/item/storage/ifak/blk, VENDOR_ITEM_REGULAR),
 		list("Syringe Pouch", floor(scale * 2), /obj/item/storage/pouch/syringe, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch (Full)", floor(scale * 2), /obj/item/storage/pouch/tools/full, VENDOR_ITEM_REGULAR),
 		list("Construction Pouch", floor(scale * 2), /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
@@ -262,8 +262,9 @@
 		list("M39 Rubber Magazine (10x20mm)", round(scale * 10), /obj/item/ammo_magazine/smg/m39/rubber, VENDOR_ITEM_REGULAR),
 		list("M41A MK1 Rubber Magazine (10x24mm)", round(scale * 10), /obj/item/ammo_magazine/rifle/rubber, VENDOR_ITEM_REGULAR),
 		list("Box Of Beanbag Shells", round(scale * 5), /obj/item/ammo_magazine/shotgun/beanbag, VENDOR_ITEM_REGULAR),
-		list("m15 Stun Grenade", round(scale * 10), /obj/item/explosive/grenade/high_explosive/m15/rubber, VENDOR_ITEM_REGULAR),
-		list("m40 Stun Grenade", round(scale * 10), /obj/item/explosive/grenade/flashbang/noskill, VENDOR_ITEM_REGULAR),
+		list("M15 Stun Grenade", round(scale * 10), /obj/item/explosive/grenade/high_explosive/m15/rubber, VENDOR_ITEM_REGULAR),
+		list("M40 Stun Grenade", round(scale * 1), /obj/item/storage/box/flashbang/pvp, VENDOR_ITEM_REGULAR),
+		list("M66 Teargas Grenade", round(scale * 1), /obj/item/storage/box/nade_box/tear_gas, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR-PIERCING AMMUNITION", -1, null, null),
 		list("88 Mod 4 AP Magazine (9mm)", round(scale * 5), /obj/item/ammo_magazine/pistol/mod88, VENDOR_ITEM_REGULAR),
@@ -286,8 +287,9 @@
 		list("M4A3 Incendiary Magazine (9mm)", round(scale * 1), /obj/item/ammo_magazine/pistol/incendiary, VENDOR_ITEM_REGULAR),
 
 		list("SPECIAL AMMUNITION", -1, null, null),
-		list("M56 DV9 Battery", 4, /obj/item/smartgun_battery, VENDOR_ITEM_REGULAR),
+		list("DV9 heavy weapons battery", 6, /obj/item/heavygun_battery, VENDOR_ITEM_REGULAR),
 		list("M56 Smartgun Drum", 4, /obj/item/ammo_magazine/smartgun, VENDOR_ITEM_REGULAR),
+		list("M78 PIG pellet magazime", 4, /obj/item/ammo_magazine/m78_pig, VENDOR_ITEM_REGULAR),
 		list("M44 Heavy Speed Loader (.44)", 10, /obj/item/ammo_magazine/revolver/heavy, VENDOR_ITEM_REGULAR),
 		list("M44 Marksman Speed Loader (.44)", 6, /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
 		list("M4A3 HP Magazine (9mm)", floor(scale * 2), /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
@@ -305,7 +307,7 @@
 		list("M2C Box Magazine", floor(scale * 2), /obj/item/ammo_magazine/m2c, VENDOR_ITEM_REGULAR),
 		list("XM51 Magazine (16g)", floor(scale * 3), /obj/item/ammo_magazine/rifle/xm51, VENDOR_ITEM_REGULAR),
 
-		list("EXTRA SCOUT AMMUNITION", -1, null, null, null),
+		list("EXTRA DMR AMMUNITION", -1, null, null, null),
 		list("A19 High Velocity Impact Magazine (10x24mm)", round(scale * 10), /obj/item/ammo_magazine/rifle/m4ra/custom/impact, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Incendiary Magazine (10x24mm)", round(scale * 10), /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Magazine (10x24mm)", round(scale * 15), /obj/item/ammo_magazine/rifle/m4ra/custom, VENDOR_ITEM_REGULAR),
@@ -315,9 +317,10 @@
 		list("M42A Incendiary Magazine (10x28mm)", round(scale * 10), /obj/item/ammo_magazine/sniper/incendiary, VENDOR_ITEM_REGULAR),
 		list("M42A Marksman Magazine (10x28mm Caseless)", round(scale * 15), /obj/item/ammo_magazine/sniper, VENDOR_ITEM_REGULAR),
 
-		list("EXTRA DEMOLITIONIST AMMUNITION", -1, null, null, null),
+		list("EXTRA M5 RPG AMMUNITION", -1, null, null, null),
 		list("84mm Anti-Armor Rocket", round(scale * 10), /obj/item/ammo_magazine/rocket/ap, VENDOR_ITEM_REGULAR),
 		list("84mm High-Explosive Rocket", round(scale * 10), /obj/item/ammo_magazine/rocket, VENDOR_ITEM_REGULAR),
+		list("84mm High-Explosive Fragmentation Rocket", round(scale * 20), /obj/item/ammo_magazine/rocket/frag,, VENDOR_ITEM_REGULAR),
 		list("84mm White-Phosphorus Rocket", round(scale * 10), /obj/item/ammo_magazine/rocket/wp, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA GRENADES", -1, null, null, null),

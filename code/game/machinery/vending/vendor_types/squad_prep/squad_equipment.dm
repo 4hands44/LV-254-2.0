@@ -40,7 +40,6 @@ GLOBAL_LIST_INIT(cm_vending_gear_leader, list(
 
 		list("SQUAD KIT (CHOOSE 1, for yourself or your squad)", 0, null, null, null),
 		list("M4RA Sniper Kit", 0, /obj/item/storage/box/kit/mini_sniper, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("M41A Standard Kit", 0, /obj/item/storage/box/kit/m41a_kit	, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("M240 Pyrotechnician Support Kit", 0, /obj/item/storage/box/kit/mini_pyro, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("M2C Heavy Machine Gun", 0, /obj/item/storage/box/guncase/m2c, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 		list("M56D Heavy Machine Gun", 0, /obj/item/storage/box/guncase/m56d, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
@@ -221,8 +220,11 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi, list(
 		list("Demolitionist kit", 0, /obj/item/storage/box/kit/breacher, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Pointman Breacher kit", 0, /obj/item/storage/box/kit/pursuit, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("M56D HMG Crew kit", 0, /obj/item/storage/box/guncase/m56d, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("M2C Heavy Machine Gun", 0, /obj/item/storage/box/guncase/m2c, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+
+		list("ENGINEERING CREW SERVED WEAPON KIT (OPTIONAL)", 0, null, null, null),
+		list("M402 Mortar Crew kit", 0, /obj/item/storage/box/spec/mortar, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("M56D HMG Crew kit", 0, /obj/item/storage/box/guncase/m56d, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("M2C HMG Crew kit", 0, /obj/item/storage/box/guncase/m2c, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("HANDHELD DEFENSE (CHOOSE 1)", 0, null, null, null),
 		list("21S Tesla Coil", 0, /obj/item/defenses/handheld/tesla_coil, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
@@ -236,6 +238,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi, list(
 		list("APC Circuit Board", 2, /obj/item/circuitboard/apc, null, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool (ET)", 2, /obj/item/tool/shovel/etool, null, VENDOR_ITEM_REGULAR),
 		list("High-Capacity Power Cell", 3, /obj/item/cell/high, null, VENDOR_ITEM_REGULAR),
+		list("Wood x50", 15, /obj/item/stack/sheet/wood/large_stack, null, VENDOR_ITEM_RECOMMENDED),
 		list("Metal x10", 5, /obj/item/stack/sheet/metal/small_stack, null, VENDOR_ITEM_RECOMMENDED),
 		list("Plasteel x10", 7, /obj/item/stack/sheet/plasteel/small_stack, null, VENDOR_ITEM_RECOMMENDED),
 		list("Concertina Wire x50", 10, /obj/item/stack/concertina_wire/full_stack, null, VENDOR_ITEM_RECOMMENDED),
@@ -313,7 +316,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("Blood Bag (O-)", 4, /obj/item/reagent_container/blood/OMinus, null, VENDOR_ITEM_REGULAR),
 
 		list("FIRSTAID KITS", 0, null, null, null),
-		list("Advanced Firstaid Kit", 12, /obj/item/storage/firstaid/adv, null, VENDOR_ITEM_RECOMMENDED),
+		list("Advanced Firstaid Kit", 20, /obj/item/storage/firstaid/adv, null, VENDOR_ITEM_RECOMMENDED),
 		list("Firstaid Kit", 5, /obj/item/storage/firstaid/regular, null, VENDOR_ITEM_REGULAR),
 		list("Fire Firstaid Kit", 6, /obj/item/storage/firstaid/fire, null, VENDOR_ITEM_REGULAR),
 		list("Toxin Firstaid Kit", 6, /obj/item/storage/firstaid/toxin, null, VENDOR_ITEM_REGULAR),
@@ -342,6 +345,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("MEDICAL UTILITIES", 0, null, null, null),
 		list("MS-11 Smart Refill Tank", 6, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
 		list("FixOVein", 7, /obj/item/tool/surgery/FixOVein, null, VENDOR_ITEM_REGULAR),
+		list("Crutches", 4, /obj/item/crutches, null, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", 4, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
 		list("Health Analyzer", 4, /obj/item/device/healthanalyzer, null, VENDOR_ITEM_REGULAR),
 		list("Stasis Bag", 6, /obj/item/bodybag/cryobag, null, VENDOR_ITEM_REGULAR),
@@ -436,10 +440,11 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 
 //------------Squad Smartgunner---------------
 GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
-		list("SMARTGUN SET (MANDATORY)", 0, null, null, null),
+		list("SUPPORT RIFLEMAN SET (MANDATORY)", 0, null, null, null),
 		list("Essential Smartgunner Set", 0, /obj/effect/essentials_set/smartgunner/m56, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential xm99a gunner Set", 0, /obj/effect/essentials_set/smartgunner/xm99a, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential HPR gunner Set", 0, /obj/effect/essentials_set/smartgunner/hpr, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("M78 PIG kit", 0, /obj/item/storage/box/spec/pig_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 
 		list("SUPPORT WEAPON AMMUNITION", 0, null, null, null),
 		list("M56 Smartgun Drum", 15, /obj/item/ammo_magazine/smartgun, null, VENDOR_ITEM_RECOMMENDED),
@@ -468,12 +473,15 @@ GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 		list("VP78 Pistol", 15, /obj/item/storage/box/guncase/vp78, null, VENDOR_ITEM_REGULAR),
 		list("SU-6 Smart Pistol", 15, /obj/item/storage/box/guncase/smartpistol, null, VENDOR_ITEM_REGULAR),
 		list("XM51 breaching scattergun", 30, /obj/item/storage/box/guncase/xm51, null, VENDOR_ITEM_RECOMMENDED),
-		list("M240 Pyrotechnician Support Kit", 30, /obj/item/storage/box/kit/mini_pyro, null, VENDOR_ITEM_REGULAR),
+		list("M240 Pyrotechnician Support Kit", 30, /obj/item/storage/box/kit/mini_pyro, null, VENDOR_ITEM_RECOMMENDED),
+		list("M5 RPG Kit", 60, /obj/item/storage/box/kit/m5, null, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING ITEMS", 0, null, null, null),
 		list("Smartgunner Machete Scabbard (Full)", 6, /obj/item/storage/large_holster/machete/smartgunner/full, null, VENDOR_ITEM_REGULAR),
+		list("Shotgun Scabbard", 6, /obj/item/storage/large_holster/m37, null, VENDOR_ITEM_REGULAR),
 		list("Fuel Tank Strap Pouch", 5, /obj/item/storage/pouch/flamertank, null, VENDOR_ITEM_REGULAR),
 		list("Large General Pouch", 6, /obj/item/storage/pouch/general/large, null, VENDOR_ITEM_REGULAR),
+		list("G8-A general utility pouch", 6, /obj/item/storage/backpack/general_belt, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
 		list("Range Finder", 10, /obj/item/device/binoculars/range, null, VENDOR_ITEM_REGULAR),
@@ -501,7 +509,8 @@ GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 GLOBAL_LIST_INIT(cm_vending_gear_marine, list(
 
 		list("WEAPON SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
-		list("M5 RPG Kit", 0, /obj/item/storage/box/spec/demolitionist, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("M5 RPG Specialist Kit", 0, /obj/item/storage/box/spec/demolitionist, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("M78 PIG kit", 0, /obj/item/storage/box/spec/pig_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Grenadier Kit", 0, /obj/item/storage/box/spec/heavy_grenadier, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("P9 SHARP Rifle Kit", 0, /obj/item/storage/box/spec/sharp_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("M240T Flamer Kit", 0, /obj/item/storage/box/spec/pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
@@ -537,12 +546,17 @@ GLOBAL_LIST_INIT(cm_vending_gear_marine, list(
 		list("EXTRA RPG AMMUNITION", 0, null, null, null),
 		list("84mm Anti-Armor Rocket", 40, /obj/item/ammo_magazine/rocket/ap, null, VENDOR_ITEM_REGULAR),
 		list("84mm High-Explosive Rocket", 40, /obj/item/ammo_magazine/rocket, null, VENDOR_ITEM_REGULAR),
+		list("84mm High-Explosive Fragmentation Rocket", 20, /obj/item/ammo_magazine/rocket/frag, null, VENDOR_ITEM_REGULAR),
 		list("84mm White-Phosphorus Rocket", 40, /obj/item/ammo_magazine/rocket/wp, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA SHARP AMMUNITION", 0, null, null, null),
 		list("SHARP 9X-E Sticky Explosive Dart magazine (darts)", 40, /obj/item/ammo_magazine/rifle/sharp/explosive, null, VENDOR_ITEM_REGULAR),
 		list("SHARP 9X-T Sticky incendiary Dart magazine (darts)", 40, /obj/item/ammo_magazine/rifle/sharp/incendiary, null, VENDOR_ITEM_REGULAR),
 		list("SHARP 9X-F Flechette Dart Magazine (darts)", 40, /obj/item/ammo_magazine/rifle/sharp/flechette, null, VENDOR_ITEM_REGULAR),
+
+		list("EXTRA PIG AMMUNITION", 0, null, null, null),
+		list("M78 PIG pellets cannister (pellets)", 80, /obj/item/ammo_magazine/m78_pig, null, VENDOR_ITEM_REGULAR),
+		list("DV9 heavy weapons battery", 80, /obj/item/heavygun_battery, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA GRENADES", 0, null, null, null),
 		list("M40 HEDP Grenades x6", 20, /obj/effect/essentials_set/hedp_6_pack, null, VENDOR_ITEM_REGULAR),

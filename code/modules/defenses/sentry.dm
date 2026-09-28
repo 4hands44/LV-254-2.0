@@ -15,7 +15,7 @@
 	var/datum/shape/range_bounds
 	var/datum/effect_system/spark_spread/spark_system //The spark system, used for generating... sparks?
 	var/last_fired = 0
-	var/fire_delay = 4
+	var/fire_delay = 1
 	var/immobile = FALSE //Used for prebuilt ones.
 	var/obj/item/ammo_magazine/ammo = new /obj/item/ammo_magazine/sentry
 	var/sentry_type = "uac_sentry" //Used for the icon
@@ -155,15 +155,15 @@
 		if(ROF_SINGLE)
 			burst = 1
 			accuracy_mult = 1
-			fire_delay = 4
+			fire_delay = 1
 		if(ROF_BURST)
 			burst = 3
 			accuracy_mult = 0.6
-			fire_delay = 12
+			fire_delay = 6
 		if(ROF_FULL_AUTO)
 			burst = 1
 			accuracy_mult = 0.5
-			fire_delay = 0.5
+			fire_delay = 0.25
 
 /obj/structure/machinery/defenses/sentry/get_examine_text(mob/user)
 	. = ..()
@@ -682,7 +682,7 @@
 	defense_type = "Shotgun"
 	health = 250
 	health_max = 250
-	fire_delay = 2 SECONDS
+	fire_delay = 1 SECONDS
 	sentry_range = 3
 	ammo = new /obj/item/ammo_magazine/sentry/shotgun
 
@@ -831,7 +831,7 @@
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
 	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
 	sentry_type = "wy_sentry"
-	fire_delay = 2 SECONDS
+	fire_delay = 0.5 SECONDS
 	health = 350
 	health_max = 350
 	damage_mult = 3.5

@@ -1,7 +1,7 @@
 /obj/vehicle/multitile/tank/aev
 	name = "M34A1 Armored Engineering Vehicle"
 	desc = "A giant piece of armor with a plow, you know what to do. Entrance in the back."
-	desc_lore = "M34A1 is an rather uncommon modification of the Standard M34A2 Longstreet tank, developed for use by USCM Engineers to clear minefields, debris, and other obstacles. It features no standard weapon mounting points, and instead is intended for purely technical support."
+	desc_lore = "M34A1 is an rather uncommon modification of the Standard Armstrong tank, developed for use by USCM Engineers to clear minefields, debris, and other obstacles. It features no standard weapon mounting points, and instead is intended for purely technical support."
 
 	icon_state = "aev_base"
 	vehicle_pen_armor = VEHICLE_ARMOR_HEAVY_ARMOR

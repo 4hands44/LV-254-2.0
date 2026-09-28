@@ -516,3 +516,107 @@
 	name = "\improper WY-LWI StarGlider SG-200"
 	desc = "The WY-LWI StarGlider SG-200, a product of the collaborative ingenuity between Weyland Yutani and Lunnar-Welsun Industries, This small dropship is designed for short-range commercial transport."
 	icon = 'icons/turf/dropship4.dmi'
+
+// Walls
+
+/turf/closed/wall/lava/rock
+	name = "basalt wall"
+	icon = 'icons/turf/walls/lavaland/lava_walls.dmi'
+	icon_state = "solaris_rock"
+	walltype = WALL_SOLARIS_ROCK
+	turf_flags = TURF_HULL
+	baseturfs = /turf/open/gm/basalt
+
+/turf/closed/wall/lava/solaris_dark
+	name = "colony wall"
+	icon = 'icons/turf/walls/lavaland/lava_walls.dmi'
+	icon_state = "solaris_interior"
+	desc = "Tough looking walls that have been blasted by volcanic storms since the day they were erected. A testament to human willpower."
+	walltype = WALL_SOLARIS
+
+/turf/closed/wall/lava/solaris_dark/reinforced
+	name = "reinforced colony wall"
+	icon_state = "solaris_interior_r"
+	walltype = WALL_SOLARISR
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/lava/solaris_dark/reinforced/hull
+	name = "heavy reinforced colony wall"
+	icon_state = "solaris_interior_h"
+
+// windows
+
+/obj/structure/window/framed/lava
+	name = "window"
+	icon = 'icons/turf/walls/lavaland/windows_teal.dmi'
+	icon_state = "solaris_window0"
+	basestate = "solaris_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/lavaland
+
+/obj/structure/window/framed/lava/orange
+	icon = 'icons/turf/walls/lavaland/windows_orange.dmi'
+
+/obj/structure/window/framed/lava/orange2
+	icon = 'icons/turf/walls/lavaland/windows_orange2.dmi'
+
+/obj/structure/window/framed/lava/purple
+	icon = 'icons/turf/walls/lavaland/windows_purple.dmi'
+
+/obj/structure/window/framed/lava/reinforced
+	name = "reinforced window"
+	icon_state = "solaris_rwindow0"
+	basestate = "solaris_rwindow"
+	desc = "A glass window. The inside is reinforced with a few tempered matrix rods along the base. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = 1
+	window_frame = /obj/structure/window_frame/lavaland/reinforced
+
+/obj/structure/window/framed/lava/reinforced/orange
+	icon = 'icons/turf/walls/lavaland/windows_orange.dmi'
+
+/obj/structure/window/framed/lava/reinforced/orange2
+	icon = 'icons/turf/walls/lavaland/windows_orange2.dmi'
+
+/obj/structure/window/framed/lava/reinforced/purple
+	icon = 'icons/turf/walls/lavaland/windows_purple.dmi'
+
+/obj/structure/window/framed/lava/reinforced/hull
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+
+/obj/structure/window/framed/lava/reinforced/hull/orange
+	icon = 'icons/turf/walls/lavaland/windows_orange.dmi'
+
+/obj/structure/window/framed/lava/reinforced/hull/orange2
+	icon = 'icons/turf/walls/lavaland/windows_orange2.dmi'
+
+/obj/structure/window/framed/lava/reinforced/hull/purple
+	icon = 'icons/turf/walls/lavaland/windows_purple.dmi'
+
+/obj/structure/window/framed/lava/reinforced/tinted
+	desc = "A tinted glass window. It looks rather strong and opaque. Might take a few good hits to shatter it."
+	opacity = TRUE
+
+/obj/structure/window/framed/lava/reinforced/tinted/orange
+	icon = 'icons/turf/walls/lavaland/windows_orange.dmi'
+
+/obj/structure/window/framed/lava/reinforced/tinted/orange2
+	icon = 'icons/turf/walls/lavaland/windows_orange2.dmi'
+
+// Window Frames
+
+/obj/structure/window_frame/lavaland
+	icon = 'icons/turf/walls/lavaland/windows_teal.dmi'
+	icon_state = "solaris_window0_frame"
+	basestate = "solaris_window"
+
+/obj/structure/window_frame/lavaland/reinforced
+	icon_state = "solaris_window0_frame"
+	basestate = "solaris_window"
+	reinforced = TRUE

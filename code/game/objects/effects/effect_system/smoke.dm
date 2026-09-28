@@ -17,7 +17,7 @@
 	flags_atom = NO_ZFALL
 	var/amount = 2
 	var/spread_speed = 1 //time in decisecond for a smoke to spread one tile.
-	var/time_to_live = 100
+	var/time_to_live = 20
 	var/smokeranking = SMOKE_RANK_HARMLESS //Override priority. A higher ranked smoke cloud will displace lower and equal ones on spreading.
 	var/datum/cause_data/cause_data = null
 
@@ -312,6 +312,83 @@
 		affected_mob.coughedtime = world.time + 2 SECONDS
 		if(ishuman(affected_mob)) //Humans only to avoid issues
 			affected_mob.emote("cough")
+	return TRUE
+
+/////////////////////////////////////////////
+// Tear Gas
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/teargas
+	name = "Tear gas"
+	smokeranking = SMOKE_RANK_HIGH
+	color = "#df0c2f"
+	var/xeno_affecting = FALSE
+	opacity = FALSE
+	time_to_live = 15
+	alpha = 75
+
+/obj/effect/particle_effect/smoke/teargas/Move()
+	. = ..()
+	if(!xeno_affecting)
+		for(var/mob/living/carbon/human/human in get_turf(src))
+			affect(human)
+	else
+		for(var/mob/living/carbon/creature in get_turf(src))
+			affect(creature)
+
+
+/obj/effect/particle_effect/smoke/teargas/affect(mob/living/carbon/creature)
+	. = ..()
+	if(!.)
+		return FALSE
+	if(creature.stat == DEAD)
+		return FALSE
+	if(issynth(creature))
+		return FALSE
+
+	var/mob/living/carbon/xenomorph/xeno_creature
+	var/mob/living/carbon/human/human_creature
+	if(isxeno(creature))
+		xeno_creature = creature
+	else if(ishuman(creature))
+		human_creature = creature
+
+	if(!xeno_affecting && xeno_creature)
+		return FALSE
+	if(isyautja(creature) && prob(25))
+		return FALSE
+
+	if(creature.wear_mask && (creature.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return FALSE
+	if(human_creature && (human_creature.head && (human_creature.head.flags_inventory & BLOCKGASEFFECT)))
+		return FALSE
+
+	else
+		creature.apply_effect(3, EYE_BLUR)
+		creature.apply_effect(1, DAZE)
+		creature.apply_effect(1, SLOW)
+	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
+		creature.coughedtime = 1
+		if(prob(50))
+			creature.emote("cough")
+		else
+			creature.emote("wheeze")
+		addtimer(VARSET_CALLBACK(creature, coughedtime, 0), 1.5 SECONDS)
+	var/stun_chance = 20
+	if(xeno_affecting)
+		stun_chance = 35
+	if(prob(stun_chance))
+		creature.apply_effect(1, WEAKEN)
+
+	if(xeno_creature)
+		to_chat(xeno_creature, SPAN_XENODANGER("Your body burns all over and you struggle to resist!"))
+	else
+		to_chat(creature, SPAN_DANGER("Your body burns all over and you struggle to resist!"))
+	if(prob(60 + round(amount*15))) //Highly likely to drop items due to arms/hands seizing up
+		creature.drop_held_item()
+	if(human_creature)
+		human_creature.temporary_slowdown = max(human_creature.temporary_slowdown, 4) //One tick every two second
+		human_creature.recalculate_move_delay = TRUE
 	return TRUE
 
 /////////////////////////////////////////////
@@ -909,6 +986,9 @@
 
 /datum/effect_system/smoke_spread/phosphorus/weak
 	smoke_type = /obj/effect/particle_effect/smoke/phosphorus/weak
+
+/datum/effect_system/smoke_spread/teargas
+	smoke_type = /obj/effect/particle_effect/smoke/teargas
 
 /datum/effect_system/smoke_spread/cn20
 	smoke_type = /obj/effect/particle_effect/smoke/cn20
