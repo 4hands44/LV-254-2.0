@@ -17,7 +17,6 @@ Clown Gang
 /datum/skills/clown/spec
 	name = "Jester"
 	skills = list(
-		SKILL_LEADERSHIP = SKILL_LEAD_TRAINED,
 		SKILL_FIREMAN = SKILL_FIREMAN_SKILLED,
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 		SKILL_CQC = SKILL_CQC_SKILLED,
