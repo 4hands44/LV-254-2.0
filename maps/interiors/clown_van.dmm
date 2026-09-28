@@ -42,20 +42,53 @@
 /turf/open/shuttle/vehicle/floor_3_11,
 /area/interior/vehicle/clown_van)
 "g" = (
+/obj/effect/landmark/interior/spawn/interior_viewport/simple{
+	alpha = 100;
+	pixel_y = -2
+	},
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = 8;
+	dir = 1
+	},
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = -8;
+	dir = 1
+	},
+/turf/open/shuttle/vehicle/med/slate,
+/area/interior/vehicle/clown_van)
+"i" = (
+/obj/effect/landmark/interior/spawn/interior_viewport/simple{
+	pixel_y = 32
+	},
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = 8;
+	pixel_y = 16;
+	layer = 3.3
+	},
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = -8;
+	pixel_y = 16;
+	layer = 3.3
+	},
 /obj/effect/vehicle_roof/box_van{
 	icon_state = "roof_7"
 	},
 /turf/open/shuttle/vehicle/med/slate,
 /area/interior/vehicle/clown_van)
 "k" = (
-/obj/structure/interior_wall/box_van{
-	icon_state = "exterior_2"
+/obj/structure/machinery/cm_vending/gear/clown{
+	pixel_y = 16;
+	layer = 3.3;
+	density = 0
 	},
 /obj/effect/vehicle_roof/box_van{
-	icon_state = "roof_6"
+	icon_state = "roof_7"
 	},
-/turf/open/space/basic,
-/area/space)
+/obj/effect/landmark/interior/spawn/interior_viewport/simple{
+	pixel_y = 32
+	},
+/turf/open/shuttle/vehicle/med/slate,
+/area/interior/vehicle/clown_van)
 "l" = (
 /obj/structure/interior_wall/box_van{
 	icon_state = "background_3";
@@ -111,6 +144,16 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
+"z" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	pixel_y = 32;
+	layer = 3.3
+	},
+/obj/effect/vehicle_roof/box_van{
+	icon_state = "roof_7"
+	},
+/turf/open/shuttle/vehicle/med/slate,
+/area/interior/vehicle/clown_van)
 "B" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
@@ -147,9 +190,13 @@
 /turf/open/void/vehicle,
 /area/space)
 "J" = (
-/obj/effect/landmark/interior/spawn/interior_viewport/simple{
-	alpha = 100;
-	pixel_y = -2
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = -8;
+	dir = 1
+	},
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = 8;
+	dir = 1
 	},
 /turf/open/shuttle/vehicle/med/slate,
 /area/interior/vehicle/clown_van)
@@ -212,11 +259,17 @@
 /turf/open/void/vehicle,
 /area/space)
 "X" = (
-/obj/effect/landmark/interior/spawn/interior_viewport/simple{
-	pixel_y = 30
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = -8;
+	dir = 1
 	},
-/obj/effect/vehicle_roof/box_van{
-	icon_state = "roof_7"
+/obj/structure/bed/chair/vehicle/white{
+	pixel_x = 8;
+	dir = 1
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport/simple{
+	alpha = 100;
+	pixel_y = -2
 	},
 /turf/open/shuttle/vehicle/med/slate,
 /area/interior/vehicle/clown_van)
@@ -234,96 +287,60 @@ a
 a
 a
 a
-a
-a
 "}
 (2,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-"}
-(3,1,1) = {"
-a
 a
 s
 L
 B
 G
 U
-a
 "}
-(4,1,1) = {"
-a
+(3,1,1) = {"
 a
 S
 u
 c
-x
+J
 l
+"}
+(4,1,1) = {"
 a
+S
+k
+c
+X
+l
 "}
 (5,1,1) = {"
 a
-a
-k
-u
+I
+i
 c
-x
+g
 l
-a
 "}
 (6,1,1) = {"
 a
-a
-I
-X
-c
-J
-l
-a
-"}
-(7,1,1) = {"
-a
-a
 y
-g
+z
 c
 x
 l
-a
 "}
-(8,1,1) = {"
-a
+(7,1,1) = {"
 a
 O
 e
 m
 d
 T
-a
 "}
-(9,1,1) = {"
-a
+(8,1,1) = {"
 a
 N
 o
 o
 Y
-a
-a
-"}
-(10,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
 a
 "}

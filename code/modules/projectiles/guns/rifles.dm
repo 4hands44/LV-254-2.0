@@ -953,7 +953,7 @@
 
 /obj/item/weapon/gun/rifle/mar40/carbine/dmr
 	random_spawn_chance = 0
-	starting_attachment_types = list(/obj/item/attachable/extended_barrel, /obj/item/attachable/scope/mini)
+	starting_attachment_types = list(/obj/item/attachable/extended_barrel, /obj/item/attachable/scope/mini, /obj/item/attachable/verticalgrip)
 
 /obj/item/weapon/gun/rifle/mar40/carbine/tactical
 	desc = "A cheap, reliable carbine chambered in 7.62x39mm. Commonly found in the hands of criminals or mercenaries. This one has been equipped with an after-market ammo-counter."

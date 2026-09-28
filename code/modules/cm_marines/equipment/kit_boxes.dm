@@ -357,7 +357,7 @@
 
 /obj/item/storage/box/spec/clown/mastermind
 	name = "\improper Mastermind equipment case"
-	desc = "A large case containing a special pre-prepared kit focused on team support.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a special pre-prepared kit focused on team support and medicine.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_name = "mastermind"
 
 /obj/item/storage/box/spec/clown/mastermind/fill_preset_inventory()
@@ -366,16 +366,16 @@
 	new /obj/item/storage/firstaid/adv (src)
 	new /obj/item/weapon/gun/smg/p90 (src)
 	new /obj/item/clothing/suit/armor/clown/medium (src)
+	new /obj/item/clothing/accessory/health (src)
 	new /obj/item/clothing/accessory/stethoscope (src)
 	new /obj/item/storage/belt/medical/civilian/full (src)
 	new /obj/item/clothing/glasses/hud/health/basic (src)
 	new /obj/item/storage/pouch/magazine/large/p90/mixed (src)
+	new /obj/item/weapon/gun/pistol/heavy (src)
 	new /obj/item/storage/pouch/pistol (src)
-	new /obj/item/weapon/gun/pistol/m1911 (src)
-	new /obj/item/ammo_magazine/pistol/m1911 (src)
-	new /obj/item/ammo_magazine/pistol/m1911 (src)
-	new /obj/item/ammo_magazine/pistol/m1911 (src)
-	new /obj/item/ammo_magazine/pistol/m1911 (src)
+	new /obj/item/ammo_magazine/pistol/heavy (src)
+	new /obj/item/ammo_magazine/pistol/heavy (src)
+	new /obj/item/ammo_magazine/pistol/heavy (src)
 
 // Technician
 
@@ -388,6 +388,7 @@
 	new /obj/item/storage/backpack/satchel/eng (src)
 	new /obj/item/weapon/gun/shotgun/pump/full (src)
 	new /obj/item/clothing/suit/armor/clown/medium (src)
+	new /obj/item/clothing/accessory/health (src)
 	new /obj/item/storage/belt/shotgun/civilian/mixed (src)
 	new /obj/item/clothing/glasses/welding/superior (src)
 	new /obj/item/storage/pouch/construction/clown (src)
@@ -412,6 +413,7 @@
 	new /obj/item/storage/backpack/satchel/norm (src)
 	new /obj/item/weapon/gun/m60 (src)
 	new /obj/item/clothing/suit/armor/clown/ultra (src)
+	new /obj/item/clothing/accessory/health (src)
 	new /obj/item/clothing/accessory/storage/droppouch(src)
 	new /obj/item/storage/belt/marine/smartgunner/m60/full (src)
 	new /obj/item/storage/pouch/pistol (src)
@@ -435,6 +437,7 @@
 	new /obj/item/storage/backpack/satchel/norm (src)
 	new /obj/item/weapon/gun/rifle/m16/grenadier/ext (src)
 	new /obj/item/clothing/suit/armor/clown/heavy (src)
+	new /obj/item/clothing/accessory/health (src)
 	new /obj/item/clothing/accessory/storage/webbing/black/m16ext(src)
 	new /obj/item/storage/belt/grenade/civilian/full (src)
 	new /obj/item/storage/pouch/magazine/large/m16/mixed (src)
@@ -445,12 +448,13 @@
 /obj/item/storage/box/spec/clown/ghost
 	name = "\improper Ghost equipment case"
 	desc = "A large case containing a special pre-prepared kit focused on speed and scouting.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
-	kit_name = "dgost"
+	kit_name = "ghost"
 
 /obj/item/storage/box/spec/clown/ghost/fill_preset_inventory()
 	new /obj/item/storage/backpack/satchel/norm (src)
 	new /obj/item/weapon/gun/rifle/mar40/carbine/dmr (src)
 	new /obj/item/clothing/suit/armor/clown (src)
+	new /obj/item/clothing/accessory/health (src)
 	new /obj/item/clothing/accessory/storage/webbing/black/mar40(src)
 	new /obj/item/storage/belt/marine/mar40 (src)
 	new /obj/item/storage/pouch/pistol (src)
