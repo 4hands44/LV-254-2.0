@@ -362,7 +362,7 @@
 
 /obj/item/storage/box/spec/clown/mastermind/fill_preset_inventory()
 	new /obj/item/storage/backpack/satchel/med (src)
-	new /obj/item/clothing/accessory/storage/surg_vest/drop_black/equipped/improved (src)
+	new /obj/item/clothing/accessory/storage/surg_vest/drop_black/equipped/advanced (src)
 	new /obj/item/storage/firstaid/adv (src)
 	new /obj/item/weapon/gun/smg/p90 (src)
 	new /obj/item/clothing/suit/armor/clown/medium (src)

@@ -142,10 +142,10 @@
 		list("Flashlight", 0, /obj/item/device/flashlight, MARINE_CAN_BUY_KIT, VENDOR_ITEM_MANDATORY),
 
 		list("GEAR KIT (CHOOSE 1)", 0, null, null, null),
-		list("Mastermind", 0, /obj/effect/essentials_set/random/clf_belt, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("Technician", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("Enforcer", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("Fugitive", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Mastermind", 0, /obj/item/storage/box/spec/clown/mastermind, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Technician", 0, /obj/item/storage/box/spec/clown/technician, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Enforcer", 0, /obj/item/storage/box/spec/clown/enforcer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Fugitive", 0, /obj/item/storage/box/spec/clown/fugitive, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 	)
 
 //====BackBiter-Gangster====//
