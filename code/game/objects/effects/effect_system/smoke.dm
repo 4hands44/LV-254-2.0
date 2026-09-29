@@ -364,8 +364,9 @@
 		return FALSE
 
 	else
-		creature.apply_effect(3, EYE_BLUR)
+		creature.apply_effect(10, EYE_BLUR)
 		creature.apply_effect(1, DAZE)
+		creature.apply_effect(1, SLUR)
 		creature.apply_effect(1, SLOW)
 	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
 		creature.coughedtime = 1
@@ -378,7 +379,7 @@
 	if(xeno_affecting)
 		stun_chance = 35
 	if(prob(stun_chance))
-		creature.apply_effect(1, WEAKEN)
+		creature.apply_effect(2, WEAKEN)
 
 	if(xeno_creature)
 		to_chat(xeno_creature, SPAN_XENODANGER("Your body burns all over and you struggle to resist!"))
