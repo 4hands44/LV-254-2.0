@@ -67,6 +67,17 @@
 
 /obj/item/ammo_box/magazine/shotgun/beanbag/empty
 	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/beanbag_riot
+	name = "\improper shotgun shell box (Beanbag x 100)"
+	icon_state = "base_bean"
+	overlay_content = "_bean"
+	magazine_type = /obj/item/ammo_magazine/shotgun/beanbag/riot
+	can_explode = FALSE
+
+
+/obj/item/ammo_box/magazine/shotgun/beanbag_riot/empty
+	empty = TRUE
 //-----------------------TYPE 23 SHELL BOXES-----------------------
 
 /obj/item/ammo_box/magazine/shotgun/upp

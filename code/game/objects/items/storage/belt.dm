@@ -1259,6 +1259,24 @@
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
 	new /obj/item/explosive/grenade/high_explosive/airburst(src)
 
+/obj/item/storage/belt/grenade/large/mp/fill_preset_inventory()
+	new /obj/item/explosive/grenade/smokebomb/airburst(src)
+	new /obj/item/explosive/grenade/smokebomb/airburst(src)
+	new /obj/item/explosive/grenade/sebb(src)
+	new /obj/item/explosive/grenade/sebb(src)
+	new /obj/item/explosive/grenade/sebb(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+	new /obj/item/explosive/grenade/slug/baton(src)
+
 /obj/item/storage/belt/grenade/large/dutch
 	name = "\improper Dutch's Grenadier Rigging"
 	desc = "A high capacity rig filled to the brim with all the explosives you could ask for, what else is there to want?"

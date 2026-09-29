@@ -785,6 +785,10 @@
 	message_down = "You lower the visor down."
 	flags_equip_slot = null
 
+/obj/item/clothing/glasses/mgoggles/cmb_riot_shield/uscm
+	name = "\improper M10 removable riot shield"
+	desc = "A cheap piece of plexiglass designed to protect from bricks, spit, and hippies."
+
 //welding goggles
 
 /obj/item/clothing/glasses/welding

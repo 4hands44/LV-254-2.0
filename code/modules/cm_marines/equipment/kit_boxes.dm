@@ -300,7 +300,6 @@
 	new /obj/item/storage/box/kit/pig_assistant (src)
 
 
-
 /obj/item/storage/box/kit/pig_assistant
 	name = "\improper PIG assistant operator Kit"
 	desc = "A large kit containing all the supplies needed to equip the loading assistant for a PIG Operator."
@@ -465,6 +464,162 @@
 	new /obj/item/ammo_magazine/pistol/m1911 (src)
 	new /obj/item/ammo_magazine/pistol/m1911 (src)
 	new /obj/item/device/binoculars/civ (src)
+
+//rifleman kitbox
+
+/obj/item/storage/box/spec/rifleman
+	name = "\improper Rifleman equipment case"
+	desc = "A large case containing the new MK2 pulse rifle, barrel charger, light armor, and some other useful equipment and attachments.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "smartgun"
+	kit_name = "rifleman"
+
+/obj/item/storage/box/spec/rifleman/fill_preset_inventory()
+
+	new /obj/item/weapon/gun/rifle/m41a(src)
+	new /obj/item/attachable/stock/rifle(src)
+	new /obj/item/attachable/angledgrip(src)
+	new /obj/item/attachable/reddot(src)
+	new /obj/item/attachable/heavy_barrel(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+
+	new /obj/item/clothing/suit/storage/marine/light/carrier(src)
+
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/device/binoculars(src)
+
+
+/obj/item/storage/box/spec/rifleman_mp
+	name = "\improper Military Police Rifleman equipment case"
+	desc = "A large case containing the new MK2 pulse rifle, barrel charger, infared security sight and some other useful equipment and attachments.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "smartgun"
+	kit_name = "rifleman mp"
+
+/obj/item/storage/box/spec/rifleman_mp/fill_preset_inventory()
+
+	new /obj/item/weapon/gun/rifle/m41a(src)
+	new /obj/item/attachable/stock/rifle(src)
+	new /obj/item/attachable/angledgrip(src)
+	new /obj/item/attachable/reddot(src)
+	new /obj/item/attachable/heavy_barrel(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+	new /obj/item/clothing/glasses/night/sechud(src)
+	new /obj/item/device/motiontracker/adv(src)
+
+	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/device/binoculars(src)
+
+
+/obj/item/storage/box/spec/mp_dispatcher
+	name = "\improper Military Police Dispatcher equipment case"
+	desc = "A large case containing a telephone, portable faxmachine, crew tracker, and other important equipment for a Military Police dispatcher.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "+jtac"
+	kit_name = "rifleman mp"
+	kit_name = "dispatcher"
+
+/obj/item/storage/box/spec/mp_dispatcher/fill_preset_inventory()
+
+	new /obj/item/weapon/gun/rifle/m41a(src)
+	new /obj/item/attachable/stock/rifle(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+
+	new /obj/item/clothing/glasses/night/sechud(src)
+	new /obj/item/device/motiontracker/adv(src)
+
+	new /obj/item/tool/crew_monitor(src)
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/encryptionkey/jtac(src)
+	new /obj/item/storage/backpack/marine/satchel/rto(src)
+	new /obj/structure/machinery/faxmachine/backpack(src)
+	new /obj/item/notepad(src)
+	new /obj/item/tool/pen(src)
+
+
+//mp riot spec kits
+
+/obj/item/storage/box/spec/riot_gl
+	name = "\improper Military Police Riot Control equipment case"
+	desc = "A large case containing USCM Military Police Riot Control Gear. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "grenadier"
+	kit_name = "rifleman mp"
+
+/obj/item/storage/box/spec/riot_gl/fill_preset_inventory()
+
+	new /obj/item/clothing/head/helmet/marine/MP(src)
+	new /obj/item/clothing/glasses/mgoggles/cmb_riot_shield/uscm(src)
+	new /obj/item/clothing/suit/armor/riot/marine(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/clothing/gloves/marine/M3G(src)
+	new /obj/item/storage/belt/grenade/large/mp(src)
+	new /obj/item/storage/backpack/marine/grenadepack(src)
+
+	new /obj/item/weapon/gun/launcher/grenade/m92/riot(src)
+	new /obj/item/weapon/baton_riot(src)
+	new /obj/item/weapon/shield/riot(src)
+
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+	new /obj/item/storage/box/nade_box/tear_gas(src)
+
+	new /obj/item/clothing/glasses/night/sechud(src)
+	new /obj/item/device/motiontracker/adv(src)
+
+	new /obj/item/device/binoculars(src)
+
+/obj/item/storage/box/spec/riot_shotty
+	name = "\improper Military Police Riot Control equipment case"
+	desc = "A large case containing USCM Military Police Riot Control Gear. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "grenadier"
+	kit_name = "rifleman mp"
+
+/obj/item/storage/box/spec/riot_shotty/fill_preset_inventory()
+
+	new /obj/item/clothing/head/helmet/marine/MP(src)
+	new /obj/item/clothing/glasses/mgoggles/cmb_riot_shield/uscm(src)
+	new /obj/item/clothing/suit/armor/riot/marine(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/clothing/gloves/marine/M3G(src)
+	new /obj/item/storage/pouch/shotgun/large/beanbag/riot(src)
+	new /obj/item/storage/pouch/shotgun/large/beanbag/riot(src)
+
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+	new /obj/item/weapon/gun/shotgun/combat/riot(src)
+	new /obj/item/weapon/baton_riot(src)
+	new /obj/item/weapon/shield/riot(src)
+
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/tear_gas(src)
+	new /obj/item/explosive/grenade/tear_gas(src)
+	new /obj/item/explosive/grenade/tear_gas(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/sebb(src)
+
+	new /obj/item/clothing/glasses/night/sechud(src)
+	new /obj/item/device/motiontracker/adv(src)
+
+	new /obj/item/device/binoculars(src)
 
 //-----------------SPEC KIT BOX------------------
 //For events/WO, allows the user to choose a specalist kit out of available ones in spec_kit_boxes_left list in gloabl_lists.dm
@@ -830,10 +985,9 @@
 
 /obj/item/storage/box/kit/honorguard/fill_preset_inventory()
 	new /obj/item/device/radio/headset/almayer/marine/mp_honor(src)
-	new /obj/item/storage/pill_bottle/packet/oxycodone(src)
-	new /obj/item/storage/pill_bottle/packet/kelotane(src)
-	new /obj/item/storage/pill_bottle/packet/bicaridine(src)
 	new /obj/item/weapon/gun/shotgun/combat/guard(src)
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/storage/pouch/general/large(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)

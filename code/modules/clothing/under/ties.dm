@@ -411,6 +411,11 @@
 	desc = "An armband, worn by the rookie nurses to display they are still not doctors. This one is dark red."
 	icon_state = "nurse"
 
+/obj/item/clothing/accessory/armband/mp
+	name = "military police armband"
+	desc = "An armband, worn by USCM military police."
+	icon_state = "armband_mp"
+
 /obj/item/clothing/accessory/armband/squad
 	name = "squad armband"
 	desc = "An armband in squad colors, worn for ease of idenfication."
