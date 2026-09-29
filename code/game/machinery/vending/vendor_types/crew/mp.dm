@@ -117,4 +117,5 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/storage/belt/security/MP/full,
 		/obj/item/clothing/head/helmet/marine/MP,
+		/obj/item/clothing/glasses/mgoggles/cmb_riot_shield/uscm,
 	)

@@ -228,6 +228,11 @@
 	req_skill = SKILL_SPEC_WEAPONS
 	req_skill_level = list(SKILL_SPEC_SMARTGUN, SKILL_SPEC_ALL)
 
+/obj/item/clothing/glasses/night/m56_goggles/mp
+	desc = "A headset and goggles system for the M56 Smartgun. Has a low-res short-range imager, allowing for view of terrain. This one features additional systems to aid military police."
+	eye_protection = EYE_PROTECTION_FLASH
+	hud_type = MOB_HUD_SECURITY_ADVANCED
+
 /obj/item/clothing/glasses/night/yautja
 	name = "bio-mask nightvision"
 	gender = NEUTER

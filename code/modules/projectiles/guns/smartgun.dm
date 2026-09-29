@@ -683,7 +683,7 @@
 /obj/item/weapon/gun/smartgun/wield(mob/living/user)
 	if(auto_aim)
 		to_chat(user, SPAN_NOTICE("You start adjusting your stance to allow [src] to guide your aim."))
-		if(!do_after(user, 15, INTERRUPT_ALL, BUSY_ICON_HOSTILE, src, INTERRUPT_DIFF_LOC))
+		if(!do_after(user, 5, INTERRUPT_ALL, BUSY_ICON_HOSTILE, src, INTERRUPT_DIFF_LOC))
 			return
 		pick(playsound(src.loc, 'sound/weapons/smartgun_move.mp3', 55, 1), playsound(src.loc, 'sound/weapons/smartgun_move2.mp3', 55, 1))
 
