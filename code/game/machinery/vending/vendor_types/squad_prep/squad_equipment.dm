@@ -36,15 +36,20 @@
 //------------Squad Leader---------------
 GLOBAL_LIST_INIT(cm_vending_gear_leader, list(
 		list("SQUAD LEADER KIT (CHOOSE 1)", 0, null, null, null),
-		list("Essential SL Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential SL Kit", 0, /obj/effect/essentials_set/leader, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 
-		list("SQUAD KIT (CHOOSE 1, for yourself or your squad)", 0, null, null, null),
-		list("M4RA Sniper Kit", 0, /obj/item/storage/box/kit/mini_sniper, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("M240 Pyrotechnician Support Kit", 0, /obj/item/storage/box/kit/mini_pyro, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("M2C Heavy Machine Gun", 0, /obj/item/storage/box/guncase/m2c, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("M56D Heavy Machine Gun", 0, /obj/item/storage/box/guncase/m56d, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("MOU-53 Shotgun", 0, /obj/item/storage/box/guncase/mou53, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
-		list("XM88 Heavy Rifle", 0, /obj/item/storage/box/guncase/xm88, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("SQUAD LEADER SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("HPR Support Kit", 0, /obj/item/storage/box/kit/heavy_support, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("M240 Pyrotechnician Support Kit", 0, /obj/item/storage/box/kit/mini_pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("MOU-53 Shotgun", 0, /obj/item/storage/box/guncase/mou53, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("XM88 Heavy Marksman Rifle", 0, /obj/item/storage/box/guncase/xm88, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("M78 PIG kit", 0, /obj/item/storage/box/spec/pig_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+
+		list("CREW SERVED WEAPON KIT (OPTIONAL)", 0, null, null, null),
+		list("M402 Mortar Crew kit", 0, /obj/item/storage/box/spec/mortar, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("M56D HMG Crew kit", 0, /obj/item/storage/box/guncase/m56d, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("M2C HMG Crew kit", 0, /obj/item/storage/box/guncase/m2c, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING ITEMS", 0, null, null, null),
 		list("Machete Scabbard (Full)", 4, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
@@ -213,6 +218,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_tl, list(
 //------------Squad Engineer---------------
 GLOBAL_LIST_INIT(cm_vending_gear_engi, list(
 		list("ENGINEERING SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Sapper Fortification kit", 0, /obj/item/storage/box/kit/sapper, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 		list("Sentry Network kit", 0, /obj/item/storage/box/kit/sentry, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 		list("M240T Flamer Kit", 0, /obj/item/storage/box/spec/pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
@@ -308,6 +314,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi, list(
 GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Rifleman mk2 Set(OPTIONAL)", 0, /obj/item/storage/box/spec/rifleman, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("FIELD SUPPLIES", 0, null, null, null),
 		list("Burn Kit", 2, /obj/item/stack/medical/advanced/ointment, null, VENDOR_ITEM_RECOMMENDED),
@@ -392,6 +399,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 //------------Squad Specialist---------------
 GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 		list("WEAPONS SPECIALIST SETS (CHOOSE 1)", 0, null, null, null),
+		list("Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Demolitionist Set", 0, /obj/item/storage/box/spec/demolitionist, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Heavy Grenadier Set", 0, /obj/item/storage/box/spec/heavy_grenadier, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Pyro Set", 0, /obj/item/storage/box/spec/pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
@@ -441,6 +449,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 //------------Squad Smartgunner---------------
 GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 		list("SUPPORT RIFLEMAN SET (MANDATORY)", 0, null, null, null),
+		list("Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Essential Smartgunner Set", 0, /obj/effect/essentials_set/smartgunner/m56, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential xm99a gunner Set", 0, /obj/effect/essentials_set/smartgunner/xm99a, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential HPR gunner Set", 0, /obj/effect/essentials_set/smartgunner/hpr, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
@@ -509,6 +518,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 GLOBAL_LIST_INIT(cm_vending_gear_marine, list(
 
 		list("WEAPON SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("M5 RPG Specialist Kit", 0, /obj/item/storage/box/spec/demolitionist, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("M78 PIG kit", 0, /obj/item/storage/box/spec/pig_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Grenadier Kit", 0, /obj/item/storage/box/spec/heavy_grenadier, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),

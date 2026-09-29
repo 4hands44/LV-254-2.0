@@ -148,8 +148,8 @@
 	)
 
 /obj/item/clothing/under/marine/warden
-	name = "military warden jumpsuit"
-	desc = "Standard-issue Military Warden uniform. It has shards of light Venlar to help protect against stabbing weapons and bullets."
+	name = "military police pattern marine operations uniform"
+	desc = "A standard-issue Military Police uniform. It has shards of light Venlar to help protect against stabbing weapons and bullets."
 	icon_state = "warden_jumpsuit"
 	worn_state = "warden_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_SLEEVE_CUTTABLE|UNIFORM_JACKET_REMOVABLE
@@ -432,12 +432,6 @@
 	worn_state = "provost"
 
 	specialty = "provost"
-
-	suit_restricted = list(
-		/obj/item/clothing/suit/storage/marine/MP,
-		/obj/item/clothing/suit/armor/riot/marine,
-		/obj/item/clothing/suit/storage/jacket/marine/provost,
-	)
 
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 

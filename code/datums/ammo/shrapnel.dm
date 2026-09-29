@@ -60,6 +60,23 @@
 	stamina_damage = 25
 	shrapnel_chance = 0
 
+/datum/ammo/bullet/shrapnel/stun_baton
+	name = "electric bolt"
+	icon_state = "stun"
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_ENERGY|AMMO_IGNORE_RESIST|AMMO_MP
+	hit_effect_color = "#FFFF00"
+
+	damage = 0
+	stamina_damage = 45
+	shrapnel_chance = 0
+	max_range = 3
+
+/datum/ammo/bullet/shrapnel/stun_baton/on_hit_mob(mob/mobs, obj/projectile/P)
+	if(ishuman(mobs))
+		var/mob/living/carbon/human/humanus = mobs
+		humanus.disable_special_items() // Disables scout cloak
+		humanus.make_jittery(40)
+
 
 /datum/ammo/bullet/shrapnel/hornet_rounds
 	name = ".22 hornet round"

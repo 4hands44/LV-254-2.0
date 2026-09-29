@@ -2,17 +2,32 @@
 
 GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 		list("POLICE SET (MANDATORY)", 0, null, null, null),
-		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
-		list("Uniform", 0, /obj/item/clothing/under/marine/mp, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("USCM MP Uniform", 0, /obj/item/clothing/under/marine/mp/provost, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Camo Conforming Uniform", 0, /obj/item/clothing/under/marine/mp, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Operations Uniform", 0, /obj/item/clothing/under/marine/warden, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/mmpo, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
 		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (TAKE ALL)", 0, null, null, null),
 		list("Military Police M2 Armor", 0, /obj/item/clothing/suit/storage/marine/MP, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("MP Beret", 0, /obj/item/clothing/head/beret/marine/mp, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+
+		list("MILITARY POLICE FIELD SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Military Police Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Military Police Smartgunner Set", 0, /obj/effect/essentials_set/mp_smartgunner/m56, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Pointman Breacher kit", 0, /obj/item/storage/box/kit/pursuit, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Field Dispatcher kit", 0, /obj/item/storage/box/spec/mp_dispatcher, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Military Police K9 handler", 0, /obj/item/storage/box/kit/k9_handler/mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Honorguard Kit", 0, /obj/item/storage/box/kit/honorguard, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+
+		list("RIOT CONTROL KIT (CHOOSE 1)", 0, null, null, null),
+		list("Riot Control Standard kit", 0, /obj/item/storage/box/spec/riot_shotty, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("Riot Control Grenadier kit", 0, /obj/item/storage/box/spec/riot_gl, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("HANDGUN CASE (CHOOSE 1)", 0, null, null, null),
 		list("88 mod 4 Combat Pistol Case", 0, /obj/item/storage/box/guncase/mod88, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
@@ -59,17 +74,31 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 
 GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 		list("POLICE SET (MANDATORY)", 0, null, null, null),
-		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
-		list("Warden Uniform", 0, /obj/item/clothing/under/marine/warden, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("USCM MP Uniform", 0, /obj/item/clothing/under/marine/mp/provost, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Camo Conforming Uniform", 0, /obj/item/clothing/under/marine/mp, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Operations Uniform", 0, /obj/item/clothing/under/marine/warden, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/cmpcom, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
 		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (TAKE ALL)", 0, null, null, null),
 		list("Military Warden M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/warden, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("Warden Peaked Cap", 0, /obj/item/clothing/head/beret/marine/mp/warden, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+
+
+		list("MILITARY POLICE SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Military Police Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Field Dispatcher kit", 0, /obj/item/storage/box/spec/mp_dispatcher, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Military Police K9 handler", 0, /obj/item/storage/box/kit/k9_handler/mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Honorguard Kit", 0, /obj/item/storage/box/kit/honorguard, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+
+		list("RIOT CONTROL KIT (CHOOSE 1)", 0, null, null, null),
+		list("Riot Control Standard kit", 0, /obj/item/storage/box/spec/riot_shotty, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("Riot Control Grenadier kit", 0, /obj/item/storage/box/spec/riot_gl, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("HANDGUN CASE (CHOOSE 1)", 0, null, null, null),
 		list("88 mod 4 Combat Pistol Case", 0, /obj/item/storage/box/guncase/mod88, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),

@@ -38,7 +38,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_chief, list(
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
-		list("CMP Uniform", 0, /obj/item/clothing/under/marine/officer/warrant, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("USCM CMP Uniform", 0, /obj/item/clothing/under/marine/mp/provost/senior, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Camo Conforming Uniform", 0, /obj/item/clothing/under/marine/mp, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Operations Uniform", 0, /obj/item/clothing/under/marine/warden, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/almayer/cmpcom, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
 		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
 
@@ -46,6 +48,17 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_chief, list(
 		list("Military Police Chief M3 Armor", 0, /obj/item/clothing/suit/storage/marine/MP/WO, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 		list("Chief MP M10 Helmet", 0, /obj/item/clothing/head/helmet/marine/MP/WO, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
 		list("CMP Beret", 0, /obj/item/clothing/head/beret/marine/mp/cmp, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+
+		list("MILITARY POLICE SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
+		list("Military Police Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Military Police Smartgunner Set", 0, /obj/effect/essentials_set/mp_smartgunner/m56, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Field Dispatcher kit", 0, /obj/item/storage/box/spec/mp_dispatcher, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Honorguard Kit", 0, /obj/item/storage/box/kit/honorguard, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+
+		list("RIOT CONTROL KIT (CHOOSE 1)", 0, null, null, null),
+		list("Riot Control Standard kit", 0, /obj/item/storage/box/spec/riot_shotty, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("Riot Control Grenadier kit", 0, /obj/item/storage/box/spec/riot_gl, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
 
 		list("HANDGUN CASE (CHOOSE 1)", 0, null, null, null),
 		list("88 mod 4 Combat Pistol Case", 0, /obj/item/storage/box/guncase/mod88, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
