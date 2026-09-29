@@ -446,12 +446,12 @@
 
 /obj/item/storage/box/spec/riot_gl/fill_preset_inventory()
 
-	new /obj/item/clothing/head/helmet/riot(src)
+	new /obj/item/clothing/head/helmet/marine/MP(src)
 	new /obj/item/clothing/glasses/mgoggles/cmb_riot_shield/uscm(src)
 	new /obj/item/clothing/suit/armor/riot/marine(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
-	new /obj/item/storage/belt/grenade/large/full(src)
+	new /obj/item/storage/belt/grenade/large/mp(src)
 	new /obj/item/storage/backpack/marine/grenadepack(src)
 
 	new /obj/item/weapon/gun/launcher/grenade/m92/riot(src)
@@ -460,12 +460,6 @@
 
 	new /obj/item/clothing/accessory/health/ceramic_plate(src)
 	new /obj/item/storage/box/nade_box/tear_gas(src)
-	new /obj/item/explosive/grenade/flashbang/noskill(src)
-	new /obj/item/explosive/grenade/sebb(src)
-	new /obj/item/explosive/grenade/sebb(src)
-	new /obj/item/explosive/grenade/sebb(src)
-	new /obj/item/explosive/grenade/sebb(src)
-	new /obj/item/explosive/grenade/sebb(src)
 
 	new /obj/item/clothing/glasses/night/sechud(src)
 	new /obj/item/device/motiontracker/adv(src)
@@ -480,7 +474,7 @@
 
 /obj/item/storage/box/spec/riot_shotty/fill_preset_inventory()
 
-	new /obj/item/clothing/head/helmet/riot(src)
+	new /obj/item/clothing/head/helmet/marine/MP(src)
 	new /obj/item/clothing/glasses/mgoggles/cmb_riot_shield/uscm(src)
 	new /obj/item/clothing/suit/armor/riot/marine(src)
 	new /obj/item/clothing/mask/gas(src)
@@ -493,11 +487,13 @@
 	new /obj/item/weapon/baton_riot(src)
 	new /obj/item/weapon/shield/riot(src)
 
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/tear_gas(src)
+	new /obj/item/explosive/grenade/tear_gas(src)
+	new /obj/item/explosive/grenade/tear_gas(src)
 	new /obj/item/explosive/grenade/flashbang/noskill(src)
-	new /obj/item/explosive/grenade/sebb(src)
-	new /obj/item/explosive/grenade/sebb(src)
-	new /obj/item/explosive/grenade/sebb(src)
-	new /obj/item/explosive/grenade/sebb(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
+	new /obj/item/explosive/grenade/flashbang/noskill(src)
 	new /obj/item/explosive/grenade/sebb(src)
 
 	new /obj/item/clothing/glasses/night/sechud(src)

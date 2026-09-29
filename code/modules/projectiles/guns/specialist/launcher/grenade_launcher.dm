@@ -299,20 +299,33 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92/riot
 	name = "\improper M92 grenade launcher"
-	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
+	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for riot control and excessive force."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/grenade_launchers.dmi'
 	icon_state = "m92-riot"
 	item_state = "m92"
+	unacidable = TRUE
+	explo_proof = TRUE
+	matter = list("metal" = 6000)
+	actions_types = list(/datum/action/item_action/toggle_firing_level)
 
-	preload = /obj/item/explosive/grenade/custom/teargas
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness)
+	flags_item = TWOHANDED|NO_CRYO_STORE
+
+	is_lobbing = TRUE
+	internal_slots = 6
+	direct_draw = FALSE
+
+	preload = /obj/item/explosive/grenade/tear_gas
 
 	valid_munitions = list(
+		/obj/item/explosive/grenade/tear_gas,
 		/obj/item/explosive/grenade/custom/teargas,
 		/obj/item/explosive/grenade/slug/baton,
 		/obj/item/explosive/grenade/smokebomb,
 		/obj/item/explosive/grenade/sebb,
 		/obj/item/explosive/grenade/smokebomb/airburst,
 		/obj/item/explosive/grenade/flashbang,
+		/obj/item/explosive/grenade/flashbang/noskill,
 		/obj/item/explosive/grenade/high_explosive/m15/rubber,
 	)
 
