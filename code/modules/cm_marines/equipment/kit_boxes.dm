@@ -1040,3 +1040,20 @@
 	new /obj/item/storage/pouch/electronics/full(src)
 	new /obj/item/uav_drone(src)
 	new /obj/item/uav_drone(src)
+
+
+/obj/item/storage/box/kit/ewar_mp
+	name = "\improper Electronic Warfare Kit"
+	pro_case_overlay = "ewar"
+	desc = "A Militar Police officer's Electronic Warfare Kit  filled with tools to access UAVs and sentry nets, or hack anything. Contains: AR Headset, UAV, JIMA backpack, Computer, EMP grenades, Tools. (WIP, mostly Fluff)"
+
+/obj/item/storage/box/kit/ewar_mp/fill_preset_inventory()
+	new /obj/item/storage/backpack/jima(src)
+	new /obj/item/device/sentry_computer(src)
+	new /obj/item/storage/toolkit/ms(src)
+	new /obj/item/clothing/glasses/night/hack_goggles/mp(src)
+	new /obj/item/device/hackingdevice(src)
+	new /obj/item/device/assembly/signaller(src)
+	new /obj/item/storage/pouch/explosive/emp(src)
+	new /obj/item/uav_drone(src)
+	new /obj/item/uav_drone(src)
