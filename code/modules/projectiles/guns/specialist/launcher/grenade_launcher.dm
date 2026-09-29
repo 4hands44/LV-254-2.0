@@ -263,7 +263,7 @@
 //-------------------------------------------------------
 //M92 GRENADE LAUNCHER
 
-/obj/item/weapon/gun/launcher/grenade/m92
+	/obj/item/weapon/gun/launcher/grenade/m92
 	name = "\improper M92 grenade launcher"
 	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/grenade_launchers.dmi'
@@ -296,6 +296,25 @@
 			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
 			return FALSE
 
+
+/obj/item/weapon/gun/launcher/grenade/m92/riot
+	name = "\improper M92 grenade launcher"
+	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/grenade_launchers.dmi'
+	icon_state = "m92-riot"
+	item_state = "m92"
+
+	preload = /obj/item/explosive/grenade/custom/teargas
+
+	valid_munitions = list(
+		/obj/item/explosive/grenade/custom/teargas,
+		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/sebb,
+		/obj/item/explosive/grenade/smokebomb/airburst,
+		/obj/item/explosive/grenade/flashbang,
+		/obj/item/explosive/grenade/high_explosive/m15/rubber,
+	)
 
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER

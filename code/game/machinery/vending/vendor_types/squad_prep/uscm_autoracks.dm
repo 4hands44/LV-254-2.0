@@ -308,6 +308,33 @@
 /obj/structure/machinery/auto_rack/uscm/beanbag/full/locked
 	locked = TRUE
 
+//riot_beanbag
+
+/obj/structure/machinery/auto_rack/uscm/beanbag_riot/full
+	name = "ColMarTech Automated Munitions Storage Carousel"
+	desc = "The ARMAT brand munitions rack has deceptively small storage, presenting only a limited single stack of storage clamps, the device automatically cycles to a fully stocked shelf when the current one is depleted. This one is configured to hold 20 gauge beanbag storage tins."
+	icon_state = "beanbag_magrack"
+	initial_stored = 4
+	max_restocks = 1
+	stocked_weapon = /obj/item/ammo_box/magazine/shotgun/beanbag_riot
+	restock_type = /obj/item/ammo_box/magazine/shotgun/beanbag_riot
+
+/obj/structure/machinery/auto_rack/uscm/beanbag_riot/full/locked
+	locked = TRUE
+
+/obj/structure/machinery/auto_rack/uscm/beanbag_riot/full
+	name = "ColMarTech Automated Munitions Storage Carousel"
+	desc = "The ARMAT brand munitions rack has deceptively small storage, presenting only a limited single stack of storage clamps, the device automatically cycles to a fully stocked shelf when the current one is depleted. This one is configured to hold 20 gauge beanbag storage tins."
+	icon_state = "beanbag_magrack"
+	initial_stored = 0
+	max_restocks = 1
+	stocked_weapon = /obj/item/ammo_box/magazine/shotgun/beanbag_riot
+	restock_type = /obj/item/ammo_box/magazine/shotgun/beanbag_riot
+
+/obj/structure/machinery/auto_rack/uscm/beanbag/full/locked_riot
+	locked = TRUE
+
+
 //Smartgun----
 
 /obj/structure/machinery/auto_rack/uscm/smartgun_ammo

@@ -78,3 +78,8 @@
 
 
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
+
+/obj/item/clothing/suit/storage/marine/smartgunner/mp
+	name = "\improper M56 MP pattern combat harness"
+	item_state = "8mp"
+	icon_state = "8mp"

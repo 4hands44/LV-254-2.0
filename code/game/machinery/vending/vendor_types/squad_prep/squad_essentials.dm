@@ -194,3 +194,11 @@
 		/obj/item/storage/box/spec/mortar,
 		)
 	new_human.equip_to_slot_or_del(new engi_kit, WEAR_L_HAND)
+
+// mp sg
+/obj/effect/essentials_set/mp_smartgunner/m56
+	spawned_gear_list = list(
+		/obj/item/storage/box/m56_system,
+		/obj/item/device/whiskey_supply_beacon,
+		/obj/item/device/whiskey_supply_beacon,
+	)

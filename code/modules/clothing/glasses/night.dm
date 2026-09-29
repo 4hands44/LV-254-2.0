@@ -45,6 +45,18 @@
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
 
+/obj/item/clothing/glasses/night/sechud
+	name = "\improper Mark 4 Battle sight"
+	gender = NEUTER
+	desc = "A ARMAT brand headset and night vision goggles system for the USCM combat rifle family. Allows highlighted imaging of surroundings, as well as the ability to view the security statuses of others. Click it to toggle."
+	icon_state = "m4_goggles"
+	deactive_state = "m4_goggles_0"
+	vision_flags = SEE_INFRA|SEE_MOBS
+	hud_type = MOB_HUD_SECURITY_ADVANCED
+	toggleable = TRUE
+	fullscreen_vision = null
+	actions_types = list(/datum/action/item_action/toggle)
+
 /obj/item/clothing/glasses/night/m42_night_goggles
 	name = "\improper M42 scout sight"
 	gender = NEUTER
@@ -227,6 +239,11 @@
 	fullscreen_vision = null
 	req_skill = SKILL_SPEC_WEAPONS
 	req_skill_level = list(SKILL_SPEC_SMARTGUN, SKILL_SPEC_ALL)
+
+/obj/item/clothing/glasses/night/m56_goggles/mp
+	desc = "A headset and goggles system for the M56 Smartgun. Has a low-res short-range imager, allowing for view of terrain. This one features additional systems to aid military police."
+	eye_protection = EYE_PROTECTION_FLASH
+	hud_type = MOB_HUD_SECURITY_ADVANCED
 
 /obj/item/clothing/glasses/night/yautja
 	name = "bio-mask nightvision"
