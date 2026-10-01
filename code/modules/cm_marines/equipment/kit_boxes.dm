@@ -867,6 +867,8 @@
 	new /obj/item/device/radio/headset/almayer/marine/mp_honor(src)
 	new /obj/item/weapon/gun/shotgun/combat/guard(src)
 	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+	new /obj/item/clothing/suit/armor/riot/marine/honorguard(src)
+	new /obj/item/weapon/shield/riot/ballistic/uscm(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/storage/pouch/general/large(src)
 	new /obj/item/ammo_magazine/shotgun/buckshot(src)
