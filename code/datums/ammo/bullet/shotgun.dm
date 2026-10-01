@@ -183,8 +183,8 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
-	accurate_range = 4
-	max_range = 4
+	accurate_range = 6
+	max_range = 9
 	damage = 25
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
@@ -227,8 +227,8 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
-	accurate_range = 4
-	max_range = 6
+	accurate_range = 6
+	max_range = 7
 	damage = 65
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
@@ -252,8 +252,8 @@
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
-	accurate_range = 3
-	max_range = 3
+	accurate_range = 6
+	max_range = 7
 	damage = 65
 	penetration = 0
 	shell_speed = AMMO_SPEED_TIER_2
@@ -265,7 +265,7 @@
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/spread
 	name = "additional heavy buckshot"
-	max_range = 4
+	max_range = 7
 	scatter = SCATTER_AMOUNT_TIER_1
 	bonus_projectiles_amount = 0
 

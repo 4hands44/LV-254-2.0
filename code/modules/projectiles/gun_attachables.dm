@@ -4015,6 +4015,15 @@ Defined in conflicts.dm of the #defines folder.
 
 	flags_attach_features = ATTACH_ACTIVATION
 
+/obj/item/attachable/bipod/m60/New()
+	..()
+
+	delay_mod = FIRE_DELAY_TIER_11
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
+	recoil_mod = RECOIL_AMOUNT_TIER_5
+
 /obj/item/attachable/bipod/pkp
 	name = "pkp bipod"
 	desc = "A simple set of telescopic poles to keep a weapon stabilized during firing."

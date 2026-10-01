@@ -41,7 +41,10 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	/obj/item/storage/box/packet/phosphorus/upp,
 	/obj/item/storage/box/packet/m15,
 	/obj/item/storage/box/packet/airburst_he,
-	/obj/item/storage/box/packet/airburst_incen
+	/obj/item/storage/box/packet/airburst_incen,
+	/obj/item/storage/box/packet/impact_he,
+	/obj/item/storage/box/packet/impact_incen,
+	/obj/item/storage/box/packet/impact_frag,
 	))
 
 /obj/item/storage/box/packet/high_explosive
@@ -184,3 +187,23 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	icon_state = "hidp_packet"
 	item_state = "hidp_packet"
 	content_type = /obj/item/explosive/grenade/incendiary/rmc
+
+/obj/item/storage/box/packet/impact_he
+	name = "\improper 40mm impact HE grenade packet"
+	desc = "It contains three 40mm impact HE grenades. This end towards the enemy."
+	icon_state = "agmf_packet"
+	content_type = /obj/item/explosive/grenade/high_explosive/impact
+
+/obj/item/storage/box/packet/impact_incen
+	name = "\improper 40mm impact incendiary grenade packet"
+	desc = "It contains three 40mm impact incendiary grenades. This end towards the enemy."
+	icon_state = "agmi_packet"
+	item_state = "agmi_packet"
+	content_type = /obj/item/explosive/grenade/incendiary/impact
+
+/obj/item/storage/box/packet/impact_frag
+	name = "\improper 40mm impact buckshot grenade packet"
+	desc = "It contains three 40mm impact buckshot grenades. This end towards the enemy."
+	icon_state = "agms_packet"
+	item_state = "agms_packet"
+	content_type = /obj/item/explosive/grenade/high_explosive/airburst/buckshot

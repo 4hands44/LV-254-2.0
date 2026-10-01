@@ -977,8 +977,8 @@
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
-	scatter = SCATTER_AMOUNT_TIER_4
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_3
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
@@ -996,7 +996,7 @@
 	item_state = "p90_twe"
 
 	fire_sound = 'sound/weapons/p90.ogg'
-	current_mag = /obj/item/ammo_magazine/smg/p90/twe/heap
+	current_mag = /obj/item/ammo_magazine/smg/p90/heap
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
 		/obj/item/attachable/extended_barrel,
@@ -1009,8 +1009,8 @@
 		)
 	accepted_ammo = list(
 		/obj/item/ammo_magazine/smg/p90,
-		/obj/item/ammo_magazine/smg/p90/twe,
-		/obj/item/ammo_magazine/smg/p90/twe/heap,
+		/obj/item/ammo_magazine/smg/p90/ap,
+		/obj/item/ammo_magazine/smg/p90/heap,
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE

@@ -840,6 +840,22 @@
 	icon_state = "webbing_black"
 	item_state = "webbing_black"
 
+/obj/item/clothing/accessory/storage/webbing/black/m16ext
+	hold = /obj/item/storage/internal/accessory/webbing/m16ext
+
+/obj/item/storage/internal/accessory/webbing/m16ext/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m16/ext(src)
+	new /obj/item/ammo_magazine/rifle/m16/ext(src)
+	new /obj/item/ammo_magazine/rifle/m16/ext(src)
+
+/obj/item/clothing/accessory/storage/webbing/black/mar40
+	hold = /obj/item/storage/internal/accessory/webbing/mar40
+
+/obj/item/storage/internal/accessory/webbing/mar40/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40/ap(src)
+	new /obj/item/ammo_magazine/rifle/mar40/ap(src)
+
 /obj/item/clothing/accessory/storage/webbing/five_slots
 	hold = /obj/item/storage/internal/accessory/webbing/five_slots
 
@@ -983,12 +999,37 @@
 	new /obj/item/tool/surgery/scalpel(src)
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/tool/surgery/cautery(src)
 	new /obj/item/tool/surgery/circular_saw(src)
 	new /obj/item/tool/surgery/surgicaldrill(src)
 	new /obj/item/tool/surgery/bonegel(src)
 	new /obj/item/tool/surgery/bonesetter(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/tool/surgery/FixOVein(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+
+/obj/item/storage/internal/accessory/surg_vest/equipped/improved/fill_preset_inventory()
+	new /obj/item/tool/surgery/scalpel/manager(src)
+	new /obj/item/tool/surgery/circular_saw(src)
+	new /obj/item/tool/surgery/surgicaldrill(src)
+	new /obj/item/tool/surgery/bonegel(src)
+	new /obj/item/tool/surgery/bonesetter(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/tool/surgery/FixOVein(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+
+/obj/item/storage/internal/accessory/surg_vest/equipped/advanced/fill_preset_inventory()
+	new /obj/item/tool/surgery/scalpel/manager/improved(src)
+	new /obj/item/tool/surgery/cautery(src)
+	new /obj/item/tool/surgery/circular_saw(src)
+	new /obj/item/tool/surgery/surgicaldrill(src)
+	new /obj/item/tool/surgery/bonegel(src)
+	new /obj/item/tool/surgery/bonesetter(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/tool/surgery/FixOVein(src)
 	new /obj/item/stack/nanopaste(src)
 	new /obj/item/tool/surgery/surgical_line(src)
@@ -1028,23 +1069,7 @@
 	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
 
 /obj/item/clothing/accessory/storage/surg_vest/drop_green/upp
-	hold = /obj/item/storage/internal/accessory/surg_vest/drop_green/upp
-
-/obj/item/storage/internal/accessory/surg_vest/drop_green/upp/fill_preset_inventory()
-	new /obj/item/tool/surgery/scalpel(src)
-	new /obj/item/tool/surgery/hemostat(src)
-	new /obj/item/tool/surgery/retractor(src)
-	new /obj/item/tool/surgery/cautery(src)
-	new /obj/item/tool/surgery/circular_saw(src)
-	new /obj/item/tool/surgery/surgicaldrill(src)
-	new /obj/item/tool/surgery/scalpel/pict_system(src)
-	new /obj/item/tool/surgery/bonesetter(src)
-	new /obj/item/tool/surgery/FixOVein(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/nanopaste(src)
-	new /obj/item/tool/surgery/bonegel(src)
-	new /obj/item/tool/surgery/bonegel(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
+	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
 
 /obj/item/clothing/accessory/storage/surg_vest/drop_black
 	name = "black surgical drop pouch"
@@ -1053,6 +1078,12 @@
 
 /obj/item/clothing/accessory/storage/surg_vest/drop_black/equipped
 	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
+
+/obj/item/clothing/accessory/storage/surg_vest/drop_black/equipped/improved
+	hold = /obj/item/storage/internal/accessory/surg_vest/equipped/improved
+
+/obj/item/clothing/accessory/storage/surg_vest/drop_black/equipped/advanced
+	hold = /obj/item/storage/internal/accessory/surg_vest/equipped/advanced
 
 /obj/item/clothing/accessory/storage/knifeharness
 	name = "M272 pattern knife vest"

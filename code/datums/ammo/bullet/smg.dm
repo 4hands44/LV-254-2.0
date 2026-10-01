@@ -176,37 +176,35 @@
 	scatter = SCATTER_AMOUNT_TIER_6
 
 /datum/ammo/bullet/smg/p90
-	name = "submachinegun bullet"
+	name = "hollow-point submachinegun bullet"
 
-	damage = 25
-	accurate_range = 5
-	effective_range_max = 8
-	penetration = ARMOR_PENETRATION_TIER_2
+	damage = 30
+	accurate_range = 7
+	effective_range_max = 9
+	penetration = ARMOR_PENETRATION_TIER_1
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6
 	vehicle_pen = VEHICLE_PEN_HEAVY
 
-/datum/ammo/bullet/smg/p90/twe_ap
+/datum/ammo/bullet/smg/p90/ap
 	name = "armor-piercing submachinegun bullet"
 
-	damage = 25
-	accurate_range = 5
-	effective_range_max = 8
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 20
+	penetration = ARMOR_PENETRATION_TIER_6
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6
 	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 
-/datum/ammo/bullet/smg/p90/twe_heap
+/datum/ammo/bullet/smg/p90/heap
 	name = "high-explosive armor-piercing submachinegun bullet"
 
-	damage = 30
+	damage = 35
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	penetration = ARMOR_PENETRATION_TIER_8
 	shell_speed = AMMO_SPEED_TIER_4
 	vehicle_pen = VEHICLE_PEN_LIGHT_ARMOR
 
-/datum/ammo/bullet/smg/p90/twe_heap/on_hit_mob(mob/M, obj/projectile/P)
+/datum/ammo/bullet/smg/p90/heap/on_hit_mob(mob/M, obj/projectile/P)
 	var/mob/living/carbon/human/target_human = M
 	if(target_human)
 		if(target_human.wear_suit)

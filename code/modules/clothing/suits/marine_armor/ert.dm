@@ -604,7 +604,7 @@
 /obj/item/clothing/suit/storage/marine/veteran/cmb/leader
 	name = "\improper M4R pattern CMB Marshal armor"
 	icon_state = "cmb_sheriff_armor"
-	desc = "A custom fit variation of the CMB Riot armor, intended to be worn the Marshals themselves, has a golden lining with rank insignia. Has additional layer of lightweigh protective materials."
+	desc = "A custom fit variation of the CMB Riot armor, intended to be worn the Marshals themselves, has a golden lining with rank insignia. Has additional layer of lightweight protective materials."
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_HIGH
 

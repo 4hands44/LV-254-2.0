@@ -31,7 +31,7 @@
 	failure_sound = 'sound/surgery/organ2.ogg'
 
 /datum/surgery_step/incision/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
-	if(tool_type == /obj/item/tool/surgery/scalpel/manager)
+	if(tool_type == /obj/item/tool/surgery/scalpel/manager || tool_type == /obj/item/tool/surgery/scalpel/manager/improved)
 		user.affected_message(target,
 			SPAN_NOTICE("You start to construct a prepared incision in [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
 			SPAN_NOTICE("[user] starts to construct a prepared incision in your [surgery.affected_limb.display_name] with \the [tool]."),
@@ -49,22 +49,14 @@
 	log_interact(user, target, "[key_name(user)] began making an incision in [key_name(target)]'s [surgery.affected_limb.display_name].")
 
 /datum/surgery_step/incision/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
-	var/obj/item/tool/surgery/scalpel/laser/las_scalpel = tool
 
-	if(tool_type == /obj/item/tool/surgery/scalpel/manager)
+	if(tool_type == /obj/item/tool/surgery/scalpel/manager || tool_type == /obj/item/tool/surgery/scalpel/manager/improved)
 		user.affected_message(target,
 			SPAN_NOTICE("You have constructed a prepared incision in [target]'s [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] has constructed a prepared incision in your [surgery.affected_limb.display_name]."),
 			SPAN_NOTICE("[user] has constructed a prepared incision in [target]'s [surgery.affected_limb.display_name]."))
 
 		surgery.status += 2 //IMS completes all steps.
-	else if(tool_type == /obj/item/tool/surgery/scalpel/laser && prob(las_scalpel.bloodlessprob))
-		user.affected_message(target,
-			SPAN_NOTICE("You finish making a bloodless incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."),
-			SPAN_NOTICE("[user] finishes making a bloodless incision on your [surgery.affected_limb.display_name] with \the [tool]."),
-			SPAN_NOTICE("[user] finishes making a bloodless incision on [target]'s [surgery.affected_limb.display_name] with \the [tool]."))
-
-		surgery.status++ //A laser scalpel may cauterise as it cuts.
 	else
 		user.affected_message(target,
 			SPAN_NOTICE("You finish the incision on [target]'s [surgery.affected_limb.display_name]."),
@@ -92,14 +84,6 @@
 
 			target.apply_damage(15, BRUTE, target_zone)
 			target.apply_damage(15, BURN, target_zone)
-		if(/obj/item/tool/surgery/scalpel/laser)
-			user.affected_message(target,
-				SPAN_WARNING("Your hand slips as \the [tool]'s blade sputters, searing a long gash in [target]'s [surgery.affected_limb.display_name]!"),
-				SPAN_WARNING("[user]'s hand slips as \the [tool]'s blade sputters, searing a long gash in your [surgery.affected_limb.display_name]!"),
-				SPAN_WARNING("[user]'s hand slips as \the [tool]'s blade sputters, searing a long gash in [target]'s [surgery.affected_limb.display_name]!"))
-
-			target.apply_damage(7.5, BRUTE, target_zone)
-			target.apply_damage(12.5, BURN, target_zone)
 		else
 			user.affected_message(target,
 				SPAN_WARNING("Your hand slips, slicing [target]'s [surgery.affected_limb.display_name] in the wrong place!"),

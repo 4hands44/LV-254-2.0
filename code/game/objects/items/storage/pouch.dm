@@ -524,6 +524,24 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/smg/fp9000(src)
 
+/obj/item/storage/pouch/magazine/large/p90/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smg/p90(src)
+
+/obj/item/storage/pouch/magazine/large/p90/mixed/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/p90(src)
+	new /obj/item/ammo_magazine/smg/p90(src)
+	new /obj/item/ammo_magazine/smg/p90/ap(src)
+	new /obj/item/ammo_magazine/smg/p90/ap(src)
+
+/obj/item/storage/pouch/magazine/large/p90/ap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smg/p90/ap(src)
+
+/obj/item/storage/pouch/magazine/large/p90/heap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smg/p90/heap(src)
+
 /obj/item/storage/pouch/magazine/large/wy/pmc_lmg/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/lmg(src)
@@ -560,6 +578,12 @@
 
 /obj/item/storage/pouch/magazine/large/m16/ap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/m16/ap(src)
+
+/obj/item/storage/pouch/magazine/large/m16/mixed/fill_preset_inventory()
+		new /obj/item/ammo_magazine/rifle/m16/ext(src)
+		new /obj/item/ammo_magazine/rifle/m16/ext(src)
+		new /obj/item/ammo_magazine/rifle/m16/ap(src)
 		new /obj/item/ammo_magazine/rifle/m16/ap(src)
 
 /obj/item/storage/pouch/magazine/large/rifle_heap
@@ -676,6 +700,18 @@
 /obj/item/storage/pouch/explosive/emp/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/grenade/empgrenade(src)
+
+/obj/item/storage/pouch/explosive/smoke/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/explosive/grenade/smokebomb(src)
+
+/obj/item/storage/pouch/explosive/mixed/fill_preset_inventory()
+		new /obj/item/explosive/grenade/high_explosive/m15(src)
+		new /obj/item/explosive/grenade/high_explosive/m15(src)
+		new /obj/item/explosive/grenade/high_explosive/m15(src)
+		new /obj/item/explosive/mine(src)
+		new /obj/item/explosive/mine(src)
+		new /obj/item/explosive/mine(src)
 
 /obj/item/storage/pouch/medical
 	name = "medical pouch"
@@ -1358,6 +1394,13 @@
 	new /obj/item/stack/sheet/wood(src, 50)
 	new /obj/item/stack/sandbags_empty(src, 50)
 	new /obj/item/stack/concertina_wire(src, 50)
+
+/obj/item/storage/pouch/construction/clown/fill_preset_inventory()
+	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/sheet/metal(src, 50)
 
 /obj/item/storage/pouch/construction/full_barbed_wire/fill_preset_inventory()
 	new /obj/item/stack/sheet/plasteel(src, 50)

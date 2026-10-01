@@ -289,6 +289,53 @@
 /obj/effect/vehicle_spawner/box_van/fixed/load_hardpoints(obj/vehicle/multitile/box_van/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion)
 
+//clown van
+
+/obj/vehicle/multitile/box_van/clown
+	interior_map = /datum/map_template/interior/clown_van
+	vehicle_flags = VEHICLE_CLASS_LIGHT
+	vehicle_pen_armor = VEHICLE_ARMOR_LIGHT_ARMOR
+	passengers_slots = 12
+	xenos_slots = 6
+
+/obj/effect/vehicle_spawner/box_van/clown
+	name = "Van Spawner"
+	icon = 'icons/obj/vehicles/box_van.dmi'
+	icon_state = "van_base"
+
+//PRESET: no hardpoints
+/obj/effect/vehicle_spawner/box_van/clown/spawn_vehicle()
+	var/obj/vehicle/multitile/box_van/clown/VAN = new (loc)
+
+	load_misc(VAN)
+	handle_direction(VAN)
+	VAN.update_icon()
+
+//PRESET: wheels installed, destroyed
+/obj/effect/vehicle_spawner/box_van/clown/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/box_van/clown/VAN = new (loc)
+
+	load_misc(VAN)
+	load_hardpoints(VAN)
+	handle_direction(VAN)
+	load_damage(VAN)
+	VAN.update_icon()
+
+/obj/effect/vehicle_spawner/box_van/clown/decrepit/load_hardpoints(obj/vehicle/multitile/box_van/clown/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion)
+
+//PRESET: wheels installed
+/obj/effect/vehicle_spawner/box_van/clown/fixed/spawn_vehicle()
+	var/obj/vehicle/multitile/box_van/clown/VAN = new (loc)
+
+	load_misc(VAN)
+	load_hardpoints(VAN)
+	handle_direction(VAN)
+	VAN.update_icon()
+
+/obj/effect/vehicle_spawner/box_van/clown/fixed/load_hardpoints(obj/vehicle/multitile/box_van/clown/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/locomotion)
+
 //ambulance
 
 /obj/vehicle/multitile/box_van/ambulance

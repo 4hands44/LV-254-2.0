@@ -30,6 +30,7 @@
 	//Similar to INCISION, but including the PICT also. Using the PICT prevents acid spray.
 	tools = list(
 		/obj/item/tool/surgery/scalpel = SURGERY_TOOL_MULT_IDEAL,
+		/obj/item/tool/surgery/scalpel/manager/improved = SURGERY_TOOL_MULT_IDEAL,
 		/obj/item/tool/surgery/scalpel/pict_system = SURGERY_TOOL_MULT_IDEAL,
 		/obj/item/attachable/bayonet = SURGERY_TOOL_MULT_SUBSTITUTE,
 		/obj/item/tool/kitchen/knife = SURGERY_TOOL_MULT_SUBSTITUTE,
@@ -72,7 +73,7 @@
 	log_interact(user, target, "[key_name(user)] began cutting the roots of a larva in [key_name(target)]'s [surgery.affected_limb.display_name] with \the [tool], attempting to begin [surgery].")
 
 /datum/surgery_step/cut_larval_pseudoroots/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
-	if(tool_type == /obj/item/tool/surgery/scalpel/pict_system)
+	if(tool_type == /obj/item/tool/surgery/scalpel/pict_system || tool_type == /obj/item/tool/surgery/scalpel/manager/improved)
 		user.visible_message(SPAN_NOTICE("[user] severs the last of the pseudoroots with \the [tool], without spilling any of the larva's acid blood."),
 			SPAN_NOTICE("You sever the last of the pseudoroots with \the [tool], without spilling any of the larva's acid blood."))
 	else
@@ -114,8 +115,10 @@
 	desc = "extract the xenomorph larva"
 	accept_hand = TRUE
 	/*Using the hands to forcefully rip out the larva will be faster at the cost of damaging both the doctor and the patient, with the addition of organ damage.
-	Unlike before, the hemostat is now the best tool for removing removing the larva, as opposed to wirecutters and the fork.*/
+	Unlike before, the hemostat (excluding IMS or MFSS) is now the best tool for removing removing the larva, as opposed to wirecutters and the fork.*/
 	tools = list(
+		/obj/item/tool/surgery/scalpel/manager = 1 * SURGERY_TOOL_MULT_IDEAL,
+		/obj/item/tool/surgery/scalpel/manager/improved = 1 * SURGERY_TOOL_MULT_IDEAL,
 		/obj/item/tool/surgery/hemostat = 1.5 * SURGERY_TOOL_MULT_IDEAL,
 		/obj/item/tool/wirecutters = 1.5 * SURGERY_TOOL_MULT_SUBOPTIMAL,
 		/obj/item/tool/kitchen/utensil/fork = 1.5 * SURGERY_TOOL_MULT_SUBSTITUTE

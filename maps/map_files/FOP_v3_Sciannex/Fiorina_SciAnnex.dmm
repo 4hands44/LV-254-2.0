@@ -21052,7 +21052,7 @@
 /area/fiorina/lz/near_lzI)
 "qgv" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/surgery/scalpel/laser{
+/obj/item/tool/surgery/scalpel/manager{
 	pixel_x = -5;
 	pixel_y = 12
 	},

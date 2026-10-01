@@ -232,6 +232,8 @@
 	max_rounds = 40
 	gun_type = /obj/item/weapon/gun/rifle/mar40
 	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+mar40_band"
+	ammo_band_icon_empty = "+mar40_band_e"
 
 /obj/item/ammo_magazine/rifle/mar40/extended
 	name = "\improper MAR extended magazine (7.62x39mm)"
@@ -244,6 +246,7 @@
 	name = "\improper MAR AP magazine (7.62x39mm)"
 	desc = "A 7.62x39mm magazine for the MAR series of firearms."
 	default_ammo = /datum/ammo/bullet/rifle/mar40/ap
+	bonus_overlay = "mar40_ex"
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/mar40/rubber
@@ -297,7 +300,7 @@
 
 /obj/item/ammo_magazine/rifle/m16/ext
 	name = "\improper M16 extended magazine (5.56x45mm)"
-	desc = "An AP 5.56x45mm magazine for the M16 assault rifle. This one contains 30 bullets."
+	desc = "An extended 5.56x45mm magazine for the M16 assault rifle. This one contains 30 bullets."
 	icon_state = "m16_ext"
 	item_state = "m16_ext"
 	bonus_overlay = "m16_ext_overlay"

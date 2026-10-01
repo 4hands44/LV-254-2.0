@@ -711,7 +711,7 @@
 /obj/structure/machinery/defenses/sentry/mini
 	name = "\improper UA 512-M mini sentry"
 	defense_type = "Mini"
-	fire_delay = 0.15 SECONDS
+	fire_delay = 0.2 SECONDS
 	health = 150
 	health_max = 150
 	damage_mult = 0.4
@@ -719,6 +719,17 @@
 	disassemble_time = 0.75 SECONDS
 	handheld_type = /obj/item/defenses/handheld/sentry/mini
 	composite_icon = FALSE
+
+/obj/structure/machinery/defenses/sentry/mini/clown
+	name = "mini Sentry"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities used by the clown gang."
+	health = 200
+	health_max = 200
+	handheld_type = /obj/item/defenses/handheld/sentry/mini/clown
+	selected_categories = list(
+		SENTRY_CATEGORY_ROF = ROF_FULL_AUTO,
+		SENTRY_CATEGORY_IFF = FACTION_MERCENARY,
+	)
 
 /obj/structure/machinery/defenses/sentry/launchable
 	name = "\improper UA 571-O sentry post"

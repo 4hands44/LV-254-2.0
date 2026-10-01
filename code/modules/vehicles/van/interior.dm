@@ -120,7 +120,7 @@
 	name = "van interior wall"
 	desc = "An interior wall."
 	icon = 'icons/obj/vehicles/interiors/box_van_interior.dmi'
-	icon_state = "exterior_2"
+	icon_state = "exterior_1"
 	density = TRUE
 	opacity = FALSE
 	anchored = TRUE

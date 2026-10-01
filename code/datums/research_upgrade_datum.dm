@@ -100,24 +100,23 @@
 	maximum_price = 5000
 	clearance_req = 5
 
-/datum/research_upgrades/item/laser_scalpel
-	name = "Laser Scalpel"
-	desc = "An advanced, robust version of the normal scalpel, allowing it to pierce through thick skin and chitin alike with extreme ease."
-	value_upgrade = 3000
-	behavior = RESEARCH_UPGRADE_ITEM
-	upgrade_type = ITEM_ACCESSORY_UPGRADE
-	item_reference = /obj/item/tool/surgery/scalpel/laser/advanced
-	clearance_req = 3
-
 /datum/research_upgrades/item/incision_management
 	name = "Incision Management System"
-	desc = "A true extension of the surgeon's body, this marvel instantly and completely prepares an incision, allowing for the immediate commencement of therapeutic steps."
-	value_upgrade = 3000
+	desc = "An incredible instrument, combines the functions of a scalpel, retractor and hemostat all in one for faster, more efficient surgeries."
+	value_upgrade = 2500
 	behavior = RESEARCH_UPGRADE_ITEM
 	upgrade_type = ITEM_ACCESSORY_UPGRADE
 	clearance_req = 4
 	item_reference = /obj/item/tool/surgery/scalpel/manager
 
+/datum/research_upgrades/item/multi_function
+	name = "Multi-Function Surgical Suite"
+	desc = "A true extension of the surgeon's body, this marvel uses technology from the failed laser scapel test trials, allowing the surgeon to cauterize incisions as they cut."
+	value_upgrade = 4000
+	behavior = RESEARCH_UPGRADE_ITEM
+	upgrade_type = ITEM_ACCESSORY_UPGRADE
+	clearance_req = 5
+	item_reference = /obj/item/tool/surgery/scalpel/manager/improved
 
 /datum/research_upgrades/item/nanosplints
 	name = "Reinforced Fiber Splints"
