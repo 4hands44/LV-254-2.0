@@ -198,7 +198,7 @@
 // mp sg
 /obj/effect/essentials_set/mp_smartgunner/m56
 	spawned_gear_list = list(
-		/obj/item/storage/box/m56_system,
+		/obj/item/storage/box/m56_system_mp,
 		/obj/item/device/whiskey_supply_beacon,
 		/obj/item/device/whiskey_supply_beacon,
 	)

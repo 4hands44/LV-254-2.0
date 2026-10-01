@@ -321,3 +321,7 @@
 /obj/item/clothing/glasses/night/hack_goggles/get_examine_text(mob/user)
 	. = ..()
 	. += SPAN_INFO("THIS IS ITEM IS WIP AND CURRENTLY DOES NOT DO ITS INTENDED FUNCTION. Can be used as welding and reagent goggles.")
+
+/obj/item/clothing/glasses/night/hack_goggles/mp
+	name = "\improper MP pattern M701 AR Headset"
+	hud_type = MOB_HUD_SECURITY_ADVANCED

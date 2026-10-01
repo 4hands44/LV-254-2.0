@@ -19,7 +19,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 		list("MILITARY POLICE FIELD SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
 		list("Military Police Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Military Police Smartgunner Set", 0, /obj/effect/essentials_set/mp_smartgunner/m56, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Pointman Breacher kit", 0, /obj/item/storage/box/kit/pursuit, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Field Dispatcher kit", 0, /obj/item/storage/box/spec/mp_dispatcher, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Military Police K9 handler", 0, /obj/item/storage/box/kit/k9_handler/mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
@@ -92,7 +92,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 
 		list("MILITARY POLICE SPECIALIZATION KIT (CHOOSE 1)", 0, null, null, null),
 		list("Military Police Rifleman mk2 Set", 0, /obj/item/storage/box/spec/rifleman_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Field Dispatcher kit", 0, /obj/item/storage/box/spec/mp_dispatcher, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Military Police K9 handler", 0, /obj/item/storage/box/kit/k9_handler/mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Honorguard Kit", 0, /obj/item/storage/box/kit/honorguard, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
