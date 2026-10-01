@@ -463,6 +463,7 @@
 		/obj/item/ammo_magazine/rifle/m4ra/rubber = 40,
 		/obj/item/clothing/head/helmet/marine/MP = 8,
 		/obj/item/explosive/plastic/breaching_charge/rubber = 6,
+		/obj/item/stack/spikestrip/full_stack = 6,
 	)
 
 /obj/structure/machinery/vending/security/prison

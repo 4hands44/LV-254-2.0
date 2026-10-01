@@ -22,6 +22,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 		list("Electronic Warfare kit(WIP)", 0, /obj/item/storage/box/kit/ewar_mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Pointman Breacher kit", 0, /obj/item/storage/box/kit/pursuit, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Field Dispatcher kit", 0, /obj/item/storage/box/spec/mp_dispatcher, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Checkpoint Engineering kit", 0, /obj/item/storage/box/spec/mp_checkpoint, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Military Police K9 handler", 0, /obj/item/storage/box/kit/k9_handler/mp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Honorguard Kit", 0, /obj/item/storage/box/kit/honorguard, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 
