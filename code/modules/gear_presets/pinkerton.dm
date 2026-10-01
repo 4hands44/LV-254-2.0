@@ -446,7 +446,7 @@
 //standard - death squad
 
 /datum/equipment_preset/other/pinkerton/death
-	name = "pinkerton security officer(DEATHSQUAD)"
+	name = "pinkerton strikebreaker (DEATHSQUAD)"
 	assignment = JOB_PKT
 	rank = JOB_PKT
 	paygrades = list(PAY_SHORT_PKT = JOB_PLAYTIME_TIER_0)
@@ -491,7 +491,7 @@
 //team lead - deathsquad
 
 /datum/equipment_preset/other/pinkerton/death_team_lead
-	name = "pinkerton team leader(DEATHSQUAD)"
+	name = "pinkerton strikebreaker team leader(DEATHSQUAD)"
 	assignment = JOB_PKT_TL
 	rank = JOB_PKT_TL
 	idtype = /obj/item/card/id/pktl

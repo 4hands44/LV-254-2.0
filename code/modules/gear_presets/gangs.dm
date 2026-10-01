@@ -113,6 +113,36 @@
 	new_human.equip_to_slot(new /obj/item/ammo_magazine/handful/shotgun/buckshot(new_human), WEAR_IN_BACK)
 	. = ..()
 
+
+//------
+
+/datum/equipment_preset/gangster/clown_leader
+	name = "Gangster Leader(clown !!silly!!)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_GANGSTER_CLOWN_LEADER
+	rank = JOB_GANGSTER_CLOWN_LEADER
+	languages = list(LANGUAGE_FRENCH, LANGUAGE_ENGLISH)
+	skills = /datum/skills/civilian/survivor/gangleader
+
+/datum/equipment_preset/gangster/clown_leader/load_status(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/clown(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/suit_jacket/red(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/clown_shoes(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret(new_human), WEAR_HEAD)
+
+	new_human.equip_to_slot(new /obj/item/toy/bikehorn(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot(new /obj/item/device/flashlight(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot(new /obj/item/weapon/gun/shotgun/pump(new_human), WEAR_L_HAND)
+	new_human.equip_to_slot(new /obj/item/weapon/gun/pistol/t73/leader(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/ammo_magazine/pistol/t73_impact(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/ammo_magazine/pistol/t73(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/ammo_magazine/pistol/t73(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/ammo_magazine/handful/shotgun/buckshot(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/ammo_magazine/handful/shotgun/buckshot(new_human), WEAR_IN_BACK)
+	. = ..()
+
 //------
 
 /datum/equipment_preset/gangster/clown

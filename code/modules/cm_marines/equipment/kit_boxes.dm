@@ -531,7 +531,7 @@
 	name = "\improper Military Police Dispatcher equipment case"
 	desc = "A large case containing a telephone, portable faxmachine, crew tracker, and other important equipment for a Military Police dispatcher.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "+jtac"
-	kit_name = "rifleman mp"
+	kit_name = "mp dispatcher"
 	kit_name = "dispatcher"
 
 /obj/item/storage/box/spec/mp_dispatcher/fill_preset_inventory()
@@ -552,9 +552,38 @@
 	new /obj/item/device/encryptionkey/jtac(src)
 	new /obj/item/storage/backpack/marine/satchel/rto(src)
 	new /obj/structure/machinery/faxmachine/backpack(src)
+	new /obj/item/storage/pouch/document(src)
 	new /obj/item/notepad(src)
 	new /obj/item/tool/pen(src)
 
+/obj/item/storage/box/spec/mp_checkpoint
+	name = "\improper Military Police Checkpoint Engineering equipment case"
+	desc = "A large case containing a various supplies for making roadstops.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = ""
+	kit_name = "rifleman mp"
+	kit_name = "dispatcher"
+
+/obj/item/storage/box/spec/mp_checkpoint/fill_preset_inventory()
+
+	new /obj/item/weapon/gun/rifle/m41a(src)
+	new /obj/item/attachable/stock/rifle(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+
+	new /obj/item/device/motiontracker/adv(src)
+
+	new /obj/item/tool/crew_monitor(src)
+	new /obj/item/device/binoculars(src)
+	new /obj/item/stack/spikestrip/full_stack(src)
+	new /obj/item/stack/folding_barricade/three(src)
+	new /obj/item/defenses/handheld/sentry(src)
+	new /obj/item/defenses/handheld/sentry(src)
+	new /obj/item/storage/box/explosive_mines(src)
+	new /obj/item/storage/box/explosive_atmines(src)
+	new /obj/item/storage/pouch/construction/full(src)
 
 //mp riot spec kits
 
@@ -562,7 +591,7 @@
 	name = "\improper Military Police Riot Control equipment case"
 	desc = "A large case containing USCM Military Police Riot Control Gear. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "grenadier"
-	kit_name = "rifleman mp"
+	kit_name = "riot grenadier mp"
 
 /obj/item/storage/box/spec/riot_gl/fill_preset_inventory()
 
@@ -590,7 +619,7 @@
 	name = "\improper Military Police Riot Control equipment case"
 	desc = "A large case containing USCM Military Police Riot Control Gear. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "grenadier"
-	kit_name = "rifleman mp"
+	kit_name = "riot mp"
 
 /obj/item/storage/box/spec/riot_shotty/fill_preset_inventory()
 
