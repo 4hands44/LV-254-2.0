@@ -68,6 +68,8 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 ///The generic "I'm a bad guy" access
 #define ACCESS_ILLEGAL_PIRATE 120
+#define ACCESS_ILLEGAL_CLOWN 121
+
 
 //TIS-locked covert items
 #define ACCESS_TIS 125

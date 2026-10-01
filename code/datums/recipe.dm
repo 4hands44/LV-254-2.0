@@ -187,7 +187,7 @@
 /datum/recipe/clownburger
 	items = list(
 		/obj/item/reagent_container/food/snacks/bun,
-		/obj/item/clothing/mask/gas/clown_hat,
+		/obj/item/clothing/mask/gas/clown,
 		/* /obj/item/reagent_container/food/snacks/grown/banana, */
 	)
 	result = /obj/item/reagent_container/food/snacks/clownburger

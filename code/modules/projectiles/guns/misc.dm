@@ -116,9 +116,9 @@
 
 /obj/item/weapon/gun/m60/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_12)
+	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_5)
-	set_burst_delay(FIRE_DELAY_TIER_12)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_10

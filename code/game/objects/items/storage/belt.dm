@@ -219,6 +219,26 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 
+/obj/item/storage/belt/medical/civilian
+	name = "\improper medical response belt"
+	desc = "A civilian replica of the M276 pattern medical rig, useful for storing medical supplies. Holds slightly less than its military counterpart."
+	icon_state = "medicalbelt"
+	item_state = "medical"
+	storage_slots = 10
+	max_w_class = SIZE_MEDIUM
+
+/obj/item/storage/belt/medical/civilian/full/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/defibrillator/upgraded(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/roller/surgical(src)
+	new /obj/item/roller(src)
+
 /obj/item/storage/belt/medical/verb/toggle_mode() //A verb that can (should) only be used if in hand/equipped
 	set category = "Object"
 	set name = "Toggle belt mode"
@@ -695,9 +715,16 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/m16/ap (src)
 
+/obj/item/storage/belt/marine/mar40
+	name = "ammo load rig"
+	desc = "Good for carrying around extra ammo in the heat of battle."
+
 /obj/item/storage/belt/marine/mar40/fill_preset_inventory() // Mar40
-	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/mar40 (src)
+	new /obj/item/ammo_magazine/rifle/mar40 (src)
+	new /obj/item/ammo_magazine/rifle/mar40 (src)
+	new /obj/item/ammo_magazine/rifle/mar40 (src)
+	new /obj/item/ammo_magazine/rifle/mar40 (src)
+	new /obj/item/ammo_magazine/rifle/mar40/ap (src)
 
 /obj/item/storage/belt/marine/mar40/drum/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -765,12 +792,16 @@
 	new /obj/item/ammo_magazine/rifle/xm99a(src)
 
 /obj/item/storage/belt/marine/smartgunner/full/fill_preset_inventory()
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/belt/marine/smartgunner/m60
+	name = "\improper heavy gunner rig"
+	desc = "A civilian replica of the M280 pattern smartgunner rig designed to hold several large drums."
+
+/obj/item/storage/belt/marine/smartgunner/m60/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/m60(src)
 
 /obj/item/storage/belt/marine/smartgunner/xm_limited
 	name = "\improper M280 pattern plasmagunner belt"
@@ -927,6 +958,26 @@
 	for(var/i = 1 to storage_slots)
 		var/random_shell_type = pick(GLOB.shotgun_handfuls_12g)
 		new random_shell_type(src)
+
+/obj/item/storage/belt/shotgun/civilian
+	name = "\improper shotgun shell rig"
+	desc = "A civilian replica of the M276 shotgun ammunition rig designed to hold shotgun shells or individual bullets."
+
+/obj/item/storage/belt/shotgun/civilian/mixed/fill_preset_inventory()
+	new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+	new /obj/item/ammo_magazine/handful/shotgun/slug(src)
+	new /obj/item/ammo_magazine/handful/shotgun/slug(src)
+	new /obj/item/ammo_magazine/handful/shotgun/slug(src)
+	new /obj/item/ammo_magazine/handful/shotgun/flechette(src)
+	new /obj/item/ammo_magazine/handful/shotgun/flechette(src)
+	new /obj/item/ammo_magazine/handful/shotgun/flechette(src)
+	new /obj/item/ammo_magazine/handful/shotgun/flechette(src)
 
 /obj/item/storage/belt/shotgun/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/ammo_magazine/shotgun))
@@ -1133,7 +1184,6 @@
 	max_storage_space = 24
 	can_hold = list(/obj/item/explosive/grenade)
 
-
 /obj/item/storage/belt/grenade/full/fill_preset_inventory()
 	new /obj/item/explosive/grenade/incendiary(src)
 	new /obj/item/explosive/grenade/incendiary(src)
@@ -1155,6 +1205,27 @@
 	new /obj/item/explosive/grenade/incendiary(src)
 	new /obj/item/explosive/grenade/incendiary(src)
 	new /obj/item/explosive/grenade/incendiary(src)
+
+/obj/item/storage/belt/grenade/civilian
+	name= "\improper grenade rig"
+	desc= "A civilian replica of the M276 pattern grenade rig. This version is designed to carry bulk quantities of grenades."
+	storage_slots = 14
+
+/obj/item/storage/belt/grenade/civilian/full/fill_preset_inventory()
+	new /obj/item/explosive/grenade/high_explosive/impact(src)
+	new /obj/item/explosive/grenade/high_explosive/impact(src)
+	new /obj/item/explosive/grenade/high_explosive/impact(src)
+	new /obj/item/explosive/grenade/high_explosive/impact(src)
+	new /obj/item/explosive/grenade/high_explosive/impact(src)
+	new /obj/item/explosive/grenade/incendiary/impact(src)
+	new /obj/item/explosive/grenade/incendiary/impact(src)
+	new /obj/item/explosive/grenade/incendiary/impact(src)
+	new /obj/item/explosive/grenade/incendiary/impact(src)
+	new /obj/item/explosive/grenade/incendiary/impact(src)
+	new /obj/item/explosive/grenade/high_explosive/airburst/buckshot(src)
+	new /obj/item/explosive/grenade/high_explosive/airburst/buckshot(src)
+	new /obj/item/explosive/grenade/high_explosive/airburst/buckshot(src)
+	new /obj/item/explosive/grenade/high_explosive/airburst/buckshot(src)
 
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))

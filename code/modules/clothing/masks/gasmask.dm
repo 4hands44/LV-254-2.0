@@ -115,11 +115,13 @@
 	siemens_coefficient = 0.7
 	flags_armor_protection = BODY_FLAG_FACE|BODY_FLAG_EYES
 
-/obj/item/clothing/mask/gas/clown_hat
+// Clown Gang
+
+/obj/item/clothing/mask/gas/clown
 	name = "clown wig and mask"
 	desc = "A true prankster's facial attire. A clown is incomplete without their wig and mask."
-	icon_state = "clown"
-	item_state = "clown_hat"
+	icon_state = "clown_classic"
+	item_state = "clown_classic"
 	icon = 'icons/obj/items/clothing/masks/masks.dmi'
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/clothing/masks/masks.dmi',
@@ -128,6 +130,45 @@
 	)
 	vision_impair = VISION_IMPAIR_NONE
 	black_market_value = 25
+
+/obj/item/clothing/mask/gas/clown/gang
+	name = "clown gang mask"
+	desc = "A modified ballistic mask, professionally made to resemble a unique clown, provides a decent amount of face protection."
+	icon_state = "clown_america"
+	item_state = "clown_america"
+
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_VERYLOW
+	armor_energy = CLOTHING_ARMOR_VERYLOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_VERYLOW
+	armor_rad = CLOTHING_ARMOR_VERYLOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	flags_inventory = COVERMOUTH
+	flags_inv_hide = HIDEFACE
+	flags_equip_slot = SLOT_FACE
+	flags_armor_protection = BODY_FLAG_FACE|BODY_FLAG_HEAD|BODY_FLAG_EYES
+
+/obj/item/clothing/mask/gas/clown/gang/enforcer
+	icon_state = "clown_enforcer"
+	item_state = "clown_enforcer"
+
+/obj/item/clothing/mask/gas/clown/gang/texas
+	icon_state = "clown_texas"
+	item_state = "clown_texas"
+
+/obj/item/clothing/mask/gas/clown/gang/disturbing
+	icon_state = "clown_disturbing"
+	item_state = "clown_disturbing"
+
+/obj/item/clothing/mask/gas/clown/gang/england
+	icon_state = "clown_england"
+	item_state = "clown_england"
+
+/obj/item/clothing/mask/gas/clown/gang/hockey
+	icon_state = "clown_hockey"
+	item_state = "clown_hockey"
 
 /obj/item/clothing/mask/gas/fake_mustache
 	name = "fake mustache"

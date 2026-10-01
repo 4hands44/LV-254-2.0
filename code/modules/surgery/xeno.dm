@@ -20,7 +20,7 @@
 	if(islarva(patient) || isfacehugger(patient))
 		to_chat(user, SPAN_DANGER("This race is probably too small to have a mature organ worthy to extract..."))
 		return FALSE
-	if((patient.tier > 2 || isqueen(patient)) && !istype(tool, /obj/item/tool/surgery/scalpel/laser/advanced))
+	if((patient.tier > 2 || isqueen(patient)) && !istype(tool, /obj/item/tool/surgery/scalpel/manager/improved))
 		to_chat(user, SPAN_DANGER("Chitin of this kind is too thick for an ordinary tool, you would need something special."))
 		return FALSE
 	if(patient.stat == DEAD && !patient.organ_removed)
@@ -31,7 +31,6 @@
 	name = "Cut Exoskeleton Carapace"
 	desc = "cut the carapace open"
 	tools = list(
-		/obj/item/tool/surgery/scalpel/laser/advanced = SURGERY_TOOL_MULT_IDEAL,
 		/obj/item/tool/surgery/circular_saw = SURGERY_TOOL_MULT_IDEAL,
 		/obj/item/weapon/twohanded/fireaxe = SURGERY_TOOL_MULT_SUBOPTIMAL,
 		/obj/item/weapon/sword/machete = SURGERY_TOOL_MULT_SUBOPTIMAL,
@@ -46,7 +45,7 @@
 	failure_sound = 'sound/surgery/organ2.ogg'
 
 /datum/surgery_step/xenomorph/cut_exoskeleton/preop(mob/living/carbon/human/user, mob/living/carbon/xenomorph/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
-	if(tool_type == /obj/item/tool/surgery/circular_saw || tool_type == /obj/item/tool/surgery/scalpel/laser/advanced)
+	if(tool_type == /obj/item/tool/surgery/circular_saw)
 		user.affected_message(target,
 			SPAN_NOTICE("You start to cut [target.caste_type] carapace apart using [tool], carefully, trying to prevent acid leaks."),
 			SPAN_NOTICE("[user] starts to cut your carapace apart using [tool], carefully, trying to prevent acid leaks."),
@@ -178,6 +177,8 @@
 	accept_hand = TRUE
 	tools = list(
 		/obj/item/tool/surgery/hemostat = SURGERY_TOOL_MULT_IDEAL,
+		/obj/item/tool/surgery/scalpel/manager = SURGERY_TOOL_MULT_IDEAL,
+		/obj/item/tool/surgery/scalpel/manager/improved = SURGERY_TOOL_MULT_IDEAL,
 		/obj/item/tool/wirecutters = SURGERY_TOOL_MULT_SUBOPTIMAL,
 		/obj/item/tool/kitchen/utensil/fork = SURGERY_TOOL_MULT_SUBSTITUTE,
 	)//shamelessly taken from embryo code

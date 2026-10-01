@@ -41,7 +41,7 @@
 	pixel_x = 8
 	},
 /obj/effect/vehicle_roof/box_van{
-	icon_state = "roof_4"
+	icon_state = "roof_5"
 	},
 /turf/open/void/vehicle,
 /area/space)
@@ -64,7 +64,7 @@
 	layer = 3.3
 	},
 /obj/effect/vehicle_roof/box_van{
-	icon_state = "roof_3"
+	icon_state = "roof_4"
 	},
 /turf/open/shuttle/vehicle/med/slate,
 /area/interior/vehicle/box_van)
@@ -73,7 +73,7 @@
 	icon_state = "exterior_3"
 	},
 /obj/effect/vehicle_roof/box_van{
-	icon_state = "roof_5"
+	icon_state = "roof_6"
 	},
 /turf/open/void/vehicle,
 /area/space)
@@ -100,7 +100,7 @@
 	icon = 'icons/obj/vehicles/interiors/box_van_interior.dmi'
 	},
 /obj/effect/vehicle_roof/box_van{
-	icon_state = "front_roof_2"
+	icon_state = "front_roof_3"
 	},
 /turf/open/shuttle/vehicle/floor_3_11,
 /area/interior/vehicle/box_van)
@@ -167,7 +167,7 @@
 	layer = 4
 	},
 /obj/effect/vehicle_roof/box_van{
-	icon_state = "roof_2"
+	icon_state = "roof_3"
 	},
 /turf/open/shuttle/vehicle/med/slate,
 /area/interior/vehicle/box_van)

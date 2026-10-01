@@ -251,8 +251,9 @@
 	hand_throwable = FALSE
 	dangerous = TRUE
 	underslug_launchable = TRUE
-	explosion_power = 100 //hedp
-	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
+	explosion_power = 200
+	explosion_falloff = 15
+
 
 /obj/item/explosive/grenade/high_explosive/impact/prime()
 // We don't prime, we use launch_impact.
@@ -266,6 +267,7 @@
 		detonate = FALSE
 	if(active && detonate) // Active, and we reached our destination.
 		if(explosion_power)
+			apply_explosion_overlay()
 			cell_explosion(loc, explosion_power, explosion_falloff, falloff_mode, last_move_dir, cause_data)
 		qdel(src)
 

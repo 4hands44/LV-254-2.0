@@ -1265,6 +1265,9 @@ can cause issues with ammo types getting mixed up during the burst.
 		pumped = FALSE
 	return ..()
 
+/obj/item/weapon/gun/shotgun/pump/full
+	starting_attachment_types = list(/obj/item/attachable/stock/shotgun, /obj/item/attachable/flashlight/grip, /obj/item/attachable/shotgun_choke)
+
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube

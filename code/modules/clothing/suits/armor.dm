@@ -15,8 +15,11 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L, ACCESSORY_SLOT_ARMOR_S)
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 
+	time_to_unequip = 20
+	time_to_equip = 20
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
+	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/armor.dmi',
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/suits_lefthand.dmi',
@@ -201,6 +204,74 @@
 	icon_state = "bulletproofbadge"
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L, ACCESSORY_SLOT_ARMOR_S, ACCESSORY_SLOT_ARMOR_M)
 
+// Clown Gang
+
+/obj/item/clothing/suit/armor/clown
+	name = "black suit jacket"
+	desc = "Premium body armor inspired by freelancer designs, heavily favors ballistic protection over anything else. This one has been heavily stripped down, allowing for faster movement and concealment."
+	icon_state = "ballistic_light"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi',
+	)
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	flags_armor_protection = BODY_FLAG_CHEST
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_VERYLOW
+	armor_bomb = CLOTHING_ARMOR_VERYLOW
+	armor_bio = CLOTHING_ARMOR_VERYLOW
+	armor_rad = CLOTHING_ARMOR_VERYLOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	movement_compensation = SLOWDOWN_ARMOR_VERY_LIGHT
+
+/obj/item/clothing/suit/armor/clown/medium
+	name = "ballistic vest"
+	desc = "Premium body armor inspired by freelancer designs, heavily favors ballistic protection over anything else, a popular accessory for hardened criminals."
+	icon_state = "ballistic_medium"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi',
+	)
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/armor/clown/heavy
+	name = "heavy ballistic vest"
+	desc = "Premium body armor inspired by freelancer designs, heavily favors ballistic protection over anything else. This one has been up-armored, allowing for greater protection at the cost of movement speed."
+	icon_state = "ballistic_heavy"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi',
+	)
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	movement_compensation = SLOWDOWN_ARMOR_HEAVY
+
+/obj/item/clothing/suit/armor/clown/ultra
+	name = "combined ballistic vest"
+	desc = "Premium body armor inspired by freelancer designs, heavily favors ballistic protection over anything else. This one has been heavily reinforced, providing extreme full-body protection at the cost of being ridiculously heavy."
+	icon_state = "ballistic_ultra"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi',
+	)
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
+	flags_armor_protection = BODY_FLAG_ALL_BUT_HEAD
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
+	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
+
 /obj/item/clothing/suit/armor/QRF
 	name = "C9 Tactical Response Armor"
 	desc = "The main protection in a Marshal's QRF team. While outdated compared to the M3 series, is cheaper to produce and maintain as well as lighter. It has markings on all sides denoting the user as an agent of the Colonial Marshals."
@@ -273,8 +344,6 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
 	siemens_coefficient = 0.5
-	time_to_unequip = 20
-	time_to_equip = 20
 
 /obj/item/clothing/suit/armor/gladiator
 	name = "gladiator armor"
@@ -292,8 +361,6 @@
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEJUMPSUIT
 	siemens_coefficient = 0.5
-	time_to_unequip = 20
-	time_to_equip = 20
 	allowed = list(
 		/obj/item/weapon/sword,
 		/obj/item/weapon/shield/riot,
@@ -318,8 +385,6 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	time_to_unequip = 20
-	time_to_equip = 20
 
 /obj/item/clothing/suit/armor/riot/marine/vintage_riot
 	desc = "Barring the slightly off-color plates, it's preserved quite well."

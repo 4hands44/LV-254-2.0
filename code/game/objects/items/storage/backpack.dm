@@ -17,11 +17,6 @@
 	max_w_class = SIZE_MEDIUM
 	storage_slots = null
 	max_storage_space = 21
-	cant_hold = list(/obj/item/storage/firstaid, /obj/item/storage/toolkit)
-	can_hold_skill = list(
-		/obj/item/storage/firstaid = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/storage/toolkit = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		)
 	drop_sound = "armorequip"
 	var/worn_accessible = FALSE //whether you can access its content while worn on the back
 	var/obj/item/card/id/locking_id = null
@@ -370,8 +365,77 @@
 
 /obj/item/storage/backpack/satchel/eng
 	name = "industrial satchel"
-	desc = "A tough satchel with extra pockets."
+	desc = "A tough satchel with extra pockets, has a small welding fuel tank inside for quick refills."
 	icon_state = "satchel-eng"
+	var/max_fuel = 100
+	var/fuel_type = "fuel"
+
+/obj/item/storage/backpack/satchel/eng/Initialize()
+	. = ..()
+	create_reagents(max_fuel) //Lotsa refills
+	reagents.add_reagent(fuel_type, max_fuel)
+
+/obj/item/storage/backpack/satchel/eng/attackby(obj/item/W, mob/living/user)
+	if(reagents.total_volume)
+		if(iswelder(W))
+			var/obj/item/tool/weldingtool/T = W
+			if(T.welding)
+				to_chat(user, SPAN_WARNING("That was close! However, you realized you had the welder on and prevented disaster."))
+				return
+			if(!(T.get_fuel()==T.max_fuel) && reagents.total_volume)
+				reagents.trans_to(W, T.max_fuel)
+				to_chat(user, SPAN_NOTICE("Welder refilled!"))
+				playsound(loc, 'sound/effects/refill.ogg', 25, TRUE, 3)
+				return
+		else if(istype(W, /obj/item/ammo_magazine/flamer_tank))
+			var/obj/item/ammo_magazine/flamer_tank/FT = W
+			if(!FT.current_rounds && reagents.total_volume)
+				var/fuel_available = reagents.total_volume < FT.max_rounds ? reagents.total_volume : FT.max_rounds
+				reagents.remove_reagent("fuel", fuel_available)
+				FT.current_rounds = fuel_available
+				playsound(loc, 'sound/effects/refill.ogg', 25, TRUE, 3)
+				FT.caliber = "Fuel"
+				to_chat(user, SPAN_NOTICE("You refill [FT] with [lowertext(FT.caliber)]."))
+				FT.update_icon()
+				return
+		else if(isgun(W))
+			var/obj/item/weapon/gun/G = W
+			for(var/slot in G.attachments)
+				if(istype(G.attachments[slot], /obj/item/attachable/attached_gun/flamer))
+					var/obj/item/attachable/attached_gun/flamer/F = G.attachments[slot]
+					if(F.current_rounds < F.max_rounds)
+						var/to_transfer = F.max_rounds - F.current_rounds
+						if(to_transfer > reagents.total_volume)
+							to_transfer = reagents.total_volume
+						reagents.remove_reagent("fuel", to_transfer)
+						F.current_rounds += to_transfer
+						playsound(loc, 'sound/effects/refill.ogg', 25, TRUE, 3)
+						to_chat(user, SPAN_NOTICE("You refill [F] with fuel."))
+					else
+						to_chat(user, SPAN_WARNING("[F] is full."))
+					return
+	. = ..()
+
+/obj/item/storage/backpack/satchel/eng/afterattack(obj/target, mob/user, proximity)
+	if(!proximity)
+		return
+	if(istype(target, /obj/structure/reagent_dispensers))
+		if(!(istypestrict(target, /obj/structure/reagent_dispensers/fueltank)))
+			to_chat(user, SPAN_NOTICE("This must be filled with a fuel tank."))
+			return
+		if(reagents.total_volume < max_fuel)
+			target.reagents.trans_to(src, max_fuel)
+			to_chat(user, SPAN_NOTICE("You crack the cap off the top of the pack and fill it back up again from the tank."))
+			playsound(loc, 'sound/effects/refill.ogg', 25, TRUE, 3)
+			return
+		if(reagents.total_volume == max_fuel)
+			to_chat(user, SPAN_NOTICE("The pack is already full!"))
+			return
+	..()
+
+/obj/item/storage/backpack/satchel/eng/get_examine_text(mob/user)
+	. = ..()
+	. += "[reagents.total_volume] units of fuel left!"
 
 /obj/item/storage/backpack/satchel/med
 	name = "medical satchel"

@@ -91,7 +91,7 @@ See also /datum/surgery_step/cut_larval_pseudoroots, /datum/surgery_step/retract
 #define SURGERY_TOOLS_INCISION list(\
 	/obj/item/tool/surgery/scalpel = SURGERY_TOOL_MULT_IDEAL,\
 	/obj/item/tool/surgery/scalpel/manager = SURGERY_TOOL_MULT_IDEAL,\
-	/obj/item/tool/surgery/scalpel/laser = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager/improved = SURGERY_TOOL_MULT_IDEAL,\
 	/obj/item/tool/surgery/scalpel/pict_system = SURGERY_TOOL_MULT_SUBOPTIMAL,\
 	/obj/item/attachable/bayonet = SURGERY_TOOL_MULT_SUBSTITUTE,\
 	/obj/item/tool/kitchen/knife = SURGERY_TOOL_MULT_SUBSTITUTE,\
@@ -103,7 +103,7 @@ See also /datum/surgery_step/cut_larval_pseudoroots, /datum/surgery_step/retract
 #define SURGERY_TOOLS_CAUTERIZE list(\
 	/obj/item/tool/surgery/cautery = SURGERY_TOOL_MULT_IDEAL,\
 	/obj/item/tool/surgery/wound_clamp = SURGERY_TOOL_MULT_IDEAL,\
-	/obj/item/tool/surgery/scalpel/laser = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager/improved = SURGERY_TOOL_MULT_IDEAL,\
 	/obj/item/clothing/mask/cigarette = SURGERY_TOOL_MULT_SUBOPTIMAL,\
 	/obj/item/tool/lighter = SURGERY_TOOL_MULT_SUBSTITUTE,\
 	/obj/item/tool/weldingtool = SURGERY_TOOL_MULT_BAD_SUBSTITUTE\
@@ -116,6 +116,8 @@ See also /datum/surgery_step/cut_larval_pseudoroots, /datum/surgery_step/retract
 ///Tools used to grab and remove things delicately. See also /datum/surgery_step/remove_larva.
 #define SURGERY_TOOLS_PINCH list(\
 	/obj/item/tool/surgery/hemostat = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager/improved = SURGERY_TOOL_MULT_IDEAL,\
 	/obj/item/tool/wirecutters = SURGERY_TOOL_MULT_SUBSTITUTE,\
 	/obj/item/tool/kitchen/utensil/fork = SURGERY_TOOL_MULT_AWFUL\
 	)
@@ -125,6 +127,8 @@ See also /datum/surgery_step/cut_larval_pseudoroots, /datum/surgery_step/retract
 ///Tools used to pry things very finely. No crowbar, fork works decently; it can't pinch, but it's easier to maneuver precisely than wirecutters.
 #define SURGERY_TOOLS_PRY_DELICATE list(\
 	/obj/item/tool/surgery/retractor = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager/improved = SURGERY_TOOL_MULT_IDEAL,\
 	/obj/item/tool/surgery/hemostat = SURGERY_TOOL_MULT_SUBOPTIMAL,\
 	/obj/item/tool/kitchen/utensil/fork = SURGERY_TOOL_MULT_SUBSTITUTE,\
 	/obj/item/tool/wirecutters = SURGERY_TOOL_MULT_BAD_SUBSTITUTE\
@@ -168,6 +172,8 @@ See also /datum/surgery_step/saw_off_limb/failure var/list/cannot_hack, listing 
 ///Tools used to open and close ribs/skull. Heavy-duty prying, haemostat/wirecutter won't cut it.
 #define SURGERY_TOOLS_PRY_ENCASED list(\
 	/obj/item/tool/surgery/retractor = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager = SURGERY_TOOL_MULT_IDEAL,\
+	/obj/item/tool/surgery/scalpel/manager/improved = SURGERY_TOOL_MULT_IDEAL,\
 	/obj/item/tool/crowbar = SURGERY_TOOL_MULT_SUBSTITUTE,\
 	/obj/item/maintenance_jack = SURGERY_TOOL_MULT_BAD_SUBSTITUTE\
 	)

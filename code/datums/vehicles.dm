@@ -104,6 +104,10 @@
 	name = "Box Van"
 	interior_id = "box_van"
 
+/datum/map_template/interior/clown_van
+	name = "Clown Van"
+	interior_id = "clown_van"
+
 /datum/map_template/interior/pizza_van
 	name = "Pizza-Galaxy Van"
 	interior_id = "pizza_van"

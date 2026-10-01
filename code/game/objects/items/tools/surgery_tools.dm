@@ -121,37 +121,7 @@
 	icon_state = "predator_scalpel"
 
 /*
- * Researchable Scalpels
- */
-/obj/item/tool/surgery/scalpel/laser
-	name = "prototype laser scalpel"
-	desc = "A scalpel augmented with a directed laser, for controlling bleeding as the incision is made. Also functions as a cautery. This one looks like an unreliable early model."
-	icon_state = "scalpel_laser"
-	damtype = "fire"
-	flags_item = ANIMATED_SURGICAL_TOOL
-	///The likelihood an incision made with this will be bloodless.
-	var/bloodlessprob = 60
-	black_market_value = 25
-
-/obj/item/tool/surgery/scalpel/laser/improved
-	name = "laser scalpel"
-	desc = "A scalpel augmented with a directed laser, for controlling bleeding as the incision is made. Also functions as a cautery. This one looks trustworthy, though it could be better."
-	icon_state = "scalpel_laser_2"
-	damtype = "fire"
-	force = 12
-	bloodlessprob = 80
-	black_market_value = 35
-
-/obj/item/tool/surgery/scalpel/laser/advanced
-	name = "advanced laser scalpel"
-	desc = "A scalpel augmented with a directed laser, for controlling bleeding as the incision is made. Also functions as a cautery. This one looks to be the pinnacle of precision energy cutlery!"
-	icon_state = "scalpel_laser_3"
-	damtype = "fire"
-	force = 15
-	bloodlessprob = 100
-
-/*
- * Special Variants
+ * Researchable Variants
  */
 
 /obj/item/tool/surgery/scalpel/pict_system
@@ -164,11 +134,19 @@
 
 /obj/item/tool/surgery/scalpel/manager
 	name = "incision management system"
-	desc = "A true extension of the surgeon's body, this marvel instantly and completely prepares an incision allowing for the immediate commencement of therapeutic steps."
+	desc = "An incredible instrument, combines the functions of a scalpel, retractor and hemostat all in one for faster, more efficient surgeries."
 	icon_state = "scalpel_manager"
 	force = 7.5
 	flags_item = ANIMATED_SURGICAL_TOOL
 	black_market_value = 25
+
+/obj/item/tool/surgery/scalpel/manager/improved
+	name = "multi-function surgical suite"
+	desc = "A true extension of the surgeon's body, this marvel uses technology from the failed laser scapel test trials, allowing the surgeon to cauterize incisions as they cut."
+	icon_state = "scalpel_manager_imp"
+	force = 7.5
+	flags_item = ANIMATED_SURGICAL_TOOL
+	black_market_value = 50
 
 /*
  * Circular Saw
@@ -385,6 +363,7 @@
 
 /obj/item/tool/surgery/bonesetter
 	name = "bone setter"
+	desc = "Used to set bones into their proper shape, usually after applying bone-gel, a good arm workout."
 	icon_state = "bonesetter"
 	force = 0
 	throwforce = 9
@@ -397,24 +376,6 @@
 /obj/item/tool/surgery/bonesetter/predatorbonesetter
 	name = "bone placer"
 	icon_state = "predator_bonesetter"
-
-/*
-WILL BE USED AT A LATER TIME
-
-t. optimisticdude
-
-/obj/item/tool/surgery/handheld_pump
-	name = "handheld surgical pump"
-	desc = "This sucks. Literally"
-	icon_state = "pump"
-	force = 0
-	throwforce = 9
-	throw_speed = SPEED_VERY_FAST
-	throw_range = 5
-	w_class = SIZE_SMALL
-	attack_verb = list("attacked", "hit", "bludgeoned")
-	matter = list("plastic" = 7500)
-*/
 
 /obj/item/tool/surgery/drapes //Does nothing at present. Might be useful for increasing odds of success.
 	name = "surgical drapes"

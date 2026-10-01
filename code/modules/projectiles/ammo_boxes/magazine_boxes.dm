@@ -267,6 +267,59 @@
 /obj/item/ammo_box/magazine/M16/ap/empty
 	empty = TRUE
 
+//-----------------------MAR40 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/MAR40
+	name = "magazine box (MAR40 x 12)"
+	icon_state = "base_m16"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_gun_type = "_m16"
+	num_of_magazines = 12
+	magazine_type = /obj/item/ammo_magazine/rifle/mar40
+
+/obj/item/ammo_box/magazine/MAR40/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/MAR40/ap
+	name = "magazine box (AP MAR40 x 12)"
+	icon_state = "base_m16"
+	overlay_ammo_type = "_ap"
+	overlay_gun_type = "_m16"
+	num_of_magazines = 12
+	magazine_type = /obj/item/ammo_magazine/rifle/mar40/ap
+
+/obj/item/ammo_box/magazine/MAR40/ap/empty
+	empty = TRUE
+
+//-----------------------M60 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/M60
+	name = "magazine box (M60 x 6)"
+	icon_state = "base_m16"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_gun_type = "_m16"
+	num_of_magazines = 6
+	magazine_type = /obj/item/ammo_magazine/m60
+
+/obj/item/ammo_box/magazine/M60/empty
+	empty = TRUE
+
+//-----------------------Deagle Pistol Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/heavy
+	name = "magazine box (Desert Eagle x 8)"
+	icon_state = "base_m16"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_gun_type = "_m16"
+	num_of_magazines = 8
+	magazine_type = /obj/item/ammo_magazine/pistol/heavy
+
+/obj/item/ammo_box/magazine/heavy/empty
+	empty = TRUE
+
 //-----------------------M10 Pistol Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m10

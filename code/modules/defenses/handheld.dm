@@ -149,6 +149,10 @@
 	defense_type = /obj/structure/machinery/defenses/sentry/mini
 	deployment_time = 0.75 SECONDS
 
+/obj/item/defenses/handheld/sentry/mini/clown
+	name = "handheld mini sentry"
+	defense_type = /obj/structure/machinery/defenses/sentry/mini/clown
+
 /obj/item/defenses/handheld/sentry/omni
 	name = "handheld UA 571-D omnidirectional sentry gun"
 	icon = 'icons/obj/structures/machinery/defenses/sentry.dmi'

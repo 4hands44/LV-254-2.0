@@ -1017,6 +1017,58 @@ GLOBAL_LIST_INIT(rebel_rifles, list(
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_ACCESSORY)
 
+/////////////// Clown RNG ///////////////
+
+/datum/equipment_preset/proc/spawn_random_mask(mob/living/carbon/human/new_human) // Randomized clown mask.
+	var/random_gear = rand(0,5)
+	switch(random_gear)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown/gang(new_human), WEAR_FACE)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown/gang/enforcer(new_human), WEAR_FACE)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown/gang/texas(new_human), WEAR_FACE)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown/gang/disturbing(new_human), WEAR_FACE)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown/gang/england(new_human), WEAR_FACE)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown/gang/hockey(new_human), WEAR_FACE)
+
+/datum/equipment_preset/proc/spawn_random_tie(mob/living/carbon/human/new_human) // Randomized tie.
+	var/random_gear = rand(0,3)
+	switch(random_gear)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory(new_human), WEAR_ACCESSORY)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/green(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/red(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/gold(new_human), WEAR_ACCESSORY)
+
+/datum/equipment_preset/proc/spawn_random_jacket(mob/living/carbon/human/new_human) // Randomized suit jacket.
+	var/random_gear = rand(0,3)
+	switch(random_gear)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate(new_human), WEAR_JACKET)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/brown(new_human), WEAR_JACKET)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/black(new_human), WEAR_JACKET)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/corporate/blue(new_human), WEAR_JACKET)
+
+/datum/equipment_preset/proc/spawn_random_suit(mob/living/carbon/human/new_human) // Randomized suit pants.
+	var/random_gear = rand(0,2)
+	switch(random_gear)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/blue(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/brown(new_human), WEAR_BODY)
+
 /////////////// Antag Vendor Equipment ///////////////
 /datum/equipment_preset/proc/get_antag_clothing_equipment()
 	return list(

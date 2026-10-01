@@ -18357,7 +18357,7 @@
 /area/corsat/sigma/south)
 "bsy" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/tool/surgery/scalpel/laser{
+/obj/item/tool/surgery/scalpel/manager{
 	pixel_y = 10
 	},
 /turf/open/floor/corsat/lightplate,
