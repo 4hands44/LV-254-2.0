@@ -26,7 +26,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/rifleman/crafty
 
 /datum/equipment_preset/dust_raider/private/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -77,7 +77,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 
 /datum/equipment_preset/dust_raider/smartgunner/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -166,7 +166,7 @@
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Spc"
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 
 /datum/equipment_preset/dust_raider/specialist/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels

@@ -163,8 +163,8 @@
 
 /datum/ammo/rifle/sharp/explosive/proc/delayed_explosion(obj/projectile/shot_dart, mob/target, mob/shooter)
 	if(ismob(target))
-		var/explosion_size = 60
-		var/falloff_size = 35
+		var/explosion_size = 120
+		var/falloff_size = 70
 		var/cause_data = create_cause_data("P9 SHARP Rifle", shooter)
 		cell_explosion(get_turf(target), explosion_size, falloff_size, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
@@ -240,7 +240,7 @@
 	create_flechette(P.loc, P)
 
 /datum/ammo/rifle/sharp/flechette/proc/create_flechette(loc, obj/projectile/shot_dart)
-	var/shrapnel_count = 8
+	var/shrapnel_count = 36
 	var/dispersion_angle = 20
 	create_shrapnel(loc, shrapnel_count, shot_dart.dir, dispersion_angle, shrapnel_type, shot_dart.weapon_cause_data, FALSE, 1)
 	apply_explosion_overlay(loc)

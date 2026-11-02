@@ -233,7 +233,7 @@
 			return
 
 		if(!skills)
-			skills = new /datum/skills/pfc(src)
+			skills = new /datum/skills/rifleman(src)
 
 		skills.tgui_interact(usr)
 

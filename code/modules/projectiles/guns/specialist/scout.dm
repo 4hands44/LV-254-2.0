@@ -119,6 +119,9 @@
 /obj/item/weapon/gun/rifle/m4ra_custom/tactical
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet, /obj/item/attachable/angledgrip)
 
+/obj/item/weapon/gun/rifle/m4ra_custom/attachies
+	starting_attachment_types = list(/obj/item/attachable/scope, /obj/item/attachable/suppressor, /obj/item/attachable/attached_gun/shotgun)
+
 // Elite version used by OWLF
 
 /obj/item/weapon/gun/rifle/m4ra1_custom

@@ -2269,7 +2269,7 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m4ra/rubber
 
 /obj/item/weapon/gun/rifle/m4ra/tactical
-	current_mag = /obj/item/ammo_magazine/rifle/m4ra/extended
+	current_mag = /obj/item/ammo_magazine/rifle/m4ra/heap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
 
 

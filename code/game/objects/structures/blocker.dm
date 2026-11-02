@@ -156,6 +156,10 @@
 		return TRUE
 	return FALSE
 
+/obj/structure/blocker/forcefield/multitile_vehicles/hedgehog
+	icon = 'icons/obj/structures/barricades.dmi'
+	icon_state = "tank_trap"
+
 /obj/structure/blocker/forcefield/human
 	types = list(/mob/living/carbon/human)
 	icon_state = "purple_line"

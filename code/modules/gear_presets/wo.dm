@@ -678,7 +678,7 @@
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Spc"
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 	minimap_icon = "spec"
 
 /datum/equipment_preset/wo/marine/spec/load_gear(mob/living/carbon/human/new_human)
@@ -714,7 +714,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/wo/marine/sg/load_gear(mob/living/carbon/human/new_human)
@@ -813,7 +813,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc
+	skills = /datum/skills/rifleman
 
 /datum/equipment_preset/wo/marine/pfc/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel

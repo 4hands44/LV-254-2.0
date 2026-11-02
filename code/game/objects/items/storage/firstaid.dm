@@ -489,14 +489,18 @@
 	desc = "Contains upgraded medical kits, nanosplints and an upgraded defibrillator."
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "medicbox"
-	storage_slots = 4
+	storage_slots = 8
 
 /obj/item/storage/box/czsp/medical/Initialize()
 	. = ..()
-	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
 	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/splint/nano(src)
 	new /obj/item/stack/medical/splint/nano(src)
 	new /obj/item/device/defibrillator/upgraded(src)
+	new /obj/item/device/defibrillator/synthetic(src)
 
 /obj/item/storage/box/czsp/medic_upgraded_kits
 	name = "medical upgrade kit"
@@ -505,12 +509,13 @@
 	desc = "This kit holds upgraded trauma and burn kits, for critical injuries."
 	w_class = SIZE_SMALL
 	max_w_class = SIZE_MEDIUM
-	storage_slots = 2
+	storage_slots = 3
 
 /obj/item/storage/box/czsp/medic_upgraded_kits/full/Initialize()
 	. = ..()
 	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
 	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+	new /obj/item/stack/medical/splint/nano(src)
 
 /obj/item/storage/box/czsp/medic_upgraded_kits/looted/Initialize()
 	. = ..()

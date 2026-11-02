@@ -103,6 +103,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_commanding_officer, list(
 
 		list("BELTS (CHOOSE 1)", 0, null, null, null),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M278 Pattern pistol webbing", 0, /obj/item/storage/belt/gun/dual_pistol, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("Military Police Belt", 0, /obj/item/storage/belt/security/MP/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 Medical Lifesaver Rig", 0, /obj/item/storage/belt/medical/lifesaver/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),

@@ -754,6 +754,33 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
+/obj/item/weapon/gun/pistol/vp78/vp78m6
+	name = "\improper VP78M6 pistol"
+	desc = "The VP78M6, often called the 'Mod Six', or just 'Sixes', are enhanced variants of the VP78 combat pistol. Smoother trigger assemblies, formed grips, longer shrouded barrels. These M6's have been modified to have special counterweights in the receivers and under the barrels to resist muzzle climb, allowing for much better handling, so much better, in fact, that holding just one doesn't feel right."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/pistols.dmi'
+	icon_state = "vp78m6"
+	item_state = "vp78m6"
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+
+/obj/item/weapon/gun/pistol/vp78/vp78m6/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 23, "under_x" = 21, "under_y" = 13, "stock_x" = 18, "stock_y" = 14)
+
+/obj/item/weapon/gun/pistol/vp78/vp78m6/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/pistol/vp78/vp78m6/b18
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/incendiary
 
 //-------------------------------------------------------
 /*

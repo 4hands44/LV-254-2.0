@@ -14,7 +14,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_PIRATE
 
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/rifleman/crafty
 
 /datum/equipment_preset/fun/pirate/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
@@ -87,7 +87,7 @@
 
 	minimap_icon = "hefa"
 
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 
 /datum/equipment_preset/fun/hefa/load_skills(mob/living/carbon/human/new_human)
 	..()
@@ -420,7 +420,7 @@
 
 	uses_special_name = TRUE
 
-	skills = /datum/skills/pfc/crafty // about equivalent to a marine
+	skills = /datum/skills/rifleman/crafty // about equivalent to a marine
 
 	assignment = "Monkey"
 	rank = "Monkey"

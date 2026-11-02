@@ -1171,6 +1171,7 @@
 	item_state = "grenadebelt"
 	item_icons = list(
 		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks.dmi',
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/snow_lefthand.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/snow_righthand.dmi'
 	)
@@ -1180,6 +1181,7 @@
 	)
 	w_class = SIZE_LARGE
 	storage_slots = 12
+	flags_equip_slot = SLOT_WAIST|SLOT_BACK
 	max_w_class = SIZE_MEDIUM
 	max_storage_space = 24
 	can_hold = list(/obj/item/explosive/grenade)
@@ -1780,6 +1782,10 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39/extended(src)
 
+/obj/item/storage/belt/gun/m39/heap/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39(src))
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/heap(src)
 
 /obj/item/storage/belt/gun/m39/full/whiteout/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite/compact/heap(src))
@@ -1962,6 +1968,56 @@
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44())
 	for(var/i = 1 to storage_slots - 2)
 		new /obj/item/ammo_magazine/revolver/marksman(src)
+
+/obj/item/storage/belt/gun/dual_pistol
+	name = "\improper M278 pistol webbing"
+	desc = "A well-oiled leather harness with two hip-mounted holsters for large magazine fed handguns. Has some extra pouches for mags right where you'd need 'em."
+	icon_state = "dual_holster"
+	icon = 'icons/obj/items/clothing/belts/belts.dmi'
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts.dmi',
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN
+	storage_slots = 8
+	can_hold = list(
+		/obj/item/weapon/gun/pistol,
+		/obj/item/ammo_magazine/pistol,
+	)
+	holster_slots = list(
+		"1" = list("icon_x" = -9, "icon_y" = -8),
+		"2" = list("icon_x" = 9, "icon_y" = -8))
+	skip_fullness_overlays = TRUE
+
+/obj/item/storage/belt/gun/dual_pistol/Initialize()
+	var/matrix/M = matrix()
+	M.Scale(-1, 1)
+	holster_slots["2"]["underlay_transform"] = M
+	. = ..()
+
+
+/obj/item/storage/belt/gun/dual_pistol/mod88/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	for(var/i = 1 to storage_slots - 2)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/belt/gun/dual_pistol/vp78/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	for(var/i = 1 to storage_slots - 2)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/belt/gun/dual_pistol/vp78m6/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/vp78m6())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/vp78m6())
+	for(var/i = 1 to storage_slots - 2)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/belt/gun/dual_pistol/vp78m6_b18/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/vp78m6/b18())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/vp78m6/b18())
+	for(var/i = 1 to storage_slots - 2)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
 
 /obj/item/storage/belt/gun/m44/lever_action
 	name = "\improper M276 pattern 45-70 revolver rig"
@@ -2712,6 +2768,14 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/mod88())
 	new /obj/item/ammo_magazine/pistol/mod88(src)
 	new /obj/item/ammo_magazine/pistol/mod88(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/wirecutters(src)
+	new /obj/item/device/multitool(src)
+
+/obj/item/storage/belt/gun/utility/spec/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/vp78m6())
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/device/multitool(src)

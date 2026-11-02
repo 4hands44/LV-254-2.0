@@ -68,7 +68,7 @@
 	rank = JOB_MS_CO
 	paygrades = list(PAY_SHORT_MO5)
 	role_comm_title = "CO"
-	skills = /datum/skills/ms/commander
+	skills = /datum/skills/commander
 	idtype = /obj/item/card/id/gold/council
 
 	minimap_icon = "co"
@@ -149,7 +149,7 @@
 	rank = JOB_MS_GC
 	paygrades = list(PAY_SHORT_MO3)
 	role_comm_title = "CDR"
-	skills = /datum/skills/ms/commander
+	skills = /datum/skills/commander
 	idtype = /obj/item/card/id/gold
 
 	minimap_icon = "xo"
@@ -244,7 +244,7 @@
 	paygrades = list(PAY_SHORT_MO2)
 	role_comm_title = "Adjc"
 	minimum_age = 35
-	skills = /datum/skills/ms/lt
+	skills = /datum/skills/SO
 
 	minimap_icon = "so"
 	minimap_background = "background_command"
@@ -290,7 +290,7 @@
 	paygrades = list(PAY_SHORT_MO1)
 	role_comm_title = "LT"
 	minimum_age = 25
-	skills = /datum/skills/ms/lt
+	skills = /datum/skills/SO
 
 	minimap_icon = "so"
 	minimap_background = "background_command"
@@ -330,7 +330,7 @@
 	paygrades = list(PAY_SHORT_MO1)
 	role_comm_title = "LT"
 	minimum_age = 25
-	skills = /datum/skills/ms/lt
+	skills = /datum/skills/SO
 
 	minimap_icon = "so"
 	minimap_background = "background_command"
@@ -381,7 +381,7 @@
 	paygrades = list(PAY_SHORT_ME5)
 	role_comm_title = "SL"
 	minimum_age = 27
-	skills = /datum/skills/ms/sl
+	skills = /datum/skills/SL
 
 	minimap_icon = "leader"
 
@@ -475,7 +475,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3)
 	role_comm_title = "SG"
-	skills = /datum/skills/ms/rifleman
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "smartgunner"
 
@@ -596,7 +596,7 @@
 	rank = JOB_SQUAD_MEDIC
 	paygrades = list(PAY_SHORT_ME3)
 	role_comm_title = "HM"
-	skills = /datum/skills/ms/medic
+	skills = /datum/skills/combat_medic
 
 	minimap_icon = "medic"
 
@@ -678,7 +678,7 @@
 	rank = JOB_SQUAD_ENGI
 	paygrades = list(PAY_SHORT_ME4)
 	role_comm_title = "ComTech"
-	skills = /datum/skills/ms/engi
+	skills = /datum/skills/combat_engineer
 
 	minimap_icon = "engi"
 
@@ -760,7 +760,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2)
 	role_comm_title = "Rfm"
-	skills = /datum/skills/ms/rifleman
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "private"
 
@@ -842,7 +842,7 @@
 	rank = JOB_MS_K9
 	paygrades = list(PAY_SHORT_ME2)
 	role_comm_title = "Rfm"
-	skills = /datum/skills/ms/rifleman
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "private"
 

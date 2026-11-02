@@ -47,6 +47,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader, list(
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M278 Pattern pistol webbing", 0, /obj/item/storage/belt/gun/dual_pistol, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Lifesaver Bag", 0, /obj/item/storage/belt/medical/lifesaver, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Medical Storage Rig", 0, /obj/item/storage/belt/medical, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -279,6 +280,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M278 Pattern pistol webbing", 0, /obj/item/storage/belt/gun/dual_pistol, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 M39 Holster Rig", 0, /obj/item/storage/belt/gun/m39, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 M10 Holster Rig", 0, /obj/item/storage/belt/gun/m10, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -372,6 +374,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_smartgun, list(
 
 		list("BELT", 0, null, null, null),
 		list("M802 Smartgunner Sidearm Belt", 0, /obj/item/storage/belt/gun/smartgunner/teamwork/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
+		list("M278 Pattern pistol webbing", 0, /obj/item/storage/belt/gun/dual_pistol, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M802 Plasmagunner Belt", 0, /obj/item/storage/belt/marine/smartgunner/xm_limited, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
 		list("M802 HPR Supportgunner Belt", 0, /obj/item/storage/belt/gun/smartgunner/hpr, MARINE_CAN_BUY_BELT, VENDOR_ITEM_MANDATORY),
 		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),

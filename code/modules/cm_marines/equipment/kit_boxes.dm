@@ -42,7 +42,7 @@
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/explosive/plastic(src)
@@ -75,7 +75,7 @@
 	new /obj/item/ammo_magazine/rocket/wp(src)
 
 	// equipment
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/explosive/plastic(src)
@@ -97,16 +97,18 @@
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/m42_night_goggles(src)
 	new /obj/item/ammo_magazine/sniper(src)
+	new /obj/item/ammo_magazine/sniper(src)
 	new /obj/item/ammo_magazine/sniper/incendiary(src)
 	new /obj/item/ammo_magazine/sniper/incendiary(src)
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/storage/backpack/marine/smock(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/weapon/gun/rifle/sniper/M42A(src)
 	new /obj/item/facepaint/sniper(src)
+	new /obj/item/device/binoculars/range/designator(src)
 	// spotter
 	new /obj/item/storage/box/kit/spotter(src)
 
@@ -123,10 +125,11 @@
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/storage/backpack/marine/smock(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/facepaint/sniper(src)
+	new /obj/item/device/binoculars/range/designator(src)
 	// spotter
 	new /obj/item/storage/box/kit/spotter(src)
 
@@ -148,7 +151,7 @@
 	new /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary(src)
 	new /obj/item/ammo_magazine/rifle/m4ra/custom/impact(src)
 	new /obj/item/ammo_magazine/rifle/m4ra/custom/impact(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/weapon/gun/rifle/m4ra_custom(src)
@@ -181,7 +184,7 @@
 	new /obj/item/clothing/gloves/marine/M3G(src)
 	new /obj/item/clothing/suit/storage/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/device/binoculars(src)
@@ -201,7 +204,7 @@
 	new /obj/item/storage/pouch/flamertank(src)
 	new /obj/item/tool/extinguisher(src)
 	new /obj/item/tool/extinguisher/mini(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/device/binoculars(src)
@@ -221,7 +224,7 @@
 	new /obj/item/clothing/gloves/marine/M3G(src)
 	new /obj/item/clothing/suit/storage/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/device/binoculars(src)
@@ -247,14 +250,23 @@
 
 //maybe put in req for later use?
 /obj/item/storage/box/spec/B18
-	name = "\improper B18 heavy armor case"
-	desc = "A large case containing the experimental B18 armor platform. Handle with care, it's more expensive than all of Delta combined.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	name = "\improper B18 Shocktrooper heavy armor case"
+	desc = "A large case containing the experimental B18 armor platform, and a custom modified pair of vp78 pistols. Handle with care, it's more expensive than all of Delta combined.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "b18"
 
 /obj/item/storage/box/spec/B18/fill_preset_inventory()
 	new /obj/item/clothing/gloves/marine/specialist(src)
 	new /obj/item/clothing/head/helmet/marine/specialist(src)
 	new /obj/item/clothing/suit/storage/marine/specialist(src)
+	new /obj/item/clothing/glasses/night/m42_night_goggles(src)
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+	new /obj/item/clothing/accessory/health/ceramic_plate(src)
+	new /obj/item/storage/pouch/explosive/smoke(src)
+	new /obj/item/storage/pouch/explosive/full(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/device/binoculars(src)
+
 
 /obj/item/storage/box/spec/mortar
 	name = "\improper Mortar Kit"
@@ -323,7 +335,7 @@
 	new /obj/item/ammo_magazine/m78_pig(src)
 
 	// equipment
-	new /obj/item/weapon/gun/pistol/vp78(src)
+	new /obj/item/weapon/gun/pistol/vp78/vp78m6(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/device/binoculars(src)
@@ -1031,6 +1043,7 @@
 	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/m42_night_goggles/spotter(src)
 	new /obj/item/storage/backpack/marine/smock(src)
+	new /obj/item/storage/backpack/marine/satchel/rto(src)
 	new /obj/item/device/binoculars/range/designator/spotter(src)
 	new /obj/item/pamphlet/skill/spotter(src)
 

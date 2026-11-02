@@ -99,7 +99,7 @@
 	name = "UPP Soldier (Cryo)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
-	skills = /datum/skills/pfc
+	skills = /datum/skills/rifleman
 	assignment = JOB_UPP
 	rank = JOB_UPP
 	role_comm_title = "Sol"

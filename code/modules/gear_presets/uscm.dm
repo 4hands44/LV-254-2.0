@@ -69,7 +69,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "private"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -101,7 +101,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "smartgunner"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -279,7 +279,7 @@
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "Spc"
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "spec"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -301,31 +301,6 @@
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/spec_kit/cryo, WEAR_R_HAND)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/uscm/spec/full_armor
-	name = "Falling Falcons Weapons Specialist (B18 Armor)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
-/datum/equipment_preset/uscm/spec/full_armor/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/specialist(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/specialist(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas(new_human), WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/specialist(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a(new_human), WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human.back), WEAR_IN_BACK)
-
-/datum/equipment_preset/uscm/spec/full_armor/load_status(mob/living/carbon/human/new_human)
-	return //No cryo munchies
 
 //*****************************************************************************************************/
 
@@ -469,7 +444,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/rifleman/crafty
 
 	minimap_icon = "private"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -555,7 +530,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "smartgunner"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -698,7 +673,7 @@
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "Spc"
-	skills = /datum/skills/specialist
+	skills = /datum/skills/rifleman
 
 	minimap_icon = "spec"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -1114,7 +1089,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner_pve
+	skills = /datum/skills/rifleman_pve
 
 	minimap_icon = "smartgunner"
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
@@ -1372,7 +1347,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner_pve
+	skills = /datum/skills/rifleman_pve
 
 	minimap_icon = "smartgunner"
 

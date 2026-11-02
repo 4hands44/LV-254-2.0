@@ -805,7 +805,7 @@
 	rank = JOB_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "A-RFN"
-	skills = /datum/skills/pfc/crafty
+	skills = /datum/skills/rifleman/crafty
 	faction = FACTION_MARSHAL
 	faction_group = list(FACTION_MARSHAL, FACTION_MARINE)
 	minimap_icon = "private"
@@ -1003,7 +1003,7 @@
 	rank = JOB_SQUAD_SMARTGUN
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "A-SG"
-	skills = /datum/skills/smartgunner
+	skills = /datum/skills/rifleman
 	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/uscm/cmb/smartgunner/load_gear(mob/living/carbon/human/new_human)

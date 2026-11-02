@@ -341,7 +341,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	. = ..()
 	if(in_chamber) . += "It has a chambered round."
 
-
 /obj/item/weapon/gun/shotgun/combat/riot
 	name = "\improper MK221 riot shotgun"
 	icon_state = "mp220"

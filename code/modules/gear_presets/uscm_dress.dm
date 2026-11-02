@@ -7,7 +7,7 @@
 	minimum_age = 18
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Mar"
-	skills = /datum/skills/pfc
+	skills = /datum/skills/rifleman
 
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
