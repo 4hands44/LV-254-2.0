@@ -1,7 +1,6 @@
 /datum/equipment_preset/gangster
 	name = "gangster"
-	faction = FACTION_MERCENARY
-	faction_group = FACTION_LIST_MERCENARY
+	faction = FACTION_GANGSTER
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_RUSSIAN, LANGUAGE_JAPANESE)
 	idtype = /obj/item/card/id/lanyard
 	skills = /datum/skills/civilian
@@ -14,6 +13,7 @@
 
 /datum/equipment_preset/gangster/generic
 	name = "Gangster(generic)"
+	faction = FACTION_GANGSTER
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER
 	rank = JOB_GANGSTER
@@ -38,6 +38,7 @@
 
 /datum/equipment_preset/gangster/generic_elite
 	name = "Gangster elite(generic)"
+	faction = FACTION_GANGSTER
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER
 	rank = JOB_GANGSTER
@@ -65,6 +66,7 @@
 
 /datum/equipment_preset/gangster/generic_leader
 	name = "Gangster Leader(generic)"
+	faction = FACTION_GANGSTER
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_LEADER
 	rank = JOB_GANGSTER_LEADER
@@ -90,6 +92,7 @@
 //====Clown-Gangsters====//
 /datum/equipment_preset/gangster/clown_silly
 	name = "Gangster(clown !!silly!!)"
+	faction = FACTION_CLOWN_GANG
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CLOWN
 	rank = JOB_GANGSTER_CLOWN
@@ -118,6 +121,7 @@
 
 /datum/equipment_preset/gangster/clown_leader
 	name = "Gangster Leader(clown !!silly!!)"
+	faction = FACTION_CLOWN_GANG
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CLOWN_LEADER
 	rank = JOB_GANGSTER_CLOWN_LEADER
@@ -147,6 +151,7 @@
 
 /datum/equipment_preset/gangster/clown
 	name = "Gangster(clown)"
+	faction = FACTION_CLOWN_GANG
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CLOWN
 	rank = JOB_GANGSTER_CLOWN
@@ -181,6 +186,7 @@
 //====BackBiter-Gangster====//
 /datum/equipment_preset/gangster/backbiter
 	name = "Gangster(Backbiter)"
+	faction = FACTION_BIKER_GANG
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_BB
 	rank = JOB_GANGSTER_BB
@@ -220,6 +226,7 @@
 
 /datum/equipment_preset/gangster/backbiter_elite
 	name = "Gangster elite(Backbiter)"
+	faction = FACTION_BIKER_GANG
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_BB
 	rank = JOB_GANGSTER_BB
@@ -261,6 +268,7 @@
 
 /datum/equipment_preset/gangster/backbiter_leader
 	name = "Gangster Leader(Backbiter)"
+	faction = FACTION_BIKER_GANG
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_BB_LEADER
 	rank = JOB_GANGSTER_BB_LEADER
@@ -297,6 +305,7 @@
 
 /datum/equipment_preset/gangster/yakuza
 	name = "Gangster(Yakuza)"
+	faction = FACTION_YAKUZA
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_YK
 	rank = JOB_GANGSTER_YK
@@ -328,6 +337,7 @@
 
 /datum/equipment_preset/gangster/yakuza_elite
 	name = "Gangster elite(Yakuza)"
+	faction = FACTION_YAKUZA
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_YK
 	rank = JOB_GANGSTER_YK
@@ -360,6 +370,7 @@
 
 /datum/equipment_preset/gangster/yakuza_leader
 	name = "Gangster Leader(Yakuza)"
+	faction = FACTION_YAKUZA
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_YK_LEADER
 	rank = JOB_GANGSTER_YK_LEADER
@@ -389,6 +400,7 @@
 
 /datum/equipment_preset/gangster/dionysus_male
 	name = "Gangster(Dionysus-Male)"
+	faction = FACTION_DIONYSUS
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CD
 	rank =JOB_GANGSTER_CD
@@ -418,6 +430,7 @@
 
 /datum/equipment_preset/gangster/dionysus_female
 	name = "Gangster(Dionysus-Female)"
+	faction = FACTION_DIONYSUS
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CD
 	rank =JOB_GANGSTER_CD
@@ -448,6 +461,7 @@
 
 /datum/equipment_preset/gangster/dionysus_male_elite
 	name = "Gangster elite(Dionysus-Male)"
+	faction = FACTION_DIONYSUS
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CD
 	rank = JOB_GANGSTER_CD
@@ -480,6 +494,7 @@
 
 /datum/equipment_preset/gangster/dionysus_female_elite
 	name = "Gangster elite(Dionysus-Female)"
+	faction = FACTION_DIONYSUS
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CD
 	rank = JOB_GANGSTER_CD
@@ -515,6 +530,7 @@
 
 /datum/equipment_preset/gangster/dionysus_male_leader
 	name = "Gangster Leader(Dionysus-Male)"
+	faction = FACTION_DIONYSUS
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CD_LEADER
 	rank = JOB_GANGSTER_CD_LEADER
@@ -546,6 +562,7 @@
 
 /datum/equipment_preset/gangster/dionysus_female_leader
 	name = "Gangster Leader(Dionysus-Female)"
+	faction = FACTION_DIONYSUS
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_GANGSTER_CD_LEADER
 	rank = JOB_GANGSTER_CD_LEADER
@@ -579,6 +596,7 @@
 //====Dionysis-Kidnapping synth====//
 /datum/equipment_preset/synth/working_joe/dionysus
 	name = "Gangster Synth (Dionysus)"
+	faction = FACTION_DIONYSUS
 
 /datum/equipment_preset/synth/working_joe/dionysus/load_gear(mob/living/carbon/human/new_human)
 	new_human.gender = FEMALE
@@ -620,6 +638,7 @@
 //====Syndicate-Gangster====//
 /datum/equipment_preset/gangster/Syndicate
 	name = "Syndicate Operative"
+	faction = FACTION_SYNDICATE
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_SYNDICATE_OP
 	rank = JOB_SYNDICATE_OP
