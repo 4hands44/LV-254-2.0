@@ -10,27 +10,47 @@
 	icon = 'icons/obj/structures/barricades.dmi'
 	icon_state = "tank_trap"
 	barricade_type = "tank_trap"
-	var/obj/structure/blocker/forcefield/vehicles/linked_blocker
+	projectile_coverage = PROJECTILE_COVERAGE_HIGH
+	var/is_whitelist = FALSE
+	var/strict_types = FALSE
+	var/list/types = list(/obj/vehicle/)
 
 /obj/structure/barricade/tank_trap/Initialize(mapload)
 	. = ..()
-	update_linked_blocker()
-	AddComponent(/datum/component/shimmy_around, east_offset = -15, west_offset = -15)
+	dir = NORTH|SOUTH|EAST|WEST
 
-/obj/structure/barricade/tank_trap/BlockedPassDirs(atom/movable/mover, target_dir)
-	return NO_BLOCKED_MOVEMENT
+/obj/structure/barricade/tank_trap/initialize_pass_flags(datum/pass_flags_container/pass_flags)
+	..()
+	if (pass_flags)
+		pass_flags.flags_can_pass_all = PASS_MOB_IS
+		pass_flags.flags_can_pass_front = PASS_MOB_IS
+		pass_flags.flags_can_pass_behind = PASS_OVER^(PASS_OVER_ACID_SPRAY|PASS_OVER_THROW_MOB)
+	flags_can_pass_front_temp = PASS_OVER_THROW_MOB
+	flags_can_pass_behind_temp = PASS_OVER_THROW_MOB
+	dir = NORTH|SOUTH|EAST|WEST
 
-/obj/structure/barricade/tank_trap/proc/update_linked_blocker()
-	if(anchored)
-		if(!linked_blocker)
-			linked_blocker = new /obj/structure/blocker/forcefield/vehicles(get_turf(src))
-	else if(linked_blocker)
-		qdel(linked_blocker)
-		linked_blocker = null
+/obj/structure/barricade/tank_trap/Crossed(atom/movable/AM)
+	. = ..()
+	var/mob/living/carbon/xenomorph/XN = AM
 
-/obj/structure/barricade/tank_trap/proc/set_anchored(new_value)
-	anchored = new_value
-	update_linked_blocker()
+	if(strict_types)
+		if(AM.type in types)
+			return is_whitelist
+	else
+		for(var/type in types)
+			if(istype(AM, type))
+				return is_whitelist
+
+	if(istype(XN))
+		if(XN.stat == DEAD)
+			return
+		if(HAS_TRAIT(XN, TRAIT_ABILITY_BURROWED))
+			return
+		for(var/type in types)
+			if(istype(AM, type))
+				return is_whitelist
+
+	return !is_whitelist
 
 /obj/structure/barricade/tank_trap/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
@@ -57,9 +77,3 @@
 			playsound(loc, 'sound/effects/barbed_wire_movement.ogg', 100)
 			new /obj/item/stack/sheet/metal(get_turf(src), 10)
 			qdel(src)
-
-/obj/structure/barricade/tank_trap/Destroy()
-	if(linked_blocker)
-		qdel(linked_blocker)
-		linked_blocker = null
-	return ..()

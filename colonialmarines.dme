@@ -1424,6 +1424,7 @@
 #include "code\game\objects\structures\window.dm"
 #include "code\game\objects\structures\window_frame.dm"
 #include "code\game\objects\structures\barricade\barricade.dm"
+#include "code\game\objects\structures\barricade\tank_trap.dm"
 #include "code\game\objects\structures\barricade\deployable.dm"
 #include "code\game\objects\structures\barricade\folding.dm"
 #include "code\game\objects\structures\barricade\handrail.dm"
