@@ -366,7 +366,7 @@
 /datum/emote/living/carbon/human/warcry/get_sound(mob/living/user)
 	if(ishumansynth_strict(user))
 		switch(user.faction)
-			if(FACTION_UPP, FACTION_HUNTED_UPP)
+			if(FACTION_UPP, FACTION_HUNTED_UPP, FACTION_WARLORD, FACTION_SCAV)
 				return get_sfx("[user.gender]_upp_warcry")
 			else
 				return get_sfx("[user.gender]_warcry")

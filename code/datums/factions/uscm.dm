@@ -101,6 +101,9 @@
 		else if(ID)
 			_role = ID.rank
 		switch(_role)
+			if(JOB_MARINE_CHAPLAIN)
+				marine_rk = "chap"
+				border_rk = "command"
 			if(JOB_XO)
 				marine_rk = "xo"
 				border_rk = "command"

@@ -997,6 +997,7 @@
 	mob_size = MOB_SIZE_XENO
 	maxHealth = 1000
 	health = 1000
+	faction = FACTION_LARRY
 
 	speak_chance = 4
 	melee_damage_lower = 50

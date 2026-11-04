@@ -561,6 +561,11 @@
 	desc = "An elusive patch worn by members of the UAAC-TIS, also known as Three Eyes."
 	icon_state = "tispatch"
 
+/obj/item/clothing/accessory/patch/chaplain
+	name = "Military Chaplain patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Military Chaplain corps."
+	icon_state = "chaplain"
+
 /obj/item/clothing/accessory/patch/falcon/squad_main
 	name = "USCM Falling Falcons squad patch"
 	desc = "A fire-resistant shoulder patch, a squad patch worn by the Falling Falcons—2nd Battalion, 4th Brigade, USCM. Stitched in squad colors."
