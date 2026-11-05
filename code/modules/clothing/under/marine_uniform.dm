@@ -840,9 +840,20 @@
 	)
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	has_sensor = UNIFORM_NO_SENSORS
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/faction/freelancer, /obj/item/clothing/suit/storage/webbing, /obj/item/clothing/suit/storage/utility_vest)
 
+//=========================//Diamond Dogs\\================================\\
 
+/obj/item/clothing/under/marine/veteran/diamond_dog
+	name = "\improper diamond dog fatigues"
+	desc = "Comfortable olive drab fatigues and flight suit, customized with reinforced knee braces and a set of brassards with the Diamond Dogs insignia on them. A perfect fit for a mercenary with a preference for stealth"
+	icon_state = "diamond_dog"
+	worn_state = "diamond_dog"
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/MERC.dmi',
+	)
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	has_sensor = UNIFORM_NO_SENSORS
 
 
 //=========================//Dutch Dozen\\================================\\
@@ -857,7 +868,6 @@
 	icon_state = "dutch_jumpsuit"
 	worn_state = "dutch_jumpsuit"
 	has_sensor = UNIFORM_NO_SENSORS
-	suit_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/dutch, /obj/item/clothing/suit/armor/vest/dutch)
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi',
 	)

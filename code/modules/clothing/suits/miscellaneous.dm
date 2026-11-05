@@ -289,6 +289,16 @@
 		/obj/item/device/motiontracker/adv,
 	)
 
+/obj/item/clothing/suit/storage/webbing/diamond_dog
+	name = "LBV-88 tactical load bearing equipment"
+	icon_state = "dd_webbing_green"
+	item_state = "dd_webbing_green"
+
+/obj/item/clothing/suit/storage/webbing/diamond_dog/black
+	name = "LBV-88 tactical load bearing equipment"
+	icon_state = "dd_webbing_black"
+	item_state = "dd_webbing_black"
+
 /obj/item/clothing/suit/storage/utility_vest
 	name = "utility vest"
 	desc = "A utility vest to hold tools in."

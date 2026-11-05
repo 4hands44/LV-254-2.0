@@ -1081,6 +1081,31 @@
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
+//===========================//Diamond Dogs\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/suit/storage/marine/veteran/diamond_dog
+	name = "\improper LBV-88 Ballistic vest"
+	desc = "A Military grade Ballistic vest with included pouches, manufactured for the civilian security market using last-gen protective materials."
+	icon_state = "diamond_dog_blk"
+	icon = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/MERC.dmi'
+	)
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
+
+/obj/item/clothing/suit/storage/marine/veteran/diamond_dog/tan
+	name = "\improper LBV-88 Ballistic vest"
+	icon_state = "diamond_dog_tan"
+
 //======================================//TAGILLA\\=========================================\\
 //==========================================================================================\\
 
