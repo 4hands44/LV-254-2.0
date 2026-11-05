@@ -71,13 +71,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 
 	if(prob(35))
-		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/kramer/sec, /obj/item/ammo_magazine/rifle/kramer/ap, new_human)
 	if(prob(40))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun/full/random, WEAR_WAIST)
 		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717, WEAR_R_HAND)
 	else
-		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/l42a/sec, /obj/item/ammo_magazine/rifle/l42a/ap, new_human)
 
 
@@ -126,10 +126,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 
 	if(prob(25))
-		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/sa80/ugl/rifleman/sec, /obj/item/ammo_magazine/rifle/sa80/ap, new_human)
 	else
-		new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
 		spawn_weapon(/obj/item/weapon/gun/rifle/kramer/sec, /obj/item/ammo_magazine/rifle/kramer/ap, new_human)
 
 //director
@@ -170,7 +170,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/cmb/slugger, WEAR_IN_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new/obj/item/storage/belt/marine, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine, WEAR_WAIST)
 	spawn_weapon(/obj/item/weapon/gun/rifle/sa80/ugl/rifleman/sec, /obj/item/ammo_magazine/rifle/sa80/ap, new_human)
 
 //detective

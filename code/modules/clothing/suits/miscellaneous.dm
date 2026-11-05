@@ -287,6 +287,10 @@
 		/obj/item/storage/large_holster/machete,
 		/obj/item/storage/large_holster/katana,
 		/obj/item/device/motiontracker/adv,
+
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/handful,
+
 	)
 
 /obj/item/clothing/suit/storage/webbing/diamond_dog
