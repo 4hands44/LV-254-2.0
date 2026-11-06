@@ -1,11 +1,11 @@
 //Autodoc
 /obj/structure/machinery/medical_pod/autodoc
 	name = "\improper autodoc emergency medical system"
-	desc = "A fancy machine developed to be capable of operating on people with minimal human intervention. The interface is rather complex and would only be useful to trained Doctors however."
+	desc = "A fancy machine developed to be capable of operating on people with minimal human intervention."
 	icon_state = "autodoc_open"
 
 	entry_timer = 2 SECONDS
-	skilllock = SKILL_SURGERY_NOVICE
+	skilllock = null
 
 	var/list/surgery_todo_list = list() //a list of surgeries to do.
 	var/surgery = 0 //Are we operating or no? 0 for no, 1 for yes
@@ -623,9 +623,6 @@
 		dat += "This console is not connected to a Auto-Doc or the Auto-Doc is non-functional."
 		to_chat(user, "This console seems to be powered down.")
 	else
-		if(!skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE))
-			to_chat(user, SPAN_WARNING("You have no idea how to use this."))
-			return
 		var/mob/living/occupant = connected.occupant
 		dat += "<B>Overall Status:</B><BR>"
 		if(occupant)

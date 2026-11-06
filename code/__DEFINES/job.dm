@@ -13,7 +13,12 @@
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_FORECON "FORECON"
+#define SQUAD_FALL "Falling Falcons"
+#define SQUAD_DUST "Dust Raiders"
 #define SQUAD_SOLAR "Solar Devils"
+#define SQUAD_MUD "Mudskippers"
+#define SQUAD_HELL "Hell Divers"
+#define SQUAD_TUNNEL "Tunnel Rats"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"

@@ -373,7 +373,7 @@
 /datum/equipment_preset/uscm_mudskippers/leader
 	name = "Mudskippers-Squad Leader"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_BRIG, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_MS_SL
@@ -453,7 +453,7 @@
 /datum/equipment_preset/uscm_mudskippers/sg
 	name = "Mudskippers-Squad Smartgunner"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -574,7 +574,7 @@
 /datum/equipment_preset/uscm_mudskippers/medic
 	name = "Mudskippers-Squad Hospital Corpsman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -656,7 +656,7 @@
 /datum/equipment_preset/uscm_mudskippers/engineer
 	name = "Mudskippers-Squad Combat Technician"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -739,7 +739,7 @@
 /datum/equipment_preset/uscm_mudskippers/rfm
 	name = "Mudskippers-Squad Rifleman"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,
@@ -821,7 +821,7 @@
 /datum/equipment_preset/uscm_mudskippers/k9
 	name = "Mudskippers-Squad K9 Handler"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	auto_squad_name = SQUAD_MARINE_CRYO
+	auto_squad_name = SQUAD_MUD
 
 	access = list(
 		ACCESS_MARINE_COMMAND,

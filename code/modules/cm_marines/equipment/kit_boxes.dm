@@ -507,6 +507,27 @@
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/device/binoculars(src)
 
+//vet sl kitbox
+
+/obj/item/storage/box/spec/vet_sl
+	name = "\improper Veteran SL equipment case"
+	desc = "A large case of containing the older Kramer pattern pulse rifle, custom pistol holsters with modified vp78s and some other useful equipment and attachments fit for a grizzled veteran.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "smartgun"
+	kit_name = "rifleman"
+
+/obj/item/storage/box/spec/vet_sl/fill_preset_inventory()
+
+	new /obj/item/weapon/gun/rifle/kramer/dmr(src)
+	new /obj/item/ammo_magazine/rifle/kramer/heap(src)
+	new /obj/item/ammo_magazine/rifle/kramer/heap(src)
+	new /obj/item/ammo_magazine/rifle/kramer/heap(src)
+	new /obj/item/ammo_magazine/rifle/kramer/heap(src)
+	new /obj/item/ammo_magazine/rifle/kramer/heap(src)
+
+	new /obj/item/storage/belt/gun/dual_pistol/vp78m6(src)
+
+	new /obj/item/clothing/gloves/marine/veteran/insulated(src)
+	new /obj/item/clothing/accessory/health(src)
 
 /obj/item/storage/box/spec/rifleman_mp
 	name = "\improper Military Police Rifleman equipment case"

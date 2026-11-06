@@ -3,6 +3,9 @@
 	idtype = /obj/item/card/id/dogtag
 	languages = list(LANGUAGE_ENGLISH)
 	faction = FACTION_MARINE
+	var/auto_squad_name
+	///Allows the squad to be set even if spawned on admin z level
+	var/ert_squad = FALSE
 
 
 /datum/equipment_preset/dust_raider/load_name(mob/living/carbon/human/new_human)
@@ -14,6 +17,27 @@
 	new_human.change_real_name(new_human, random_name)
 	new_human.name = new_human.real_name
 	new_human.age = rand(21,45)
+
+/datum/equipment_preset/dust_raider/load_preset(mob/living/carbon/human/new_human, randomise, count_participant)
+	. = ..()
+	if(!auto_squad_name || (should_block_game_interaction(new_human) && !ert_squad))
+		return
+	if(!GLOB.data_core.manifest_modify(new_human.real_name, WEAKREF(new_human), assignment, rank))
+		GLOB.data_core.manifest_inject(new_human)
+
+	var/obj/item/card/id/ID = new_human.get_idcard()
+	var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
+	ID.associated_account_number = acct.account_number
+
+	var/datum/squad/auto_squad = get_squad_by_name(auto_squad_name)
+	if(auto_squad)
+		transfer_marine_to_squad(new_human, auto_squad, new_human.assigned_squad, ID)
+	if(!ert_squad && !auto_squad.active)
+		auto_squad.engage_squad(FALSE)
+
+	new_human.sec_hud_set_ID()
+	new_human.hud_set_squad()
+
 
 //*****************************************************************************************************/
 
@@ -27,6 +51,7 @@
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RFN"
 	skills = /datum/skills/rifleman/crafty
+	auto_squad_name = SQUAD_DUST
 
 /datum/equipment_preset/dust_raider/private/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -49,6 +74,7 @@
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SL"
 	skills = /datum/skills/SL
+	auto_squad_name = SQUAD_DUST
 
 /datum/equipment_preset/dust_raider/leader/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -71,6 +97,7 @@
 /datum/equipment_preset/dust_raider/smartgunner
 	name = "Dust Raider Smartgunner"
 	flags = EQUIPMENT_PRESET_EXTRA
+	auto_squad_name = SQUAD_DUST
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	assignment = JOB_SQUAD_SMARTGUN
@@ -78,6 +105,7 @@
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SG"
 	skills = /datum/skills/rifleman
+	auto_squad_name = SQUAD_DUST
 
 /datum/equipment_preset/dust_raider/smartgunner/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -103,6 +131,7 @@
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Eng"
 	skills = /datum/skills/combat_engineer
+	auto_squad_name = SQUAD_DUST
 
 /datum/equipment_preset/dust_raider/engineer/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -132,6 +161,7 @@
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "HM"
 	skills = /datum/skills/combat_medic
+	auto_squad_name = SQUAD_DUST
 
 /datum/equipment_preset/dust_raider/medic/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
@@ -167,6 +197,7 @@
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Spc"
 	skills = /datum/skills/rifleman
+	auto_squad_name = SQUAD_DUST
 
 /datum/equipment_preset/dust_raider/specialist/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels

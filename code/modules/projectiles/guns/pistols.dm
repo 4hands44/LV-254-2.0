@@ -756,7 +756,7 @@
 
 /obj/item/weapon/gun/pistol/vp78/vp78m6
 	name = "\improper VP78M6 pistol"
-	desc = "The VP78M6, often called the 'Mod Six', or just 'Sixes', are enhanced variants of the VP78 combat pistol. Smoother trigger assemblies, formed grips, longer shrouded barrels. These M6's have been modified to have special counterweights in the receivers and under the barrels to resist muzzle climb, allowing for much better handling, so much better, in fact, that holding just one doesn't feel right."
+	desc = "The VP78M6, often called the 'Mod Six', or just 'Sixes', are custom enhanced variants of the VP78 combat pistol. Smoother trigger assemblies, formed grips, longer shrouded barrels, and a severe weight reduction."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/pistols.dmi'
 	icon_state = "vp78m6"
 	item_state = "vp78m6"

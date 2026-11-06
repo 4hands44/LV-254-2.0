@@ -242,11 +242,71 @@
 	roundstart = FALSE
 	locked = TRUE
 
+/datum/squad/marine/falling_falcons
+	name = SQUAD_FALL
+	equipment_color = "#4148c8"
+	chat_color = "#828cff"
+	radio_freq = CRYO_FREQ
+	minimap_color =	"#828cff"
+	background_icon = "background_delta"
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
+
+/datum/squad/marine/dust_raiders
+	name = SQUAD_DUST
+	equipment_color = "#c47a50"
+	chat_color = "#c47a50"
+	radio_freq = CRYO_FREQ
+	minimap_color = "#c47a50"
+	background_icon = "background_alpha"
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
+
+/datum/squad/marine/mudskippers
+	name = SQUAD_MUD
+	equipment_color = "#201e1e"
+	chat_color = "#5a2c2c"
+	radio_freq = CRYO_FREQ
+	minimap_color = "#5a2c2c"
+	background_icon = "background_civillian"
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
+
+/datum/squad/marine/helldivers
+	name = SQUAD_HELL
+	equipment_color = "#32CD32"
+	chat_color = "#32CD32"
+	radio_freq = FORECON_FREQ
+	minimap_color = "#32CD32"
+	background_icon = "background_forecon"
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
+
+/datum/squad/marine/tunnel_rats
+	name = SQUAD_TUNNEL
+	equipment_color = "#e2500d"
+	chat_color = "#ffa550"
+	radio_freq = CRYO_FREQ
+	minimap_color = "#e2500d"
+	background_icon = "background_bravo"
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
+
 /datum/squad/marine/solardevils
 	name = SQUAD_SOLAR
 	equipment_color = "#5a2c2c"
 	chat_color = "#5a2c2c"
-	radio_freq = SOF_FREQ
+	radio_freq = CRYO_FREQ
 	minimap_color = "#5a2c2c"
 	background_icon = "background_civillian"
 
