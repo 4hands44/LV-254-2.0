@@ -88,6 +88,12 @@
 	desc = "A shooting target with a threatening silhouette."
 	health = 6500
 
+/obj/structure/target/snake
+	name = "Snake"
+	icon_state = "snake_decoy"
+	desc = "A sneaky lookin chap."
+	health = 7500
+
 /obj/structure/monorail
 	name = "monorail track"
 	icon = 'icons/obj/structures/structures.dmi'
